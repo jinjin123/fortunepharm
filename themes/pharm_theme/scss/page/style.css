@@ -1,0 +1,231 @@
+#block-nyu-theme-page-title h1 span {
+  background: #4120a0;
+  /* Old Browsers */
+  /*Safari 5.1-6*/
+  /*Opera 11.1-12*/
+  /*Fx 3.6-15*/
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #4120a0), to(#b22045));
+  background: linear-gradient(left, #4120a0 1%, #b22045 100%);
+  /*Standard*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-size: 50px;
+  display: block;
+}
+
+@media (max-width: 1091.98px) {
+  #block-nyu-theme-page-title h1 span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #block-nyu-theme-page-title h1 span {
+    font-size: 30px;
+  }
+}
+
+.navigation {
+  width: 23%;
+  float: left;
+  padding: 128px 0 0 0;
+}
+
+.navigation ul {
+  width: 100%;
+  list-style: none;
+}
+
+.navigation ul li {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  line-height: 1.5;
+  background-position: 98% 12px !important;
+  background-repeat: no-repeat !important;
+}
+
+.navigation ul li.root {
+  background: url("https://cdn.shanghai.nyu.edu/sites/all/themes/shanghai/images/icon-expand.png");
+}
+
+.navigation ul li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.navigation ul li:last-child ul li:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  display: block;
+  width: 65%;
+  height: 100%;
+  padding: 10px 0;
+  color: #656565;
+}
+
+.navigation ul li ul {
+  display: none;
+}
+
+.navigation ul li ul li {
+  padding-left: 20px;
+}
+
+.navigation ul li ul li:last-child {
+  border-bottom: none;
+}
+
+.layout-content {
+  margin-left: 25%;
+}
+
+#block-views-block-video-list-block-1 .views-row img {
+  height: auto;
+  width: 100%;
+}
+
+#block-views-block-video-list-block-1 .views-row .views-field-title {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #57068C;
+}
+
+#block-views-block-video-list-block-1 .views-row:nth-child(3n+1) {
+  margin-right: 0;
+}
+
+@media (max-width: 991.98px) {
+  .navigation {
+    float: none;
+    display: none;
+    position: relative;
+  }
+  .layout-content {
+    margin-left: 0;
+  }
+}
+
+.homepage #block-nyu-theme-content {
+  padding: 30px 0;
+}
+
+#block-nyu-theme-content .views-row {
+  overflow-x: hidden;
+}
+
+#block-nyu-theme-content ul, #block-nyu-theme-content ol {
+  padding-left: 20px;
+}
+
+#block-nyu-theme-content ul li, #block-nyu-theme-content ol li {
+  color: #656565;
+}
+
+.news-teaser-section .contextual {
+  display: none !important;
+}
+
+.news-teaser-section > .links.inline {
+  display: none;
+}
+
+.news-teaser-section .links.inline {
+  display: none;
+}
+
+.news-teaser-section .news-teaser {
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 0;
+}
+
+@media (max-width: 575.98px) {
+  .news-teaser-section .news-teaser {
+    margin-bottom: 20px;
+  }
+}
+
+.news-teaser-section .news-teaser h2 {
+  left: 0;
+  width: 65%;
+  padding: 0;
+  float: right;
+  display: block;
+  height: 100%;
+  margin: 0 0 15px;
+  line-height: 24px;
+}
+
+.news-teaser-section .news-teaser img {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-teaser-section .news-teaser .news-teaser-content {
+  width: 65%;
+  float: right;
+}
+
+.news-teaser-section .news-teaser div {
+  color: #656565;
+}
+
+.news-teaser-section .news-teaser .news_image {
+  float: left;
+  width: 30%;
+  margin-right: 1%;
+}
+
+#yamlform-submission-registeration-2018-form select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+#yamlform-submission-registeration-2018-form .description p {
+  font-style: italic;
+  color: #656565;
+}
+
+div[role='contentinfo'] {
+  color: red;
+}
+
+@media (max-width: 575.98px) {
+  .news-teaser-section .news-teaser h2 {
+    width: 100%;
+  }
+  .news-teaser-section .news-teaser h2 span {
+    font-style: 16px !important;
+  }
+  .news-teaser-section .news-teaser .news_image {
+    width: 100%;
+    clear: both;
+  }
+  .news-teaser-section .news-teaser .news-teaser-content {
+    width: 100%;
+    float: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

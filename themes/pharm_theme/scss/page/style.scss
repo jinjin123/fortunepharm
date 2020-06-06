@@ -1,0 +1,68 @@
+@import '../variable';
+@import '../mixins';
+body {
+    color: #656565;
+}
+#block-nyu-theme-page-title {
+    h1 {
+        @include main-heading;
+    }
+}
+h3 {
+    @include sub-heading;
+}
+h5 {
+    @include bullet-title;
+}
+table {
+    border-bottom: 0px;
+}
+i {
+    color: #777777;
+}
+#block-defaultbanner {
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+#main {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+#banner-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    clear: both;
+    overflow: auto;
+    .page_title {
+        float: left;
+        width: 25%;
+    }
+    .page_banner {
+        float: left;
+        width: 75%;
+    }
+}
+.page-node-2 {
+    #block-pharm-theme-content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        p {
+            color: #878787;
+        }
+        .field-label-hidden {
+          margin: 10px 0;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+  #block-pharm-theme-content{
+    width: 50%;
+  }
+}

@@ -1,0 +1,515 @@
+.homepage {
+  /*
+  @media (max-width: $desktop) {
+    section.homepage-highlight {
+      &>div {
+        .highlight-image-item {
+          img {
+            display: block;
+            width: auto;
+            height: auto;
+            overflow-x: hidden;
+            max-height: $highlight_full_height;
+          }
+        }
+      }
+    }
+    .body {
+      #block-nyu-theme-content {
+        top: 280px;
+        padding: 0 $content_padding;
+        height: auto;
+        max-height: 1000px;
+        overflow: visible;
+        article {
+          opacity: .9;
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  */
+  /*
+  @media (max-width: $phone) {
+    section.homepage-highlight {
+      &>div {
+        
+        .highlight-image-item {
+          img {
+            display: block;
+            width: auto;
+            max-height: $phone_banner_height;
+            overflow-x: hidden;
+          }
+        }
+
+        .slick-dots {
+          li {
+            button {
+              &:before {
+                border: 1px solid $purple;
+                content: '';
+                color: $purple;
+              }
+            }
+            &.slick-active {
+              button:before {
+                background-color: $purple;
+              }
+            }
+          }
+        }
+      
+      }
+    }
+    
+    .body {
+      #block-nyu-theme-content {
+        article {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  */
+}
+
+.homepage #block-nyu-theme-page-title,
+.homepage #block-nyu-theme-local-tasks {
+  display: none;
+}
+
+.homepage section.homepage-highlight > div {
+  width: 100%;
+}
+
+.homepage section.homepage-highlight > div .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.homepage section.homepage-highlight > div .highlight-image-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.homepage section.homepage-highlight > div .slick-dots {
+  display: none;
+  bottom: 0;
+  z-index: 100;
+  text-align: right;
+  padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.homepage section.homepage-highlight > div .slick-dots li button:before {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  content: '';
+  color: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+.homepage section.homepage-highlight > div .slick-dots li.slick-active button:before {
+  background-color: #fff;
+}
+
+.homepage .body {
+  position: relative;
+}
+
+.homepage .body .slick-slide div {
+  display: none;
+}
+
+.homepage .body .slick-active div {
+  display: block;
+}
+
+.homepage .body #block-nyu-theme-content {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  width: 100%;
+  /*
+      @media (max-width: 1400px) {
+        & {
+          top: $header_height * 2;
+        }
+        article {
+            width: 85%;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        & {
+          top: $header_height * 1.5;
+        }
+        article {
+            top: -75px;
+        }
+      }
+
+      @media (max-width: $desktop) {
+        & {
+          top: $header_height * 1.5;
+        }
+        article {
+            width: 85%;
+        }
+      }*/
+  /*
+      @media (max-width: 950px) {
+        article {
+          padding-top: $content-padding !important;
+          padding-bottom: $content-padding !important;
+        }
+      }
+
+      @media (max-width: $pad) {
+        & {
+          top: $header_height * 3;
+
+          article {
+            padding: $content-padding;
+          }
+        }
+      }
+      */
+}
+
+.homepage .body #block-nyu-theme-content article {
+  color: #FFFFFF;
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 40px 20px;
+}
+
+.homepage .body #block-nyu-theme-content article h3 {
+  line-height: 75px;
+}
+
+.homepage .body #block-nyu-theme-content article .font-color p {
+  color: #522E91;
+}
+
+.homepage .body #block-nyu-theme-content article p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.homepage .body #block-nyu-theme-content article a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.homepage .body #block-nyu-theme-content {
+  display: none;
+}
+
+.homepage .body .views-view-grid #block-nyu-theme-content {
+  display: block;
+}
+
+.homepage .senior-spotlight .slick-slide {
+  margin: 0 15px;
+}
+
+.homepage .senior-spotlight .slick-dots {
+  bottom: -25px !important;
+}
+
+.homepage .senior-spotlight .slick-dots li button:before {
+  color: #fff;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #5d1889;
+  opacity: 1;
+}
+
+.homepage .senior-spotlight .slick-dots li.slick-active button:before {
+  background-color: #5d1889;
+}
+
+#block-homepagemorecontent,
+#block-views-block-frontpage-block-1 {
+  padding: 30px;
+  margin: auto;
+  max-width: 1390px;
+}
+
+@media (max-width: 575.98px) {
+  #block-homepagemorecontent,
+  #block-views-block-frontpage-block-1 {
+    padding: 15px;
+  }
+}
+
+#block-views-block-frontpage-block-1 {
+  padding-top: 0 !important;
+}
+
+#block-views-block-frontpage-block-1 h2 {
+  text-align: center;
+  margin-bottom: 2%;
+  position: relative;
+  left: 35%;
+  line-height: 1.90476em;
+  margin-top: 0.95238em;
+  margin-bottom: 0.95238em;
+}
+
+/**
+* The following codes are designed from 2019 March, the purpose of them is to 
+* reorganize the structure of class and let it can be maintained easily in future.
+* =================================================================================================
+* Attention: 
+* -----------
+* If you want to see more examples, please go to the "UI Elements" page 
+* in Development Site.
+*/
+/**
+* Spotlight Box
+* =============
+* 1. Pattern:
+* ------------
+*   <div class="spotlight-box">
+*        <div class="box-label">
+*            <p>
+*                <span class="dash-left">Spotlight Box</span>
+*            </p>
+*        </div>
+*       <div class="box-image">
+*           <a href="#">
+*              <img src="xxx.jpg">
+*           </a> 
+*        </div>
+*       <div class="box-content">
+*          <h4 class="box-title">
+*              <a href="#">
+*                   Text Title
+*              </a>
+*          </h4>
+*          <div class="box-message">
+*               <p>..........</p>
+*               <p>..........</p>
+*          </div>
+*           <div class="read-more">
+*               <a href="#">
+*                   Read more
+*               </a>
+*           </div>
+*       </div>
+*   </div>
+* 
+*
+* 2. Attention: 
+* --------------
+* - If you want to adjust the top position of box-content, suggest use the "margin-top"
+* element, do not suggest use "top: -60px" method, because this box is set with 
+* relative position, not absolute position.
+*
+* - If you want to adjust the spacing of bottom between upper box and lower box,
+* now just use the "margin-bottom" of spotlight-box, no need to adjust the max-height. 
+* 
+* - If there is one paragraph only, you can insert "single-para" class into paragraph, 
+* but actually there has been the nature of single-para by default.
+*
+* - We set this class to be relative in position and the value of float is "left", 
+* this purpose is to let you still execute it as grid even if no grid there in real.
+*
+*/
+.spotlight-box {
+  margin-bottom: 20px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.spotlight-box h3,
+.spotlight-box h4,
+.spotlight-box p,
+.spotlight-box ul,
+.spotlight-box ol {
+  max-width: 100% !important;
+}
+
+.spotlight-box .box-label p {
+  color: #999;
+  font-size: 13px !important;
+  margin-bottom: 6px !important;
+  padding: initial !important;
+}
+
+.spotlight-box .box-label p span {
+  color: #888;
+}
+
+.spotlight-box .box-image {
+  background-color: #D5D5D5;
+  font-size: 0;
+}
+
+.spotlight-box .box-image img {
+  width: 100%;
+}
+
+.spotlight-box .box-image img.file-default {
+  margin-top: 0 !important;
+}
+
+.spotlight-box .box-content {
+  background-color: #fff;
+  position: relative;
+  max-width: 90%;
+  padding: 20px 20px 20px 0;
+  margin-top: -60px;
+}
+
+.spotlight-box .box-content .box-title {
+  font-size: 1em;
+  height: auto;
+  padding: 0 0 5px 0 !important;
+}
+
+.spotlight-box .box-content .box-title a {
+  color: #57068C;
+  font-weight: 600;
+  padding: 0 !important;
+}
+
+.spotlight-box .box-content .box-title a:hover, .spotlight-box .box-content .box-title a:focus {
+  color: #57068C;
+}
+
+.spotlight-box .box-content .box-title,
+.spotlight-box .box-content .box-message,
+.spotlight-box .box-content .read-more {
+  margin: 0 0 10px;
+}
+
+.spotlight-box .box-content .box-message {
+  height: auto;
+  overflow: auto;
+}
+
+.spotlight-box .box-content .box-message p {
+  color: #777;
+  margin-bottom: 20px;
+  padding: initial;
+}
+
+.spotlight-box .box-content .box-message p:last-of-type, .spotlight-box .box-content .box-message p.single-para {
+  margin-bottom: 10px;
+}
+
+.spotlight-box .box-content .read-more {
+  margin: 0;
+  padding: 0;
+}
+
+.spotlight-box .box-content .read-more a {
+  color: #444;
+  font-size: 13px !important;
+  font-weight: 600;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.spotlight-box .box-content .read-more a:hover, .spotlight-box .box-content .read-more a:focus {
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .spotlight-box .box-content {
+    margin-top: -30px;
+  }
+}
+
+/* Responsive Setting */
+@media (max-width: 1400px) {
+  .homepage .body #block-nyu-theme-content {
+    top: 187.5px;
+  }
+  .homepage .body #block-nyu-theme-content article {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .homepage .body h1 {
+    margin: 0.3em 0;
+  }
+  .homepage .body #block-nyu-theme-content {
+    max-height: 100%;
+    position: relative;
+    top: -75px;
+    min-height: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background: none;
+  }
+  .homepage .body #block-nyu-theme-content article {
+    opacity: 1;
+    left: 0;
+    width: 80%;
+    left: 10%;
+    padding: 40px;
+    position: relative;
+    background-color: #FFFFFF;
+    bottom: initial;
+  }
+  .homepage .body #block-nyu-theme-content article h3 {
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .homepage .body #block-nyu-theme-content article p {
+    color: #777;
+  }
+  .homepage .body #block-nyu-theme-content article a {
+    color: #522E91;
+  }
+  .homepage .body .slick-dots {
+    bottom: 40px;
+    position: relative;
+    padding: 0;
+    text-align: center !important;
+  }
+  .homepage .body .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .homepage .body .slick-dots li button:before {
+    border: 1px solid #5d1889 !important;
+  }
+  .homepage .body .slick-dots li.slick-active button:before {
+    background: #5d1889 !important;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #block-views-block-frontpage-block-1 h2 {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  #block-views-block-frontpage-block-1 h2 {
+    left: 25%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

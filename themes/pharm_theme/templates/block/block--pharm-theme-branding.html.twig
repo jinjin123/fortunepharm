@@ -1,0 +1,13 @@
+{% extends "block.html.twig" %}
+{% if language == 'en' %}
+  {% set URL = '/' %}
+{% else %}
+  {% set URL = '/cn' %}
+{% endif %}
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ URL }}" title="{{ 'Home'|t }}" rel="{{ 'Home'|t }}">
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+    </a>
+  {% endif %}
+{% endblock %}

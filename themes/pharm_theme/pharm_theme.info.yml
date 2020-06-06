@@ -1,0 +1,18 @@
+core: 8.x
+type: theme
+
+name: 'pharm_theme'
+description: 'Theme'
+
+regions:
+  header: 'Header'
+  home_page: 'Home page'
+  banner: 'Banner'
+  page_title: 'Page Title'
+  page_banner: 'Page Banner'
+  content: 'Content'
+  navigation: 'Navigation'
+  footer: 'Footer'
+
+libraries:
+  - pharm_theme/global

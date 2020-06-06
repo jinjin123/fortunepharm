@@ -1,0 +1,35 @@
+{{ attach_library('nyu_theme/homepage') }}
+
+<div class="layout-container homepage">
+
+  <header id="header" class="navbar">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.header }}
+      </div>
+    </div>
+  </header>
+
+  <main class="body" role="main">
+    <div class="banner">
+      {{ page.banner }}
+    </div>
+    <div class="content-section">
+      <div class="inner">
+        {% if page.home_page %}
+          <div class="home_page">
+            {{ page.home_page }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo" id="footer">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.footer }}
+      </div>
+    </div>
+  </footer>
+</div>

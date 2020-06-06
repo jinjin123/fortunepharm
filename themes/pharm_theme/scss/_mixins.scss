@@ -1,0 +1,71 @@
+@mixin main-heading {
+  background: #4120a0; /* Old Browsers */
+  background: -webkit-linear-gradient(left,#4120a0 1%,#b22045 100%); /*Safari 5.1-6*/
+  background: -o-linear-gradient(left,#4120a0 1%,#b22045 100%); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(left,#4120a0 1%,#b22045 100%); /*Fx 3.6-15*/
+  background: linear-gradient(left,#4120a0 1%,#b22045 100%); /*Standard*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-size: 52px;
+  line-height: 60px;
+  margin:0 ;
+  padding-bottom: $space-30;
+  font-weight: $font-bold;
+  @media (max-width: 1024px) { 
+    font-size: 38px;
+    line-height: 46px;
+    padding: $space-60 0 $space-30 0; 
+  }
+  @media (max-width: 767px) { 
+    font-size: 28px;
+    line-height:36px;
+  }
+}
+@mixin small-content {
+  font-size: 13px;
+  line-height: 18px;
+  color: #777;
+}
+@mixin sub-heading {
+  font-size:30px;
+  line-height: 36px;
+  margin:0 ;
+  padding-bottom: $space-20;
+  font-weight: $font-bold;
+  color: $dark_gray;
+  @media (max-width: 1024px) { 
+    font-size: 24px;
+    line-height: 30px;
+  }
+  @media (max-width: 767px) { 
+    font-size: 20px;
+    padding: 0 0 $space-10 0!important;
+  }
+}
+@mixin bullet-title {
+  font-size:20px;
+  line-height: 26px;
+  margin:0 ;
+  padding: $space-20 0 $space-25 $space-20;
+  font-weight: $font-bold;
+  color: $purple_new;
+  position: relative;
+  &::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color:  $purple_new;
+    border-radius: $width-fluid;
+    content: '';
+    margin: 8px 0 0 -20px;
+  }
+  @media (max-width: 1024px) { 
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @media (max-width: 767px) { 
+    font-size: 18px;
+  }
+}

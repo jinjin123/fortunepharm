@@ -1,0 +1,37 @@
+<div class="layout-container page">
+{# Header section #}
+  <header id="header" class="navbar">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.header }}
+      </div>
+    </div>
+  </header>
+{# Header section #}
+{# Content section #}
+  <div id="main">
+    <div class="container-fluid">
+      <section id="banner-wrapper">
+        <div class="page_title">
+        {{ page.page_title }}
+      </div>
+      <div class="page_banner">
+        {{ page.page_banner }}
+      </div>
+      </section>
+      <section id="os-wrapper">
+        {{ page.content }}
+      </section>
+    </div>
+  </div>
+{# Content section #}
+{# Footer section #}
+  <footer class="footer" role="contentinfo" id="footer">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.footer }}
+      </div>
+    </div>
+  </footer>
+</div>
+{# Footer section #}

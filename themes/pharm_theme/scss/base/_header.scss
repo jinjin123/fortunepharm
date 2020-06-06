@@ -1,0 +1,138 @@
+@import '../variable';
+#header {
+    border: 0;
+    #logo {
+        width: 90px;
+        height: 110px;
+        padding: 0;
+        margin: 0 0 0 0;
+    }
+    a {
+        color: #878787;
+        &:active, &:hover {
+            color: #040C4A;
+        }
+    }
+    .main-menu {
+        margin-top: 80px;
+    }
+    #lang, #social-icon, #linkage-icon {
+        margin-top: 60px;
+    }
+    #lang {
+        padding-right: 0px;
+        padding-left: 12px;
+        a {
+            height: 24px;
+            line-height: 24px;
+            padding: 0 5px;
+            background-image: url(../images/laug_sep.png);
+            background-position: left;
+            &:hover {
+              color: #040C4A;
+              background: none;
+              text-decoration: none;
+            }
+        }
+        li:first-child a {
+            background-image: none;
+        }
+        .active a {
+            color: #040C4A;
+        }
+        li {
+            margin: 13px 0;
+        }
+    }
+    #linkage-icon {
+        .icon-list-item a {
+            padding-right: 0px;
+            padding-left: 12px
+        }
+    }
+    .main-menu a {
+        height: 30px;
+        line-height: 20px;
+        padding: 5px 10px;
+        margin: 0 5px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          background: none;
+          text-decoration: underline;
+        }
+    }
+    #social-icon {
+        margin-left: 20px;
+        a {
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            margin: 0 1px;
+            &:hover {
+                background-position: 0 -24px;
+            }
+        }
+        a.fb-icon {
+            background-image: url(../images/facebook_icon.png);
+        }
+        a.weibo-icon {
+            background-image: url(../images/webio_icon.png);
+        }
+        a.youtube-icon {
+            background-image: url(../images/youtube_icon.png);
+        }
+        #social-icon li {
+            margin: 13px 0;
+        }
+    }
+    #linkage-icon {
+        margin-left: 10px;
+    }
+    .navbar-header {
+        float: left;
+    }
+    #block-pharm-theme-branding a {
+        width: 90px;
+        height: 110px;
+        padding: 0;
+        margin: 0 0 0 0;
+        display: block;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #header {
+        padding-bottom: 10px;
+        border-bottom: 2px solid #EFEFEF;
+    }
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+        visibility: visible !important;
+    }
+    .main-menu {
+        float: left;
+        margin: 0;
+        list-style: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #header {
+        .navbar-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 0;
+        }
+        .navbar-middle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 200px;
+        }
+        #lang, #social-icon, #linkage-icon {
+            margin-top: 0;
+        }
+    }
+}

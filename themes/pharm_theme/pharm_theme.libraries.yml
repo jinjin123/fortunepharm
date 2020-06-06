@@ -1,0 +1,50 @@
+global:
+  css:
+    theme:
+      https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css: {}
+      node_modules/normalize.css/normalize.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      dist/css/style.css: {}
+  js:
+    dist/js/app.js: {}
+    https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - c2018/countdown
+
+
+slick:
+  css:
+    theme:
+      node_modules/slick-carousel/slick/slick.css: {}
+      node_modules/slick-carousel/slick/slick-theme.css: {}
+  js:
+    node_modules/slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
+countdown:
+  css:
+    theme:
+      vendors/countdown/media.css: {}
+  js:
+    vendors/countdown/jquery.countdown.js: {}
+  dependencies:
+    - core/jquery
+
+homepage:
+  js:
+    dist/js/homepage/index.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - c2018/slick
+
+
+news:
+  js:
+    dist/js/news/index.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

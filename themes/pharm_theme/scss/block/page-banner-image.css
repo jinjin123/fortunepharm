@@ -1,0 +1,30 @@
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden;
+  }
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden;
+  }
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+    width: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+}
+/*# sourceMappingURL=page-banner-image.css.map */

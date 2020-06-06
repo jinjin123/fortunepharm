@@ -1,0 +1,196 @@
+@import '../variable';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    line-height: 1.875rem;
+    font-size: 1rem;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, label {
+    color: #000;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+strong {
+    font-weight: $font-bold;
+}
+.body {
+    min-height: $header_height;
+}
+.layout-container {
+    position: relative;
+}
+.content-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .inner {
+        width: 100%;
+        max-width: $content_full_width;
+        padding: 0 $content_padding;
+    }
+}
+h1 {
+    margin-top: 0;
+}
+#block-pharm-theme-local-tasks {
+    line-height: 40px;
+    >ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        li {
+            flex-grow: 1;
+            border-bottom: 1px solid #ccc;
+            background: #eee;
+        }
+        a {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #220337;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            &:hover {
+                background: #220337;
+                color: #fff;
+            }
+        }
+    }
+}
+@media (max-width: $pad) {
+    html, body {
+        font-size: 15px;
+    }
+}
+@media (max-width: $phone) {
+    .content-section {
+        .inner {
+            padding: 0 $content_padding_sm;
+        }
+    }
+}
+form {
+    line-height: 200%;
+    fieldset {
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+    #edit-submit {
+        width: 100px;
+        background-color: $purple;
+        color: $white;
+        border: none;
+        margin: $content_padding_sm 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.table-bordered {
+    thead {
+        td, th {
+            border-bottom-width: 1px;
+        }
+    }
+}
+table {
+    border: 1px solid $light_grey;
+    border-bottom: 3px solid $purple;
+    border-spacing: 0;
+    tr {
+        line-height: 1.5;
+        td {
+            padding: 7px;
+            font-size: 15px;
+            p {
+                margin-bottom: 20px!important;
+                &:last-child {
+                    margin-bottom: 0!important;
+                }
+            }
+            a {
+                font-weight: 400!important;
+            }
+        }
+    }
+    thead {
+        tr {
+            color: $grey;
+            th {
+                border-width: 1px;
+                font-size: 15px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            color: $grey; // &:nth-child(odd) {
+            //   background-color: $pink;
+            // }
+        }
+    }
+}
+h1, h2, h3, h4 {
+    display: inline-block
+}
+.text-center {
+    text-align: center;
+}
+.container-fluid-40 {
+    position: relative;
+    padding-right: 45px;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+.container-fluid-125 {
+    position: relative;
+    padding-right: 125px;
+    padding-left: 125px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}

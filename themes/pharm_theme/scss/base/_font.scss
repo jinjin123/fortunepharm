@@ -1,0 +1,43 @@
+
+// Icon font torch
+@font-face {
+	font-family: 'icomoon';
+	src:url('https://cdn.shanghai.nyu.edu/sites/default/files/icomoon.ttf');
+}
+// Gotham
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Light.eot');
+	src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham-Light.woff') format('woff'),
+		url('../fonts/Gotham-Light.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Book.eot');
+	src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham-Book.woff') format('woff'),
+		url('../fonts/Gotham-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/GothamMedium.eot');
+	src: url('../fonts/GothamMedium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamMedium.woff') format('woff'),
+		url('../fonts/GothamMedium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/GothamBold.eot');
+	src: url('../fonts/GothamBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamBold.woff') format('woff'),
+		url('../fonts/GothamBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
