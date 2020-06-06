@@ -13,11 +13,20 @@
           <li class=""><a href="http://www.fortunepharm.com/eng/health-tips">Health Tips</a></li>
           <li class="active"><a href="http://www.fortunepharm.com/eng/other-services">Other Services</a></li>
         </ul> #}
+        {% if language == 'en' %}
+          {% set active_en = 'active' %}
+        {% endif %}
+        {% if language == 'zh-hant' %}
+          {% set active_cht = 'active' %}
+        {% endif %}
+        {% if language == 'zh-hans' %}
+          {% set active_chs = 'active' %}
+        {% endif %}
     <div class="navbar-right">
       <ul id="lang" class="nav navbar-nav">
-        <li class=""><a href="http://www.fortunepharm.com/cht/other-services">繁</a></li>
-        <li class=""><a href="http://www.fortunepharm.com/chs/other-services">簡</a></li>
-        <li class="active"><a href="http://www.fortunepharm.com/eng/other-services">ENG</a></li>
+        <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
+        <li class="{{active_cht}}"><a href="/chs{{ current_url }}">簡</a></li>
+        <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
       </ul>
       <ul id="social-icon" class="nav navbar-nav">
         <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
