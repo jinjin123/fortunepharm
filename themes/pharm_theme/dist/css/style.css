@@ -341,11 +341,6 @@ h1, h2, h3, h4 {
   #footer ul {
     padding: 0; } }
 
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
 #block-nyu-theme-breadcrumbs {
   line-height: 40px; }
   #block-nyu-theme-breadcrumbs ol {
@@ -405,6 +400,11 @@ body.fontyourface {
       overflow-x: hidden;
       transform: translateX(-36%); } }
 
+
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
 
 body {
   color: #656565; }
@@ -507,13 +507,13 @@ i {
     float: left;
     width: 75%; }
 
-.page-node-2 #block-pharm-theme-content {
+.page-node-type-page #block-pharm-theme-content {
   max-width: 900px;
   margin: 0 auto;
   padding-bottom: 30px; }
-  .page-node-2 #block-pharm-theme-content p {
+  .page-node-type-page #block-pharm-theme-content p {
     color: #878787; }
-  .page-node-2 #block-pharm-theme-content .field-label-hidden {
+  .page-node-type-page #block-pharm-theme-content .field-label-hidden {
     margin: 10px 0; }
 
 @media only screen and (min-width: 768px) {
