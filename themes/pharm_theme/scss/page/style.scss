@@ -55,14 +55,175 @@ i {
             color: #878787;
         }
         .field-label-hidden {
-          margin: 10px 0;
+            margin: 10px 0;
         }
     }
 }
-
-
-@media only screen and (min-width: 768px){
-  #block-pharm-theme-content{
-    width: 50%;
-  }
+#block-historybottomcontent-2 {
+    .center-intro-video {
+        text-align: center;
+        iframe {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+    .intro-img {
+        max-width: 100%;
+        border: 3px solid #F8F8F8;
+    }
+    .intro-text-area {
+        word-wrap: break-word;
+        margin: 10px 10px 10px 0px;
+    }
+    .tvc-img-btn {
+        display: block;
+        width: 162px;
+        height: 52px;
+        background-image: url(../images/intro_play_btn.png);
+        margin-top: 15px;
+    }
+}
+#block-latestoffers {
+    .img-wrapper {
+        padding-right: 3px;
+    }
+    .content-wrapper {
+        padding-left: 3px;
+        >div {
+            height: 100%;
+        }
+        .content-left {
+            background-color: #C4EDF6;
+            display: table;
+            h3 {
+                font-size: 1.5em;
+                margin: 0;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                color: #000077;
+            }
+        }
+        .content-right {
+            overflow-y: auto;
+            background-color: #EAF6F8;
+            padding: 15px;
+        }
+    }
+}
+#block-contactus {
+    #offers-wrapper {
+        overflow: hidden;
+        >div {
+            padding: 0;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+    }
+    .content-wrapper {
+        >div {
+            height: 100%;
+        }
+        .content-left {
+            background-color: #C4EDF6;
+            display: table;
+            div {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            h3 {
+                font-size: 1.5em;
+                margin: 0;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                color: #000077;
+                display: block;
+                vertical-align: inherit;
+                padding: 0; 
+            }
+            p {
+                text-align: center;
+                font-size: 0.5em;
+                margin-top: 10px;
+            }
+        }
+        .content-right {
+            background-color: #EAF6F8;
+            padding: 0;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    padding: 15px 20px;
+                    width: 100%;
+                    border-bottom: 1px solid #E1ECEE;
+                    color: #848788;
+                    label {
+                        width: 65px;
+                        a {
+                            color: #848788;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-wrapper.with-image {
+        .content-left {
+            display: block;
+            padding: 0;
+            background-color: #EAF6F8;
+            img {
+                width: 61%;
+            }
+        }
+        .content-right {
+            background-color: #EAF6F8;
+            padding: 20px 15px;
+            p, a {
+                color: #848788;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    #block-pharm-theme-content {
+        width: 50%;
+    }
+    #block-contactus {
+        #offers-wrapper {
+            >div:nth-child(odd) {
+                padding-right: 3px;
+                clear: both;
+            }
+            >div:nth-child(even) {
+                padding-left: 3px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    #block-contactus {
+        .content-wrapper {
+            height: 304px !important;
+            h3 {
+                padding: 0;
+            }
+            .content-right {
+                ul {
+                    li {
+                        padding: 15px 10px;
+                        label {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .content-wrapper.with-image {
+            height: 230px !important;
+        }
+    }
 }

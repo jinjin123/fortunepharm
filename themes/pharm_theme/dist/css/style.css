@@ -206,6 +206,23 @@ h1, h2, h3, h4 {
       color: #040C4A; }
   #header .main-menu {
     margin-top: 80px; }
+    #header .main-menu a {
+      height: 30px;
+      line-height: 20px;
+      padding: 5px 10px;
+      margin: 0 5px;
+      border-bottom: 1px solid transparent;
+      color: #878787; }
+      #header .main-menu a:hover {
+        background: none;
+        color: #040C4A;
+        border-bottom: 1px #040C4A solid; }
+    #header .main-menu .active a {
+      color: #040C4A;
+      border-bottom: 1px #040C4A solid; }
+    #header .main-menu #linkage-icon .icon-list-item a {
+      padding-right: 0px;
+      padding-left: 12px; }
   #header #lang, #header #social-icon, #header #linkage-icon {
     margin-top: 60px; }
   #header #lang {
@@ -227,20 +244,9 @@ h1, h2, h3, h4 {
       color: #040C4A; }
     #header #lang li {
       margin: 13px 0; }
-  #header #linkage-icon .icon-list-item a {
-    padding-right: 0px;
-    padding-left: 12px; }
-  #header .main-menu a {
-    height: 30px;
-    line-height: 20px;
-    padding: 5px 10px;
-    margin: 0 5px;
-    border-bottom: 1px solid transparent; }
-    #header .main-menu a:hover {
-      background: none;
-      text-decoration: underline; }
   #header #social-icon {
-    margin-left: 20px; }
+    margin-left: 20px;
+    margin-top: 75px; }
     #header #social-icon a {
       width: 24px;
       height: 24px;
@@ -340,71 +346,6 @@ h1, h2, h3, h4 {
     padding-left: 10px; }
   #footer ul {
     padding: 0; } }
-
-#block-nyu-theme-breadcrumbs {
-  line-height: 40px; }
-  #block-nyu-theme-breadcrumbs ol {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; }
-    #block-nyu-theme-breadcrumbs ol li {
-      margin-right: 5px; }
-      #block-nyu-theme-breadcrumbs ol li:after {
-        content: '>'; }
-      #block-nyu-theme-breadcrumbs ol li:last-child:after {
-        display: none; }
-
-#block-nyu-theme-local-tasks {
-  line-height: 40px; }
-  #block-nyu-theme-local-tasks > ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #block-nyu-theme-local-tasks > ul li {
-      flex-grow: 1;
-      border-bottom: 1px solid #ccc;
-      background: #eee; }
-      #block-nyu-theme-local-tasks > ul li a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #220337;
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        #block-nyu-theme-local-tasks > ul li a:hover {
-          background: #220337;
-          color: #fff; }
-
-#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-@media (max-width: 991.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: 100%;
-      height: auto;
-      overflow-x: hidden; } }
-
-@media screen and (max-width: 575.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: auto;
-      max-height: 400px;
-      overflow-x: hidden;
-      transform: translateX(-36%); } }
-
-
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
 
 body {
   color: #656565; }
@@ -516,6 +457,192 @@ i {
   .page-node-type-page #block-pharm-theme-content .field-label-hidden {
     margin: 10px 0; }
 
+#block-historybottomcontent-2 .center-intro-video {
+  text-align: center; }
+  #block-historybottomcontent-2 .center-intro-video iframe {
+    width: 100%;
+    max-width: 500px; }
+
+#block-historybottomcontent-2 .intro-img {
+  max-width: 100%;
+  border: 3px solid #F8F8F8; }
+
+#block-historybottomcontent-2 .intro-text-area {
+  word-wrap: break-word;
+  margin: 10px 10px 10px 0px; }
+
+#block-historybottomcontent-2 .tvc-img-btn {
+  display: block;
+  width: 162px;
+  height: 52px;
+  background-image: url(../images/intro_play_btn.png);
+  margin-top: 15px; }
+
+#block-latestoffers .img-wrapper {
+  padding-right: 3px; }
+
+#block-latestoffers .content-wrapper {
+  padding-left: 3px; }
+  #block-latestoffers .content-wrapper > div {
+    height: 100%; }
+  #block-latestoffers .content-wrapper .content-left {
+    background-color: #C4EDF6;
+    display: table; }
+    #block-latestoffers .content-wrapper .content-left h3 {
+      font-size: 1.5em;
+      margin: 0;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: #000077; }
+  #block-latestoffers .content-wrapper .content-right {
+    overflow-y: auto;
+    background-color: #EAF6F8;
+    padding: 15px; }
+
+#block-contactus #offers-wrapper {
+  overflow: hidden; }
+  #block-contactus #offers-wrapper > div {
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden; }
+
+#block-contactus .content-wrapper > div {
+  height: 100%; }
+
+#block-contactus .content-wrapper .content-left {
+  background-color: #C4EDF6;
+  display: table; }
+  #block-contactus .content-wrapper .content-left div {
+    display: table-cell;
+    vertical-align: middle; }
+  #block-contactus .content-wrapper .content-left h3 {
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000077;
+    display: block;
+    vertical-align: inherit;
+    padding: 0; }
+  #block-contactus .content-wrapper .content-left p {
+    text-align: center;
+    font-size: 0.5em;
+    margin-top: 10px; }
+
+#block-contactus .content-wrapper .content-right {
+  background-color: #EAF6F8;
+  padding: 0; }
+  #block-contactus .content-wrapper .content-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    #block-contactus .content-wrapper .content-right ul li {
+      padding: 15px 20px;
+      width: 100%;
+      border-bottom: 1px solid #E1ECEE;
+      color: #848788; }
+      #block-contactus .content-wrapper .content-right ul li label {
+        width: 65px; }
+        #block-contactus .content-wrapper .content-right ul li label a {
+          color: #848788; }
+
+#block-contactus .content-wrapper.with-image .content-left {
+  display: block;
+  padding: 0;
+  background-color: #EAF6F8; }
+  #block-contactus .content-wrapper.with-image .content-left img {
+    width: 61%; }
+
+#block-contactus .content-wrapper.with-image .content-right {
+  background-color: #EAF6F8;
+  padding: 20px 15px; }
+  #block-contactus .content-wrapper.with-image .content-right p, #block-contactus .content-wrapper.with-image .content-right a {
+    color: #848788; }
+
 @media only screen and (min-width: 768px) {
   #block-pharm-theme-content {
-    width: 50%; } }
+    width: 50%; }
+  #block-contactus #offers-wrapper > div:nth-child(odd) {
+    padding-right: 3px;
+    clear: both; }
+  #block-contactus #offers-wrapper > div:nth-child(even) {
+    padding-left: 3px; } }
+
+@media only screen and (max-width: 767px) {
+  #block-contactus .content-wrapper {
+    height: 304px !important; }
+    #block-contactus .content-wrapper h3 {
+      padding: 0; }
+    #block-contactus .content-wrapper .content-right ul li {
+      padding: 15px 10px; }
+      #block-contactus .content-wrapper .content-right ul li label {
+        display: block; }
+  #block-contactus .content-wrapper.with-image {
+    height: 230px !important; } }
+
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
+#block-nyu-theme-breadcrumbs {
+  line-height: 40px; }
+  #block-nyu-theme-breadcrumbs ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; }
+    #block-nyu-theme-breadcrumbs ol li {
+      margin-right: 5px; }
+      #block-nyu-theme-breadcrumbs ol li:after {
+        content: '>'; }
+      #block-nyu-theme-breadcrumbs ol li:last-child:after {
+        display: none; }
+
+#block-nyu-theme-local-tasks {
+  line-height: 40px; }
+  #block-nyu-theme-local-tasks > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #block-nyu-theme-local-tasks > ul li {
+      flex-grow: 1;
+      border-bottom: 1px solid #ccc;
+      background: #eee; }
+      #block-nyu-theme-local-tasks > ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #220337;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+        #block-nyu-theme-local-tasks > ul li a:hover {
+          background: #220337;
+          color: #fff; }
+
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden; } }
+
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+      transform: translateX(-36%); } }
+

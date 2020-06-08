@@ -15,54 +15,63 @@
     }
     .main-menu {
         margin-top: 80px;
-    }
-    #lang, #social-icon, #linkage-icon {
-        margin-top: 60px;
-    }
-    #lang {
-        padding-right: 0px;
-        padding-left: 12px;
         a {
-            height: 24px;
-            line-height: 24px;
-            padding: 0 5px;
-            background-image: url(../images/laug_sep.png);
-            background-position: left;
+            height: 30px;
+            line-height: 20px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-bottom: 1px solid transparent;
+            color: #878787;
             &:hover {
-              color: #040C4A;
-              background: none;
-              text-decoration: none;
+                background: none;
+                color: #040C4A;
+                border-bottom: 1px #040C4A solid;
             }
         }
-        li:first-child a {
-            background-image: none;
+        .active {
+            a {
+                color: #040C4A;
+                border-bottom: 1px #040C4A solid;
+            }
         }
-        .active a {
-            color: #040C4A;
-        }
-        li {
-            margin: 13px 0;
+        #linkage-icon {
+            .icon-list-item a {
+                padding-right: 0px;
+                padding-left: 12px
+            }
         }
     }
-    #linkage-icon {
-        .icon-list-item a {
+            #lang, #social-icon, #linkage-icon {
+            margin-top: 60px;
+        }
+        #lang {
             padding-right: 0px;
-            padding-left: 12px
+            padding-left: 12px;
+            a {
+                height: 24px;
+                line-height: 24px;
+                padding: 0 5px;
+                background-image: url(../images/laug_sep.png);
+                background-position: left;
+                &:hover {
+                    color: #040C4A;
+                    background: none;
+                    text-decoration: none;
+                }
+            }
+            li:first-child a {
+                background-image: none;
+            }
+            .active a {
+                color: #040C4A;
+            }
+            li {
+                margin: 13px 0;
+            }
         }
-    }
-    .main-menu a {
-        height: 30px;
-        line-height: 20px;
-        padding: 5px 10px;
-        margin: 0 5px;
-        border-bottom: 1px solid transparent;
-        &:hover {
-          background: none;
-          text-decoration: underline;
-        }
-    }
     #social-icon {
         margin-left: 20px;
+        margin-top: 75px;
         a {
             width: 24px;
             height: 24px;
