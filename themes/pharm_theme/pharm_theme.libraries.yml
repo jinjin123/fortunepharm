@@ -12,6 +12,7 @@ global:
     js/timeline.js: {}
     js/app.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
     - core/jquery.once
 

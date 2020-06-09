@@ -140,7 +140,7 @@ i {
                 color: #000077;
                 display: block;
                 vertical-align: inherit;
-                padding: 0; 
+                padding: 0;
             }
             p {
                 text-align: center;
@@ -186,6 +186,79 @@ i {
                 color: #848788;
             }
         }
+    }
+}
+#company-timeline {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding-top: 50px;
+    background-image: url(../images/charity_arrow.png);
+    background-position: center top;
+    #timeline_date_separator_1954 {
+        padding-top: 0;
+    }
+    div.timeline_title {
+        margin: 0;
+        span.timeline_title_date {
+            display: none;
+        }
+        span.timeline_title_label {
+            position: relative;
+            font-size: 2em;
+            height: 45px;
+            line-height: 45px;
+            padding-left: 15px;
+            color: #FFF;
+            background-position: left;
+        }
+    }
+    .timeline_element_left {
+        div.timeline_title {
+            span.timeline_title_label {
+                background-image: url(../images/intro_year_tag_1.png);
+            }
+        }
+    }
+    .timeline_element_right {
+        div.timeline_title {
+            span.timeline_title_label {
+                background-image: url(../images/intro_year_tag_2.png);
+            }
+        }
+    }
+    div.timeline {
+        div.date_separator {
+            span {
+                font-family: "Times New Roman";
+                font-size: 2em;
+                border: 0;
+                background-color: #F8F8F8;
+                color: #8E8E8E;
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    }
+    div.timeline_element_box {
+        border: 0;
+    }
+    div.timeline_title {
+        background-color: #F8F8F8;
+    }
+    div.timeline_element.blog_post {
+        div.content {
+            background-color: #F8F8F8;
+            color: #878787;
+            padding: 10px 20px 20px 20px;
+        }
+    }
+    .youtube-btn {
+        display: block;
+        width: 162px;
+        height: 52px;
+        background-image: url(../image/intro_play_btn.png);
+        margin-top: 15px;
     }
 }
 @media only screen and (min-width: 768px) {

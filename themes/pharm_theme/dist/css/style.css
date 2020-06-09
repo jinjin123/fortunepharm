@@ -347,6 +347,71 @@ h1, h2, h3, h4 {
   #footer ul {
     padding: 0; } }
 
+#block-nyu-theme-breadcrumbs {
+  line-height: 40px; }
+  #block-nyu-theme-breadcrumbs ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; }
+    #block-nyu-theme-breadcrumbs ol li {
+      margin-right: 5px; }
+      #block-nyu-theme-breadcrumbs ol li:after {
+        content: '>'; }
+      #block-nyu-theme-breadcrumbs ol li:last-child:after {
+        display: none; }
+
+#block-nyu-theme-local-tasks {
+  line-height: 40px; }
+  #block-nyu-theme-local-tasks > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #block-nyu-theme-local-tasks > ul li {
+      flex-grow: 1;
+      border-bottom: 1px solid #ccc;
+      background: #eee; }
+      #block-nyu-theme-local-tasks > ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #220337;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+        #block-nyu-theme-local-tasks > ul li a:hover {
+          background: #220337;
+          color: #fff; }
+
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden; } }
+
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+      transform: translateX(-36%); } }
+
+
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
 body {
   color: #656565; }
 
@@ -561,6 +626,54 @@ i {
   #block-contactus .content-wrapper.with-image .content-right p, #block-contactus .content-wrapper.with-image .content-right a {
     color: #848788; }
 
+#company-timeline {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding-top: 50px;
+  background-image: url(../images/charity_arrow.png);
+  background-position: center top; }
+  #company-timeline #timeline_date_separator_1954 {
+    padding-top: 0; }
+  #company-timeline div.timeline_title {
+    margin: 0; }
+    #company-timeline div.timeline_title span.timeline_title_date {
+      display: none; }
+    #company-timeline div.timeline_title span.timeline_title_label {
+      position: relative;
+      font-size: 2em;
+      height: 45px;
+      line-height: 45px;
+      padding-left: 15px;
+      color: #FFF;
+      background-position: left; }
+  #company-timeline .timeline_element_left div.timeline_title span.timeline_title_label {
+    background-image: url(../images/intro_year_tag_1.png); }
+  #company-timeline .timeline_element_right div.timeline_title span.timeline_title_label {
+    background-image: url(../images/intro_year_tag_2.png); }
+  #company-timeline div.timeline div.date_separator span {
+    font-family: "Times New Roman";
+    font-size: 2em;
+    border: 0;
+    background-color: #F8F8F8;
+    color: #8E8E8E;
+    height: 35px;
+    line-height: 35px; }
+  #company-timeline div.timeline_element_box {
+    border: 0; }
+  #company-timeline div.timeline_title {
+    background-color: #F8F8F8; }
+  #company-timeline div.timeline_element.blog_post div.content {
+    background-color: #F8F8F8;
+    color: #878787;
+    padding: 10px 20px 20px 20px; }
+  #company-timeline .youtube-btn {
+    display: block;
+    width: 162px;
+    height: 52px;
+    background-image: url(../image/intro_play_btn.png);
+    margin-top: 15px; }
+
 @media only screen and (min-width: 768px) {
   #block-pharm-theme-content {
     width: 50%; }
@@ -581,68 +694,3 @@ i {
         display: block; }
   #block-contactus .content-wrapper.with-image {
     height: 230px !important; } }
-
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
-#block-nyu-theme-breadcrumbs {
-  line-height: 40px; }
-  #block-nyu-theme-breadcrumbs ol {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; }
-    #block-nyu-theme-breadcrumbs ol li {
-      margin-right: 5px; }
-      #block-nyu-theme-breadcrumbs ol li:after {
-        content: '>'; }
-      #block-nyu-theme-breadcrumbs ol li:last-child:after {
-        display: none; }
-
-#block-nyu-theme-local-tasks {
-  line-height: 40px; }
-  #block-nyu-theme-local-tasks > ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #block-nyu-theme-local-tasks > ul li {
-      flex-grow: 1;
-      border-bottom: 1px solid #ccc;
-      background: #eee; }
-      #block-nyu-theme-local-tasks > ul li a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #220337;
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        #block-nyu-theme-local-tasks > ul li a:hover {
-          background: #220337;
-          color: #fff; }
-
-#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-@media (max-width: 991.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: 100%;
-      height: auto;
-      overflow-x: hidden; } }
-
-@media screen and (max-width: 575.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: auto;
-      max-height: 400px;
-      overflow-x: hidden;
-      transform: translateX(-36%); } }
-
