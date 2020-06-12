@@ -14,14 +14,73 @@
     <div class="banner">
       {{ page.banner }}
     </div>
-    <div class="content-section">
-      <div class="inner">
-        {% if page.home_page %}
-          <div class="home_page">
-            {{ page.home_page }}
-          </div>
-        {% endif %}
+    <div class="container-fluid">
+      <div class="desktop-main main-wrapper hidden-xs">
+        <div class="col-sm-9-4 row-sm-9-4">
+          {{ page.home_page_top_one }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-4">
+          {{ page.home_page_top_two }}
+        </div>
+        <div class="col-sm-9-2 row-sm-9-4">
+          {{ page.home_page_top_three }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_one }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_two }}
+        </div>
+        <div class="col-sm-9-3 row-sm-9-1">
+          {{ page.home_page_bottom_three }}
+        </div>
       </div>
+      {# Mobile #}
+      <div class="mobile-main main-wrapper visible-xs">
+        <div class="col-xs-12 row-xs-12 nopadding">
+           {# {{ drupal_view('homepage_slider', 'block_1') }} #}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 10) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 11) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 12) }}
+        </div>
+        <div class="col-xs-8 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 13) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 14) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 15) }}
+        </div>
+        <div class="col-xs-8 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 16) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 17) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 18) }}
+        </div>
+        <div class="col-xs-4 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 19) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 20) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 21) }}
+        </div>
+        <div class="col-xs-12 row-xs-4 nopadding">
+          {{ drupal_entity('block_content', 22) }}
+        </div>
+      </div>
+      {# Mobile #}
     </div>
   </main>
 

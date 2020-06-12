@@ -1,10 +1,10 @@
 @import '../variable';
 @import '../mixins';
 body.fontyourface {
-  overflow-x: hidden;
-  .homepage{
-    .banner{
-      max-height: 100%;
+    overflow-x: hidden;
+    .homepage {
+        .banner {
+            max-height: 100%;
+        }
     }
-  }
 }

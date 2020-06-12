@@ -1,3 +1,13 @@
+slick:
+  css:
+    theme:
+      node_modules/slick-carousel/slick/slick.css: {}
+      node_modules/slick-carousel/slick/slick-theme.css: {}
+  js:
+    node_modules/slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+
 global:
   css:
     theme:
@@ -15,22 +25,4 @@ global:
     - core/drupal
     - core/jquery
     - core/jquery.once
-
-
-slick:
-  css:
-    theme:
-      node_modules/slick-carousel/slick/slick.css: {}
-      node_modules/slick-carousel/slick/slick-theme.css: {}
-  js:
-    node_modules/slick-carousel/slick/slick.min.js: {}
-  dependencies:
-    - core/jquery
-
-homepage:
-  js:
-    dist/js/homepage/index.js: {}
-  dependencies:
-    - core/jquery
-    - core/jquery.once
-    - c2018/slick
+    - pharm_theme/slick

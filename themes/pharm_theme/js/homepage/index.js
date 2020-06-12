@@ -6,20 +6,11 @@ jQuery(document).ready(() => {
   const $infobox = $('#block-nyu-theme-content')
   let $carouselDots = null
 
-
-// for carousel
-  $('.homepage-highlight .views-view-grid').slick({
-    autoplay: true,
-    arrows: false,
-    dots: true,
-    fade: true
-  }) 
-
   //
-  $('.senior-spotlight ul').slick({
+  $('.homepage-slider .field-content ul').slick({
     dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -31,8 +22,8 @@ jQuery(document).ready(() => {
     {
       breakpoint: 991,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 3
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     },
     {
