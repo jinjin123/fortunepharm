@@ -8,3 +8,67 @@ body.fontyourface {
         }
     }
 }
+body.path-frontpage {
+    .slick-slide {
+        img {
+            height: 100%;
+        }
+    }
+}
+.main-wrapper {
+    margin-right: -5px;
+}
+.index-wrapper  {
+    a {
+        color: #fff;
+    }
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-color: #6ECCF4;
+        background-image: url(../img/index_img_video.png);
+        background-size: 20%;
+        background-position: 30% 40%;
+        p {
+            &.video-text1 {
+                font-size: 1.2em;
+                top: 30%;
+            }
+            &.video-text2 {
+                font-size: 0.7em;
+                top: 50%;
+            }
+        }
+    }
+    .info-label {
+        position: absolute;
+        height: 30px;
+        top: 10px;
+        left: 0;
+        background-color: #6ECCF4 ;
+        line-height: 30px;
+        color: #FFF;
+        padding-left: 25px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-main {
+        .col-xs-4, .col-xs-8 {
+            &.row-xs-4 {
+                &.nopadding {
+                    div {
+                        height: 100%;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+

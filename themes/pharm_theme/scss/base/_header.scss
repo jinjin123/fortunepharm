@@ -41,37 +41,36 @@
             }
         }
     }
-            #lang, #social-icon, #linkage-icon {
-            margin-top: 60px;
-        }
-        #lang {
-            padding-right: 0px;
-            padding-left: 12px;
-            a {
-                height: 24px;
-                line-height: 24px;
-                padding: 0 5px;
-                background-image: url(../images/laug_sep.png);
-                background-position: left;
-                &:hover {
-                    color: #040C4A;
-                    background: none;
-                    text-decoration: none;
-                }
-            }
-            li:first-child a {
-                background-image: none;
-            }
-            .active a {
+    #lang, #social-icon, #linkage-icon {
+    margin-top: 60px;
+    }
+    #lang {
+        padding-right: 0px;
+        padding-left: 12px;
+        a {
+            height: 24px;
+            line-height: 24px;
+            padding: 0 5px;
+            background-image: url(../images/laug_sep.png);
+            background-position: left;
+            &:hover {
                 color: #040C4A;
-            }
-            li {
-                margin: 13px 0;
+                background: none;
+                text-decoration: none;
             }
         }
+        li:first-child a {
+            background-image: none;
+        }
+        .active a {
+            color: #040C4A;
+        }
+        li {
+            margin: 13px 0;
+        }
+    }
     #social-icon {
         margin-left: 20px;
-        margin-top: 75px;
         a {
             width: 24px;
             height: 24px;
@@ -90,7 +89,7 @@
         a.youtube-icon {
             background-image: url(../images/youtube_icon.png);
         }
-        #social-icon li {
+        li {
             margin: 13px 0;
         }
     }
@@ -99,6 +98,10 @@
     }
     .navbar-header {
         float: left;
+        img {
+            max-width: 100%;
+            width: auto;
+        }
     }
     #block-pharm-theme-branding a {
         width: 90px;
@@ -110,8 +113,8 @@
 }
 @media only screen and (min-width: 768px) {
     #header {
-        padding-bottom: 10px;
-        border-bottom: 2px solid #EFEFEF;
+        padding-bottom: 0;
+        border-bottom: 0px solid #EFEFEF;
     }
     .navbar-collapse.collapse {
         display: block !important;

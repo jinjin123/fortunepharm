@@ -8,15 +8,15 @@ var sass_dir  = './scss/**/*.scss'
 var js_dir    = './js/**/*.js'
 var fonts_dir = './fonts/**/*.*'
 
-// gulp.task('js', () => {
-//   return gulp.src(js_dir)
-//     .pipe(babel({
-//       presets: ['env']
-//     }))
-//     .pipe(uglify())
-//     // .pipe(concat('app.mijs'))
-//     .pipe(gulp.dest('./dist/js/'))
-// })
+gulp.task('js', () => {
+  return gulp.src(js_dir)
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(uglify())
+    // .pipe(concat('app.mijs'))
+    .pipe(gulp.dest('./dist/js/'))
+})
 
 
 
@@ -33,11 +33,11 @@ gulp.task('copy-font', function() {
 })
 
 
-gulp.task('default', gulp.series('copy-font', 'sass', (done) => {
+gulp.task('default', gulp.series('js', 'copy-font', 'sass', (done) => {
   // Sass changes
   gulp.watch([sass_dir], gulp.series('sass'));
   // Js changes
- // gulp.watch([js_dir], gulp.series('js'));
+  gulp.watch([js_dir], gulp.series('js'));
   // Js changes
   gulp.watch([fonts_dir], gulp.series('copy-font'));
 
