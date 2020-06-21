@@ -970,6 +970,11 @@ i {
     background-image: url(../image/intro_play_btn.png);
     margin-top: 15px; }
 
+#contact-nav {
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px; }
+
 .main-wrapper .index-wrapper, .main-wrapper #block-views-block-homepage-slider-block-1 {
   position: relative;
   height: 100%;
@@ -1169,9 +1174,9 @@ i {
   .path-news .content-row .colume2 .title-wrapper a {
     top: 10px;
     right: 10px; }
-  #banner-wrapper .page_title {
+  .page_title {
     width: 50%; }
-    #banner-wrapper .page_title h1 {
+    .page_title h1 {
       font-size: 1.25em; }
   #banner-wrapper .page_banner img {
     max-height: 130px;

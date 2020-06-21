@@ -290,6 +290,13 @@ i {
         margin-top: 15px;
     }
 }
+
+#contact-nav {
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
+}
+
 .main-wrapper {
     .index-wrapper, #block-views-block-homepage-slider-block-1 {
         position: relative;
@@ -560,14 +567,20 @@ i {
             }
         }
     }
-
-    #banner-wrapper  {
-        .page_title {
-            width: 50%;
-            h1 {
-                font-size: 1.25em;
-            }
+  //About us menu
+    .page_title {
+        width: 50%;
+        h1 {
+            font-size: 1.25em;
         }
+    }
+    #banner-wrapper  {
+        //.page_title {
+        //    width: 50%;
+        //    h1 {
+        //        font-size: 1.25em;
+        //    }
+        //}
         .page_banner {
             img {
                 max-height: 130px;
