@@ -15,9 +15,34 @@
     }
     .main-menu {
         margin-top: 80px;
+        a {
+            height: 30px;
+            line-height: 20px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-bottom: 1px solid transparent;
+            color: #878787;
+            &:hover {
+                background: none;
+                color: #040C4A;
+                border-bottom: 1px #040C4A solid;
+            }
+        }
+        .active {
+            a {
+                color: #040C4A;
+                border-bottom: 1px #040C4A solid;
+            }
+        }
+        #linkage-icon {
+            .icon-list-item a {
+                padding-right: 0px;
+                padding-left: 12px
+            }
+        }
     }
     #lang, #social-icon, #linkage-icon {
-        margin-top: 60px;
+    margin-top: 60px;
     }
     #lang {
         padding-right: 0px;
@@ -29,9 +54,9 @@
             background-image: url(../images/laug_sep.png);
             background-position: left;
             &:hover {
-              color: #040C4A;
-              background: none;
-              text-decoration: none;
+                color: #040C4A;
+                background: none;
+                text-decoration: none;
             }
         }
         li:first-child a {
@@ -42,23 +67,6 @@
         }
         li {
             margin: 13px 0;
-        }
-    }
-    #linkage-icon {
-        .icon-list-item a {
-            padding-right: 0px;
-            padding-left: 12px
-        }
-    }
-    .main-menu a {
-        height: 30px;
-        line-height: 20px;
-        padding: 5px 10px;
-        margin: 0 5px;
-        border-bottom: 1px solid transparent;
-        &:hover {
-          background: none;
-          text-decoration: underline;
         }
     }
     #social-icon {
@@ -81,7 +89,7 @@
         a.youtube-icon {
             background-image: url(../images/youtube_icon.png);
         }
-        #social-icon li {
+        li {
             margin: 13px 0;
         }
     }
@@ -90,6 +98,10 @@
     }
     .navbar-header {
         float: left;
+        img {
+            max-width: 100%;
+            width: auto;
+        }
     }
     #block-pharm-theme-branding a {
         width: 90px;
@@ -101,8 +113,8 @@
 }
 @media only screen and (min-width: 768px) {
     #header {
-        padding-bottom: 10px;
-        border-bottom: 2px solid #EFEFEF;
+        padding-bottom: 0;
+        border-bottom: 0px solid #EFEFEF;
     }
     .navbar-collapse.collapse {
         display: block !important;

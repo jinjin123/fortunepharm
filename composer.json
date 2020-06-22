@@ -20,7 +20,9 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
-        "drupal/simplify_menu": "^2.0"
+        "drupal/pathauto": "^1.8",
+        "drupal/simplify_menu": "^2.0",
+        "drupal/twig_tweak": "^2.6"
     },
     "conflict": {
         "drupal/drupal": "*"

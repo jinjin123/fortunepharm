@@ -34,7 +34,7 @@
   @media (max-width: $phone) {
     section.homepage-highlight {
       &>div {
-        
+
         .highlight-image-item {
           img {
             display: block;
@@ -60,10 +60,10 @@
             }
           }
         }
-      
+
       }
     }
-    
+
     .body {
       #block-nyu-theme-content {
         article {
@@ -268,12 +268,12 @@
 }
 
 /**
-* The following codes are designed from 2019 March, the purpose of them is to 
+* The following codes are designed from 2019 March, the purpose of them is to
 * reorganize the structure of class and let it can be maintained easily in future.
 * =================================================================================================
-* Attention: 
+* Attention:
 * -----------
-* If you want to see more examples, please go to the "UI Elements" page 
+* If you want to see more examples, please go to the "UI Elements" page
 * in Development Site.
 */
 /**
@@ -290,7 +290,7 @@
 *       <div class="box-image">
 *           <a href="#">
 *              <img src="xxx.jpg">
-*           </a> 
+*           </a>
 *        </div>
 *       <div class="box-content">
 *          <h4 class="box-title">
@@ -309,21 +309,21 @@
 *           </div>
 *       </div>
 *   </div>
-* 
 *
-* 2. Attention: 
+*
+* 2. Attention:
 * --------------
 * - If you want to adjust the top position of box-content, suggest use the "margin-top"
-* element, do not suggest use "top: -60px" method, because this box is set with 
+* element, do not suggest use "top: -60px" method, because this box is set with
 * relative position, not absolute position.
 *
 * - If you want to adjust the spacing of bottom between upper box and lower box,
-* now just use the "margin-bottom" of spotlight-box, no need to adjust the max-height. 
-* 
-* - If there is one paragraph only, you can insert "single-para" class into paragraph, 
+* now just use the "margin-bottom" of spotlight-box, no need to adjust the max-height.
+*
+* - If there is one paragraph only, you can insert "single-para" class into paragraph,
 * but actually there has been the nature of single-para by default.
 *
-* - We set this class to be relative in position and the value of float is "left", 
+* - We set this class to be relative in position and the value of float is "left",
 * this purpose is to let you still execute it as grid even if no grid there in real.
 *
 */
@@ -512,4 +512,3 @@
     left: 25%;
   }
 }
-/*# sourceMappingURL=style.css.map */

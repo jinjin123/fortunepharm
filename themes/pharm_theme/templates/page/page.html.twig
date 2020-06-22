@@ -9,18 +9,25 @@
   </header>
 {# Header section #}
 {# Content section #}
+  <nav id="contact-nav" class="container-fluid">
+    <div class="container-fluid-125">
+      <div class="page_title">
+        {{ page.page_title }}
+      </div>
+    </div>
+  </nav>
   <div id="main">
     <div class="container-fluid">
       <section id="banner-wrapper">
-        <div class="page_title">
-        {{ page.page_title }}
-      </div>
       <div class="page_banner">
         {{ page.page_banner }}
       </div>
       </section>
       <section id="os-wrapper">
         {{ page.content }}
+      </section>
+      <section id="content_bottom">
+        {{ page.content_bottom }}
       </section>
     </div>
   </div>

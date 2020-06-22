@@ -1,12 +1,14 @@
 @import '../variable';
 
 #footer {
+  border-top: 2px solid #EFEFEF;
   .container-fluid-40{
     overflow: hidden;
     margin: 20px 0 25px 0;
   }
   .copyright{
     float: left;
+    line-height: 14px;
   }
   .footer-link{
     float: right;
@@ -36,13 +38,12 @@
     }
   }
 }
-
-
-@media only screen and (min-width: 768px) {
-  #footer{
-    border-top: 2px solid #EFEFEF;
+.homepage {
+  #footer {
+    border: 0;
   }
 }
+
 
 @media only screen and (max-width: 767px){
   #footer {
