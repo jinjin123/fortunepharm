@@ -290,6 +290,13 @@ i {
         margin-top: 15px;
     }
 }
+
+#contact-nav {
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
+}
+
 .main-wrapper {
     .index-wrapper, #block-views-block-homepage-slider-block-1 {
         position: relative;
@@ -323,6 +330,30 @@ i {
             text-align: center;
             display: none;
         }
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background-color: #6ECCF4;
+        background-image: url(../images/index_img_video.png);
+        background-size: 20%;
+        background-position: 30% 40%;
+        p {
+          display: block;
+          color: #FFF;
+          width: 50%;
+          left: 45%;
+        }
+        p.video-text1 {
+          font-size: 1.2em;
+          top: 30%;
+        }
+        p.video-text2 {
+          font-size: 0.7em;
+          top: 50%;
+        }
+      }
         .link-wrapper {
             position: relative;
             width: 100%;
@@ -340,30 +371,7 @@ i {
             h3.red {
                 color: #FF6360;
             }
-            .video-wrapper {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                display: inline-block;
-                background-color: #6ECCF4;
-                background-image: url(../images/index_img_video.png);
-                background-size: 20%;
-                background-position: 30% 40%;
-                p {
-                    display: block;
-                    color: #FFF;
-                    width: 50%;
-                    left: 45%;
-                }
-                p.video-text1 {
-                    font-size: 1.2em;
-                    top: 30%;
-                }
-                p.video-text2 {
-                    font-size: 0.7em;
-                    top: 50%;
-                }
-            }
+
         }
         .link-wrapper.style1 {
             background-color: #6ECCF4;
@@ -540,7 +548,7 @@ i {
             .with-image {
                 height: 230px !important;
             }
-            
+
         }
     } // News
     .path-news {
@@ -559,14 +567,20 @@ i {
             }
         }
     }
-
-    #banner-wrapper  {
-        .page_title {
-            width: 50%;
-            h1 {
-                font-size: 1.25em;
-            }
+  //About us menu
+    .page_title {
+        width: 50%;
+        h1 {
+            font-size: 1.25em;
         }
+    }
+    #banner-wrapper  {
+        //.page_title {
+        //    width: 50%;
+        //    h1 {
+        //        font-size: 1.25em;
+        //    }
+        //}
         .page_banner {
             img {
                 max-height: 130px;
@@ -574,7 +588,7 @@ i {
             }
         }
     }
-    
+
     #block-latestoffers {
         .content-wrapper {
             .content-left {
@@ -594,4 +608,3 @@ i {
         }
     }
 }
-
