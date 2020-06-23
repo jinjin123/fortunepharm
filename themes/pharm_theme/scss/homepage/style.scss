@@ -55,17 +55,17 @@ body.path-frontpage {
     }
 }
 
-@media only screen and (max-width: 768px) {
-  .mobile-main {
-        .col-xs-4, .col-xs-8 {
-            &.row-xs-4 {
-                &.nopadding {
-                    div {
-                        height: 100%;
-                    }
-
-                }
-            }
-        }
-    }
-}
+//@media only screen and (max-width: 768px) {
+//  .mobile-main {
+//        .col-xs-4, .col-xs-8 {
+//            &.row-xs-4 {
+//                &.nopadding {
+//                    div {
+//                        height: 100%;
+//                    }
+//
+//                }
+//            }
+//        }
+//    }
+//}
