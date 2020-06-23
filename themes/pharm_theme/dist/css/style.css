@@ -683,10 +683,6 @@ body.path-frontpage .slick-slide img {
   padding-left: 25px;
   padding-right: 10px; }
 
-@media only screen and (max-width: 768px) {
-  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
-    height: 100%; } }
-
 body {
   color: #656565; }
 
