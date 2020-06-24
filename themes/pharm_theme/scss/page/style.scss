@@ -135,6 +135,55 @@ i {
     }
 }
 
+#block-advertisementsblock {
+  margin-bottom: 25px;
+  .img-wrapper {
+    padding-right: 3px;
+    > iframe {
+      //height: 100%;
+      width: 100%;
+    }
+  }
+  .content-wrapper {
+    padding-left: 3px;
+    >div {
+      height: 100%;
+    }
+    .content-left {
+      background-color: #C4EDF6;
+      //display: table;
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+        //text-align: center;
+        //display: table-cell;
+        //vertical-align: middle;
+        color: #286D9E;
+        margin-bottom: 30px;
+        //font-weight: normal;
+        //line-height: 1.1;
+      }
+    }
+    .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px;
+      > p {
+        color: #666666;
+      }
+    }
+  }
+  .latest-off-block {
+    display: flex;
+  }
+}
+
+#block-advertisementsblock .content-wrapper .content-left,
+#block-advertisementsblock .content-wrapper .content-right{
+  padding: 30px 20px;
+}
+
+
 #block-contactus {
     #offers-wrapper {
         overflow: hidden;
@@ -295,6 +344,7 @@ i {
   background-color: #F3F3F3;
   border-bottom: 3px solid #EDEDED;
   margin-bottom: 25px;
+  height: 50px
 }
 
 .main-wrapper {

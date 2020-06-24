@@ -17,6 +17,7 @@ global:
       dist/css/timeline.css: {}
       dist/css/sidebar.css: {}
       dist/css/jquery.fancybox.css: {}
+#      //www.fortunepharm.com/assets/js/fancybox/jquery.fancybox.css: {}
       dist/css/style.css: {}
 
   js:

@@ -196,6 +196,7 @@ h1, h2, h3, h4 {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+    margin-top: 12px;
 }
 .nopadding {
     padding: 0 !important;
@@ -527,6 +528,22 @@ div.index-wrapper > a > p{
     padding-left: 20px;
   }
 }
+
+#contact-nav  .container-fluid-125 .page_title {
+  ul {
+    list-style: none;
+    display: flex;
+    >li a {
+      padding-left: 20px;
+      padding-right: 20px;
+      &:hover {
+          text-decoration: underline;
+      }
+    }
+  }
+
+}
+
 
 
 

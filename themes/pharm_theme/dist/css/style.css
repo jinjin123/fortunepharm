@@ -191,7 +191,8 @@ h1, h2, h3, h4 {
   padding-left: 125px;
   margin-right: auto;
   margin-left: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 12px; }
 
 .nopadding {
   padding: 0 !important;
@@ -425,6 +426,15 @@ div.index-wrapper > a > p {
   #health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
   #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p {
     padding-left: 20px; } }
+
+#contact-nav .container-fluid-125 .page_title ul {
+  list-style: none;
+  display: flex; }
+  #contact-nav .container-fluid-125 .page_title ul > li a {
+    padding-left: 20px;
+    padding-right: 20px; }
+    #contact-nav .container-fluid-125 .page_title ul > li a:hover {
+      text-decoration: underline; }
 
 #header {
   border: 0; }
@@ -854,6 +864,36 @@ i {
   #block-latestoffers .latest-off-block {
     display: flex; }
 
+#block-advertisementsblock {
+  margin-bottom: 25px; }
+  #block-advertisementsblock .img-wrapper {
+    padding-right: 3px; }
+    #block-advertisementsblock .img-wrapper > iframe {
+      width: 100%; }
+  #block-advertisementsblock .content-wrapper {
+    padding-left: 3px; }
+    #block-advertisementsblock .content-wrapper > div {
+      height: 100%; }
+    #block-advertisementsblock .content-wrapper .content-left {
+      background-color: #C4EDF6; }
+      #block-advertisementsblock .content-wrapper .content-left h3 {
+        font-size: 1.5em;
+        margin: 0;
+        color: #286D9E;
+        margin-bottom: 30px; }
+    #block-advertisementsblock .content-wrapper .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px; }
+      #block-advertisementsblock .content-wrapper .content-right > p {
+        color: #666666; }
+  #block-advertisementsblock .latest-off-block {
+    display: flex; }
+
+#block-advertisementsblock .content-wrapper .content-left,
+#block-advertisementsblock .content-wrapper .content-right {
+  padding: 30px 20px; }
+
 #block-contactus #offers-wrapper {
   overflow: hidden; }
   #block-contactus #offers-wrapper > div {
@@ -969,7 +1009,8 @@ i {
 #contact-nav {
   background-color: #F3F3F3;
   border-bottom: 3px solid #EDEDED;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  height: 50px; }
 
 .main-wrapper .index-wrapper, .main-wrapper #block-views-block-homepage-slider-block-1 {
   position: relative;

@@ -77,10 +77,10 @@
  *
  * @code
  * $databases['default']['default'] = [
- *   'database' => 'fortunepharm',
- *   'username' => 'root',
- *   'password' => 'root',
- *   'host' => 'mysql',
+ *   'database' => 'databasename',
+ *   'username' => 'sqlusername',
+ *   'password' => 'sqlpassword',
+ *   'host' => 'localhost',
  *   'port' => '3306',
  *   'driver' => 'mysql',
  *   'prefix' => '',
@@ -793,13 +793,21 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'fortunepharmdb',
+  'database' => 'fortunepharm',
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
-  'host' => 'mysql',
-  'port' => '3306',
+  'host' => '192.168.50.146',
+  'port' => '3307',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_DhorEQay39owgS5MYIFQPwzNSrjPsh9EMLigbSW0IO0TS8OmvuaHYJSX91F22Mk4vce_EA8HWw/sync';
+$settings['memcache']['servers'] = array(
+	'192.168.50.146:11211' => 'default',
+	'192.168.50.146:11212' => 'pages'
+);
+$settings['cache']['bins']['render'] = 'cache.backend.memcache';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.memcache';
+$settings['cache']['bins']['cache_page'] = 'pages';
+#$settings['memcache_storage']['debug'] = TRUE;
