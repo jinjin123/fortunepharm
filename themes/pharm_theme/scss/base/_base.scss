@@ -24,6 +24,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, label {
 img {
     width: 100%;
 }
+p a, .blue{
+  color: #518fcc;
+}
 a {
     text-decoration: none;
     &:hover {
