@@ -177,6 +177,7 @@ Drupal.behaviors.yourmodulename = {
         /*** News page ****/
         $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
         if ($('.path-news .content-row').length > 0) {
+          $(".fancybox_popup").fancybox().trigger('click');
             $('.path-news .content-row').show();
             $.data(this, 'news', setTimeout(function() {
                 $('.path-news .content-row .colume2').each(function() {
