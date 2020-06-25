@@ -913,3 +913,102 @@ div.timeline_dual div.timeline_element_right:hover:after{
         padding-right: 10px;
     }
 }
+#wrapper #contact-nav li {
+  background-image: url(../images/laug_sep.png);
+  background-position: left;
+}
+
+#wrapper #contact-nav li:first-child {
+  background-image: none;
+}
+#contact-nav {
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
+  height: 50px
+}
+
+/* news  */
+/** News page ***/
+
+.path-news {
+  .year-wrapper {
+    width: 100%;
+    background-color: #EFF0F2;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+  .year-wrapper-div {
+    margin: 0;
+    font-size: 0.9em;
+    border-left: 2px solid #A6A6A8;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+  .content-row {
+    overflow: hidden;
+    border-top: 2px solid #F5F5F5;
+    &::last-child {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #F5F5F5;
+    }
+    >div {
+      padding: 20px;
+      min-height: 38px;
+    }
+    .colume2 {
+      position: relative;
+      border-left: 2px solid #F5F5F5;
+    }
+    &:nth-child(odd) .colume1 {
+      background-color: #C7E3E2;
+    }
+    &:nth-child(odd) .colume2 {
+      background-color: #FAFAFA;
+    }
+    .colume2 {
+      .content-wrapper {
+        display: none;
+        margin-top: 20px;
+      }
+      .title-wrapper {
+        h4 {
+          font-size: 1.2em;
+          color: #6ABED8;
+          text-decoration: underline;
+          margin: 0;
+          margin-right: 30px;
+        }
+        a {
+          position: absolute;
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          background-image: url(../images/news_open_btn.png);
+          right: 20px;
+          top: 20px;
+        }
+      }
+      .img img {
+        float: right;
+        max-width: 100%;
+      }
+      .text p {
+        color: #848788;
+      }
+    }
+  }
+  .content-row.active {
+    .colume1 {
+      background-color: #EAF6F8;
+    }
+    .colume2 {
+      .content-wrapper {
+        display: block;
+      }
+      .title-wrapper a {
+        background-position: 0 -22px;
+      }
+    }
+  }
+}

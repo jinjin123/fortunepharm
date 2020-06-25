@@ -337,3 +337,22 @@ h1, h2, h3, h4 {
         width: 11.11111111%;
     }
 }
+
+
+
+#contact-nav  .container-fluid-125 .page_title {
+  ul {
+    list-style: none;
+    display: flex;
+    >li a {
+      padding-left: 20px;
+      padding-right: 20px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+

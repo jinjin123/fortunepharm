@@ -108,6 +108,13 @@ Drupal.behaviors.yourmodulename = {
                 interval: false
             });
         }
+      /*all*/
+      function change_size(id_name, width, height) {
+        if ($('#' + id_name).length > 0) {
+          $('#' + id_name).width(width);
+          $('#' + id_name).height(height);
+        }
+      }
 
         function change_height(class_name, height) {
             if ($('.' + class_name).length > 0) {
@@ -338,6 +345,26 @@ Drupal.behaviors.yourmodulename = {
         if ($('.fancybox').length > 0) {
             $(".fancybox").fancybox();
         }
+
+
+        /*news */
+      if(window.location.href.indexOf("news") > -1){
+        $(".fancybox_popup").fancybox().trigger('click');
+        $(".fancybox-overlay").css("display","block");
+        // $(".fancybox_popup").fancybox().trigger('close');
+      }
+      $(document).click(function(e) {
+        // console.log($(e.target));
+        // console.log($(e.target).attr("class"))
+        if($(e.target).attr("class") == "fancybox-item fancybox-close"){
+          // console.log("aaa")
+          $(".fancybox-overlay").css("display","none");
+        }else if($(e.target).attr("src").indexOf("thumbs") !=-1) {
+          $(".fancybox-overlay").css("display","block");
+          $(".fancybox-overlay").css("height",$(document).height());
+        }
+
+      })
 
     }
 };
