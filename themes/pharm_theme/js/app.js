@@ -348,23 +348,7 @@ Drupal.behaviors.yourmodulename = {
 
 
         /*news */
-      if(window.location.href.indexOf("news") > -1){
-        $(".fancybox_popup").fancybox().trigger('click');
-        $(".fancybox-overlay").css("display","block");
-        // $(".fancybox_popup").fancybox().trigger('close');
-      }
-      $(document).click(function(e) {
-        // console.log($(e.target));
-        // console.log($(e.target).attr("class"))
-        if($(e.target).attr("class") == "fancybox-item fancybox-close"){
-          // console.log("aaa")
-          $(".fancybox-overlay").css("display","none");
-        }else if($(e.target).attr("src").indexOf("thumbs") !=-1) {
-          $(".fancybox-overlay").css("display","block");
-          $(".fancybox-overlay").css("height",$(document).height());
-        }
 
-      })
 
     }
 };
