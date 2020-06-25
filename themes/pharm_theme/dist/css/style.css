@@ -456,66 +456,52 @@ h1, h2, h3, h4 {
   #footer ul {
     padding: 0; } }
 
-#block-nyu-theme-breadcrumbs {
-  line-height: 40px; }
-  #block-nyu-theme-breadcrumbs ol {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; }
-    #block-nyu-theme-breadcrumbs ol li {
-      margin-right: 5px; }
-      #block-nyu-theme-breadcrumbs ol li:after {
-        content: '>'; }
-      #block-nyu-theme-breadcrumbs ol li:last-child:after {
-        display: none; }
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
 
-#block-nyu-theme-local-tasks {
-  line-height: 40px; }
-  #block-nyu-theme-local-tasks > ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #block-nyu-theme-local-tasks > ul li {
-      flex-grow: 1;
-      border-bottom: 1px solid #ccc;
-      background: #eee; }
-      #block-nyu-theme-local-tasks > ul li a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #220337;
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        #block-nyu-theme-local-tasks > ul li a:hover {
-          background: #220337;
-          color: #fff; }
+body.path-frontpage .slick-slide img {
+  height: 100%; }
 
-#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
-  display: block;
+.main-wrapper {
+  margin-right: -5px; }
+
+.index-wrapper a {
+  color: #fff; }
+
+.index-wrapper .video-wrapper {
+  position: relative;
   width: 100%;
-  height: auto; }
+  height: 100%;
+  display: inline-block;
+  background-color: #6ECCF4;
+  background-image: url(../img/index_img_video.png);
+  background-size: 20%;
+  background-position: 30% 40%; }
+  .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 1.2em;
+    top: 30%; }
+  .index-wrapper .video-wrapper p.video-text2 {
+    font-size: 0.7em;
+    top: 50%; }
 
-@media (max-width: 991.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: 100%;
-      height: auto;
-      overflow-x: hidden; } }
+.index-wrapper .info-label {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 0;
+  background-color: #6ECCF4;
+  line-height: 30px;
+  color: #FFF;
+  padding-left: 25px;
+  padding-right: 10px; }
 
-@media screen and (max-width: 575.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: auto;
-      max-height: 400px;
-      overflow-x: hidden;
-      transform: translateX(-36%); } }
+@media only screen and (max-width: 768px) {
+  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
+    height: 100%; } }
 
-
+@charset "UTF-8";
 body {
   color: #656565; }
 
@@ -751,20 +737,20 @@ i {
   #block-contactus .content-wrapper.with-image .content-right p, #block-contactus .content-wrapper.with-image .content-right a {
     color: #848788; }
 
-#company-timeline {
+#company-timeline, #fund-timeline {
   width: 90%;
   max-width: 1000px;
   margin: 50px auto;
   padding-top: 50px;
   background-image: url(../images/charity_arrow.png);
   background-position: center top; }
-  #company-timeline #timeline_date_separator_1954 {
+  #company-timeline #timeline_date_separator_1954, #fund-timeline #timeline_date_separator_1954 {
     padding-top: 0; }
-  #company-timeline div.timeline_title {
+  #company-timeline div.timeline_title, #fund-timeline div.timeline_title {
     margin: 0; }
-    #company-timeline div.timeline_title span.timeline_title_date {
+    #company-timeline div.timeline_title span.timeline_title_date, #fund-timeline div.timeline_title span.timeline_title_date {
       display: none; }
-    #company-timeline div.timeline_title span.timeline_title_label {
+    #company-timeline div.timeline_title span.timeline_title_label, #fund-timeline div.timeline_title span.timeline_title_label {
       position: relative;
       font-size: 2em;
       height: 45px;
@@ -772,11 +758,11 @@ i {
       padding-left: 15px;
       color: #FFF;
       background-position: left; }
-  #company-timeline .timeline_element_left div.timeline_title span.timeline_title_label {
+  #company-timeline .timeline_element_left div.timeline_title span.timeline_title_label, #fund-timeline .timeline_element_left div.timeline_title span.timeline_title_label {
     background-image: url(../images/intro_year_tag_1.png); }
-  #company-timeline .timeline_element_right div.timeline_title span.timeline_title_label {
+  #company-timeline .timeline_element_right div.timeline_title span.timeline_title_label, #fund-timeline .timeline_element_right div.timeline_title span.timeline_title_label {
     background-image: url(../images/intro_year_tag_2.png); }
-  #company-timeline div.timeline div.date_separator span {
+  #company-timeline div.timeline div.date_separator span, #fund-timeline div.timeline div.date_separator span {
     font-family: "Times New Roman";
     font-size: 2em;
     border: 0;
@@ -784,15 +770,15 @@ i {
     color: #8E8E8E;
     height: 35px;
     line-height: 35px; }
-  #company-timeline div.timeline_element_box {
+  #company-timeline div.timeline_element_box, #fund-timeline div.timeline_element_box {
     border: 0; }
-  #company-timeline div.timeline_title {
+  #company-timeline div.timeline_title, #fund-timeline div.timeline_title {
     background-color: #F8F8F8; }
-  #company-timeline div.timeline_element.blog_post div.content {
+  #company-timeline div.timeline_element.blog_post div.content, #fund-timeline div.timeline_element.blog_post div.content {
     background-color: #F8F8F8;
     color: #878787;
     padding: 10px 20px 20px 20px; }
-  #company-timeline .youtube-btn {
+  #company-timeline .youtube-btn, #fund-timeline .youtube-btn {
     display: block;
     width: 162px;
     height: 52px;
@@ -837,6 +823,19 @@ i {
   display: inline-block;
   background-image: url(../images/arrow_icon.png);
   background-position: center 75%; }
+  .main-wrapper .index-wrapper .link-wrapper span {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+    -webkit-transition: 200ms linear;
+    -moz-transition: 200ms linear;
+    -ms-transition: 200ms linear;
+    -o-transition: 200ms linear;
+    transition: 200ms linear;
+    color: #FFF; }
   .main-wrapper .index-wrapper .link-wrapper h3 {
     color: #FFF;
     z-index: 2; }
@@ -960,10 +959,261 @@ i {
   background-position: 0 -22px; }
 
 /** News page ***/
+/*advertisements*/
+#vid-content {
+  display: none;
+  visibility: hidden; }
+
+.path-advertisements #banner-wrapper {
+  overflow: inherit; }
+
+.path-advertisements .video-outer-wrapper {
+  overflow: hidden; }
+  .path-advertisements .video-outer-wrapper .video-wrapper {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    padding-right: 5px; }
+    .path-advertisements .video-outer-wrapper .video-wrapper .image {
+      position: relative;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 140px;
+      background-color: #EAF6F8; }
+      .path-advertisements .video-outer-wrapper .video-wrapper .image img {
+        max-width: 100%;
+        max-height: 150px; }
+      .path-advertisements .video-outer-wrapper .video-wrapper .image .image-inner {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle; }
+    .path-advertisements .video-outer-wrapper .video-wrapper .content {
+      position: relative;
+      background-color: #C4EDF6;
+      width: 100%;
+      padding: 5px 5px 40px 5px; }
+      .path-advertisements .video-outer-wrapper .video-wrapper .content a {
+        position: absolute;
+        padding: 2px 35px;
+        background-color: #383743;
+        color: #FFF;
+        right: 8px;
+        bottom: 15px; }
+        .path-advertisements .video-outer-wrapper .video-wrapper .content a:before {
+          content: '>';
+          position: absolute;
+          left: 20px;
+          top: 0;
+          line-height: 22px; }
+    .path-advertisements .video-outer-wrapper .video-wrapper a.play-btn {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 140px;
+      top: 0;
+      left: 0; }
+      .path-advertisements .video-outer-wrapper .video-wrapper a.play-btn span {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        display: block;
+        background-image: url(../images/ad_play_btn.png);
+        background-position: 0 0;
+        left: 50%;
+        top: 50%;
+        margin-left: -32px;
+        margin-top: -32px; }
+      .path-advertisements .video-outer-wrapper .video-wrapper a.play-btn:hover span {
+        background-position: 0 -64px; }
+
+.path-advertisements .advertisements-top {
+  overflow: hidden;
+  margin-bottom: 30px; }
+  .path-advertisements .advertisements-top div {
+    padding: 0;
+    height: 300px; }
+    .path-advertisements .advertisements-top div iframe {
+      width: 100%;
+      height: 100%; }
+  .path-advertisements .advertisements-top div.content1 {
+    padding: 30px 20px;
+    background-color: #C4EDF6; }
+    .path-advertisements .advertisements-top div.content1 h3 {
+      color: #286D9E;
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: 1.5em;
+      width: 100%; }
+  .path-advertisements .advertisements-top div.content2 {
+    padding: 30px 20px;
+    background-color: #EAF6F8; }
+
+.path-advertisements .pagination-wrapper {
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+  .path-advertisements .pagination-wrapper .right-s {
+    margin-right: 10px; }
+  .path-advertisements .pagination-wrapper .right-l {
+    margin-right: 20px; }
+
+.path-advertisements .pagination-btn, .path-advertisements .pagination-skip {
+  float: left;
+  padding: 15px 25px;
+  height: 50px; }
+
+.path-advertisements .pagination-btn {
+  background-color: #F7F7F7;
+  color: #12738F;
+  cursor: pointer; }
+  .path-advertisements .pagination-btn select {
+    border: 0;
+    background-color: #FFF;
+    height: 36px;
+    width: 100px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+.path-advertisements .pagination-btn.with-select:before {
+  /*content: 'è·³è‡³';*/
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.path-advertisements .pang-more {
+  float: left;
+  padding: 15px 25px;
+  height: 50px;
+  background-color: #F7F7F7;
+  color: #12738F; }
+
+.path-advertisements .pagination-btn:hover, .path-advertisements .pagination-btn.active {
+  background-color: #E0F3F6; }
+
+.path-advertisements .pagination-btn.with-select {
+  padding: 7px;
+  margin-left: 10px;
+  cursor: inherit; }
+
+/*advertisements*/
+.pagination-btn, .pagination-skip {
+  float: left;
+  padding: 15px 25px;
+  height: 50px; }
+
+.pagination-btn {
+  background-color: #F7F7F7;
+  color: #12738F;
+  cursor: pointer; }
+  .pagination-btn select {
+    border: 0;
+    background-color: #FFF;
+    height: 36px;
+    width: 100px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+.pagination-btn:hover, .pagination-btn.active {
+  background-color: #E0F3F6; }
+
+.pagination-btn.with-select {
+  padding: 7px;
+  cursor: inherit; }
+  .pagination-btn.with-select::before {
+    /*content: 'è·³è‡³';*/
+    padding-left: 20px;
+    padding-right: 20px; }
+
+div.timeline_left div.timeline_element:after,
+div.timeline_right div.timeline_element:after,
+div.timeline_dual div.timeline_element_left:after,
+div.timeline_dual div.timeline_element_right:after,
+div.timeline_left div.timeline_element:hover:after,
+div.timeline_right div.timeline_element:hover:after,
+div.timeline_dual div.timeline_element_left:hover:after,
+div.timeline_dual div.timeline_element_right:hover:after {
+  background-color: #FF0000; }
+
+#fund-timeline #charity-fund-title {
+  color: skyblue;
+  text-decoration: underline; }
+
+#fund-timeline .timeline {
+  padding-top: 70px; }
+
+#fund-timeline div.timeline_title {
+  position: relative;
+  background-color: #F0FFFF;
+  margin: 0; }
+  #fund-timeline div.timeline_title span.timeline_title_date {
+    display: none; }
+  #fund-timeline div.timeline_title span.timeline_title_label {
+    font-family: "Times New Roman";
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-size: 3.5em;
+    color: #0096B0;
+    text-align: center;
+    margin-bottom: 8px;
+    background-image: none !important; }
+  #fund-timeline div.timeline_title:before {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -30px; }
+
+#fund-timeline div.timeline_element_box {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0; }
+
+#fund-timeline div.timeline_element.blog_post div.content {
+  text-align: center;
+  color: #878787;
+  padding-bottom: 30px;
+  position: relative;
+  background-color: #F0FFFF; }
+
+#fund-timeline div.timeline div.timeline_element.animated {
+  margin-bottom: 60px; }
+
+#fund-timeline div.timeline_left div.timeline_element:before, #fund-timeline div.timeline_right div.timeline_element:before {
+  width: 60px; }
+
+#fund-timeline div.timeline_dual div.timeline_element_left:before, #fund-timeline div.timeline_dual div.timeline_element_right:before {
+  width: 60px; }
+
+#fund-timeline div.timeline_right div.timeline_element_box, #fund-timeline div.timeline_dual div.timeline_element_right div.timeline_element_box {
+  margin-left: 60px; }
+
+#fund-timeline div.timeline_left div.timeline_element_box, #fund-timeline div.timeline_dual div.timeline_element_left div.timeline_element_box {
+  margin-right: 60px; }
+
+.charity_popup_dialog {
+  background-color: #F0FFFF;
+  border: 2px #0096B0 solid;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center; }
+
+.charity_popup_date {
+  font-size: 2.5em;
+  color: #0096B0; }
+
 @media only screen and (min-width: 768px) {
   #block-pharm-theme-content {
     width: 50%; }
-  .path-news #block-pharm-theme-content {
+  .path-news #block-pharm-theme-content, .path-advertisements #block-pharm-theme-content {
     width: 100%; }
   #block-contactus #offers-wrapper > div:nth-child(odd) {
     padding-right: 3px;
@@ -1011,49 +1261,72 @@ i {
   #block-latestoffers .img-wrapper {
     padding-right: 15px; }
   #block-latestoffers .content-wrapper {
-    padding-left: 15px; } }
+    padding-left: 15px; }
+  .video-outer-wrapper .video-wrapper:nth-child(even) {
+    padding-left: 5px;
+    padding-right: 0; }
+  .pagination-btn, .pagination-skip {
+    padding: 15px 10px; }
+  .pagination-btn.with-select:before {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
+#block-nyu-theme-breadcrumbs {
+  line-height: 40px; }
+  #block-nyu-theme-breadcrumbs ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; }
+    #block-nyu-theme-breadcrumbs ol li {
+      margin-right: 5px; }
+      #block-nyu-theme-breadcrumbs ol li:after {
+        content: '>'; }
+      #block-nyu-theme-breadcrumbs ol li:last-child:after {
+        display: none; }
 
-body.path-frontpage .slick-slide img {
-  height: 100%; }
+#block-nyu-theme-local-tasks {
+  line-height: 40px; }
+  #block-nyu-theme-local-tasks > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #block-nyu-theme-local-tasks > ul li {
+      flex-grow: 1;
+      border-bottom: 1px solid #ccc;
+      background: #eee; }
+      #block-nyu-theme-local-tasks > ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #220337;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+        #block-nyu-theme-local-tasks > ul li a:hover {
+          background: #220337;
+          color: #fff; }
 
-.main-wrapper {
-  margin-right: -5px; }
-
-.index-wrapper a {
-  color: #fff; }
-
-.index-wrapper .video-wrapper {
-  position: relative;
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
   width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-color: #6ECCF4;
-  background-image: url(../img/index_img_video.png);
-  background-size: 20%;
-  background-position: 30% 40%; }
-  .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 1.2em;
-    top: 30%; }
-  .index-wrapper .video-wrapper p.video-text2 {
-    font-size: 0.7em;
-    top: 50%; }
+  height: auto; }
 
-.index-wrapper .info-label {
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  left: 0;
-  background-color: #6ECCF4;
-  line-height: 30px;
-  color: #FFF;
-  padding-left: 25px;
-  padding-right: 10px; }
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden; } }
 
-@media only screen and (max-width: 768px) {
-  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
-    height: 100%; } }
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+      transform: translateX(-36%); } }
+

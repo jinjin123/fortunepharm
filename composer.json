@@ -22,7 +22,8 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/pathauto": "^1.8",
         "drupal/simplify_menu": "^2.0",
-        "drupal/twig_tweak": "^2.6"
+        "drupal/twig_tweak": "^2.6",
+        "drupal/yearonly": "^1.3"
     },
     "conflict": {
         "drupal/drupal": "*"
