@@ -24,6 +24,9 @@ h1, h2, h3, h4, h5, h6, p, a, span, label {
 img {
     width: 100%;
 }
+p a, .blue{
+  color: #518fcc;
+}
 a {
     text-decoration: none;
     &:hover {
@@ -194,6 +197,7 @@ h1, h2, h3, h4 {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+  margin-top: 12px;
 }
 
 .nopadding {
@@ -339,7 +343,7 @@ h1, h2, h3, h4 {
 }
 
 
-
+/*second menu bars */
 #contact-nav  .container-fluid-125 .page_title {
   ul {
     list-style: none;
@@ -355,4 +359,178 @@ h1, h2, h3, h4 {
 
 }
 
+#product-wrapper .product-small-image img{
+  border:solid;
+  border-color:#ddd;
+  border-width:1pt;
 
+}
+
+#product-wrapper .product-small-image img:hover{
+  border-color:#94c5d2;
+  border-width:2pt;
+}
+
+
+div.index-wrapper > a > p {
+  color: #FFF;
+}
+
+
+@media (min-width: 768px){
+  #header{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EFEFEF;
+  }
+  #footer{
+    border-top: 2px solid #EFEFEF;
+  }
+
+  /*index*/
+  .main-wrapper .index-wrapper:hover p{
+    display: block;
+    top: 45%;
+  }
+  .main-wrapper .index-wrapper:hover h3{
+    top: 25%;
+  }
+  /*lastest-offers*/
+  #lastest-offers #offers-wrapper .img-wrapper{
+    padding-right: 3px;
+  }
+  #lastest-offers #offers-wrapper .content-wrapper{
+    padding-left: 3px;
+    display: none;
+  }
+  #lastest-offers #offers-wrapper .content-wrapper .content-right{
+    overflow-y: auto;
+  }
+
+  /*product-children*/
+  .healthcare .healthcare-wrapper:nth-child(odd){
+    padding-right: 3px;
+  }
+  .healthcare .healthcare-wrapper:nth-child(even){
+    padding-left: 3px;
+  }
+
+  /*contact-us*/
+  #lastest-offers.contact-us #offers-wrapper > div > div:nth-child(odd){
+    padding-right: 3px;
+    clear: both;
+  }
+  #lastest-offers.contact-us #offers-wrapper > div > div:nth-child(even){
+    padding-left: 3px;
+  }
+  /*company-history*/
+  #factory-intro .intro-text,
+  #company-history .history-text{
+    width: 50%;
+  }
+  #other-services .content{
+    width: 50%;
+  }
+}
+
+
+@media only screen and (min-width: 1200px){
+  /*index*/
+  #index #main .index-wrapper h3{
+    font-size: 1.5em;
+  }
+  #index #main .index-wrapper p{
+    top: 45%;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /*index*/
+  #index #main .index-wrapper .link-wrapper{
+    background-position: center 90%;
+  }
+  #index #main .index-wrapper p{
+    top: 45%;
+  }
+  /*health-tips*/
+  #health-tips.pain .function-wrapper .function-btn > p,
+  #health-tips.allergy .function-wrapper .function-btn > p,
+  #health-tips.gerd .function-wrapper .function-btn > p{
+    padding: 10px;
+    font-size: 1em;
+    width: 85%;
+  }
+  #health-tips.pain .function-wrapper .function-right-wrapper .function-btn > p,
+  #health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
+  #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p{
+    padding-left: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*header*/
+  #header .navbar-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+  }
+
+  #header .navbar-middle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 200px;
+  }
+
+  #header #lang, #header #social-icon{
+    margin-top: 0;
+  }
+  #header #lang, #header #linkage-icon{
+    margin-top: 0;
+  }
+
+  .contact-section #contact-nav li a{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*index*/
+  #index #main .index-wrapper .link-wrapper{
+    background-position: center 95%;
+  }
+  #index #main .index-wrapper p{
+    line-height: 12px;
+  }
+  #index #main .index-wrapper h3{
+    font-size: 1em;
+  }
+  #index #main .index-wrapper:hover h3{
+    top: 15%;
+  }
+  #index #main .index-wrapper .banner-title{
+    width: 77px;
+    height: 24px;
+  }
+  #index #main .index-wrapper:last-child .banner-title{
+    width: 90px;
+  }
+  /*product*/
+  #product #product-wrapper .product-big-image,
+  #product #product-wrapper .product-small-image,
+  #product #product-wrapper .product-description,
+  .healthcare .healthcare-wrapper .image-wrapper{
+    height: 330px;
+  }
+  /*health-tips*/
+  #health-tips.pain .function-wrapper .function-btn > p,
+  #health-tips.allergy .function-wrapper .function-btn > p,
+  #health-tips.gerd .function-wrapper .function-btn > p{
+    padding: 5px;
+    font-size: 0.6em;
+    width: 90%;
+  }
+  #health-tips.pain .function-wrapper .function-right-wrapper .function-btn > p,
+  #health-tips.allergy .function-wrapper .function-right-wrapper .function-btn > p,
+  #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn > p{
+    padding-left: 20px;
+  }
+}

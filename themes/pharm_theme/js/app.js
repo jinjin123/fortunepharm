@@ -123,6 +123,25 @@ Drupal.behaviors.yourmodulename = {
                 });
             }
         }
+      /*window resize*/
+      change_size('wrapper', $(window).width(), $(window).height());
+      $('body').show();
+      $(window).resize(function () {
+        clearTimeout($.data(this, 'resizeTimer2'));
+        $.data(this, 'resizeTimer2', setTimeout(function () {
+          change_size('wrapper', $(window).width(), $(window).height());
+        }, 200));
+        if ($(window).width() >= 768) {
+          if ($('#wrapper').hasClass('toggled')) {
+            $('#wrapper').removeClass('toggled');
+          }
+          if ($('.hamburger').hasClass('is-open')) {
+            $('.hamburger').removeClass('is-open');
+            $('.hamburger').addClass('is-closed');
+          }
+        }
+      });
+      /*window resize*/
 
         function index_row_wrapper(desktop_class, mobile_class, unit) {
             if ($(window).width() >= 768) var main_width = $('.' + desktop_class).width();
