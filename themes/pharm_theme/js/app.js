@@ -237,10 +237,92 @@ Drupal.behaviors.yourmodulename = {
       }
     });
 
+
     // Pager
-    $('.path-news .pagination-btn .pagination-change').change(function () {
-      console.log($(this).val());
-    });
+      $('.path-news .pagination-btn.withmovebutt').click(function(){
+        var page=$(this).attr('rel');
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/news/"+page);
+      });
+      $('.path-news .rightmove').click(function(){
+        var current_page=$('#current_page').attr('rel');
+        current_page++;
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/news/"+current_page);
+      });
+      $('.path-news .leftmove').click(function(){
+        var current_page=$('#current_page').attr('rel');
+        current_page--;
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/news/"+current_page);
+      });
+      $(".path-news .pagination-change").on('focus', function () {
+      }).change(function() {
+        var current_page=$(this).val()-1;
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/news/"+current_page);
+      });
+
+      $("#advertisements .pagination-change").on('focus', function () {
+      }).change(function() {
+        var yr=$(this).val();
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/advertisements/"+yr);
+      });
+      $('#advertisements .pagination-btn.withmovebutt').click(function(){
+        var page=$(this).attr('rel');
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/advertisements/"+page);
+      });
+      $('#advertisements .rightmove').click(function(){
+        var current_page=$('#current_page').attr('rel');
+        current_page++;
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/advertisements/"+current_page);
+      });
+      $('#advertisements .leftmove').click(function(){
+        var current_page=$('#current_page').attr('rel');
+        current_page--;
+        var globalpath=$('#globalpath').attr('rel');
+        var lang=$('#lang').attr('rel');
+        window.location.assign(globalpath+lang+"/advertisements/"+current_page);
+      });
+      $('#advertisements .view-video').click(function(){
+        var langname = $('#lang').attr('rel');
+        var vid = $(this).attr('rel');
+        $.ajax({
+          type: 'POST',
+          url: '/video_swap',
+          data: {
+            langname: langname,
+            vid:vid
+          },
+          dataType : "json",
+          async: false,
+          success: function(data){
+            if(data.lang_name=='eng' ||data.lang_name=='cht'){
+              $('.advertisements-top .video').html('<iframe width="400" height="300" src="https://www.youtube.com/embed/'+data.link+'" frameborder="0" allowfullscreen></iframe>');
+            }else{
+              $('.advertisements-top .video').html('<iframe width="400" height="300" src="http://player.youku.com/embed/'+data.link+'" frameborder="0" allowfullscreen></iframe>');
+            }
+            $('.advertisements-top .content1 h3').html(data.title);
+            $('.advertisements-top .content1 p').html(data.date);
+            $('.advertisements-top .content2 p').html(data.desc);
+            scrolled = $('.advertisements-top').scrollTop();
+            $('html, body').animate({
+              scrollTop:   $('.advertisements-top').offset().top - 5
+            });
+          }
+        });
+      });
+
     /*** News page ****/
 
     console.log('test');
@@ -284,11 +366,14 @@ Drupal.behaviors.yourmodulename = {
         // $(".fancybox_popup").fancybox().trigger('close');
       }
       $(document).click(function(e) {
-        // console.log($(e.target))
+        // console.log($(e.target));
         // console.log($(e.target).attr("class"))
         if($(e.target).attr("class") == "fancybox-item fancybox-close"){
           // console.log("aaa")
           $(".fancybox-overlay").css("display","none");
+        }else if($(e.target).attr("src").indexOf("thumbs") !=-1) {
+          $(".fancybox-overlay").css("display","block");
+          $(".fancybox-overlay").css("height",$(document).height());
         }
 
       })
