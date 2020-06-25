@@ -134,56 +134,6 @@ i {
         display: flex;
     }
 }
-
-#block-advertisementsblock {
-  margin-bottom: 25px;
-  .img-wrapper {
-    padding-right: 3px;
-    > iframe {
-      //height: 100%;
-      width: 100%;
-    }
-  }
-  .content-wrapper {
-    padding-left: 3px;
-    >div {
-      height: 100%;
-    }
-    .content-left {
-      background-color: #C4EDF6;
-      //display: table;
-      h3 {
-        font-size: 1.5em;
-        margin: 0;
-        //text-align: center;
-        //display: table-cell;
-        //vertical-align: middle;
-        color: #286D9E;
-        margin-bottom: 30px;
-        //font-weight: normal;
-        //line-height: 1.1;
-      }
-    }
-    .content-right {
-      overflow-y: auto;
-      background-color: #EAF6F8;
-      padding: 15px;
-      > p {
-        color: #666666;
-      }
-    }
-  }
-  .latest-off-block {
-    display: flex;
-  }
-}
-
-#block-advertisementsblock .content-wrapper .content-left,
-#block-advertisementsblock .content-wrapper .content-right{
-  padding: 30px 20px;
-}
-
-
 #block-contactus {
     #offers-wrapper {
         overflow: hidden;
@@ -339,14 +289,6 @@ i {
         margin-top: 15px;
     }
 }
-
-#contact-nav {
-  background-color: #F3F3F3;
-  border-bottom: 3px solid #EDEDED;
-  margin-bottom: 25px;
-  height: 50px
-}
-
 .main-wrapper {
     .index-wrapper, #block-views-block-homepage-slider-block-1 {
         position: relative;
@@ -365,7 +307,7 @@ i {
             width: 100%;
             text-align: center;
             margin: 0;
-            //font-size: 1.2em;
+            font-size: 1.2em;
             -webkit-transition: 200ms linear;
             -moz-transition: 200ms linear;
             -ms-transition: 200ms linear;
@@ -959,73 +901,6 @@ div.timeline_dual div.timeline_element_right:hover:after{
             padding-left: 15px;
         }
     }
-}
-/*pagination*/
-.pagination-wrapper{
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.pagination-wrapper .right-s{
-  margin-right: 10px;
-}
-.pagination-wrapper .right-l{
-  margin-right: 20px;
-}
-.pagination-btn,
-.pagination-skip{
-  float: left;
-  padding: 15px 25px;
-  height: 50px;
-}
-.pagination-btn{
-  background-color: #F7F7F7;
-  color: #12738F;
-  cursor: pointer;
-}
-
-.pang-more{
-  float: left;
-  padding: 15px 25px;
-  height: 50px;
-  background-color: #F7F7F7;
-  color: #12738F;
-
-}
-
-.pagination-btn:hover,
-.pagination-btn.active{
-  background-color: #E0F3F6;
-}
-.pagination-btn.with-select{
-  padding: 7px;
-  margin-left:10px;
-  cursor: inherit;
-}
-.pagination-btn select{
-  border: 0;
-  background-color: #FFF;
-  height: 36px;
-  width: 100px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.pagination-btn.with-select:before{
-  /*content: '跳至';*/
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#wrapper #contact-nav li {
-  background-image: url(../images/laug_sep.png);
-  background-position: left;
-}
-
-#wrapper #contact-nav li:first-child {
-  background-image: none;
-}
     .video-outer-wrapper .video-wrapper:nth-child(even) {
         padding-left: 5px;
         padding-right: 0;
@@ -1037,3 +912,4 @@ div.timeline_dual div.timeline_element_right:hover:after{
         padding-left: 10px;
         padding-right: 10px;
     }
+}

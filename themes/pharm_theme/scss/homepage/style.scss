@@ -28,7 +28,7 @@ body.path-frontpage {
         height: 100%;
         display: inline-block;
         background-color: #6ECCF4;
-        background-image: url(../images/index_img_video.png);
+        background-image: url(../img/index_img_video.png);
         background-size: 20%;
         background-position: 30% 40%;
         p {
@@ -55,17 +55,20 @@ body.path-frontpage {
     }
 }
 
-//@media only screen and (max-width: 768px) {
-//  .mobile-main {
-//        .col-xs-4, .col-xs-8 {
-//            &.row-xs-4 {
-//                &.nopadding {
-//                    div {
-//                        height: 100%;
-//                    }
-//
-//                }
-//            }
-//        }
-//    }
-//}
+@media only screen and (max-width: 768px) {
+    .mobile-main {
+        .col-xs-4, .col-xs-8 {
+            &.row-xs-4 {
+                &.nopadding {
+                    div {
+                        height: 100%;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
