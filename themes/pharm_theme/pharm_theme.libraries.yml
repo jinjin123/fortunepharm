@@ -8,6 +8,15 @@ slick:
   dependencies:
     - core/jquery
 
+
+loadsh:
+  js:
+    dist/js/lodash.js: {}
+  dependencies:
+    - core/jquery
+
+
+
 global:
   css:
     theme:
