@@ -4,15 +4,8 @@
   </div>
   <nav class="collapse navbar-collapse bs-navbar-collapse">
     {{ elements.pharm_theme_main_menu }}
-    {# <ul id="nav-bar" class="nav navbar-nav">
-          <li class=""> <a href="http://www.fortunepharm.com/eng/home">Home</a></li>
-          <li class=""><a href="http://www.fortunepharm.com/eng/company-history">About Us</a></li>
-          <li class=""><a href="http://www.fortunepharm.com/eng/product/hongkong/1/0">Product</a></li>
-          <li class=""><a href="http://www.fortunepharm.com/eng/product_take">Product Finder</a></li>
-          <li class=""><a href="http://www.fortunepharm.com/eng/faq/0">FAQ</a></li>
-          <li class=""><a href="http://www.fortunepharm.com/eng/health-tips">Health Tips</a></li>
-          <li class="active"><a href="http://www.fortunepharm.com/eng/other-services">Other Services</a></li>
-        </ul> #}
+    {{ elements.fantizhudaohang }}
+    {{ elements.jiantizhudaohang }}
         {% if language == 'en' %}
           {% set active_en = 'active' %}
         {% endif %}
@@ -25,7 +18,7 @@
     <div class="navbar-right">
       <ul id="lang" class="nav navbar-nav">
         <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
-        <li class="{{active_cht}}"><a href="/chs{{ current_url }}">簡</a></li>
+        <li class="{{active_cht}}"><a href="/chs{{ current_url }}">简</a></li>
         <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
       </ul>
       <ul id="social-icon" class="nav navbar-nav">
