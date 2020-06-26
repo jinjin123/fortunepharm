@@ -195,7 +195,11 @@ h1, h2, h3, h4 {
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
-  margin-top: 12px; }
+  margin-top: 12px;
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
+  height: 50px; }
 
 .nopadding {
   padding: 0 !important;
@@ -305,13 +309,13 @@ h1, h2, h3, h4 {
     width: 11.11111111%; } }
 
 /*second menu bars */
-#contact-nav .container-fluid-125 .page_title ul {
+#secondmenu .container-fluid-125 .page_title ul {
   list-style: none;
   display: flex; }
-  #contact-nav .container-fluid-125 .page_title ul > li a {
+  #secondmenu .container-fluid-125 .page_title ul > li a {
     padding-left: 20px;
     padding-right: 20px; }
-    #contact-nav .container-fluid-125 .page_title ul > li a:hover {
+    #secondmenu .container-fluid-125 .page_title ul > li a:hover {
       text-decoration: underline; }
 
 #product-wrapper .product-small-image img {
@@ -405,7 +409,7 @@ div.index-wrapper > a > p {
     margin-top: 0; }
   #header #lang, #header #linkage-icon {
     margin-top: 0; }
-  .contact-section #contact-nav li a {
+  .contact-section #secondmenu li a {
     padding-left: 15px;
     padding-right: 15px; }
   /*index*/
@@ -655,51 +659,6 @@ div.index-wrapper > a > p {
       overflow-x: hidden;
       transform: translateX(-36%); } }
 
-
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
-body.path-frontpage .slick-slide img {
-  height: 100%; }
-
-.main-wrapper {
-  margin-right: -5px; }
-
-.index-wrapper a {
-  color: #fff; }
-
-.index-wrapper .video-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-color: #6ECCF4;
-  background-image: url(../img/index_img_video.png);
-  background-size: 20%;
-  background-position: 30% 40%; }
-  .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 1.2em;
-    top: 30%; }
-  .index-wrapper .video-wrapper p.video-text2 {
-    font-size: 0.7em;
-    top: 50%; }
-
-.index-wrapper .info-label {
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  left: 0;
-  background-color: #6ECCF4;
-  line-height: 30px;
-  color: #FFF;
-  padding-left: 25px;
-  padding-right: 10px; }
-
-@media only screen and (max-width: 768px) {
-  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
-    height: 100%; } }
 
 @charset "UTF-8";
 body {
@@ -1472,21 +1431,15 @@ div.timeline_dual div.timeline_element_right:hover:after {
     padding-left: 10px;
     padding-right: 10px; } }
 
-#wrapper #contact-nav li {
+#wrapper #secondmenu li {
   background-image: url(../images/laug_sep.png);
   background-position: left; }
 
-#wrapper #contact-nav li:first-child {
+#wrapper #secondmenu li:first-child {
   background-image: none; }
 
-#contact-nav {
-  background-color: #F3F3F3;
-  border-bottom: 3px solid #EDEDED;
-  margin-bottom: 25px;
-  height: 50px; }
-
-#contact-nav li.active a,
-#contact-nav li:hover a {
+#secondmenu li.active a,
+#secondmenu li:hover a {
   text-decoration: underline; }
 
 /* news  */
@@ -1635,3 +1588,48 @@ div.timeline_dual div.timeline_element_right:hover:after {
   /*content: '跳至';*/
   padding-left: 20px;
   padding-right: 20px; }
+
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
+body.path-frontpage .slick-slide img {
+  height: 100%; }
+
+.main-wrapper {
+  margin-right: -5px; }
+
+.index-wrapper a {
+  color: #fff; }
+
+.index-wrapper .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #6ECCF4;
+  background-image: url(../img/index_img_video.png);
+  background-size: 20%;
+  background-position: 30% 40%; }
+  .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 1.2em;
+    top: 30%; }
+  .index-wrapper .video-wrapper p.video-text2 {
+    font-size: 0.7em;
+    top: 50%; }
+
+.index-wrapper .info-label {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 0;
+  background-color: #6ECCF4;
+  line-height: 30px;
+  color: #FFF;
+  padding-left: 25px;
+  padding-right: 10px; }
+
+@media only screen and (max-width: 768px) {
+  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
+    height: 100%; } }

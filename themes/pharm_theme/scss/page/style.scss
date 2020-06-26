@@ -916,25 +916,24 @@ div.timeline_dual div.timeline_element_right:hover:after{
         padding-right: 10px;
     }
 }
-#wrapper #contact-nav li {
+#wrapper #secondmenu li {
   background-image: url(../images/laug_sep.png);
   background-position: left;
 }
 
-#wrapper #contact-nav li:first-child {
+#wrapper #secondmenu li:first-child {
   background-image: none;
 }
-#contact-nav {
-  background-color: #F3F3F3;
-  border-bottom: 3px solid #EDEDED;
-  margin-bottom: 25px;
-  height: 50px
-}
-#contact-nav li.active a,
-#contact-nav li:hover a{
+//#secondmenu {
+//  background-color: #F3F3F3;
+//  border-bottom: 3px solid #EDEDED;
+//  margin-bottom: 25px;
+//  height: 50px
+//}
+#secondmenu li.active a,
+#secondmenu li:hover a{
   text-decoration: underline;
 }
-
 
 
 /* news  */

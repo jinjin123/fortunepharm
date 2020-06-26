@@ -198,6 +198,10 @@ h1, h2, h3, h4 {
     margin-left: auto;
     overflow: hidden;
   margin-top: 12px;
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
+  height: 50px;
 }
 
 .nopadding {
@@ -344,7 +348,7 @@ h1, h2, h3, h4 {
 
 
 /*second menu bars */
-#contact-nav  .container-fluid-125 .page_title {
+#secondmenu  .container-fluid-125 .page_title {
   ul {
     list-style: none;
     display: flex;
@@ -489,7 +493,7 @@ div.index-wrapper > a > p {
     margin-top: 0;
   }
 
-  .contact-section #contact-nav li a{
+  .contact-section #secondmenu li a{
     padding-left: 15px;
     padding-right: 15px;
   }
