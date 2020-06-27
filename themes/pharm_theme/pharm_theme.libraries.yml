@@ -22,6 +22,7 @@ global:
     theme:
       https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css: {}
       node_modules/normalize.css/normalize.css: {}
+      https://www.fortunepharm.com/assets/css/style.css: {}
       //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
       dist/css/timeline.css: {}
       dist/css/sidebar.css: {}
