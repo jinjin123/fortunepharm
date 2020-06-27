@@ -228,8 +228,13 @@ Drupal.behaviors.yourmodulename = {
             }
         });
         // Pager
+        var pager = settings.path.currentQuery.page;
+        $('.path-news .pagination-btn .pagination-change option[rel='+pager+']').attr('selected','selected');
+
         $('.path-news .pagination-btn .pagination-change').change(function() {
-            //console.log($(this).val());
+            var path = $(this).val();
+            var lang = settings.path.pathPrefix;
+            window.location.assign(path);
         });
         /*** News page ****/
         /*advertisements*/
