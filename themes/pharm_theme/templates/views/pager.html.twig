@@ -104,7 +104,7 @@
   <font style="padding:5pt;">{{ 'Skip'|t }}</font>
   <select class="pagination-change">
     {% for i in 1..pager_max %}
-    <option value="?q={{page_url}}&page={{ i - 1 }}">{{ i }}</option>
+    <option value="?q={{page_url}}&page={{ i - 1 }}" rel="{{ i - 1 }}">{{ i }}</option>
     {% endfor %}
   </select>
 </div>

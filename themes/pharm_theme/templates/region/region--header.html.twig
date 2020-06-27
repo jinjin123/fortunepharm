@@ -4,8 +4,9 @@
   </div>
   <nav class="collapse navbar-collapse bs-navbar-collapse">
     {{ elements.pharm_theme_main_menu }}
-    {{ elements.fantizhudaohang }}
-    {{ elements.jiantizhudaohang }}
+    <div class="sub_menu">
+      {{ elements.mainnavigation }}
+    </div>
         {% if language == 'en' %}
           {% set active_en = 'active' %}
         {% endif %}
