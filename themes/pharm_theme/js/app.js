@@ -382,6 +382,7 @@ Drupal.behaviors.yourmodulename = {
           //   con
         }
       })
+
         /*news */
     }
 
