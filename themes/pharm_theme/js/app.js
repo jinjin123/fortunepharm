@@ -197,6 +197,8 @@ Drupal.behaviors.yourmodulename = {
         $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
         if ($('.path-news .content-row').length > 0) {
           $(".fancybox_popup").fancybox().trigger('click');
+          $(".fancybox-overlay").css("display","block");
+          $(".fancybox-overlay").css("height",$(document).height());
             $('.path-news .content-row').show();
             $.data(this, 'news', setTimeout(function() {
                 $('.path-news .content-row .colume2').each(function() {
@@ -370,10 +372,17 @@ Drupal.behaviors.yourmodulename = {
         if ($('.fancybox').length > 0) {
             $(".fancybox").fancybox();
         }
-
-
+      $(document).click(function(e) {
+        if($(e.target).attr("class") == "fancybox-item fancybox-close"){
+          $(".fancybox-overlay").css("display","none");
+          // }else if($(e.target).attr("src").indexOf("thumbs") !=-1) {
+          //   $(".fancybox-overlay").css("display","block");
+          //   $(".fancybox-overlay").css("height",$(document).height());
+          // }else{
+          //   con
+        }
+      })
         /*news */
-
-
     }
+
 };
