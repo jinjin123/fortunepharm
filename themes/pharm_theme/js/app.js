@@ -266,84 +266,6 @@ Drupal.behaviors.yourmodulename = {
           });
         }
       }
-      if ($('#health-tips .function-wrapper .function-btn').length > 0) {
-        $.data(this, 'function', setTimeout(function() {
-          health_tips();
-        }, 200));
-        $(window).resize(function() {
-          clearTimeout($.data(this, 'health-btn'));
-          $.data(this, 'health-btn', setTimeout(function() {
-            health_tips();
-          }, 800));
-        });
-        $('#health-tips .function-wrapper .function-btn').click(function() {
-          if (typeof($(this).attr('rel')) !== 'undefined') {
-            var rel = $(this).attr('rel');
-            $('#health-tips .function-wrapper .function-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-btn[rel="' + rel + '"]').addClass('active');
-
-            $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel + '"]').addClass('active');
-
-            if ($('#health-tips .function-wrapper .function-middle-wrapper p').length > 0) {
-              $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
-                $(this).removeClass('active');
-              });
-              $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel + '"]').addClass('active');
-            }
-            if ($('#health-tips .function-detail-wrapper .detail-right-wrapper').length > 0) {
-              $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
-                $(this).removeClass('active');
-              });
-              $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel + '"]').addClass('active');
-            }
-          }
-        });
-        $('#health-tips .function-tab-wrapper .function-tab-btn').click(function() {
-          if (typeof($(this).attr('rel')) !== 'undefined') {
-            var rel = $(this).attr('rel');
-            $('#health-tips .function-tab-wrapper .function-tab-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-tab-wrapper .function-tab-btn[rel="' + rel + '"]').addClass('active');
-
-            if ($(window).width() >= 768) {
-              var temp = 'left';
-            } else {
-              var temp = 'right';
-            }
-            $('#health-tips .function-' + temp + '-wrapper').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-' + temp + '-wrapper[rel="' + rel + '"]').addClass('active');
-            health_tips();
-
-            $('.function-' + temp + '-wrapper:visible .function-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('.function-' + temp + '-wrapper:visible .function-btn:first-child').addClass('active');
-
-            var rel2 = $('.function-' + temp + '-wrapper:visible .function-btn:first-child').attr('rel');
-            $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel2 + '"]').addClass('active');
-
-            $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel2 + '"]').addClass('active');
-            $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel2 + '"]').addClass('active');
-          }
-        });
-      }
       /*window resize*/
         function index_row_wrapper(desktop_class, mobile_class, unit) {
             if ($(window).width() >= 768) var main_width = $('.' + desktop_class).width();
@@ -792,10 +714,6 @@ Drupal.behaviors.yourmodulename = {
             }
 
         });
-
-        //lhz
-
-
 
 
     }
