@@ -15,13 +15,17 @@ loadsh:
   dependencies:
     - core/jquery
 
+healthtips:
+  js:
+    js/healthtips.js: {}
+  dependencies:
+    - core/jquery
 
 global:
   css:
     theme:
       https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css: {}
       node_modules/normalize.css/normalize.css: {}
-      https://www.fortunepharm.com/assets/css/style.css: {}
       //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
       dist/css/timeline.css: {}
       dist/css/sidebar.css: {}
@@ -31,11 +35,10 @@ global:
   js:
     https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js: {}
     js/timeline.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js: {}
+    dist/js/jquery.fancybox.js: {}
     js/app.js: {}
   dependencies:
     - core/drupal
     - core/jquery
     - core/jquery.once
     - pharm_theme/slick
-
