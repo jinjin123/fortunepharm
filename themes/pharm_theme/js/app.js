@@ -177,7 +177,6 @@ Drupal.behaviors.yourmodulename = {
           $(this).addClass('active');
         }
       });
-
       $('.sidebar-nav > li.parent').click(function() {
         if ($(this).hasClass('show-sub')) {
           $(this).removeClass('show-sub');
@@ -187,6 +186,52 @@ Drupal.behaviors.yourmodulename = {
         $(this).find('.sub-sidebar-nav').slideToggle();
       });
 
+      /*sub-tab-session*/
+      if($('.sub-tab-session').length > 0){
+        clearTimeout($.data(this, 'sub-tab-session'));
+        $.data(this, 'sub-tab-session', setTimeout(function() {
+          if($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()){
+            $('.sub-tab-session .arrow-right').fadeOut();
+          }else{
+            $('.sub-tab-session .arrow-right').fadeIn();
+          }
+        }, 500));
+
+
+        $('.sub-tab-outer-wrapper').scroll(function() {
+          if($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()){
+            $('.sub-tab-session .arrow-right').fadeOut();
+          }else{
+            $('.sub-tab-session .arrow-right').fadeIn();
+          }
+
+          if($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()){
+            $('.sub-tab-session .arrow-left').fadeIn();
+          }else{
+            $('.sub-tab-session .arrow-left').fadeOut();
+          }
+        });
+
+        $(".sub-tab-session .arrow").on("click" ,function(){
+          var target = $('.sub-tab-session .sub-tab-outer-wrapper');
+          var arrow = $(this);
+          if (!$(target).is(':animated')){
+            scrolled = $(target).scrollLeft();
+            if($(arrow).hasClass('arrow-left')){
+              scrolled -= 100;
+            }
+            if($(arrow).hasClass('arrow-right')){
+              scrolled += 100;
+            }
+            $(target).animate({
+              scrollLeft:  scrolled
+            });
+          }
+        });
+      }
+      /*sub-tab-session*/
+
+      /*health-tips*/
       if ($('#health-tips .sub-tab-wrapper li').length > 0) {
         var tab_width = 0;
         clearTimeout($.data(this, 'health-tips-tab'));
