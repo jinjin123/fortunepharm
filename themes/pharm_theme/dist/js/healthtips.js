@@ -1,0 +1,1 @@
+"use strict";Drupal.behaviors.Healthtips={attach:function(){console.log("Healthtips")}};

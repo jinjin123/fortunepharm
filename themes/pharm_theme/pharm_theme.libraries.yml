@@ -15,6 +15,11 @@ loadsh:
   dependencies:
     - core/jquery
 
+healthtips:
+  js:
+    js/healthtips.js: {}
+  dependencies:
+    - core/jquery
 
 
 global:
