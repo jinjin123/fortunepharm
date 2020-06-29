@@ -16,7 +16,6 @@ loadsh:
     - core/jquery
 
 
-
 global:
   css:
     theme:
