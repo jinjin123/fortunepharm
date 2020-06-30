@@ -76,4 +76,6 @@ function pharm_theme_preprocess_node(&$variables) {
   if ($variables['node']->getType() == 'healthtips') {
     $variables['#attached']['library'][] = 'pharm_theme/healthtips';
   }
+  // Provide content_type variable 
+  $variables['content_type'] = $variables['node']->getType(); 
 }
