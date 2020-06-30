@@ -1,0 +1,57 @@
+<div class="health-tips">
+  <div id='health1'>
+    <div id="health-tips" class="pain">
+      <div id="wrapper">
+        <div id="page-content-wrapper">
+          <div id="main">
+            <div class="container-fluid">
+              <div class="content-outer-wrapper">
+                <div class="notice-wrapper">
+                  {{ node.field_details_stomach.value }}
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  {# {{ content.field_short_description }} #}
+
+  <div>
+
+  </div>
+</div>
+
+  <div id='health1'>
+    <div id="health-tips" class="gerd">
+      <div id="wrapper">
+        <div id="page-content-wrapper">
+          <div id="main">
+            <div class="container-fluid">
+              <div class="content-outer-wrapper">
+                {{content.body}}
+                <div class="detail-wrapper detail-wrapper2 function-detail-wrapper">
+                  <div class="detail-left-wrapper col-sm-3">
+                    <h4>{{ node.field_details_stomach1.value }}</h4>
+
+                  </div>
+                  <div class="detail-right-wrapper col-sm-9 active" rel="10">
+{#                    <p>{{node.field_stomach_nr |view}} </p>#}
+                    {{ node.field_stomach_nr.value | check_markup(node.field_stomach_nr.format) }}
+
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

@@ -12,7 +12,8 @@ function pharm_theme_preprocess_region__header(&$vars) {
     $path = \Drupal::request()->attributes->get('_system_path');
     $current_uri = \Drupal::request()->getRequestUri();
     $current_path = \Drupal::service('path.current')->getPath();
-    $vars['current_url'] = $current_path;
+    $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+    $vars['current_url'] = $result;
 }
 
 /**
@@ -64,5 +65,15 @@ function pharm_theme_preprocess_pager(array &$variables) {
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') 
       && (in_array($path_args[2], $array))) {
     $variables['#attached']['library'][] = 'pharm_theme/loadsh';
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function pharm_theme_preprocess_node(&$variables) {
+  if ($variables['node']->getType() == 'healthtips') {
+    $variables['#attached']['library'][] = 'pharm_theme/healthtips';
   }
 }
