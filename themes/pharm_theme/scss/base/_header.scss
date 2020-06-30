@@ -55,7 +55,6 @@
             background-position: left;
             &:hover {
                 color: #040C4A;
-                background: none;
                 text-decoration: none;
             }
         }
@@ -111,10 +110,25 @@
         display: block;
     }
 }
+
+
+
 @media only screen and (min-width: 768px) {
+    .nav {
+        li {
+            a{
+                &:hover, &:focus {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
     #header {
         padding-bottom: 0;
         border-bottom: 0px solid #EFEFEF;
+        #contact-nav {
+            display: none;
+        }
     }
     .navbar-collapse.collapse {
         display: block !important;
@@ -127,6 +141,27 @@
         float: left;
         margin: 0;
         list-style: none;
+    }
+    nav {
+        &#contact-nav {
+            background-color: #F3F3F3;
+            border-bottom: 3px solid #EDEDED;
+            margin-bottom: 25px;
+            li {
+                background-image: url(../images/laug_sep.png);
+                background-position: left;
+                background-repeat: no-repeat;
+                &:first-child {
+                    background-image: none;
+                }
+                &.active, &:hover {
+                    a {
+                        text-decoration: underline;
+                        color: #000;
+                    }
+                }
+            }
+        }
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {

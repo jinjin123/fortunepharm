@@ -97,15 +97,15 @@
         </li>
       {% endif %}
     </ul>
+    {% if arg_one == 'news' %}
+        <div class="pagination-btn with-select">
+          <font style="padding:5pt;">{{ 'Skip'|t }}</font>
+            <select class="pagination-change">
+              {% for i in 1..pager_max %}
+                <option value="?q={{page_url}}&page={{ i - 1 }}" rel="{{ i - 1 }}">{{ i }}</option>
+              {% endfor %}
+            </select>
+          </div>
+    {% endif %}
   </nav>
-{% endif %}
-{% if arg_one == 'news' %}
-<div class="pagination-btn with-select">
-  <font style="padding:5pt;">{{ 'Skip'|t }}</font>
-  <select class="pagination-change">
-    {% for i in 1..pager_max %}
-    <option value="?q={{page_url}}&page={{ i - 1 }}" rel="{{ i - 1 }}">{{ i }}</option>
-    {% endfor %}
-  </select>
-</div>
 {% endif %}
