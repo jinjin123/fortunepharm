@@ -18,14 +18,14 @@
 {# Content section #}
   <div id="wrapper">
     {% if page.page_title %}
-    <div id="contact-nav" class="container-fluid">
+    <nav id="contact-nav" class="container-fluid">
 
       <div class="container-fluid-125">
         <div class="page_title">
           {{ page.page_title }}
         </div>
       </div>
-    </div>
+    </nav>
   {%endif  %}
   <div id="main">
     <div class="container-fluid">
@@ -35,41 +35,7 @@
       </div>
       </section>
       <section id="os-wrapper">
-      <div class="health-tips">
-        <div id='health1'>
-          <div id="health-tips" class="pain">
-            <div id="wrapper">
-              <div id="page-content-wrapper">
-                <div id="main">
-                  <div class="container-fluid">
-                    <div class="content-outer-wrapper">
-                      {% for item in node.field_healthtips_paragraph %}
-                        <div>field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format)
-                        </div>
-
-                        <div class="notice-wrapper">
-                          <p>
-                            {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }}
-                            <p></div>
-                            <div>
-                              item.entity.field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format)
-                            </div>
-
-                            {{ item.entity.field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format) }}
-                            <div>
-                              item.entity.field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format)
-                            </div>
-                            {{ item.entity.field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }}
-
-                          {% endfor %}
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {{ page.content }}
       </section>
       <section id="content_bottom">
         {{ page.content_bottom }}
