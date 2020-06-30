@@ -35,7 +35,7 @@ global:
   js:
     https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js: {}
     js/timeline.js: {}
-    dist/js/jquery.fancybox.js: {}
+    dist/js/jquery.fancybox.pack.js: {}
     js/app.js: {}
   dependencies:
     - core/drupal
