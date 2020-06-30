@@ -5,30 +5,33 @@ use Drupal\Core\Url;
 /**
  * Implements hook_preprocess_region___HOOK().
  */
-function pharm_theme_preprocess_region__header(&$vars) {
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $vars['language'] = $language;
+function pharm_theme_preprocess_region__header(&$vars)
+{
+  $language         = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
 
-    $path = \Drupal::request()->attributes->get('_system_path');
-    $current_uri = \Drupal::request()->getRequestUri();
-    $current_path = \Drupal::service('path.current')->getPath();
-    $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-    $vars['current_url'] = $result;
+  $path                = \Drupal::request()->attributes->get('_system_path');
+  $current_uri         = \Drupal::request()->getRequestUri();
+  $current_path        = \Drupal::service('path.current')->getPath();
+  $result              = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  $vars['current_url'] = $result;
 }
 
 /**
  * Implements hook_preprocess_block().
  */
-function pharm_theme_preprocess_block(&$vars) {
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $vars['language'] = $language;
+function pharm_theme_preprocess_block(&$vars)
+{
+  $language         = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
-function pharm_theme_preprocess_html(&$variables) {
-  $path = \Drupal::service('path.current')->getPath();
+function pharm_theme_preprocess_html(&$variables)
+{
+  $path      = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $path);
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
     $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
@@ -38,32 +41,33 @@ function pharm_theme_preprocess_html(&$variables) {
 /**
  * Implements hook_preprocess_HOOK().
  */
-function pharm_theme_preprocess_pager(array &$variables) {
+function pharm_theme_preprocess_pager(array &$variables)
+{
   // @see globals.api.php
-  $path = \Drupal::service('path.current')->getPath();
+  $path      = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $path);
 
   $current_url = Url::fromRoute('<current>');
-  $url = $current_url->toString();
+  $url         = $current_url->toString();
 
   global $pager_total;
   $element = $variables['pager']['#element'];
   // Get the max page number for the current pager.
   $variables['pager_max'] = $pager_total[$element];
-  $variables['arg_one'] = $path_args[1];
-  $variables['page_url'] = $url;
+  $variables['arg_one']   = $path_args[1];
+  $variables['page_url']  = $url;
 }
-
 
 /**
  * Implements hook_preprocess_HOOK().
  */
- function pharm_theme_preprocess_page(array &$variables) {
-  $path = \Drupal::service('path.current')->getPath();
+function pharm_theme_preprocess_page(array &$variables)
+{
+  $path      = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $path);
-  $array = [17];
+  $array     = [17];
   if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node')
-      && (in_array($path_args[2], $array))) {
+    && (in_array($path_args[2], $array))) {
     $variables['#attached']['library'][] = 'pharm_theme/loadsh';
   }
 
@@ -72,8 +76,22 @@ function pharm_theme_preprocess_pager(array &$variables) {
 /**
  * Implements hook_preprocess_node().
  */
-function pharm_theme_preprocess_node(&$variables) {
+function pharm_theme_preprocess_node(&$variables)
+{
   if ($variables['node']->getType() == 'healthtips') {
     $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    if ($content_type == 'healthtips') {
+      $suggestions[] = 'page__' . $content_type;
+    }
   }
 }
