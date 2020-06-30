@@ -20,17 +20,9 @@
         text-align: center;
         font-size: 9pt;
       }
-      &.active {
+      a:hover, a:focus{
         background-color: #677D3A;
-        a {
-          color: #FFF;
-        }
-      }
-      &:hover {
-        background-color: #677D3A;
-        a {
-          color: #FFF;
-        }
+        color: #eee;
       }
     }
   }

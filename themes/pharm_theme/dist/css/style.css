@@ -562,14 +562,9 @@ table {
       .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a.navbar-link {
         text-align: center;
         font-size: 9pt; }
-      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active {
-        background-color: #677D3A; }
-        .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active a {
-          color: #FFF; }
-      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover {
-        background-color: #677D3A; }
-        .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover a {
-          color: #FFF; }
+      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:hover, .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:focus {
+        background-color: #677D3A;
+        color: #eee; }
 
 /*contact*/
 .contact-section #header {
