@@ -545,24 +545,24 @@ table {
     padding: 0; } }
 
 /********** helathtips SASS ***/
-nav#block-mainnavigation-2 {
+.container-healthtips-submenu nav#block-mainnavigation {
   padding-top: 30px;
   margin-right: auto;
   margin-left: auto; }
-  nav#block-mainnavigation-2 #menu {
+  .container-healthtips-submenu nav#block-mainnavigation #menu {
     width: 100%;
     height: 50px;
     background-color: #F7F7F7; }
-    nav#block-mainnavigation-2 #menu li.navbar-item {
+    .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
       width: 160px; }
-      nav#block-mainnavigation-2 #menu li.navbar-item a.navbar-link {
+      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a.navbar-link {
         text-align: center;
         font-size: 9pt; }
-      nav#block-mainnavigation-2 #menu li.navbar-item.active a {
+      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active a {
         color: #FFF; }
-      nav#block-mainnavigation-2 #menu li.navbar-item:hover {
+      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover {
         color: #677D3A; }
-        nav#block-mainnavigation-2 #menu li.navbar-item:hover a {
+        .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover a {
           color: #FFF; }
 
 /*contact*/
