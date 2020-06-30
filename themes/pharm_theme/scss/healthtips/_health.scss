@@ -3,7 +3,6 @@
 
 /********** helathtips SASS ***/
 .container-healthtips-submenu nav#block-mainnavigation {
-  padding-top: 30px;
   margin-right: auto;
   margin-left: auto;
   #menu {
@@ -12,15 +11,19 @@
     background-color: #F7F7F7;
     li.navbar-item {
       width: 160px;
+      color: #677D3A;
       a.navbar-link {
         text-align: center;
         font-size: 9pt;
       }
-      &.active a {
-        color: #FFF;
+      &.active {
+        background-color: #677D3A;
+        a {
+          color: #FFF;
+        }
       }
       &:hover {
-        color: #677D3A;
+        background-color: #677D3A;
         a {
           color: #FFF;
         }

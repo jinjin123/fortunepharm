@@ -546,7 +546,6 @@ table {
 
 /********** helathtips SASS ***/
 .container-healthtips-submenu nav#block-mainnavigation {
-  padding-top: 30px;
   margin-right: auto;
   margin-left: auto; }
   .container-healthtips-submenu nav#block-mainnavigation #menu {
@@ -554,14 +553,17 @@ table {
     height: 50px;
     background-color: #F7F7F7; }
     .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
-      width: 160px; }
+      width: 160px;
+      color: #677D3A; }
       .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a.navbar-link {
         text-align: center;
         font-size: 9pt; }
-      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active a {
-        color: #FFF; }
+      .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active {
+        background-color: #677D3A; }
+        .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item.active a {
+          color: #FFF; }
       .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover {
-        color: #677D3A; }
+        background-color: #677D3A; }
         .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item:hover a {
           color: #FFF; }
 
