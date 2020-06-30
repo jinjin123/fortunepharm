@@ -1417,6 +1417,60 @@ i {
   #block-latestoffers .latest-off-block {
     display: flex; }
 
+#block-latestofferschs {
+  margin-bottom: 25px; }
+  #block-latestofferschs .img-wrapper {
+    padding-right: 3px; }
+  #block-latestofferschs .content-wrapper {
+    padding-left: 3px; }
+    #block-latestofferschs .content-wrapper > div {
+      height: 100%; }
+    #block-latestofferschs .content-wrapper .content-left {
+      background-color: #C4EDF6;
+      display: table; }
+      #block-latestofferschs .content-wrapper .content-left h3 {
+        font-size: 1.5em;
+        margin: 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #000077;
+        font-weight: normal;
+        line-height: 1.1; }
+    #block-latestofferschs .content-wrapper .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px; }
+  #block-latestofferschs .latest-off-block {
+    display: flex; }
+
+#block-zuixinyouhuifanti {
+  margin-bottom: 25px; }
+  #block-zuixinyouhuifanti .img-wrapper {
+    padding-right: 3px; }
+  #block-zuixinyouhuifanti .content-wrapper {
+    padding-left: 3px; }
+    #block-zuixinyouhuifanti .content-wrapper > div {
+      height: 100%; }
+    #block-zuixinyouhuifanti .content-wrapper .content-left {
+      background-color: #C4EDF6;
+      display: table; }
+      #block-zuixinyouhuifanti .content-wrapper .content-left h3 {
+        font-size: 1.5em;
+        margin: 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #000077;
+        font-weight: normal;
+        line-height: 1.1; }
+    #block-zuixinyouhuifanti .content-wrapper .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px; }
+  #block-zuixinyouhuifanti .latest-off-block {
+    display: flex; }
+
 #company-timeline {
   width: 90%;
   max-width: 1000px;
@@ -1763,6 +1817,7 @@ i {
   #banner-wrapper .page_banner img {
     max-height: 130px;
     width: 100%; }
+  /*** latestoffers ***/
   #block-latestoffers .content-wrapper .content-left h3 {
     padding: 30px 0 !important; }
   #block-latestoffers .latest-off-block {
@@ -1770,6 +1825,22 @@ i {
   #block-latestoffers .img-wrapper {
     padding-right: 15px; }
   #block-latestoffers .content-wrapper {
+    padding-left: 15px; }
+  #block-latestofferschs .content-wrapper .content-left h3 {
+    padding: 30px 0 !important; }
+  #block-latestofferschs .latest-off-block {
+    display: block; }
+  #block-latestofferschs .img-wrapper {
+    padding-right: 15px; }
+  #block-latestofferschs .content-wrapper {
+    padding-left: 15px; }
+  #block-zuixinyouhuifanti .content-wrapper .content-left h3 {
+    padding: 30px 0 !important; }
+  #block-zuixinyouhuifanti .latest-off-block {
+    display: block; }
+  #block-zuixinyouhuifanti .img-wrapper {
+    padding-right: 15px; }
+  #block-zuixinyouhuifanti .content-wrapper {
     padding-left: 15px; } }
 
 @media only screen and (min-width: 768px) {

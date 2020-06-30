@@ -135,6 +135,75 @@ i {
         display: flex;
     }
 }
+#block-latestofferschs {
+  margin-bottom: 25px;
+  .img-wrapper {
+    padding-right: 3px;
+  }
+  .content-wrapper {
+    padding-left: 3px;
+    >div {
+      height: 100%;
+    }
+    .content-left {
+      background-color: #C4EDF6;
+      display: table;
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #000077;
+        font-weight: normal;
+        line-height: 1.1;
+      }
+    }
+    .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px;
+    }
+  }
+  .latest-off-block {
+    display: flex;
+  }
+}
+
+#block-zuixinyouhuifanti {
+  margin-bottom: 25px;
+  .img-wrapper {
+    padding-right: 3px;
+  }
+  .content-wrapper {
+    padding-left: 3px;
+    >div {
+      height: 100%;
+    }
+    .content-left {
+      background-color: #C4EDF6;
+      display: table;
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #000077;
+        font-weight: normal;
+        line-height: 1.1;
+      }
+    }
+    .content-right {
+      overflow-y: auto;
+      background-color: #EAF6F8;
+      padding: 15px;
+    }
+  }
+  .latest-off-block {
+    display: flex;
+  }
+}
 
 #company-timeline {
     width: 90%;
@@ -589,7 +658,7 @@ i {
             }
         }
     }
-
+/*** latestoffers ***/
     #block-latestoffers {
         .content-wrapper {
             .content-left {
@@ -608,6 +677,42 @@ i {
             padding-left: 15px;
         }
     }
+  #block-latestofferschs {
+    .content-wrapper {
+      .content-left {
+        h3 {
+          padding: 30px 0!important;
+        }
+      }
+    }
+    .latest-off-block {
+      display: block;
+    }
+    .img-wrapper {
+      padding-right: 15px;
+    }
+    .content-wrapper {
+      padding-left: 15px;
+    }
+  }
+  #block-zuixinyouhuifanti {
+    .content-wrapper {
+      .content-left {
+        h3 {
+          padding: 30px 0!important;
+        }
+      }
+    }
+    .latest-off-block {
+      display: block;
+    }
+    .img-wrapper {
+      padding-right: 15px;
+    }
+    .content-wrapper {
+      padding-left: 15px;
+    }
+  }
 }
 
 
