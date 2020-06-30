@@ -190,7 +190,7 @@ Drupal.behaviors.yourmodulename = {
     /*** News page ****/
     $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
     if ($('.path-news .content-row').length > 0) {
-      $(".fancybox_popup").fancybox().trigger('click');
+      // $(".fancybox_popup").fancybox().trigger('click');
       $('.path-news .content-row').show();
       $.data(this, 'news', setTimeout(function() {
         $('.path-news .content-row .colume2').each(function() {
@@ -365,8 +365,20 @@ Drupal.behaviors.yourmodulename = {
     /*news */
 
     $(document).ready(function() {
-      var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+      $(".fancybox_popup").fancybox().trigger('click');
+      $(".fancybox_popup").fancybox({
+        openEffect	: 'elastic',
+        closeEffect	: 'elastic',
 
+        helpers : {
+          title : {
+            type : 'inside'
+          }
+        }
+      });
+    });;
+    $(document).ready(function() {
+      var hash = document.URL.substr(document.URL.indexOf('#') + 1);
       change_size('wrapper', $(window).width(), $(window).height());
       $('body').show();
       $(window).resize(function () {
@@ -565,15 +577,6 @@ Drupal.behaviors.yourmodulename = {
         if ($('.fancybox').length > 0) {
             $(".fancybox").fancybox();
         }
-        $(document).click(function(e) {
-            if ($(e.target).attr("class") == "fancybox-item fancybox-close") {
-                $(".fancybox-overlay").css("display", "none");
-                // }else if($(e.target).attr("src").indexOf("thumbs") !=-1) {
-                //   $(".fancybox-overlay").css("display","block");
-                //   $(".fancybox-overlay").css("height",$(document).height());
-                // }else{
-                //   con
-            }
-        })
+
   }
 };
