@@ -15,6 +15,11 @@ loadsh:
   dependencies:
     - core/jquery
 
+healthtips:
+  js:
+    js/healthtips.js: {}
+  dependencies:
+    - core/jquery
 
 global:
   css:
@@ -30,11 +35,10 @@ global:
   js:
     https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js: {}
     js/timeline.js: {}
-    //cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js: {}
+    dist/js/jquery.fancybox.js: {}
     js/app.js: {}
   dependencies:
     - core/drupal
     - core/jquery
     - core/jquery.once
     - pharm_theme/slick
-
