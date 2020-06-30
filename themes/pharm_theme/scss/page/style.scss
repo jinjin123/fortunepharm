@@ -101,7 +101,9 @@ i {
         display: none;
     }
 }
-#block-latestoffers {
+#block-latestoffers,
+#block-latestofferschs,
+#block-zuixinyouhuifanti{
     margin-bottom: 25px;
     .img-wrapper {
         padding-right: 3px;
@@ -468,7 +470,7 @@ i {
                 position: relative;
                 border-left: 2px solid #F5F5F5;
             }
-            
+
             .colume2 {
                 .content-wrapper {
                     display: none;
@@ -625,7 +627,7 @@ i {
                 }
             }
         }
-        
+
     }
 }
 
@@ -743,7 +745,7 @@ i {
             .with-image {
                 height: 230px !important;
             }
-            
+
         }
     } // News
     .path-news {
@@ -762,7 +764,7 @@ i {
                     }
                 }
             }
-        }        
+        }
     }
 
     #banner-wrapper  {
@@ -779,8 +781,10 @@ i {
             }
         }
     }
-    
-    #block-latestoffers {
+
+    #block-latestoffers,
+    #block-latestofferschs,
+    #block-zuixinyouhuifanti{
         .content-wrapper {
             .content-left {
                 h3 {
