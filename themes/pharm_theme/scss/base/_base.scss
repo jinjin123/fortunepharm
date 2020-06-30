@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-    color: inherit;
 }
 .grey {
     color: #666666;
@@ -79,7 +78,7 @@ h1 {
     }
     &.with-select {
         padding: 7px;
-        margin-left: 10px;
+        margin:0;
         cursor: inherit;
     }
     select {
@@ -110,6 +109,7 @@ h1 {
         padding: 0;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-right: 10px;
         overflow: hidden;
         float: left;
         .pager__item {
@@ -158,6 +158,17 @@ h1 {
 }
 .d-none {
     display: none;
+}
+.purple {
+    color: #1D778F;
+}
+.blue {
+    color: #518fcc;
+}
+p {
+    a{
+        color: #518fcc;
+    }
 }
 
 #block-pharm-theme-local-tasks {
@@ -376,6 +387,7 @@ table {
     .pl-3 {
         padding-left: 3px!important;
     }
+    
 }
 @media (min-width: 992px) {
     .col-md-9-1, .col-md-9-2, .col-md-9-3, .col-md-9-4, .col-md-9-5, .col-md-9-6, .col-md-9-7, .col-md-9-8, .col-md-9-9, .col-md-9-10, .col-md-9-11, .col-md-9-12 {
