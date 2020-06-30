@@ -136,88 +136,6 @@ i {
     }
 }
 
-#block-contactus {
-    #offers-wrapper {
-        overflow: hidden;
-        >div {
-            padding: 0;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-    }
-    .content-wrapper {
-        >div {
-            height: 100%;
-        }
-        .content-left {
-            background-color: #C4EDF6;
-            display: table;
-            div {
-                display: table-cell;
-                vertical-align: middle;
-            }
-            h3 {
-                font-size: 1.5em;
-                margin: 0;
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-                color: #000077;
-                display: block;
-                vertical-align: inherit;
-                padding: 0;
-            }
-            p {
-                text-align: center;
-                font-size: 0.5em;
-                margin-top: 10px;
-            }
-        }
-        .content-right {
-            background-color: #EAF6F8;
-            padding: 0;
-            ul {
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                li {
-                    padding: 15px 20px;
-                    width: 100%;
-                    border-bottom: 1px solid #E1ECEE;
-                    color: #848788;
-                    label {
-                        width: 65px;
-                        a {
-                            color: #848788;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .img-wrapper {
-        img {
-            height: 100%;
-        }
-    }
-    .content-wrapper.with-image {
-        .content-left {
-            display: block;
-            padding: 0;
-            background-color: #EAF6F8;
-            img {
-                width: 61%;
-            }
-        }
-        .content-right {
-            background-color: #EAF6F8;
-            padding: 20px 15px;
-            p, a {
-                color: #848788;
-            }
-        }
-    }
-}
 #company-timeline {
     width: 90%;
     max-width: 1000px;
@@ -628,17 +546,6 @@ i {
     .path-news #block-pharm-theme-content {
         width: 100%;
     }
-    #block-contactus {
-        #offers-wrapper {
-            >div:nth-child(odd) {
-                padding-right: 3px;
-                clear: both;
-            }
-            >div:nth-child(even) {
-                padding-left: 3px;
-            }
-        }
-    }
 }
 @media only screen and (max-width: 991px) {
     #banner-wrapper  {
@@ -651,34 +558,6 @@ i {
     }
 }
 @media only screen and (max-width: 767px) {
-    #block-contactus {
-        .content-wrapper {
-            height: 304px !important;
-            margin-bottom: 25px;
-            h3 {
-                padding: 0;
-            }
-            .content-right {
-                ul {
-                    li {
-                        padding: 15px 10px;
-                        label {
-                            display: block;
-                        }
-                    }
-                }
-            }
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
-        .content-wrapper {
-            .with-image {
-                height: 230px !important;
-            }
-
-        }
-    } // News
     .path-news {
         .content-row {
             &>div {
@@ -768,15 +647,6 @@ i {
     padding-left: 3px;
   }
 
-  /*contact-us*/
-  #lastest-offers.contact-us #offers-wrapper > div > div:nth-child(odd){
-    padding-right: 3px;
-    clear: both;
-  }
-  #lastest-offers.contact-us #offers-wrapper > div > div:nth-child(even){
-    padding-left: 3px;
-  }
-
   /*company-history*/
   #factory-intro .intro-text,
   #company-history .history-text{
@@ -843,10 +713,6 @@ i {
     margin-top: 0;
   }
 
-  .contact-section #contact-nav li a{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 
   /*index*/
   #index #main .index-wrapper .link-wrapper{
@@ -1039,22 +905,7 @@ i {
     padding: 30px 0;
   }
 
-  /*contact-us*/
-  #lastest-offers.contact-us #offers-wrapper .content-wrapper {
-    height: 304px !important;
-  }
-  #lastest-offers.contact-us #offers-wrapper .content-wrapper.with-image {
-    height: 230px !important;
-  }
-  #lastest-offers.contact-us #offers-wrapper .content-wrapper h3 {
-    padding: 0;
-  }
-  #lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li {
-    padding: 15px 10px;
-  }
-  #lastest-offers.contact-us #offers-wrapper .content-wrapper .content-right ul li label {
-    display: block;
-  }
+
 
   /*advertisements*/
   #advertisements .video-outer-wrapper .video-wrapper:nth-child(even) {
