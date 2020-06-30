@@ -6,4 +6,25 @@ nav#block-mainnavigation-2 {
   padding-top: 30px;
   margin-right: auto;
   margin-left: auto;
+  #menu {
+    width: 100%;
+    height: 50px;
+    background-color: #F7F7F7;
+    li.navbar-item {
+      width: 160px;
+      a.navbar-link {
+        text-align: center;
+        font-size: 9pt;
+      }
+      &.active a {
+        color: #FFF;
+      }
+      &:hover {
+        color: #677D3A;
+        a {
+          color: #FFF;
+        }
+      }
+    }
+  }
 }
