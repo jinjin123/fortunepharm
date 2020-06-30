@@ -26,7 +26,7 @@
       </ul>
     </div>
   </nav>
-  {% if row._entity.gettype == 'page' %}
+  {% if row._entity.gettype != 'healthtips' %}
   <nav id="contact-nav" class="container-fluid hidden-xs">
     <div class="container-fluid-125">
       {{ elements.mainnavigation }}
