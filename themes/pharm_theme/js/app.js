@@ -376,7 +376,7 @@ Drupal.behaviors.yourmodulename = {
           }
         }
       });
-    });;
+    });
     $(document).ready(function() {
       var hash = document.URL.substr(document.URL.indexOf('#') + 1);
       change_size('wrapper', $(window).width(), $(window).height());
@@ -577,6 +577,93 @@ Drupal.behaviors.yourmodulename = {
         if ($('.fancybox').length > 0) {
             $(".fancybox").fancybox();
         }
+
+    /*contact-us-offers*/
+      if($('#block-contactus #offers-wrapper').length > 0){
+        $.data(this, 'blcok-contactus', setTimeout(function() {
+          $('#block-contactus #offers-wrapper .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#block-contactus #offers-wrapper .content-wrapper').show();
+        }, 200));
+        $(window).resize(function() {
+          clearTimeout($.data(this, 'blcok-contactus2'));
+          $.data(this, 'blcok-contactus2', setTimeout(function() {
+            $('#block-contactus #offers-wrapper .img-wrapper').each(function(){
+              $(this).siblings('.content-wrapper').height($(this).height());
+            });
+            $('#block-contactus #offers-wrapper .content-wrapper').show();
+          }, 800));
+        });
+      }
+      $('#block-contactus #offers-wrapper .more-btn').click(function(){
+        $('#block-contactus #offers-wrapper > div.hide').each(function(key){
+          if(key < 3)
+            $(this).removeClass('hide');
+          if($('#block-contactus #offers-wrapper > div.hide').length == 0)
+            $('#block-contactus #offers-wrapper .more-btn').remove();
+        });
+        $('#block-contactus #offers-wrapper .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+      });
+    if($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper').length > 0){
+      $.data(this, 'blcok-contactus', setTimeout(function() {
+        $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'blcok-contactus2'));
+        $.data(this, 'blcok-contactus2', setTimeout(function() {
+          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function(){
+      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function(key){
+        if(key < 3)
+          $(this).removeClass('hide');
+        if($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0)
+          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
+      });
+      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function(){
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+    if($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper').length > 0){
+      $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti', setTimeout(function() {
+        $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti2'));
+        $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti2', setTimeout(function() {
+          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function(){
+      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function(key){
+        if(key < 3)
+          $(this).removeClass('hide');
+        if($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0)
+          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
+      });
+      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function(){
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+      /*contact-us-offers*/
 
   }
 };
