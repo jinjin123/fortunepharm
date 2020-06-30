@@ -26,8 +26,10 @@
       </ul>
     </div>
   </nav>
+  {% if row._entity.gettype == 'page' %}
   <nav id="contact-nav" class="container-fluid hidden-xs">
     <div class="container-fluid-125">
       {{ elements.mainnavigation }}
     </div>
   </nav>
+  {% endif %}
