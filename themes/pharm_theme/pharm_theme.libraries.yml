@@ -37,6 +37,7 @@ global:
     js/timeline.js: {}
     dist/js/jquery.fancybox.pack.js: {}
     js/app.js: {}
+    js/healthtips.js: {}
   dependencies:
     - core/drupal
     - core/jquery
