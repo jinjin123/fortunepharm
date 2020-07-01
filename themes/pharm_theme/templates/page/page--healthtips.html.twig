@@ -10,7 +10,7 @@
 
 {# Header section #}
 {# Content section #}
-  <div id="wrapper">
+  <div id="wrapper1">
     <div rel="https://www.fortunepharm.com/" id="globalpath"></div>
     {% if page.page_title %}
     <nav id="contact-nav" class="container-fluid">
@@ -22,7 +22,7 @@
       </div>
     </nav>
   {%endif  %}
-  <div id="main">
+  <div id="main1">
     <div class="container-fluid">
       <section id="banner-wrapper">
       <div class="page_banner">
@@ -37,7 +37,7 @@
       <section id="os-wrapper">
       <div class="health-tips">
         <div id='health1'>
-          <div id="health-tips" class="pain">
+          <div id="health-tips" class="cold_and_flu">
             <div id="wrapper">
               <div id="page-content-wrapper">
                 <div id="main">
@@ -50,7 +50,9 @@
                         <div class="notice-wrapper">
                           <p>
                             {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }}
-                            <p></div>
+                            <p>
+                            
+                        </div>
                             <div>
                               item.entity.field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format)
                             </div>
@@ -61,7 +63,7 @@
                             </div>
                             {{ item.entity.field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }}
 
-                          {% endfor %}
+                      {% endfor %}
 
                         </div>
                       </div>

@@ -3,10 +3,18 @@ Drupal.behaviors.Healthtips = {
         var $ = jQuery.noConflict();
         console.log('Healthtips');
 
+        function change_size(id_name, width, height) {
+            if ($('#' + id_name).length > 0) {
+                $('#' + id_name).width("auto");
+                $('#' + id_name).height("auto");
+            }
+        }
         $(document).ready(function() {
             // change_size('wrapper', $(window).width(), $(window).height());
             $('body').show();
             if ($('#health-tips .sub-tab-wrapper li').length > 0) {
+                change_size('wrapper', $(window).width(), $(window).height());
+
                 var tab_width = 0;
                 clearTimeout($.data(this, 'health-tips-tab'));
                 $.data(this, 'health-tips-tab', setTimeout(function() {
@@ -19,6 +27,7 @@ Drupal.behaviors.Healthtips = {
             }
 
             function health_tips() {
+                change_size('wrapper', $(window).width(), $(window).height());
                 if ($(window).width() >= 768) {
                     $('#health-tips .function-wrapper .function-btn').each(function() {
                         if ($('#health-tips').hasClass('cold_and_flu'))
