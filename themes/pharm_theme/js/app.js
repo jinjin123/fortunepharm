@@ -190,13 +190,14 @@ Drupal.behaviors.yourmodulename = {
     /*** News page ****/
     $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
     if ($('.path-news .content-row').length > 0) {
-      // $(".fancybox_popup").fancybox().trigger('click');
-      $('.path-news .content-row').show();
+      // console.log($('.path-news .content-row'))
+      // console.log($('.path-news .content-row')[0].className = "content-row active")
+      $('.path-news .content-row')[0].className = "content-row active";
       $.data(this, 'news', setTimeout(function() {
         $('.path-news .content-row .colume2').each(function() {
           $(this).siblings('.colume1').height($(this).height());
         });
-        $('.path-news .views-row .content-row').show();
+        $('.path-news .content-row').show();
       }, 200));
       $(window).resize(function() {
         clearTimeout($.data(this, 'news2'));
@@ -204,7 +205,7 @@ Drupal.behaviors.yourmodulename = {
           $('.path-news .content-row .colume2').each(function() {
             $(this).siblings('.colume1').height($(this).height());
           });
-          $('.path-news .views-row .content-row').show();
+          $('.path-news  .content-row').show();
         }, 800));
       });
     }

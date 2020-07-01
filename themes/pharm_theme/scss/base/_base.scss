@@ -255,7 +255,8 @@ form {
     }
 }
 table {
-    border: 1px solid $light_grey;
+    // news content table not need border
+    //border: 1px solid $light_grey;
     border-bottom: 3px solid $purple;
     border-spacing: 0;
     tr {
@@ -387,7 +388,7 @@ table {
     .pl-3 {
         padding-left: 3px!important;
     }
-    
+
 }
 @media (min-width: 992px) {
     .col-md-9-1, .col-md-9-2, .col-md-9-3, .col-md-9-4, .col-md-9-5, .col-md-9-6, .col-md-9-7, .col-md-9-8, .col-md-9-9, .col-md-9-10, .col-md-9-11, .col-md-9-12 {
