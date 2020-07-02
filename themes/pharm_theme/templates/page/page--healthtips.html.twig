@@ -36,12 +36,13 @@
                 <section id="os-wrapper">
                     <div class="language">{{ language }}</div>
                     <div class="health-tips-ful">
+                    {% trans %}
                         {% for item in node.field_healthtips_paragraph %}
                         <!-- healthtips_short_descripti             start   -->
                            {# {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }}               #}
-                          {{ item.entity.field_healthtips_short_descripti.translation(language).value|raw}}
+                          {{ item.entity.field_healthtips_short_descripti.value|raw}}
                           {# {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }} #}
-
+                    {% endtrans %}
                     <!-- healthtips_short_descripti    end-->
 
                     <!-- body   start -->
