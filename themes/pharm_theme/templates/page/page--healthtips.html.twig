@@ -1,76 +1,77 @@
 <div class="layout-container page">
-    {# Header section #}
-    <header id="header" class="navbar">
-        <div class="container-fluid">
-            <div class="container-fluid-40">
-                {{ page.header }}
-            </div>
-        </div>
-    </header>
-
-    {# Header section #} {# Content section #}
-    <div id="wrapper1">
-        <div rel="https://www.fortunepharm.com/" id="globalpath"></div>
-        {% if page.page_title %}
-        <nav id="contact-nav" class="container-fluid">
-
-            <div class="container-fluid-125">
-                <div class="page_title">
-                    {{ page.page_title }}
-                </div>
-            </div>
-        </nav>
-        {%endif %}
-        <div id="main1">
-            <div class="container-fluid">
-                <section id="banner-wrapper">
-                    <div class="page_banner">
-                        {{ page.page_banner }}
-                    </div>
-                </section>
-                <nav id="contact-nav" class="container-fluid hidden-xs container-fluid-healthtips">
-                    <div class="container-healthtips-submenu">
-                        {{ page.sub_menu }}
-                    </div>
-                </nav>
-                <section id="os-wrapper">
-                    <div class="language">{{ language }}</div>
-                    <div class="health-tips-ful">
-                    {% trans %}
-                        {% for item in node.field_healthtips_paragraph %}
-                        <!-- healthtips_short_descripti             start   -->
-                           {# {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }}               #}
-                          {{ item.entity.field_healthtips_short_descripti.value|raw}}
-                          {# {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }} #}
-                    {% endtrans %}
-                    <!-- healthtips_short_descripti    end-->
-
-                    <!-- body   start -->
-
-                     {{ item.entity.field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format) }}
-                    <!-- body  end -->
-                    <!-- healthtips_details    start -->
-                      {{ item.entity.field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }}
-                    <!-- healthtips_details    end -->
-                    {% endfor %}
-                     </div>
-
-            </div>
-
-            </section>
-            <section id="content_bottom">
-                {{ page.content_bottom }}
-            </section>
-        </div>
+  {# Header section #}
+  <header id="header" class="navbar">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.header }}
+      </div>
     </div>
-    {# Content section #} {# Footer section #}
-    <footer class="footer" role="contentinfo" id="footer">
-        <div class="container-fluid">
-            <div class="container-fluid-40">
-                {{ page.footer }}
-            </div>
+  </header>
+
+  {# Header section #}
+  {# Content section #}
+  <div id="wrapper1">
+    <div rel="https://www.fortunepharm.com/" id="globalpath"></div>
+    {% if page.page_title %}
+      <nav id="contact-nav" class="container-fluid">
+
+        <div class="container-fluid-125">
+          <div class="page_title">
+            {{ page.page_title }}
+          </div>
         </div>
-    </footer>
+      </nav>
+    {%endif %}
+    <div id="main1">
+      <div class="container-fluid">
+        <section id="banner-wrapper">
+          <div class="page_banner">
+            {{ page.page_banner }}
+          </div>
+        </section>
+        <nav id="contact-nav" class="container-fluid hidden-xs container-fluid-healthtips">
+          <div class="container-healthtips-submenu">
+            {{ page.sub_menu }}
+          </div>
+        </nav>
+        <section id="os-wrapper">
+          <div class="language">{{ language }}</div>
+          <div class="health-tips-ful">
+            {% for item in node.field_healthtips_paragraph %}
+              <!-- healthtips_short_descripti             start   -->
+              {{ item.entity.translation(language).field_healthtips_short_descripti.value| check_markup(item.entity.translation(language).field_healthtips_short_descripti.format) }}
+              {{ item.entity.translation(language).field_healthtips_short_descripti.value|raw}}
+              {{ item.entity.translation(language).field_healthtips_short_descripti.value| check_markup(item.entity.translation(language).field_healthtips_short_descripti.format) }}
+
+              <!-- healthtips_short_descripti    end-->
+
+              <!-- body   start -->
+
+              {{ item.entity.translation(language).field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format) }}
+              <!-- body  end -->
+              <!-- healthtips_details    start -->
+              {{ item.entity.translation(language).field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }}
+              <!-- healthtips_details    end -->
+            {% endfor %}
+          </div>
+
+        </div>
+
+      </section>
+      <section id="content_bottom">
+        {{ page.content_bottom }}
+      </section>
+    </div>
+  </div>
+  {# Content section #}
+  {# Footer section #}
+  <footer class="footer" role="contentinfo" id="footer">
+    <div class="container-fluid">
+      <div class="container-fluid-40">
+        {{ page.footer }}
+      </div>
+    </div>
+  </footer>
 </div>
 </div>
 {# Footer section #}
