@@ -38,20 +38,18 @@
           <div class="language">{{ language }}</div>
           <div class="health-tips-ful">
             {% for item in node.field_healthtips_paragraph %}
-              <!-- healthtips_short_descripti             start   -->
-              {{ item.entity.translation(language).field_healthtips_short_descripti.value| check_markup(item.entity.translation(language).field_healthtips_short_descripti.format) }}
+              <!-- healthtips_short_descripti start   -->
               {{ item.entity.translation(language).field_healthtips_short_descripti.value|raw}}
-              {{ item.entity.translation(language).field_healthtips_short_descripti.value| check_markup(item.entity.translation(language).field_healthtips_short_descripti.format) }}
+              <!-- healthtips_short_descripti end-->
 
-              <!-- healthtips_short_descripti    end-->
-
-              <!-- body   start -->
-
+              <!-- body start -->
               {{ item.entity.translation(language).field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format) }}
-              <!-- body  end -->
-              <!-- healthtips_details    start -->
+              <!-- body end -->
+
+              <!-- healthtips_details start -->
               {{ item.entity.translation(language).field_healthtips_details.value| check_markup(item.entity.field_healthtips_details.format) }}
-              <!-- healthtips_details    end -->
+              <!-- healthtips_details end -->
+
             {% endfor %}
           </div>
 
