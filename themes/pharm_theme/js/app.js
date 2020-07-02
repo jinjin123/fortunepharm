@@ -8,7 +8,7 @@ Drupal.behaviors.yourmodulename = {
       crt_path = crt_path.replace("node/", "");
       var title_lang = "title_" + json_lang;
       var timeline_data = [];
-      var JsonAPI = "/" + lang + "timeline-json/" + crt_path;
+      var JsonAPI = "/" +lang + lang + "timeline-json/" + crt_path;
       $.getJSON(JsonAPI, callbackFuncWithData);
 
       function callbackFuncWithData(data) {
