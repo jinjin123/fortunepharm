@@ -12,7 +12,6 @@ Drupal.behaviors.yourmodulename = {
       $.getJSON(JsonAPI, callbackFuncWithData);
 
       function callbackFuncWithData(data) {
-        console.log(data);
         for (var i in data) {
           var images = data[i]['img'];
           var imgs = [];
