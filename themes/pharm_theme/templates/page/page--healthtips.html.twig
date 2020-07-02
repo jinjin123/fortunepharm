@@ -35,6 +35,7 @@
         </div>
       </nav>
       <section id="os-wrapper">
+      <div class="langauge">{{ language }}</div>
       <div class="health-tips">
         <div id='health1'>
           <div id="health-tips" class="cold_and_flu">
@@ -51,7 +52,7 @@
                           <p>
                             {{ item.entity.field_healthtips_short_descripti.value| check_markup(item.entity.field_healthtips_short_descripti.format) }}
                             <p>
-                            
+
                         </div>
                             <div>
                               item.entity.field_healthtips_body.value| check_markup(item.entity.field_healthtips_body.format)
