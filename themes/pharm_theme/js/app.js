@@ -811,8 +811,5 @@ Drupal.behaviors.yourmodulename = {
     /*sidebar*/
     /**** Mobile menu ****/
 
-
-
-
   }
 };
