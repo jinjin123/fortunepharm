@@ -22,7 +22,7 @@
             margin: 0 5px;
             border-bottom: 1px solid transparent;
             color: #878787;
-            &:hover {
+            &:hover, &:focus {
                 background: none;
                 color: #040C4A;
                 border-bottom: 1px #040C4A solid;
@@ -111,7 +111,15 @@
     }
 }
 
-
+body {
+    &.path-frontpage, &.page-node-2, &.page-node-20, &.page-node-147, &.path-news, &.page-node-5, &.page-node-20, &.path-advertisements &.page-node-6,
+    &.page-node-10 {
+        #header {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}
 
 @media only screen and (min-width: 768px) {
     .nav {
@@ -124,8 +132,8 @@
         }
     }
     #header {
-        padding-bottom: 0;
-        border-bottom: 0px solid #EFEFEF;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #EFEFEF;
         #contact-nav {
             display: none;
         }
@@ -164,6 +172,18 @@
         }
     }
 }
+
+@media only screen and (max-width: 1120px) and (min-width: 768px) {
+    #header {
+        .main-menu {
+            a {
+                padding: 5px 2px;
+                margin: 0px 2px;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #header {
         .navbar-right {
@@ -180,6 +200,67 @@
         }
         #lang, #social-icon, #linkage-icon {
             margin-top: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #sidebar-wrapper  {
+        #lang-sidebar {
+            width: 160px;
+            margin: 25px 0 25px 25px;
+            li {
+                float: left;
+                &:first-child {
+                    a {
+                        background-image: none;
+                    }
+                }
+                a {
+                    height: 24px;
+                    line-height: 24px;
+                    padding: 0 15px;
+                    background-image: url(../images/laug_sep.png);
+                    background-position: left;
+                    color: #878787;
+                    &:hover {
+                        color: #040C4A;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &.active {
+                color: #040C4A;
+            }
+            a {
+                &:hover {
+                    color: #040C4A;
+                }
+            }
+        }
+        #social-icon-sidebar {
+            position: relative;
+            width: 200px;
+            margin-left: 25px;
+            li {
+                float: left;
+                a {
+                    width: 45px;
+                    height: 45px;
+                    padding: 0;
+                    margin: 3px;
+                    background-repeat: no-repeat;
+                    &.fb-icon {
+                        background-image: url(../images/facebook_icon_mobile.png);
+                    }
+                    &.weibo-icon {
+                        background-image: url(../images/webio_icon_mobile.png);
+                    }
+                    &.youtube-icon {
+                        background-image: url(../images/youtube_icon_mobile.png);
+                    }
+                }
+            }
         }
     }
 }

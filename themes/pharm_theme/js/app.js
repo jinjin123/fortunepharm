@@ -324,7 +324,7 @@ Drupal.behaviors.yourmodulename = {
       crt_path = crt_path.replace("node/", "");
       var title_lang = "title_" + json_lang;
       var zoom_in_detail_lang = "zoom_in_detail_" + json_lang;
-      var JsonAPI = "/" + lang + "timeline-json/" + crt_path;
+      var JsonAPI = "/" + lang + lang + "timeline-json/" + crt_path;
       $.getJSON(JsonAPI, callbackFundWithData);
 
       function callbackFundWithData(charList) {
@@ -534,7 +534,7 @@ Drupal.behaviors.yourmodulename = {
       crt_path = crt_path.replace("node/", "");
       var title_lang = "title_" + json_lang;
       var zoom_in_detail_lang = "zoom_in_detail_" + json_lang;
-      var JsonAPI = "/" + lang + "timeline-json/" + crt_path;
+      var JsonAPI = "/" + lang + lang + "timeline-json/" + crt_path;
       $.getJSON(JsonAPI, callbackFundWithData);
 
       function callbackFundWithData(charList) {
@@ -760,7 +760,6 @@ Drupal.behaviors.yourmodulename = {
       /*health-tips*/
     });
     //healthtips---------------------end
-
     /**** Mobile menu ****/
     /*sidebar*/
     var trigger = $('.hamburger'),
@@ -804,6 +803,53 @@ Drupal.behaviors.yourmodulename = {
     });
     /*sidebar*/
     /**** Mobile menu ****/
-
+    /******* Faq ******/
+    function faq_detail2(element) {
+      var id = $(element).attr('rel');
+      var position = $(element).parent().parent().position();
+      var big_width = $('.path-faq .detail-wrapper').width();
+      var width = $(element).parent().parent().width();
+      var lang = settings.path.pathPrefix;
+      var langname = lang.replace('/', '');
+      var imaeg_path = $(element).parent().parent().parent().find('.img-wrapper img').attr('src');
+      var question = $(element).parent().find('.grey').html();
+      var answer = $(element).parent().find('.faq_content').html();
+      if (langname == 'eng') {
+        var label_question = 'Question:';
+        var label_answer = 'Find answer on:';
+      } else if (langname == 'cht') {
+        var label_question = '問題:';
+        var label_answer = '在幸福FAQ找答案:';
+      } else if (langname == 'chs') {
+        var label_question = '问题:';
+        var label_answer = '在幸福FAQ找答案:';
+      }
+      $('.path-faq div.share-wrapper > a').attr('href', "https://www.facebook.com/dialog/feed?app_id=105148586494382&display=popup&caption=" + question + "&description=" + answer + "&picture=" + imaeg_path + "&link=http://www.fortunepharm.com/&redirect_uri=http://www.fortunepharm.com/");
+      $('.path-faq .detail-wrapper h4').html(question);
+      $('.path-faq .detail-wrapper .description').html(answer);
+      $('.path-faq .detail-wrapper img').attr('src', imaeg_path);
+      if ((position.left + big_width) > $('.content-outer-wrapper').width()) {
+        $('.path-faq .detail-wrapper').css('top', position.top).css('left', 'auto').css('right', 0).show();
+      } else {
+        $('.path-faq .detail-wrapper').css('top', position.top).css('left', position.left).show();
+      }
+      var diff = ($('.path-faq .detail-wrapper').position().top + $('.path-faq .detail-wrapper').height() + 10) - $('.path-faq .content-outer-wrapper').height();
+      if (diff > 0) {
+        $('.path-faq .content-outer-wrapper').css('margin-bottom', diff + 10);
+      } else {
+        $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
+      }
+      $('html, body').animate({
+        scrollTop: $('.path-faq .detail-wrapper').offset().top - 5
+      }, 500);
+    }
+    $('.path-faq .content-wrapper .detail').click(function() {
+      faq_detail2($(this));
+    });
+    $('.path-faq .detail-wrapper .detail').click(function() {
+      $(this).parent().parent().hide();
+      $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
+    });
+    /***** code end ******/
   }
 };

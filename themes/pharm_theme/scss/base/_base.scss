@@ -26,6 +26,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 500;
     line-height: 1.1;
 }
+h1 {
+    font-size: 2.5em;
+}
 .grey {
     color: #666666;
     &:hover, &:focus {
@@ -37,9 +40,13 @@ img {
 }
 a {
     text-decoration: none;
+    background-color: transparent;
     &:hover {
         text-decoration: none;
     }
+}
+* {
+    background-repeat: no-repeat;
 }
 strong {
     font-weight: $font-bold;
@@ -196,11 +203,6 @@ p {
                 color: #fff;
             }
         }
-    }
-}
-@media (max-width: $pad) {
-    html, body {
-        font-size: 15px;
     }
 }
 @media (max-width: $phone) {
