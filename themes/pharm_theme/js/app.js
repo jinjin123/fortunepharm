@@ -654,12 +654,6 @@ Drupal.behaviors.yourmodulename = {
     });
     /*contact-us-offers*/
     //  healthtips--------------------start
-    function change_size(id_name, width, height) {
-      if ($('#' + id_name).length > 0) {
-        $('#' + id_name).width("auto");
-        $('#' + id_name).height("auto");
-      }
-    }
     $(document).ready(function() {
       // change_size('wrapper', $(window).width(), $(window).height());
       $('body').show();
