@@ -365,7 +365,6 @@ Drupal.behaviors.yourmodulename = {
     }
     /*news */
 
-    $(document).ready(function() {
       $(".fancybox_popup").fancybox().trigger('click');
       $(".fancybox_popup").fancybox({
         openEffect	: 'elastic',
@@ -377,8 +376,6 @@ Drupal.behaviors.yourmodulename = {
           }
         }
       });
-    });
-    $(document).ready(function() {
       var hash = document.URL.substr(document.URL.indexOf('#') + 1);
       change_size('wrapper', $(window).width(), $(window).height());
       $('body').show();
@@ -397,7 +394,6 @@ Drupal.behaviors.yourmodulename = {
           }
         }
       });
-    })
         /*index*/
         /*** News page ****/
         $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
