@@ -364,13 +364,11 @@ Drupal.behaviors.yourmodulename = {
       $(".fancybox").fancybox();
     }
     /*news */
-
     $(document).ready(function() {
       $(".fancybox_popup").fancybox().trigger('click');
       $(".fancybox_popup").fancybox({
         openEffect: 'elastic',
         closeEffect: 'elastic',
-
         helpers: {
           title: {
             type: 'inside'
@@ -438,7 +436,6 @@ Drupal.behaviors.yourmodulename = {
     // Pager
     var pager = settings.path.currentQuery.page;
     $('.path-news .pagination-btn .pagination-change option[rel=' + pager + ']').attr('selected', 'selected');
-
     $('.path-news .pagination-btn .pagination-change').change(function() {
       var path = $(this).val();
       var lang = settings.path.pathPrefix;
@@ -487,14 +484,12 @@ Drupal.behaviors.yourmodulename = {
       var timeline_data = [];
       var firstYear = '';
       var secondYear = '';
-
       $('#first-year').click(function() {
         changeYear('2016')
       });
       $('#second-year').click(function() {
         changeYear('2015')
       });
-
       $('#year-drop-down').change(function() {
         changeYear($(this).val());
       });
@@ -578,7 +573,6 @@ Drupal.behaviors.yourmodulename = {
     if ($('.fancybox').length > 0) {
       $(".fancybox").fancybox();
     }
-
     /*contact-us-offers*/
     if ($('#block-contactus #offers-wrapper').length > 0) {
       $.data(this, 'blcok-contactus', setTimeout(function() {
@@ -599,10 +593,8 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#block-contactus #offers-wrapper .more-btn').click(function() {
       $('#block-contactus #offers-wrapper > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#block-contactus #offers-wrapper > div.hide').length == 0)
-          $('#block-contactus #offers-wrapper .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#block-contactus #offers-wrapper > div.hide').length == 0) $('#block-contactus #offers-wrapper .more-btn').remove();
       });
       $('#block-contactus #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
@@ -627,10 +619,8 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function() {
       $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0)
-          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
       });
       $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
@@ -655,17 +645,14 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function() {
       $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0)
-          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
       });
       $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     /*contact-us-offers*/
-
     //  healthtips--------------------start
     function change_size(id_name, width, height) {
       if ($('#' + id_name).length > 0) {
@@ -678,14 +665,12 @@ Drupal.behaviors.yourmodulename = {
       $('body').show();
       if ($('#health-tips .sub-tab-wrapper li').length > 0) {
         change_size('wrapper', $(window).width(), $(window).height());
-
         var tab_width = 0;
         clearTimeout($.data(this, 'health-tips-tab'));
         $.data(this, 'health-tips-tab', setTimeout(function() {
           $('#health-tips .sub-tab-wrapper li').each(function() {
             tab_width += $(this).width();
           });
-
           $('#health-tips .sub-tab-wrapper').width(tab_width);
         }, 500));
       }
@@ -694,21 +679,15 @@ Drupal.behaviors.yourmodulename = {
         change_size('wrapper', $(window).width(), $(window).height());
         if ($(window).width() >= 768) {
           $('#health-tips .function-wrapper .function-btn').each(function() {
-            if ($('#health-tips').hasClass('cold_and_flu'))
-              $(this).height($(this).width() / 280 * 195);
-            else if ($('#health-tips').hasClass('children'))
-              $(this).height($(this).width() / 100 * 50);
-            else if ($('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd'))
-              $(this).height($(this).width() / 280 * 196);
+            if ($('#health-tips').hasClass('cold_and_flu')) $(this).height($(this).width() / 280 * 195);
+            else if ($('#health-tips').hasClass('children')) $(this).height($(this).width() / 100 * 50);
+            else if ($('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height($(this).width() / 280 * 196);
           });
-
           $('.function-middle-wrapper').height($('.function-left-wrapper:visible').height());
         } else {
           $('#health-tips .function-wrapper .function-btn').each(function() {
-            if ($('#health-tips').hasClass('cold_and_flu') || $('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd'))
-              $(this).height(Math.floor($(this).width() / 385 * 293));
-            if ($('#health-tips').hasClass('children'))
-              $(this).height(Math.floor($(this).width() / 516 * 293));
+            if ($('#health-tips').hasClass('cold_and_flu') || $('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height(Math.floor($(this).width() / 385 * 293));
+            if ($('#health-tips').hasClass('children')) $(this).height(Math.floor($(this).width() / 516 * 293));
           });
         }
       }
@@ -722,7 +701,6 @@ Drupal.behaviors.yourmodulename = {
             health_tips();
           }, 800));
         });
-
         $('#health-tips .function-wrapper .function-btn').click(function() {
           if (typeof($(this).attr('rel')) !== 'undefined') {
             var rel = $(this).attr('rel');
@@ -730,12 +708,10 @@ Drupal.behaviors.yourmodulename = {
               $(this).removeClass('active');
             });
             $('#health-tips .function-wrapper .function-btn[rel="' + rel + '"]').addClass('active');
-
             $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
               $(this).removeClass('active');
             });
             $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel + '"]').addClass('active');
-
             if ($('#health-tips .function-wrapper .function-middle-wrapper p').length > 0) {
               $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
                 $(this).removeClass('active');
@@ -750,7 +726,6 @@ Drupal.behaviors.yourmodulename = {
             }
           }
         });
-
         $('#health-tips .function-tab-wrapper .function-tab-btn').click(function() {
           if (typeof($(this).attr('rel')) !== 'undefined') {
             var rel = $(this).attr('rel');
@@ -758,7 +733,6 @@ Drupal.behaviors.yourmodulename = {
               $(this).removeClass('active');
             });
             $('#health-tips .function-tab-wrapper .function-tab-btn[rel="' + rel + '"]').addClass('active');
-
             if ($(window).width() >= 768) {
               var temp = 'left';
             } else {
@@ -769,18 +743,15 @@ Drupal.behaviors.yourmodulename = {
             });
             $('#health-tips .function-' + temp + '-wrapper[rel="' + rel + '"]').addClass('active');
             health_tips();
-
             $('.function-' + temp + '-wrapper:visible .function-btn').each(function() {
               $(this).removeClass('active');
             });
             $('.function-' + temp + '-wrapper:visible .function-btn:first-child').addClass('active');
-
             var rel2 = $('.function-' + temp + '-wrapper:visible .function-btn:first-child').attr('rel');
             $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
               $(this).removeClass('active');
             });
             $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel2 + '"]').addClass('active');
-
             $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
               $(this).removeClass('active');
             });
@@ -794,8 +765,51 @@ Drupal.behaviors.yourmodulename = {
       }
       /*health-tips*/
     });
-
     //healthtips---------------------end
+
+    /**** Mobile menu ****/
+    /*sidebar*/
+    var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+      isClosed = false;
+    trigger.click(function() {
+      hamburger_cross();
+    });
+
+    function hamburger_cross() {
+      if (isClosed == true) {
+        //overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        //overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+    $('[data-toggle="offcanvas"]').click(function() {
+      $('#wrapper').toggleClass('toggled');
+    });
+    $('.sidebar-nav > li').click(function() {
+      if (!$(this).hasClass('parent')) {
+        $('.sidebar-nav > li').each(function() {
+          $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+      }
+    });
+    $('.sidebar-nav > li.parent').click(function() {
+      if ($(this).hasClass('show-sub')) {
+        $(this).removeClass('show-sub');
+      } else {
+        $(this).addClass('show-sub');
+      }
+      $(this).find('.sub-sidebar-nav').slideToggle();
+    });
+    /*sidebar*/
+    /**** Mobile menu ****/
 
   }
 };

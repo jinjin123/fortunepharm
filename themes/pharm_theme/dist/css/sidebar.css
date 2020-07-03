@@ -41,7 +41,7 @@ html { height: 100%;}
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    background-image: url(../img/menu_shadow_mobile.png);
+    background-image: url(../images/menu_shadow_mobile.png);
     background-position: left;
 }
 
@@ -169,7 +169,7 @@ html { height: 100%;}
 
 .sidebar-nav > li.parent:before{
   content: '';
-  background-image: url(../img/menu_arrow_mobile.png);
+  background-image: url(../images/menu_arrow_mobile.png);
   width: 16px;
   height: 16px;
   display: inline-block;
