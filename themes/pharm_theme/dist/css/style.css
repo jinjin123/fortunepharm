@@ -486,7 +486,9 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-20 #header
 
 @media only screen and (min-width: 768px) {
   .nav li a:hover, .nav li a:focus {
-    background-color: transparent; }
+    background-color: transparent;
+    outline: none;
+    outline-offset: 0px; }
   #header {
     padding-bottom: 10px;
     border-bottom: 2px solid #EFEFEF; }
