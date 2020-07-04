@@ -483,6 +483,10 @@ table {
     margin: 0 0 0 0;
     display: block; }
 
+body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header, body.page-node-20 #header, body.page-node-147 #header, body.path-news #header, body.page-node-5 #header, body.page-node-20 #header, body.path-advertisements body.page-node-6 #header, body.page-node-10 #header {
+  padding-bottom: 0;
+  border-bottom: 0; }
+
 @media only screen and (min-width: 768px) {
   .nav li a:hover, .nav li a:focus {
     background-color: transparent;
@@ -569,6 +573,10 @@ table {
         padding: 0;
         margin: 3px;
         background-repeat: no-repeat; }
+        #sidebar-wrapper #social-icon-sidebar li a:hover, #sidebar-wrapper #social-icon-sidebar li a:focus {
+          background-color: transparent;
+          border: 0;
+          outline: 0; }
         #sidebar-wrapper #social-icon-sidebar li a.fb-icon {
           background-image: url(../images/facebook_icon_mobile.png); }
         #sidebar-wrapper #social-icon-sidebar li a.weibo-icon {
@@ -1965,7 +1973,8 @@ nav#block-mainnavigation #menu li a {
     -ms-transition: 200ms linear;
     -o-transition: 200ms linear;
     transition: 200ms linear;
-    color: #FFF; }
+    color: #FFF;
+    font-weight: 500; }
   .main-wrapper .index-wrapper .link-wrapper h3 {
     color: #FFF;
     z-index: 2; }
@@ -2332,6 +2341,17 @@ nav#block-mainnavigation #menu li a {
   padding-left: 0;
   padding-right: 0; }
 
+.lang-en .main-wrapper .index-wrapper .link-wrapper span {
+  font-size: 1.2em;
+  top: 30%; }
+
+.lang-en .main-wrapper .index-wrapper:hover span {
+  top: 15%; }
+
+@media only screen and (min-width: 1200px) {
+  .main-wrapper .index-wrapper .link-wrapper span {
+    font-size: 1.5em; } }
+
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   .main-wrapper .index-wrapper .link-wrapper {
     background-position: center 95%; }
@@ -2353,6 +2373,8 @@ nav#block-mainnavigation #menu li a {
     width: 100%; } }
 
 @media only screen and (max-width: 767px) {
+  body.path-frontpage .mobile-main .row-xs-4.nopadding .field-type-text-with-summary {
+    height: 100%; }
   .path-news .views-row .content-row > div {
     padding: 10px; }
   .path-news .views-row .content-row .colume2 .img img {
@@ -2375,3 +2397,9 @@ nav#block-mainnavigation #menu li a {
     padding-right: 15px; }
   #block-latestoffers .content-wrapper, #block-latestofferschs .content-wrapper, #block-zuixinyouhuifanti .content-wrapper {
     padding-left: 15px; } }
+
+@media only screen and (max-width: 399px) {
+  .lang-en .main-wrapper .index-wrapper .link-wrapper span {
+    font-size: 0.8em; }
+  .lang-en .main-wrapper .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 0.8em; } }
