@@ -1,8 +1,12 @@
 {% extends "block.html.twig" %}
-{% if language == 'en' %}
-  {% set URL = '/' %}
-{% else %}
-  {% set URL = '/cn' %}
+{% if language == 'eng' %}
+  {% set URL = '/eng' %}
+{% endif %}
+{% if language == 'zh-hant' %}
+  {% set URL = '/cht' %}
+{% endif %}
+{% if language == 'zh-hans' %}
+  {% set URL = '/chs' %}
 {% endif %}
 {% block content %}
   {% if site_logo %}
