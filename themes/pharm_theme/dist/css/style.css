@@ -1771,6 +1771,10 @@ i {
   max-width: 1680px;
   margin: 0 auto; }
 
+nav#block-mainnavigation #menu li a {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 #banner-wrapper {
   position: relative;
   width: 100%;
