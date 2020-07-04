@@ -2175,6 +2175,9 @@ nav#block-mainnavigation #menu li a {
   position: absolute;
   bottom: 60%; }
 
+page-node-2#contact-nav, page-node-178#contact-nav {
+  display: none; }
+
 .page-node-20 #block-pharm-theme-content {
   padding-bottom: 5px; }
   .page-node-20 #block-pharm-theme-content h2 {
