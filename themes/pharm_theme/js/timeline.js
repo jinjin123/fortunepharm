@@ -18,39 +18,988 @@
 | MelonHTML5 - Timeline                    |
 |------------------------------------------|
 | @author:  Lee Le (lee@melonhtml5.com)    |
-| @version: 2.09 (26 Jul 2017)             |
+| @version: 2.07 (18 March 2015)           |
 | @website: www.melonhtml5.com             |
 |------------------------------------------|
 */
 
-String.prototype.parseURL=function(){return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g,function(k){return k.link(k)})};String.prototype.parseHashtag=function(){return this.replace(/[#]+[A-Za-z0-9-_]+/g,function(k){var m=k.replace("#","%23");return k.link("//twitter.com/search?q="+m)})};String.prototype.trimString=function(k){return this.substr(0,k)+(this.length>k?"...":"")};
-function Timeline(k,m,e,n){e===n&&(e=jQuery);var a=this,p=e(document.body);this._lightbox=this._overlay=this._spine=this._container=null;this._original_data=m?e.extend(!0,[],m):[];this._data=[];this._responsive=!1;this._options={dateFormat:"DD MMMM YYYY",first_separator:!1,separator:"year",columnMode:"dual",order:"desc",responsive_width:null,animation:!0,lightbox:!0,max:null,loadmore:0,facebookAppId:null,facebookAccessToken:null,facebookPageId:null,twitterSearchKey:null,onSearchSuccess:null,onSearchError:null};
-this._years=[];this._months=[];this._readmore_text="Read More";this._loadmore_text="Load More";this._month_translation="January February March April May June July August September October November December".split(" ");this._spine_margin=100;this._facebook_content_length=300;this._facebook_description_length=150;this._elements=[];this._separators=[];this._iframe_queue=[];this._lightbox_loading=!1;this._use_css3=function(){var a=document.body.style;if("string"==typeof a.transition)return!0;for(var c=
-["Webkit","Moz","Khtml","O","ms"],d=0;d<c.length;d++)if("string"==typeof a[c[d]+"Transition"])return!0;return!1}();this._default_element_data={type:"blog_post",date:"2000-01-01",dateFormat:null,title:null,images:[],content:null,readmore:null,speed:null,height:300,url:null};this._transitionEnd=function(a,c){var b=!1,f=document.createElement("div");e(["transition","WebkitTransition","MozTransition","msTransition"]).each(function(a,c){if(f.style[c]!==n)return b=!0,!1});if(b)a.one("webkitTransitionEnd oTransitionEnd MSTransitionEnd transitionend",
-c);else setTimeout(c,0);return a};this._prepareData=function(){e.each(a._original_data,function(a,c){var b=moment(c.date);c.date=b.format("YYYY-MM-DD HH:mm:ss")});a._sortData(a._original_data);a._data=a._options.max&&a._options.max<a._original_data.length?a._original_data.slice(0,a._options.max):a._original_data};this._sortData=function(b){b&&b.sort(function(b,d){return"desc"===a._options.order?parseInt(d.date.replace(/[^0-9]/g,""),10)-parseInt(b.date.replace(/[^0-9]/g,""),10):parseInt(b.date.replace(/[^0-9]/g,
-""),10)-parseInt(d.date.replace(/[^0-9]/g,""),10)});return b};this._createElement=function(b,c){b=e.extend({},a._default_element_data,b);var d=e("<div>").addClass("timeline_element "+b.type);"left"===c?d.addClass("timeline_element_left"):"right"===c&&d.addClass("timeline_element_right");a._options.animation||d.addClass("animated");var f=e("<div>").addClass("timeline_element_box").appendTo(d);b.title?e("<div>").addClass("timeline_title").html('<span class="timeline_title_label">'+b.title+'</span><span class="timeline_title_date">'+
-a._getDateString(b.date,b.dateFormat||a._options.dateFormat)+"</span>").appendTo(f):d.addClass("notitle");switch(b.type){case "iframe":f=e("<div>").addClass("content loading").height(b.height).appendTo(f);a._iframe_queue.push({element:f,url:b.url});break;case "gallery":if(b.images.length){b.content&&e("<div>").addClass("content").html(b.content).appendTo(f);var g="";e(b.images).each(function(c,d){g+='<div class="img_container"><img style="height:'+b.height+'px;" src="'+d+'" />';a._options.lightbox&&
-(g+='<div class="img_overlay"><span class="magnifier" data-total="'+b.images.length+'" data-order="'+c+'" data-img="'+d+'"></span></div>');g+="</div>"});e("<div>").addClass("scroll_container").appendTo(f).html(g)}break;case "blog_post":b.content||b.readmore||d.addClass("nocontent");var h="";e(b.images).each(function(c,d){h+='<div data-total="'+b.images.length+'" data-order="'+c+'" class="img_container'+(0===c?" active":"")+'" style="display:'+(0===c?"block":"none")+';"><img src="'+d+'" />';a._options.lightbox&&
-(h+='<div class="img_overlay"><span class="magnifier" data-total="'+b.images.length+'" data-order="'+c+'" data-img="'+d+'"></span></div>');h+="</div>"});1<b.images.length&&(h+='<span class="slider_prev"></span><span class="slider_next"></span>');e("<div>").addClass("slider_container").html(h).appendTo(f);b.content&&e("<div>").addClass("content").html(b.content).appendTo(f);b.readmore&&e("<div>").addClass("readmore").html('<a href="'+b.readmore+'">'+a._readmore_text+"</a>").appendTo(f);1<b.images.length&&
-b.speed&&(d.data("speed",b.speed),setTimeout(function(){a._updateSlider(d,"next")},b.speed))}d.appendTo(a._container);a._elements.push(d);return d};this._createSeparator=function(b){b=e("<div>").addClass("date_separator").attr("id","timeline_date_separator_"+b).html("<span>"+b+"</span>").appendTo(a._container);a._options.animation||b.addClass("animated");a._separators.push(b)};this._render=function(b,c){var d=!0;e(b).each(function(b,g){if(a._options.max&&a._options.max<=b&&!c)return!1;if(c&&0===b){var f=
-a._container.children(":last");f.length&&f.hasClass("timeline_element_left")&&(d=!1)}var f=parseInt(g.date.split("-")[0],10),l=parseInt(g.date.split("-")[1],10),l=f+"-"+l,k=!1;-1!==e.inArray(f,a._years)||"year"!==a._options.separator&&null!==a._options.separator||(k=!0,a._years.push(f));-1!==e.inArray(l,a._months)||"month"!==a._options.separator&&"month_year"!==a._options.separator||(k=!0,a._months.push(l));if(k){if("year"===a._options.separator)(1<a._years.length||a._options.first_separator)&&a._createSeparator(f);
-else if("month"===a._options.separator||"month_year"===a._options.separator)if(1<a._months.length||a._options.first_separator)l=a._month_translation[parseInt(l.split("-")[1],10)-1],"month_year"===a._options.separator&&(l=l+" "+f),a._createSeparator(l);a._options.separator&&(d=!0)}"dual"===a._options.columnMode?a._createElement(g,d?"left":"right"):a._createElement(g);d=d?!1:!0})};this._updateSlider=function(b,c){b.data("timeout_id")&&clearTimeout(b.data("timeout_id"));if(!this._options.lightbox||!a._overlay.hasClass("open")){var d=
-b.find(".img_container.active").removeClass("active");var f="next"===c?d.data("order")===d.data("total")-1?b.find(".img_container:first").addClass("active"):d.next().addClass("active"):0===d.data("order")?b.find(".img_container:last").addClass("active"):d.prev().addClass("active");f.css({position:"absolute",top:0,left:0,"z-index":10}).fadeIn(300,function(){f.css({position:"",top:"",left:"","z-index":""});d.hide()})}if(b.data("speed")){var e=setTimeout(function(){a._updateSlider(b,c)},b.data("speed"));
-b.data("timeout_id",e)}};this._startAnimation=function(b){e(window).width();a._use_css3?a._spine.addClass("animated"):a._spine.animate({bottom:"0%"},500,function(){a._spine.addClass("animated")});"year"!==a._options.separator&&"month"!==a._options.separator&&"month_year"!==a._options.separator||setTimeout(function(){e(a._separators).each(function(b,c){a._use_css3?c.addClass("animated"):c.children("span").animate({opacity:1,top:"50%"},300,function(){c.addClass("animated")})})},500);var c=0;e(a._elements).each(function(d,
-f){f.hasClass("animated")||(c++,setTimeout(function(c){a._use_css3?f.addClass("animated"):f.hide().addClass("animated").fadeIn();d===a._elements.length-1&&setTimeout(b,200)},("year"===a._options.separator||"month"===a._options.separator||"month_year"===a._options.separator?1E3:500)+100*c))});return!0};this._getDateString=function(a,c){return moment(a).format(c)};this._loadMore=function(){a._loadmore.hasClass("loading")||(a._loadmore.addClass("loading"),setTimeout(function(){a._loadmore.removeClass("loading");
-var b=a._original_data.slice(a._data.length,a._data.length+a._options.loadmore);a.appendData(b);a._data.length>=a._original_data.length&&a._loadmore.remove()},1E3))};this._display=function(){a._options.lightbox&&(a._overlay=e(".timeline_overlay"),a._overlay.length?a._lightbox=a._overlay.children(".lightbox"):(a._overlay=e("<div>").addClass("timeline_overlay"),a._lightbox=e("<div>").addClass("lightbox").html('<div class="navigation"><a class="close" href="#"></a><span class="prev"></span><span class="next"></span></div>').appendTo(a._overlay),
-a._overlay.appendTo(p)));a._container=e("<div>").addClass("timeline timeline_"+a._options.columnMode);e.support.opacity||a._container.addClass("opacityFilter");a._use_css3||a._container.addClass("noneCSS3");a._spine=e("<div>").addClass("spine").appendTo(a._container);a._options.animation||a._spine.addClass("animated");a._render(a._data);a._container.data("loaded",!0).appendTo(k);a._options.loadmore&&a._options.max&&a._original_data.length&&a._original_data.length>this._options.max&&(a._loadmore=e("<div>").addClass("timeline_loadmore").text(this._loadmore_text).appendTo(k));
-a._options.animation?setTimeout(function(){a._startAnimation(a._processIframeQueue)},200):a._processIframeQueue();if(a._options.responsive_width)e(window).on("resize",a._windowResize);a._options.responsive_width&&e(window).resize();e(document).on("click",a._handleClick);e(document).on("keydown",a._handleKeyDown);return!0};this._makeResponsive=function(b){b?this._responsive||(this._responsive=!0,a._container.removeClass("timeline_left timeline_right timeline_dual"),a._container.addClass("timeline_center")):
-this._responsive&&(this._responsive=!1,a._container.removeClass("timeline_center"),a._container.addClass("timeline_"+a._options.columnMode))};this._openLightBox=function(b,c){if(!this._lightbox_loading)return this._lightbox_loading=!0,b.parent().addClass("loading"),a._lightbox.data("magnifier",b),1===b.data("total")?a._lightbox.find(".navigation span").hide():a._lightbox.find(".navigation span").show(),setTimeout(function(){a._lightbox_loading=!1;var d=function(){b.parent().removeClass("loading");
-a._overlay.addClass("open");e("<img>").attr("src",c).appendTo(a._lightbox);var d=a._getLightboxSize(f.width,f.height);a._lightbox.addClass("loaded").css({width:d.width,height:d.height})},f=new Image;f.onload=d;f.onerror=d;f.src=c},1E3),c};this._closeLightBox=function(){a._transitionEnd(a._lightbox,function(){a._overlay.removeClass("open");a._lightbox.removeAttr("style").children("img").remove()});a._lightbox.removeClass("loaded")};this._getLightboxSize=function(a,c){var b=e(window).width()-60,f=e(window).height()-
-60;var g=a;var h=c;if(a>b||c>f)a>b&&c<=f?(g=b,h=c/(a/g)):c>f&&a<=b?(h=f,g=a/(c/h)):(g=b,h=c/(a/g),h>f&&(h=f,g=a/(c/h)));return{width:g,height:h}};this._navLightBox=function(b,c){var d=a._lightbox.data("magnifier");if("next"===c){var f=d.parents(".img_container:first").next(".img_container");f.length||(f=d.parents(".img_container:first").parent().children(".img_container:first"))}else f=d.parents(".img_container:first").prev(".img_container"),f.length||(f=d.parents(".img_container:first").parent().children(".img_container:last"));
-var e=f.find("span.magnifier"),h=e.data("img"),l=new Image;l.onload=function(){a._lightbox.data("magnifier",e).addClass("updating");a._lightbox.children("img").attr("src",h);var b=a._getLightboxSize(l.width,l.height);a._lightbox.css({width:b.width,height:b.height});setTimeout(function(){a._lightbox.removeClass("updating")},500)};l.src=h};this._processIframeQueue=function(){e(a._iframe_queue).each(function(a,c){c.element.removeClass("loading").html('<iframe frameborder="0" src="'+c.url+'"></iframe>')})};
-this._windowResize=function(b){e(window).width()<a._options.responsive_width?a._makeResponsive(!0):a._makeResponsive(!1)};this._handleClick=function(b){var c=e(b.target);c.hasClass("timeline_overlay")?a._closeLightBox():c.hasClass("magnifier")?a._openLightBox(c,c.data("img")):c.hasClass("close")?(b.preventDefault(),a._closeLightBox()):c.hasClass("prev")?a._navLightBox(c,"prev"):c.hasClass("next")?a._navLightBox(c,"next"):c.hasClass("slider_prev")?a._updateSlider(c.parents(".timeline_element:first"),
-"prev"):c.hasClass("slider_next")?a._updateSlider(c.parents(".timeline_element:first"),"next"):c.hasClass("timeline_loadmore")&&a._loadMore();return!0};this._handleKeyDown=function(b){switch(parseInt(b.which,10)){case 27:a._overlay.hasClass("open")&&a._closeLightBox(b);break;case 37:if(a._lightbox.hasClass("loaded")&&a._lightbox.find(".navigation span.prev").is(":visible"))return a._lightbox.find(".navigation span.prev").click(),!1;break;case 39:if(a._lightbox.hasClass("loaded")&&a._lightbox.find(".navigation span.next").is(":visible"))return a._lightbox.find(".navigation span.next").click(),
-!1}};this._loadFacebook=function(b){var c="/"+a._options.facebookPageId+"/feed",d={access_token:a._options.facebookAccessToken,fields:"type,from,message,updated_time,object_id,link,picture,name,caption,description"},f={access_token:a._options.facebookAccessToken,fields:"images"},g=0,h=function(){b!==n&&b();if(a._options.onSearchSuccess)a._options.onSearchSuccess(a._original_data)},l=function(b){var c='<div class="facebook_type_'+b.type+'"><div class="facebook_left_column"><img class="facebook_profile" src="https://graph.facebook.com/'+
-b.from.id+'/picture?type=square" /></div><div class="facebook_right_column">';b.message&&(c+='<div class="facebook_content">'+b.message.trimString(a._facebook_message_length).parseURL()+"</div>");return c+'</div><div style="clear:both;"></div>'},k=function(b,c){a._original_data.push({type:"blog_post",date:b.updated_time,title:b.from.name,content:c})};FB.init({appId:a._options.facebookAppId,version:"v2.10"});FB.api(c,d,function(b){if(b&&b.data&&b.data.length)e(b.data).each(function(b,c){if(c.from.id)if("photo"===
-c.type)g++,FB.api("/"+c.object_id,f,function(a){var b=l(c);a.images&&(b+='<div class="facebook_post"><a href="'+c.link+'" style="display:inline;"><img class="facebook_picture" align="left" src="'+a.images[0].source+'" /></a></div>');k(c,b+"</div>");g--;0===g&&h()});else if(c.message){var d=l(c);c.picture&&(d+='<div class="facebook_post"><a href="'+c.link+'" style="display:inline;"><img class="facebook_picture" align="left" src="'+c.picture+'" /></a><div class="description_container">'+(c.name?'<a href="'+
-c.link+'">'+c.name+"</a>":"")+(c.caption?'<div class="facebook_caption">'+c.caption+"</div>":"")+(c.description?'<div class="facebook_description">'+c.description.trimString(a._facebook_description_length).parseURL()+"</div>":"")+"</div></div>");k(c,d+"</div>")}}),0===g&&h();else if(a._options.onSearchError)a._options.onSearchError(b)})};this._loadTwitter=function(b){e.getJSON("https://www.melonhtml5.com/api/?action=twittersearch&q="+a._options.twitterSearchKey+"&callback=?",function(c){if(c.statuses.length){if(e(c.statuses).each(function(b,
-c){a._original_data.push({type:"blog_post",date:c.created_at,title:'<a href="http://www.twitter.com/'+c.user.screen_name+'" target="_blank" style="text-decoration:none;color:#AAAAAA;">'+c.user.screen_name+"</a>",content:'<div><img class="twitter_profile" align="left" src="'+c.user.profile_image_url+'" /></div>'+c.text.parseURL().parseHashtag()})}),b!==n&&b(),a._options.onSearchSuccess)a._options.onSearchSuccess(c)}else if(a._options.onSearchError)a._options.onSearchError(c)})};this.setOptions=function(b){a._options=
-e.extend(a._options,b);return a._options};this.display=function(){var b=function(){a._prepareData();a._display()},c=a._options.twitterSearchKey,d=a._options.facebookAppId&&a._options.facebookAccessToken&&a._options.facebookPageId;if(a._original_data&&a._original_data.length)b();else if(c&&d){var f=0,c=function(){f++;2==f&&b()};a._loadTwitter(c);a._loadFacebook(c)}else c?a._loadTwitter(b):d&&FB&&a._loadFacebook(b)};this.appendData=function(b){var c=parseInt(a._data[a._data.length-1].date.replace(/-/g,
-""),10),d=[];"desc"===a._options.order?e(b).each(function(a,b){parseInt(b.date.replace(/-/g,""),10)<=c&&d.push(b)}):e(b).each(function(a,b){parseInt(b.date.replace(/-/g,""),10)>=c&&d.push(b)});a._data=a._data.concat(d);a._render(d,!0);a._options.animation?a._startAnimation(a._processIframeQueue):a._processIframeQueue()}};
+String.prototype.parseURL = function() {
+    return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&~\?\/.=]+/g, function(url) {
+        return url.link(url);
+    });
+};
+
+String.prototype.parseHashtag = function() {
+    return this.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
+        var tag = t.replace("#","%23")
+        return t.link("//twitter.com/search?q=" + tag);
+    });
+};
+
+String.prototype.trimString = function(length) {
+    return this.substr(0, length) + (this.length > length ? '...' : '');
+};
+
+function Timeline(element, data, $, undefined) {
+    if ($ === undefined) {
+        $ = jQuery;
+    }
+
+    var SELF = this;
+    var BODY = $(document.body);
+    var target = '#'+element[0].id;
+
+    this._container = null;  // cached DOM
+    this._spine     = null;  // cached DOM
+    this._overlay   = null;  // cached DOM
+    this._lightbox  = null;  // cached DOM
+
+    this._original_data = data ? $.extend(true, [], data) : [];  // a copy of the original data
+    this._data          = [];  // main data
+
+    this._responsive = false; // in responsive mode?
+
+    this._options = {
+        dateFormat:          'DD MMMM YYYY', // default date format
+        first_separator:     false,          // display the first separator?
+        separator:           'year',         // year, month, month_year, null
+        columnMode:          'dual',         // dual, left, right, center
+        order:               'desc',         // "asc", "desc",
+        responsive_width:    null,           // swith to responsive mode when window width is smaller than the width
+        animation:           true,           // animate on page load?
+        lightbox:            true,           // use lightbox?
+        max:                 null,           // maximum number of elements
+        loadmore:            0,              // load more data. Set to 5 to load 5 additional data each time
+        facebookAppId:       null,           // facebook app id
+        facebookAccessToken: null,           // facebook access token  "https://graph.facebook.com/oauth/access_token?client_id={app-id}&client_secret={app-secret}&grant_type=client_credentials"
+        facebookPageId:      null,           // facebook page id
+        twitterSearchKey:    null,           // twitter search key
+        onSearchSuccess:     null,           // XHR search success handler
+        onSearchError:       null            // XHR search error handler
+    };
+
+    this._years  = [];
+    this._months = [];
+
+    // settings that user can't change via setOptions()
+    this._readmore_text     = 'Read More';
+    this._loadmore_text     = 'Load More';
+    this._month_translation = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // month separators
+    this._spine_margin      = 100;
+
+    this._facebook_content_length     = 300;
+    this._facebook_description_length = 150;
+
+    // cache timeline elements in an array
+    this._elements   = [];
+    this._separators = [];
+
+    // process queue
+    this._iframe_queue  = [];  // iframe queue
+
+    this._lightbox_loading = false;
+
+    // detect css3 transition support
+    this._use_css3 = (function() {
+        var style = document.body.style;
+
+        if (typeof style['transition'] == 'string') {
+            return true;
+        }
+
+        // Tests for vendor specific prop
+        var prefix = ['Webkit', 'Moz', 'Khtml', 'O', 'ms'];
+        for (var i=0; i< prefix.length; i++) {
+            if (typeof (style[prefix[i] + 'Transition']) == 'string') {
+                return true;
+            }
+        }
+
+        return false;
+    })();
+
+    // default timeline element options
+    this._default_element_data = {
+        type:        'blog_post',      // blog_post   gallery   iframe
+        date:        '2000-01-01',     // blog_post   gallery   iframe
+        dateFormat:  null,   // blog_post   gallery   iframe
+        title:       null,             // blog_post   gallery   iframe
+        images:      [],               // blog_post   gallery
+        content:     null,             // blog_post
+        readmore:    null,             // blog_post
+        speed:       null,             // blog_post
+        height:      300,              //             gallery   iframe
+        url:         null              //                       iframe
+    };
+
+    this._transitionEnd = function(element, event_handler) {
+        var support_transition = false;
+        var transition_names   = ['transition', 'WebkitTransition', 'MozTransition', 'msTransition'];
+        var temp_element       = document.createElement('div');
+
+        $(transition_names).each(function(index, transition_name) {
+            if (temp_element.style[transition_name] !== undefined) {
+                support_transition = true;
+                return false;
+            }
+        });
+
+        if (support_transition) {
+            element.one('webkitTransitionEnd oTransitionEnd MSTransitionEnd transitionend', event_handler);
+        } else {
+            setTimeout(event_handler, 0);
+        }
+
+        // return element so that we can chain methods
+        return element;
+    },
+
+    this._prepareData = function() {
+        $.each(SELF._original_data, function(index, data) {
+            var m = moment(data.date);
+            data.date = m.format('YYYY-MM-DD HH:mm:ss');
+        });
+
+        SELF._sortData(SELF._original_data);
+
+        if (SELF._options.max && SELF._options.max < SELF._original_data.length) {
+            SELF._data = SELF._original_data.slice(0, SELF._options.max);
+        } else {
+            SELF._data = SELF._original_data;
+        }
+    };
+
+    // sort data in desc or asc order
+    this._sortData = function(timeline_data) {
+        if (timeline_data) {
+            // sort data by date
+            timeline_data.sort(function(a, b) {
+                if (SELF._options.order === 'desc') {
+                    return parseInt(b.date.replace(/[^0-9]/g, ''), 10) - parseInt(a.date.replace(/[^0-9]/g, ''), 10);
+                } else {
+                    return parseInt(a.date.replace(/[^0-9]/g, ''), 10) - parseInt(b.date.replace(/[^0-9]/g, ''), 10);
+                }
+            });
+        }
+
+        return timeline_data;
+    };
+
+    // create a single timeline element
+    this._createElement = function(element_data, position) {
+        element_data = $.extend({}, SELF._default_element_data, element_data)
+
+        // element DIV
+        var element = $('<div>').addClass('timeline_element ' + element_data.type);
+
+        if (position === 'left') {
+            element.addClass('timeline_element_left');
+        } else if (position === 'right') {
+            element.addClass('timeline_element_right');
+        }
+
+        if (!SELF._options.animation) {
+            element.addClass('animated');
+        }
+
+        var element_box = $('<div>').addClass('timeline_element_box').appendTo(element);
+
+        // title DIV
+        if (element_data.title) {
+            var title = $('<div>').addClass('timeline_title').html('<span class="timeline_title_label">' +  element_data.title + '</span><span class="timeline_title_date">' + SELF._getDateString(element_data.date, element_data.dateFormat || SELF._options.dateFormat) + '</span>').appendTo(element_box);
+        } else {
+            element.addClass('notitle');
+        }
+
+        switch (element_data.type) {
+            case 'iframe':
+                // content DIV
+                var content  = $('<div>').addClass('content loading').height(element_data.height).appendTo(element_box);
+
+                SELF._iframe_queue.push({
+                    element: content,
+                    url:     element_data.url
+                });
+
+                break;
+            case 'gallery':
+                if (element_data.images.length) {
+                    if (element_data.content) {
+                        $('<div>').addClass('content').html(element_data.content).appendTo(element_box);
+                    }
+
+                    var image_html = '';
+
+                    $(element_data.images).each(function(index, image_src) {
+                        image_html += '<div class="img_container"><img style="height:' + element_data.height + 'px;" src="' + image_src + '" />';
+                        if (SELF._options.lightbox) {
+                            image_html += '<div class="img_overlay"><span class="magnifier" data-total="' + element_data.images.length + '" data-order="' + index + '" data-img="' + image_src + '"></span></div>';
+                        }
+                        image_html += '</div>';
+                    });
+
+                    $('<div>').addClass('scroll_container').appendTo(element_box).html(image_html);
+                }
+
+                break;
+            case 'blog_post':
+                if (!element_data.content && !element_data.readmore) {
+                    element.addClass('nocontent');
+                }
+
+                var html = '';
+
+                $(element_data.images).each(function(index, image_src) {
+                    html += '<div data-total="' + element_data.images.length + '" data-order="' + index + '" class="img_container' + (index === 0 ? ' active' : '') + '" style="display:' + (index === 0 ? 'block' : 'none') + ';"><img src="' + image_src + '" />';
+                    if (SELF._options.lightbox) {
+                        html += '<div class="img_overlay"><span class="magnifier" data-total="' + element_data.images.length + '" data-order="' + index + '" data-img="' + image_src + '"></span></div>';
+                    }
+                    html += '</div>';
+                });
+
+                if (element_data.images.length > 1) {
+                    html += '<span class="slider_prev"></span><span class="slider_next"></span>';
+                }
+
+                // content DIV
+                if(target != '#fund-timeline'){
+                  $('<div>').addClass('slider_container').html(html).appendTo(element_box);
+                  if (element_data.content) {
+                      $('<div>').addClass('content').html(element_data.content).appendTo(element_box);
+                  }
+              }else{
+                  if (element_data.content) {
+                    $('<div>').addClass('content').html(element_data.content).appendTo(element_box);
+                  }
+                  $('<div>').addClass('slider_container').html(html).appendTo(element_box);
+              }
+
+                if (element_data.readmore) {
+                    $('<div>').addClass('readmore').html('<a href="' + element_data.readmore + '">' + SELF._readmore_text + '</a>').appendTo(element_box);
+                }
+
+                if (element_data.images.length > 1) {
+                    if (element_data.speed) {
+                        element.data('speed', element_data.speed);
+                        setTimeout(function() {
+                            SELF._updateSlider(element, 'next');
+                        }, element_data.speed);
+                    }
+                }
+
+                break;
+        }
+
+        element.appendTo(SELF._container);
+
+        // cache element in the array
+        SELF._elements.push(element);
+
+        return element;
+    };
+
+    // create a year separator
+    this._createSeparator = function(time) {
+        var separator = $('<div>').addClass('date_separator').attr('id', 'timeline_date_separator_' + time).html('<span>' + time + '</span>').appendTo(SELF._container);
+        if (!SELF._options.animation) {
+            separator.addClass('animated');
+        }
+        SELF._separators.push(separator);
+    };
+
+    // create DOM from JSON
+    this._render = function(timeline_data, is_append) {
+        var is_odd = true;
+
+        $(timeline_data).each(function(index, data) {
+            if (SELF._options.max && SELF._options.max <= index && !is_append) {
+                return false;
+            }
+
+            if (is_append && index === 0) {
+                var last_element = SELF._container.children(':last');
+                if (last_element.length && last_element.hasClass('timeline_element_left')) {
+                    is_odd = false;
+                }
+            }
+
+            var year  = parseInt(data.date.split('-')[0], 10);
+            var month = parseInt(data.date.split('-')[1], 10);
+            
+            if(target == '#history-timeline'){
+              if(year >= 1900 && year < 2000)
+                year = 1954;
+              if(year >= 2000)
+                year = 2000;
+            }
+
+            month = year + '-' + month;
+
+            var start_new = false;
+
+            if ($.inArray(year, SELF._years) === -1 && (SELF._options.separator === 'year' || SELF._options.separator === null)) {
+                start_new = true;
+                SELF._years.push(year);
+            }
+
+            if ($.inArray(month, SELF._months) === -1 && (SELF._options.separator === 'month' || SELF._options.separator === 'month_year')) {
+                start_new = true;
+                SELF._months.push(month);
+            }
+
+            if (start_new) {
+                if (SELF._options.separator === 'year') {
+                    if (SELF._years.length > 1 || SELF._options.first_separator) {
+                        SELF._createSeparator(year);
+                    }
+                } else if (SELF._options.separator === 'month' || SELF._options.separator === 'month_year') {
+                    if (SELF._months.length > 1 || SELF._options.first_separator) {
+                        var month_display = SELF._month_translation[parseInt(month.split('-')[1], 10) - 1];
+
+                        if (SELF._options.separator === 'month_year') {
+                            month_display = month_display + ' ' + year;
+                        }
+
+                        SELF._createSeparator(month_display);
+                    }
+                }
+
+                if (SELF._options.separator) {
+                    is_odd = true;
+                }
+            }
+
+            if (SELF._options.columnMode === 'dual') {
+                SELF._createElement(data, is_odd ? 'left' : 'right');
+            } else {
+                SELF._createElement(data);
+            }
+
+            is_odd = is_odd ? false : true;
+        });
+    };
+
+    this._updateSlider = function(timeline_element, direction) {
+        if (timeline_element.data('timeout_id')) {
+            clearTimeout(timeline_element.data('timeout_id'));
+        }
+
+        if (!this._options.lightbox || !SELF._overlay.hasClass('open')) {
+            var current_image = timeline_element.find('.img_container.active').removeClass('active');
+
+            if (direction === 'next') {
+                if (current_image.data('order') === current_image.data('total') - 1) {
+                    var next_image = timeline_element.find('.img_container:first').addClass('active');
+                } else {
+                    var next_image = current_image.next().addClass('active');
+                }
+            } else {
+                if (current_image.data('order') === 0) {
+                    var next_image = timeline_element.find('.img_container:last').addClass('active');
+                } else {
+                    var next_image = current_image.prev().addClass('active');
+                }
+            }
+
+            next_image.css({
+                'position' : 'absolute',
+                'top'      : 0,
+                'left'     : 0,
+                'z-index'  : 10
+            }).fadeIn(300, function() {
+                next_image.css({
+                    'position' : '',
+                    'top'      : '',
+                    'left'     : '',
+                    'z-index'  : ''
+                });
+
+                current_image.hide();
+            });
+        }
+
+        if (timeline_element.data('speed')) {
+            var timeout_id = setTimeout(function() {
+                SELF._updateSlider(timeline_element, direction);
+            }, timeline_element.data('speed'));
+
+            timeline_element.data('timeout_id', timeout_id);
+        }
+    };
+
+    // start animation on page load
+    this._startAnimation = function(callback) {
+        $(window).width(); // force page reflow
+
+        if (SELF._use_css3) {
+            SELF._spine.addClass('animated');
+        } else {
+            SELF._spine.animate({bottom:'0%'}, 500, function() {
+                SELF._spine.addClass('animated');
+            });
+        }
+
+        if (SELF._options.separator === 'year' || SELF._options.separator === 'month' || SELF._options.separator === 'month_year') {
+            setTimeout(function() {
+                // separator
+                $(SELF._separators).each(function(index, separator) {
+                    if (SELF._use_css3) {
+                        separator.addClass('animated');
+                    } else {
+                        separator.children('span').animate({opacity:1, top:'50%'}, 300, function() {
+                            separator.addClass('animated');
+                        });
+                    }
+                });
+            }, 500);
+        }
+
+        // timeline element
+        var count = 0;
+        $(SELF._elements).each(function(index, element) {
+            if (!element.hasClass('animated')) {
+                count++;
+
+                setTimeout(function(count) {
+                    if (SELF._use_css3) {
+                        element.addClass('animated');
+                    } else {
+                        element.hide().addClass('animated').fadeIn();
+                    }
+
+                    if (index === SELF._elements.length - 1) {
+                        setTimeout(callback, 200);
+                    }
+
+                }, (SELF._options.separator === 'year' || SELF._options.separator === 'month' || SELF._options.separator === 'month_year' ? 1000 : 500) + count * 100);
+            }
+        });
+
+        return true;
+    };
+
+    // convert 2013-12-19 to 19 Dec 2013
+    this._getDateString = function(string, format) {
+        return moment(string).format(format);
+    };
+
+    this._loadMore = function() {
+        if (SELF._loadmore.hasClass('loading')) {
+            return;
+        }
+
+        SELF._loadmore.addClass('loading');
+
+        setTimeout(function() {
+            SELF._loadmore.removeClass('loading');
+
+            var new_data = SELF._original_data.slice(SELF._data.length, SELF._data.length + SELF._options.loadmore);
+            SELF.appendData(new_data);
+
+            if (SELF._data.length >= SELF._original_data.length) {
+                SELF._loadmore.remove();
+            }
+        }, 1000);
+    };
+
+    // display timeline
+    this._display = function() {
+        if (SELF._options.lightbox) {
+            SELF._overlay = $('.timeline_overlay');
+            if (SELF._overlay.length) {
+                SELF._lightbox = SELF._overlay.children('.lightbox');
+            } else {
+                // lightbox
+                SELF._overlay  = $('<div>').addClass('timeline_overlay');
+                SELF._lightbox = $('<div>').addClass('lightbox').html('<div class="navigation"><a class="close" href="#"></a><span class="prev"></span><span class="next"></span></div>').appendTo(SELF._overlay);
+                SELF._overlay.appendTo(BODY);
+            }
+        }
+
+        // build container
+        SELF._container = $('<div>').addClass('timeline timeline_' + SELF._options.columnMode);
+
+        if (!$.support.opacity) {
+            SELF._container.addClass('opacityFilter');
+        }
+
+        if (!SELF._use_css3) {
+            SELF._container.addClass('noneCSS3');
+        }
+
+        // spine
+        SELF._spine = $('<div>').addClass('spine').appendTo(SELF._container);
+        if (!SELF._options.animation) {
+            SELF._spine.addClass('animated');
+        }
+
+        // render: create DOM
+        SELF._render(SELF._data);
+
+        SELF._container.data('loaded', true).appendTo(element);
+
+        // load more
+        if (SELF._options.loadmore && SELF._options.max && SELF._original_data.length && SELF._original_data.length > this._options.max) {
+            SELF._loadmore = $('<div>').addClass('timeline_loadmore').text(this._loadmore_text).appendTo(element);
+        }
+
+        if (SELF._options.animation) {
+            setTimeout(function() {
+                SELF._startAnimation(SELF._processIframeQueue);
+            }, 200);  // fix animation cannot be fully seen from the very beginning
+        } else {
+            SELF._processIframeQueue();
+        }
+
+        if (SELF._options.responsive_width) {
+            $(window).on('resize', SELF._windowResize);
+        }
+
+        if (SELF._options.responsive_width) {
+            $(window).resize();
+        }
+
+        $(document).on('click',   SELF._handleClick);
+        $(document).on('keydown', SELF._handleKeyDown);
+
+        return true;
+    };
+
+    this._makeResponsive = function(responsive) {
+        if (responsive) {
+            if (!this._responsive) {
+                this._responsive = true;
+                SELF._container.removeClass('timeline_left timeline_right timeline_dual');
+                SELF._container.addClass('timeline_center');
+            }
+        } else {
+            if (this._responsive) {
+                this._responsive = false;
+                SELF._container.removeClass('timeline_center');
+                SELF._container.addClass('timeline_' + SELF._options.columnMode);
+            }
+        }
+    };
+
+    /*
+    |-------------------|
+    |     LIGHTBOX      |
+    |-------------------|
+    */
+
+    // open image in a lighbox
+    this._openLightBox = function(magnifier, image_url) {
+        if (this._lightbox_loading ) {
+            return;
+        }
+
+        this._lightbox_loading = true;
+
+        magnifier.parent().addClass('loading');
+
+        SELF._lightbox.data('magnifier', magnifier);
+
+        if (magnifier.data('total') === 1) {
+            SELF._lightbox.find('.navigation span').hide();
+        } else {
+            SELF._lightbox.find('.navigation span').show();
+        }
+
+        setTimeout(function() {
+            SELF._lightbox_loading = false;
+
+            var _addImage = function() {
+                magnifier.parent().removeClass('loading');
+                SELF._overlay.addClass('open');
+                $('<img>').attr('src', image_url).appendTo(SELF._lightbox);
+
+                var lightbox_size = SELF._getLightboxSize(image.width, image.height);
+
+                SELF._lightbox.addClass('loaded').css({
+                    width:   lightbox_size.width,
+                    height:  lightbox_size.height
+                });
+            }
+
+            var image = new Image();
+            image.onload  = _addImage;
+            image.onerror = _addImage;
+            image.src = image_url;
+        }, 1000);
+
+        return image_url;
+    };
+
+    // close lightbox
+    this._closeLightBox = function() {
+        SELF._transitionEnd(SELF._lightbox, function() {
+            SELF._overlay.removeClass('open');
+            SELF._lightbox.removeAttr('style').children('img').remove();
+        });
+
+        SELF._lightbox.removeClass('loaded');
+    };
+
+    // get lightbox size (max: 90% of window size)
+    this._getLightboxSize = function(width, height) {
+        var max_width  = $(window).width() - 60;
+        var max_height = $(window).height() - 60;
+
+        var new_width  = width;
+        var new_height = height;
+
+        if (width > max_width || height > max_height) {
+            var ratio = width / height;
+
+            if (width > max_width && height <= max_height) {
+                var new_width  = max_width;
+                var new_height = height / (width / new_width);
+            } else if (height > max_height && width <= max_width) {
+                var new_height = max_height;
+                var new_width  = width / (height / new_height);
+            } else {
+                var new_width  = max_width;
+                var new_height = height / (width / new_width);
+
+                if (new_height > max_height) {
+                    var new_height = max_height;
+                    var new_width  = width / (height / new_height);
+                }
+            }
+        }
+
+        return {width:new_width, height:new_height};
+    };
+
+    // navigate to next/previous image
+    this._navLightBox = function(element, direction) {
+        var current_magnifier = SELF._lightbox.data('magnifier');
+
+        if (direction === 'next') {
+            var next_image = current_magnifier.parents('.img_container:first').next('.img_container');
+
+            if (!next_image.length) {
+                next_image = current_magnifier.parents('.img_container:first').parent().children('.img_container:first');
+            }
+        } else {
+            var next_image = current_magnifier.parents('.img_container:first').prev('.img_container');
+
+            if (!next_image.length) {
+                next_image = current_magnifier.parents('.img_container:first').parent().children('.img_container:last');
+            }
+        }
+
+        var next_magnifier = next_image.find('span.magnifier');
+        var image_url      = next_magnifier.data('img');
+
+        var _updateImage = function() {
+            SELF._lightbox.data('magnifier', next_magnifier).addClass('updating');
+
+            SELF._lightbox.children('img').attr('src', image_url)
+
+            var lightbox_size = SELF._getLightboxSize(image.width, image.height);
+
+            SELF._lightbox.css({
+                width:   lightbox_size.width,
+                height:  lightbox_size.height
+            });
+
+            setTimeout(function() {
+                SELF._lightbox.removeClass('updating');
+            }, 500);
+        }
+
+        var image = new Image();
+        image.onload = _updateImage;
+        image.src = image_url;
+    };
+
+    /*
+    |-------------------|
+    |      PROCESS      |
+    |-------------------|
+    */
+
+    this._processIframeQueue = function() {
+        $(SELF._iframe_queue).each(function(index, queue) {
+            queue.element.removeClass('loading').html('<iframe frameborder="0" src="' + queue.url + '"></iframe>');
+        });
+    };
+
+    /*
+    |-------------------|
+    |      EVENTS       |
+    |-------------------|
+    */
+
+    this._windowResize = function(e) {
+        if ($(window).width() < SELF._options.responsive_width) {
+            SELF._makeResponsive(true);
+        } else {
+            SELF._makeResponsive(false);
+        }
+    };
+
+    this._handleClick = function(e) {
+        var element = $(e.target);
+
+        if (element.hasClass('timeline_overlay')) {
+            SELF._closeLightBox();
+        } else if (element.hasClass('magnifier')) {
+            SELF._openLightBox(element, element.data('img'));
+        } else if (element.hasClass('close')) {
+            e.preventDefault();
+            SELF._closeLightBox();
+        } else if (element.hasClass('prev')) {
+            SELF._navLightBox(element, 'prev');
+        } else if (element.hasClass('next')) {
+            SELF._navLightBox(element, 'next');
+        } else if (element.hasClass('slider_prev')) {
+            SELF._updateSlider(element.parents('.timeline_element:first'), 'prev');
+        } else if (element.hasClass('slider_next')) {
+            SELF._updateSlider(element.parents('.timeline_element:first'), 'next');
+        } else if (element.hasClass('timeline_loadmore')) {
+            SELF._loadMore();
+        }
+
+        return true;
+    };
+
+    this._handleKeyDown = function(e) {
+        switch (parseInt(e.which, 10)) {
+            case 27:   // ESC
+                if (SELF._overlay.hasClass('open')) {
+                    SELF._closeLightBox(e);
+                }
+                break;
+            case 37:   // LEFT
+                if (SELF._lightbox.hasClass('loaded') && SELF._lightbox.find('.navigation span.prev').is(':visible')) {
+                    SELF._lightbox.find('.navigation span.prev').click();
+                    return false;
+                }
+                break;
+            case 39:   // RIGHT
+                if (SELF._lightbox.hasClass('loaded') && SELF._lightbox.find('.navigation span.next').is(':visible')) {
+                    SELF._lightbox.find('.navigation span.next').click();
+                    return false;
+                }
+
+                break;
+        }
+    };
+
+    /*
+    |-------------------|
+    |     Facebook      |
+    |-------------------|
+    */
+
+    this._loadFacebook = function(callback) {
+        var api_url    = '/' + SELF._options.facebookPageId + '/feed';
+        var api_option = {'access_token':SELF._options.facebookAccessToken};
+
+        var facebook_posts = [];
+
+        var picture_in_loading = 0;
+
+        var _done = function() {
+            SELF._original_data = facebook_posts;
+
+            if (callback !== undefined) {
+                callback();
+            }
+
+            if (SELF._options.onSearchSuccess) {
+                SELF._options.onSearchSuccess(facebook_posts);
+            }
+        };
+
+        var _initContent = function(facebook_data) {
+            var content = '<div class="facebook_type_' + facebook_data.type + '">' +
+                              '<div class="facebook_left_column"><img class="facebook_profile" src="https://graph.facebook.com/' + facebook_data.from.id + '/picture?type=square" /></div>' +
+                              '<div class="facebook_right_column">';
+
+            if (facebook_data.message) {
+                content +=        '<div class="facebook_content">' + facebook_data.message.trimString(SELF._facebook_message_length).parseURL() + '</div>';
+            }
+
+            content +=        '</div>' +
+                          '<div style="clear:both;"></div>';
+
+            return content;
+        };
+
+        var _pushData = function(facebook_data, content) {
+            facebook_posts.push({
+                type:     'blog_post',
+                date:     facebook_data.updated_time,
+                title:    facebook_data.from.name,
+                content:  content
+            });
+        };
+
+        FB.init({
+            appId   : SELF._options.facebookAppId,
+            version : 'v2.0'
+        });
+
+        FB.api(api_url, api_option, function(response) {
+            if (!response || ! response.data || !response.data.length) {
+                if (SELF._options.onSearchError) {
+                    SELF._options.onSearchError(response);
+                }
+
+                // no data
+                return;
+            }
+
+            // Get Timeline data via Facebook API
+            $(response.data).each(function(index, facebook_data) {
+                if (facebook_data.from.id) {
+                    if (facebook_data.type === 'photo') {
+                        picture_in_loading++;
+                        FB.api('/' + facebook_data.object_id, api_option, function(response) {
+                            var content = _initContent(facebook_data);
+
+                            if (response.source) {
+                                content += '<div class="facebook_post">' +
+                                               '<a href="' + facebook_data.link + '" style="display:inline;"><img class="facebook_picture" align="left" src="' + response.source +  '" /></a>' +
+                                           '</div>';
+                            }
+
+                            content += '</div>';
+
+                            _pushData(facebook_data, content);
+
+                            picture_in_loading--;
+
+                            if (picture_in_loading === 0) {
+                                _done();
+                            }
+                        });
+                    } else if (facebook_data.message) {
+                        var content = _initContent(facebook_data);
+
+                        if (facebook_data.picture) {
+                            content += '<div class="facebook_post">' +
+                                           '<a href="' + facebook_data.link + '" style="display:inline;"><img class="facebook_picture" align="left" src="' + facebook_data.picture +  '" /></a>' +
+                                           '<div class="description_container">' +
+                                               (facebook_data.name ? '<a href="' + facebook_data.link + '">' + facebook_data.name + '</a>' : '') +
+                                               (facebook_data.caption ? '<div class="facebook_caption">' + facebook_data.caption + '</div>' : '') +
+                                               (facebook_data.description ? '<div class="facebook_description">' + facebook_data.description.trimString(SELF._facebook_description_length).parseURL() + '</div>' : '') +
+                                           '</div>' +
+                                       '</div>';
+                        }
+
+                        content += '</div>';
+
+                        _pushData(facebook_data, content);
+                    }
+                }
+            });
+
+            if (picture_in_loading === 0) {
+                _done();
+            }
+        });
+    };
+
+    /*
+    |-------------------|
+    |     Twitter       |
+    |-------------------|
+    */
+    this._loadTwitter = function(callback) {
+        $.getJSON('//www.melonhtml5.com/api/?action=twittersearch&q=' + SELF._options.twitterSearchKey + '&callback=?', function(response) {
+            var twitter_data = [];
+
+            if (!response.statuses.length) {
+                if (SELF._options.onSearchError) {
+                    SELF._options.onSearchError(response);
+                }
+                return;
+            }
+
+            $(response.statuses).each(function(index, tweet_data) {
+                twitter_data.push({
+                    type:     'blog_post',
+                    date:     tweet_data.created_at,
+                    title:    '<a href="http://www.twitter.com/' + tweet_data.user.screen_name + '" target="_blank" style="text-decoration:none;color:#AAAAAA;">' + tweet_data.user.screen_name + '</a>',
+                    content:  '<div><img class="twitter_profile" align="left" src="' + tweet_data.user.profile_image_url + '" /></div>' + tweet_data.text.parseURL().parseHashtag()
+                });
+            });
+
+            SELF._original_data = twitter_data;
+
+            if (callback !== undefined) {
+                callback();
+            }
+
+            if (SELF._options.onSearchSuccess) {
+                SELF._options.onSearchSuccess(response);
+            }
+        });
+    };
+
+
+    /*
+    |-------------------|
+    |        API        |
+    |-------------------|
+    */
+
+    // set options
+    this.setOptions = function(opts) {
+        SELF._options = $.extend(SELF._options, opts);
+        return SELF._options;
+    };
+
+    // display
+    this.display = function() {
+        var _go = function() {
+            SELF._prepareData();
+            SELF._display();
+        };
+
+        if (SELF._original_data && SELF._original_data.length) {
+            _go();
+        } else if (SELF._options.twitterSearchKey) {
+            SELF._loadTwitter(_go);
+        } else if (SELF._options.facebookAppId && SELF._options.facebookAccessToken && SELF._options.facebookPageId) {
+            if (FB) {
+                SELF._loadFacebook(_go);
+            }
+        }
+    };
+
+    // add additional data into an existing timeline
+    this.appendData = function(timeline_data) {
+        var end_date = parseInt(SELF._data[SELF._data.length - 1].date.replace(/-/g, ''), 10);
+        var new_data = [];
+
+        if (SELF._options.order === 'desc') {
+            $(timeline_data).each(function(index, data) {
+                if (parseInt(data.date.replace(/-/g, ''), 10) <=  end_date) {
+                    new_data.push(data);
+                }
+            });
+        } else {
+            $(timeline_data).each(function(index, data) {
+                if (parseInt(data.date.replace(/-/g, ''), 10) >=  end_date) {
+                    new_data.push(data);
+                }
+            });
+        }
+
+        SELF._data = SELF._data.concat(new_data);
+
+        // render: create DOM
+        SELF._render(new_data, true);
+
+        if (SELF._options.animation) {
+            SELF._startAnimation(SELF._processIframeQueue);
+        } else {
+            SELF._processIframeQueue();
+        }
+    };
+}
