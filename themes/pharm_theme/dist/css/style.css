@@ -500,19 +500,15 @@ table {
     float: left;
     margin: 0;
     list-style: none; }
-  nav#contact-nav {
-    background-color: #F3F3F3;
-    border-bottom: 3px solid #EDEDED;
-    margin-bottom: 25px; }
-    nav#contact-nav li {
-      background-image: url(../images/laug_sep.png);
-      background-position: left;
-      background-repeat: no-repeat; }
-      nav#contact-nav li:first-child {
-        background-image: none; }
-      nav#contact-nav li.active a, nav#contact-nav li:hover a {
-        text-decoration: underline;
-        color: #000; } }
+  nav#contact-nav li {
+    background-image: url(../images/laug_sep.png);
+    background-position: left;
+    background-repeat: no-repeat; }
+    nav#contact-nav li:first-child {
+      background-image: none; }
+    nav#contact-nav li.active a, nav#contact-nav li:hover a {
+      text-decoration: underline;
+      color: #000; } }
 
 @media only screen and (max-width: 1120px) and (min-width: 768px) {
   #header .main-menu a {
@@ -1770,6 +1766,10 @@ i {
 #main {
   max-width: 1680px;
   margin: 0 auto; }
+
+nav#block-mainnavigation #menu li a {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 #banner-wrapper {
   position: relative;
