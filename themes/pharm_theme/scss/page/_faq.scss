@@ -1,0 +1,199 @@
+@import '../variable';
+@import '../mixins';
+.path-faq {
+  .more-btn {
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: #F7F7F7;
+    a {
+      padding: 15px 0;
+      width: 100%;
+      display: inline-block;
+      span {
+        position: relative;
+        margin: 0 auto;
+        width: 70px;
+        text-align: center;
+        display: block;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 14px;
+          height: 8px;
+          background-image: url(../images/offers_arrow_icon.png);
+          right: -14px;
+          top: 8px;
+        }
+      }
+    }
+  }
+  .sub-tab-outer-wrapper {
+    background-image: none;
+    margin-bottom: 20px;
+  }
+  .sub-tab-wrapper {
+    margin: 0;
+    li.active, li:hover {
+      background-color: #FFF5C9;
+    }
+    li {
+      a {
+        width: 160px;
+        color: #CFBC90;
+      }
+      &:hover {
+        a {
+          color: #666666;
+        }
+      }
+    }
+    li.active a {
+      color: #666666;
+    }
+    li.arrow a {
+      width: 50px;
+      text-align: center;
+      color: #C8C8C8;
+    }
+  }
+  .content-outer-wrapper {
+    position: relative;
+    z-index: 2;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .content-wrapper {
+      img {
+        width: 100%;
+      }
+      padding: 0;
+      padding-right: 5px;
+      padding-bottom: 20px;
+      .text-wrapper {
+        position: relative;
+        padding: 10px 15px 40px;
+        height: 140px;
+        background-color: #F0EDD2;
+        .detail {
+          position: absolute;
+          width: 90px;
+          height: 36px;
+          right: 0;
+          bottom: 0;
+          background-color: #E0C84D;
+          padding: 8px;
+          text-align: center;
+          color: #FFF;
+        }
+      }
+    }
+    .detail-wrapper {
+      position: absolute;
+      width: 66.66%;
+      padding-right: 5px;
+      display: none;
+      border-bottom: 10px solid #FFF;
+      img {
+        width: 100%;
+      }
+      .text-wrapper {
+        position: relative;
+        padding: 10px 15px 40px;
+        height: 140px;
+        background-color: #F0EDD2;
+        height: auto;
+        z-index: 2;
+        .detail {
+          position: absolute;
+          width: 90px;
+          height: 36px;
+          right: 0;
+          bottom: 0;
+          background-color: #E0C84D;
+          padding: 8px;
+          text-align: center;
+          color: #FFF;
+        }
+      }
+      .description {
+        max-height: 300px;
+        overflow: auto;
+        padding-top: 15px;
+        margin-top: 10px;
+        border-top: 1px #FFF solid;
+        p {
+          color: #666666;
+        }
+      }
+    }
+  }
+  .share-wrapper {
+    div {
+      display: inline-block;
+    }
+  }
+  .facebook-share {
+    height: 45pt;
+    width: 100pt;
+    background-image: url("../images/facebook_share_btn.png");
+    background-size: 60pt 20pt;
+    background-position: 0% 100%;
+  }
+  .pluginButton {
+    background: #4c69ba;
+    background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
+    background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+    border: none;
+    -webkit-border-radius: 3pt;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    text-shadow: 0 -1px 0 #354c8c;
+    white-space: nowrap;
+    button {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: 12pt;
+      font-weight: bold;
+      margin: -1px;
+      outline: none;
+      padding: 0;
+      text-shadow: 0 -1px 0 #354c8c;
+    }
+  }
+  span {
+    color: #FFF;
+    font-size: 8px;
+    padding-right: 5pt;
+    -webkit-font-smoothing: antialiased;
+  }
+  .pluginButtonImage {
+    display: inline-block;
+  }
+}
+/**** @media scss *****/
+
+@media only screen and (max-width: 767px) {
+  .path-faq {
+    .sub-tab-wrapper li {
+      float: left;
+    }
+    .content-outer-wrapper {
+      .detail-wrapper {
+        width: 100%;
+      }
+      .content-wrapper {
+        .text-wrapper {
+          height: auto;
+        }
+      }
+    }
+  }
+}

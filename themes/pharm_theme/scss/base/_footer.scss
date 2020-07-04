@@ -9,6 +9,11 @@
   .copyright{
     float: left;
     line-height: 14px;
+    p {
+      height: 14px;
+      line-height: 14px;
+      margin: 0;
+    }
   }
   .footer-link{
     float: right;
@@ -51,7 +56,7 @@
       position: relative;
       padding: 0;
     }
-    .copyright,.footer-link{
+    .copyright, .footer-link{
       float: left;
       width: 100%;
     }
