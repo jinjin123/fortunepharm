@@ -7,6 +7,7 @@ Drupal.behaviors.yourmodulename = {
       var crt_path = settings.path.currentPath;
       crt_path = crt_path.replace("node/", "");
       var title_lang = "title_" + json_lang;
+      var zoom_in_detail_lang = "zoom_in_detail_" + json_lang;
       var timeline_data = [];
       var JsonAPI = "/" + lang + lang + "timeline-json/" + crt_path;
       $.getJSON(JsonAPI, callbackFuncWithData);
@@ -16,13 +17,14 @@ Drupal.behaviors.yourmodulename = {
           var images = data[i]['img'];
           var imgs = [];
           var content = "";
+          var body_content = data[i][zoom_in_detail_lang];
           images = images.split(",");
           for (var x = 0; x < 21; x++) {
             if (images[x]) {
               imgs.push(images[x]);
             }
           }
-          content = data[i][title_lang];
+          content = data[i][title_lang] + body_content;
           timeline_data[i] = {
             type: 'blog_post',
             date: data[i]["date"].substring(0, 4),

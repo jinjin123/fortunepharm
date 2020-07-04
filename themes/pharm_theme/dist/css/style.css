@@ -1906,8 +1906,9 @@ i {
     display: block;
     width: 162px;
     height: 52px;
-    background-image: url(../image/intro_play_btn.png);
-    margin-top: 15px; }
+    background-image: url(../images/intro_play_btn.png);
+    margin-top: 15px;
+    font-size: 0px; }
 
 .main-wrapper .index-wrapper, .main-wrapper #block-views-block-homepage-slider-block-1 {
   position: relative;
