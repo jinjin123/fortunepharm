@@ -245,6 +245,14 @@ Drupal.behaviors.yourmodulename = {
         window.location.assign(current_page);
       });
       // On Click
+        var title = $('#vid-content .vid-title').html();
+        var date = $('#vid-content .vid-date').html();
+        var body = $('#vid-content .vid-body').html();
+        var v_url = $('#vid-content .vid-url').html();
+        $('.path-advertisements .video').html('<iframe width="400" height="300" src="' + v_url + '" frameborder="0" allowfullscreen></iframe>');
+        $('.advertisements-top .content1 h3').html(title);
+        $('.advertisements-top .content1 p').html(date);
+        $('.advertisements-top .content2').html(body);
       $('.path-advertisements .view-video').click(function() {
         var title = $(this).parent().find('#vid-content .vid-title').html();
         var date = $(this).parent().find('#vid-content .vid-date').html();

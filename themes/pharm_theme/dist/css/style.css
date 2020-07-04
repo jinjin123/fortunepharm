@@ -285,6 +285,9 @@ table {
   overflow: hidden; }
 
 .container-fluid-125 {
+  background-color: #F3F3F3;
+  border-bottom: 3px solid #EDEDED;
+  margin-bottom: 25px;
   position: relative;
   padding-right: 125px;
   padding-left: 125px;
@@ -500,15 +503,18 @@ table {
     float: left;
     margin: 0;
     list-style: none; }
-  nav#contact-nav li {
-    background-image: url(../images/laug_sep.png);
-    background-position: left;
-    background-repeat: no-repeat; }
-    nav#contact-nav li:first-child {
-      background-image: none; }
-    nav#contact-nav li.active a, nav#contact-nav li:hover a {
-      text-decoration: underline;
-      color: #000; } }
+  nav#contact-nav {
+    padding-right: 0px;
+    padding-left: 0px; }
+    nav#contact-nav li {
+      background-image: url(../images/laug_sep.png);
+      background-position: left;
+      background-repeat: no-repeat; }
+      nav#contact-nav li:first-child {
+        background-image: none; }
+      nav#contact-nav li.active a, nav#contact-nav li:hover a {
+        text-decoration: underline;
+        color: #000; } }
 
 @media only screen and (max-width: 1120px) and (min-width: 768px) {
   #header .main-menu a {
@@ -2228,6 +2234,9 @@ nav#block-mainnavigation #menu li a {
 .page-node-type-product .package-title {
   position: absolute;
   bottom: 60%; }
+
+.page-node-2 #contact-nav, .page-node-178 #contact-nav {
+  display: none; }
 
 .page-node-20 #block-pharm-theme-content {
   padding-bottom: 5px; }
