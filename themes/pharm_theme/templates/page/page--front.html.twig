@@ -1,6 +1,47 @@
-{{ attach_library('nyu_theme/homepage') }}
 
+{% set mobile_menu = simplify_menu('main') %}
 <div class="layout-container homepage">
+
+{# Mobile menu #}
+{% if mobile_menu %}
+  <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <ul id="lang-sidebar" class="nav navbar-nav">
+      <li class=""><a href="https://www.fortunepharm.com/cht/home">繁</a></li>
+      <li class=""><a href="https://www.fortunepharm.com/chs/home">簡</a></li>
+      <li class=""><a href="https://www.fortunepharm.com/eng/home">ENG</a></li>
+    </ul>
+    <ul id="social-icon-sidebar" class="nav">
+      <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
+      <li><a href="http://weibo.com/fortunepharmacal" target="_blank" class="weibo-icon"></a></li>
+      <li><a href="https://www.youtube.com/user/FortunePharmHK" target="_blank" class="youtube-icon"></a></li>
+    </ul>
+    <ul class="nav sidebar-nav">
+      {% for menu_item in mobile_menu.menu_tree %}
+          {% if menu_item.submenu %}
+            <li class="parent"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+          {% else %}
+            <li class="">
+              <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+          {% endif %}
+          {% if menu_item.submenu %}
+            <ul class="sub-sidebar-nav">
+              <li>
+                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+              </li>
+              {% for sub_menu_item in menu_item.submenu %}
+                <li>
+                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>
+  </nav>
+{% endif %}
+{# Mobile menu #}
 
   <header id="header" class="navbar">
     <div class="container-fluid">
