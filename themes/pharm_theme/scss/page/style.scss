@@ -27,12 +27,10 @@ i {
   max-width: 1680px;
   margin: 0 auto;
 }
-
 nav#block-mainnavigation #menu li a {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 #banner-wrapper {
   position: relative;
   width: 100%;
@@ -271,6 +269,7 @@ nav#block-mainnavigation #menu li a {
         -o-transition: 200ms linear;
         transition: 200ms linear;
         color: #FFF;
+        font-weight: 500;
       }
       h3 {
         color: #FFF;
@@ -615,9 +614,8 @@ nav#block-mainnavigation #menu li a {
 }
 // OtherServices
 .page-node-2 #contact-nav, .page-node-178 #contact-nav {
-	display: none;
+  display: none;
 }
-
 // Charity Fund
 .page-node-20 {
   #block-pharm-theme-content {
@@ -740,13 +738,42 @@ nav#block-mainnavigation #menu li a {
   }
   #charity-fund-detail {
     color: #0096B0;
-}
+  }
 }
 #fund-timeline div.timeline_left div.timeline_element_box, #fund-timeline div.timeline_dual div.timeline_element_left div.timeline_element_box // Health Page
 .health-tips-ful {
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+// For Eglish Pages
+.lang-en {
+  .main-wrapper {
+    .index-wrapper {
+      .link-wrapper {
+        span {
+          font-size: 1.2em;
+          top: 30%;
+        }
+      }
+      &:hover {
+        span {
+          top: 15%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width:1200px) {
+  .main-wrapper {
+    .index-wrapper {
+      .link-wrapper {
+        span {
+          font-size: 1.5em;
+        }
+      }
+    }
   }
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
@@ -785,7 +812,19 @@ nav#block-mainnavigation #menu li a {
   }
 }
 @media only screen and (max-width: 767px) {
-  // News
+  body {
+    &.path-frontpage {
+      .mobile-main {
+        .row-xs-4 {
+          &.nopadding {
+            .field-type-text-with-summary {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  } // News
   .path-news {
     .views-row {
       .content-row {
@@ -834,6 +873,27 @@ nav#block-mainnavigation #menu li a {
     }
     .content-wrapper {
       padding-left: 15px;
+    }
+  }
+}
+// For Eglish Pages
+@media only screen and (max-width: 399px) {
+  .lang-en {
+    .main-wrapper {
+      .index-wrapper {
+        .link-wrapper {
+          span {
+            font-size: 0.8em;
+          }
+        }
+        .video-wrapper {
+          p {
+            &.video-text1 {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
     }
   }
 }
