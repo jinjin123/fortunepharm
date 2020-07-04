@@ -111,16 +111,6 @@
     }
 }
 
-body {
-    &.path-frontpage, &.page-node-2, &.page-node-20, &.page-node-147, &.path-news, &.page-node-5, &.page-node-20, &.path-advertisements &.page-node-6,
-    &.page-node-10 {
-        #header {
-            padding-bottom: 0;
-            border-bottom: 0;
-        }
-    }
-}
-
 @media only screen and (min-width: 768px) {
     .nav {
         li {
@@ -134,8 +124,8 @@ body {
         }
     }
     #header {
-        padding-bottom: 10px;
-        border-bottom: 2px solid #EFEFEF;
+        padding-bottom: 0px;
+        border-bottom: 0px;
         #contact-nav {
             display: none;
         }
