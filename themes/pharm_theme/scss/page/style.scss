@@ -28,8 +28,8 @@ i {
   margin: 0 auto;
 }
 nav#block-mainnavigation #menu li a {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #banner-wrapper {
   position: relative;
@@ -745,6 +745,7 @@ nav#block-mainnavigation #menu li a {
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
+    max-width: 1680px;
   }
 }
 // For Eglish Pages
