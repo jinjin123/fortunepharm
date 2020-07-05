@@ -2467,3 +2467,11 @@ nav#block-mainnavigation #menu li a {
     font-size: 0.8em; }
   .lang-en .main-wrapper .index-wrapper .video-wrapper p.video-text1 {
     font-size: 0.8em; } }
+
+@media only screen and (max-width: 399px) {
+  .views-field-field-banner-photo .field-content img {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .views-field-field-mobile-banner-photo .field-content img {
+    display: none; } }
