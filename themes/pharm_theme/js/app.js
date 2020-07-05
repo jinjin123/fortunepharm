@@ -377,7 +377,7 @@ Drupal.behaviors.yourmodulename = {
       $(".fancybox").fancybox();
     }
     /*news */
-    $(document).ready(function() {
+
       $(".fancybox_popup").fancybox().trigger('click');
       $(".fancybox_popup").fancybox({
         openEffect: 'elastic',
@@ -388,8 +388,6 @@ Drupal.behaviors.yourmodulename = {
           }
         }
       });
-    });
-    $(document).ready(function() {
       var hash = document.URL.substr(document.URL.indexOf('#') + 1);
       change_size('wrapper', $(window).width(), $(window).height());
       $('body').show();
@@ -408,7 +406,6 @@ Drupal.behaviors.yourmodulename = {
           }
         }
       });
-    })
     /*index*/
 
     /*contact-us-offers*/
@@ -491,6 +488,37 @@ Drupal.behaviors.yourmodulename = {
       });
     });
     /*contact-us-offers*/
+
+    /*lastest-offers*/
+    if($('#main #block-latestoffers ').length > 0){
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('#main #block-latestoffers  .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#main #block-latestoffers  .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'lastest-offers2'));
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('#main #block-latestoffers .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#main #block-latestoffers  .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#main #block-latestoffers  .more-btn').click(function(){
+      $('#main #block-latestoffers  > div.hide').each(function(key){
+        if(key < 3)
+          $(this).removeClass('hide');
+        if($('#main #block-latestoffers  > div.hide').length == 0)
+          $('#main #block-latestoffers  .more-btn').remove();
+      });
+      $('#main #block-latestoffers  .img-wrapper').each(function(){
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+    /*lastest-offers*/
     //  healthtips--------------------start
     $(document).ready(function() {
       $('body').show();
