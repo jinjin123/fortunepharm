@@ -666,6 +666,10 @@ Drupal.behaviors.yourmodulename = {
       }
       $(this).find('.sub-sidebar-nav').slideToggle();
     });
+    // Remove first existant
+    $('.sidebar-nav > li.parent').each(function() {
+      $( this ).find('li').first().remove();
+    });
     /*sidebar*/
     /**** Mobile menu ****/
     /******* Faq ******/
