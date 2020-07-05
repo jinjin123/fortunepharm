@@ -2,6 +2,10 @@
 @import '../mixins';
 
 /********** helathtips SASS ***/
+div.container-fluid {
+  max-width: 1680px;
+  margin: 0 auto;
+}
 
 .container-fluid-healthtips {
     padding-left: 0;
