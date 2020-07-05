@@ -245,14 +245,14 @@ Drupal.behaviors.yourmodulename = {
         window.location.assign(current_page);
       });
       // On Click
-        var title = $('#vid-content .vid-title').html();
-        var date = $('#vid-content .vid-date').html();
-        var body = $('#vid-content .vid-body').html();
-        var v_url = $('#vid-content .vid-url').html();
-        $('.path-advertisements .video').html('<iframe width="400" height="300" src="' + v_url + '" frameborder="0" allowfullscreen></iframe>');
-        $('.advertisements-top .content1 h3').html(title);
-        $('.advertisements-top .content1 p').html(date);
-        $('.advertisements-top .content2').html(body);
+      var title = $('#vid-content .vid-title').html();
+      var date = $('#vid-content .vid-date').html();
+      var body = $('#vid-content .vid-body').html();
+      var v_url = $('#vid-content .vid-url').html();
+      $('.path-advertisements .video').html('<iframe width="400" height="300" src="' + v_url + '" frameborder="0" allowfullscreen></iframe>');
+      $('.advertisements-top .content1 h3').html(title);
+      $('.advertisements-top .content1 p').html(date);
+      $('.advertisements-top .content2').html(body);
       $('.path-advertisements .view-video').click(function() {
         var title = $(this).parent().find('#vid-content .vid-title').html();
         var date = $(this).parent().find('#vid-content .vid-date').html();
@@ -378,34 +378,34 @@ Drupal.behaviors.yourmodulename = {
     }
     /*news */
 
-      $(".fancybox_popup").fancybox().trigger('click');
-      $(".fancybox_popup").fancybox({
-        openEffect: 'elastic',
-        closeEffect: 'elastic',
-        helpers: {
-          title: {
-            type: 'inside'
-          }
+    $(".fancybox_popup").fancybox().trigger('click');
+    $(".fancybox_popup").fancybox({
+      openEffect: 'elastic',
+      closeEffect: 'elastic',
+      helpers: {
+        title: {
+          type: 'inside'
         }
-      });
-      var hash = document.URL.substr(document.URL.indexOf('#') + 1);
-      change_size('wrapper', $(window).width(), $(window).height());
-      $('body').show();
-      $(window).resize(function() {
-        clearTimeout($.data(this, 'resizeTimer2'));
-        $.data(this, 'resizeTimer2', setTimeout(function() {
-          change_size('wrapper', $(window).width(), $(window).height());
-        }, 200));
-        if ($(window).width() >= 768) {
-          if ($('#wrapper').hasClass('toggled')) {
-            $('#wrapper').removeClass('toggled');
-          }
-          if ($('.hamburger').hasClass('is-open')) {
-            $('.hamburger').removeClass('is-open');
-            $('.hamburger').addClass('is-closed');
-          }
+      }
+    });
+    var hash = document.URL.substr(document.URL.indexOf('#') + 1);
+    change_size('wrapper', $(window).width(), $(window).height());
+    $('body').show();
+    $(window).resize(function() {
+      clearTimeout($.data(this, 'resizeTimer2'));
+      $.data(this, 'resizeTimer2', setTimeout(function() {
+        change_size('wrapper', $(window).width(), $(window).height());
+      }, 200));
+      if ($(window).width() >= 768) {
+        if ($('#wrapper').hasClass('toggled')) {
+          $('#wrapper').removeClass('toggled');
         }
-      });
+        if ($('.hamburger').hasClass('is-open')) {
+          $('.hamburger').removeClass('is-open');
+          $('.hamburger').addClass('is-closed');
+        }
+      }
+    });
     /*index*/
 
     /*contact-us-offers*/
@@ -490,9 +490,9 @@ Drupal.behaviors.yourmodulename = {
     /*contact-us-offers*/
 
     /*lastest-offers*/
-    if($('#main #block-latestoffers ').length > 0){
+    if ($('#main #block-latestoffers ').length > 0) {
       $.data(this, 'lastest-offers', setTimeout(function() {
-        $('#main #block-latestoffers  .img-wrapper').each(function(){
+        $('#main #block-latestoffers  .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
         $('#main #block-latestoffers  .content-wrapper').show();
@@ -500,131 +500,187 @@ Drupal.behaviors.yourmodulename = {
       $(window).resize(function() {
         clearTimeout($.data(this, 'lastest-offers2'));
         $.data(this, 'lastest-offers2', setTimeout(function() {
-          $('#main #block-latestoffers .img-wrapper').each(function(){
+          $('#main #block-latestoffers .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
           $('#main #block-latestoffers  .content-wrapper').show();
         }, 800));
       });
     }
-    $('#main #block-latestoffers  .more-btn').click(function(){
-      $('#main #block-latestoffers  > div.hide').each(function(key){
-        if(key < 3)
+    $('#main #block-latestoffers  .more-btn').click(function() {
+      $('#main #block-latestoffers  > div.hide').each(function(key) {
+        if (key < 3)
           $(this).removeClass('hide');
-        if($('#main #block-latestoffers  > div.hide').length == 0)
+        if ($('#main #block-latestoffers  > div.hide').length == 0)
           $('#main #block-latestoffers  .more-btn').remove();
       });
-      $('#main #block-latestoffers  .img-wrapper').each(function(){
+      $('#main #block-latestoffers  .img-wrapper').each(function() {
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+    //chs
+    if ($('#main #block-latestofferschs ').length > 0) {
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('#main #block-latestofferschs  .img-wrapper').each(function() {
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#main #block-latestofferschs  .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'lastest-offers2'));
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('#main #block-latestofferschs .img-wrapper').each(function() {
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#main #block-latestofferschs  .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#main #block-latestofferschs  .more-btn').click(function() {
+      $('#main #block-latestofferschs  > div.hide').each(function(key) {
+        if (key < 3)
+          $(this).removeClass('hide');
+        if ($('#main #block-latestofferschs  > div.hide').length == 0)
+          $('#main #block-latestofferschs  .more-btn').remove();
+      });
+      $('#main #block-latestofferschs  .img-wrapper').each(function() {
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+    //cht
+    if ($('#main #block-zuixinyouhuifanti ').length > 0) {
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function() {
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'lastest-offers2'));
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('#main #block-zuixinyouhuifanti .img-wrapper').each(function() {
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#main #block-zuixinyouhuifanti  .more-btn').click(function() {
+      $('#main #block-zuixinyouhuifanti  > div.hide').each(function(key) {
+        if (key < 3)
+          $(this).removeClass('hide');
+        if ($('#main #block-zuixinyouhuifanti  > div.hide').length == 0)
+          $('#main #block-zuixinyouhuifanti  .more-btn').remove();
+      });
+      $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     /*lastest-offers*/
-    //  healthtips--------------------start
-    $(document).ready(function() {
-      $('body').show();
-      if ($('#health-tips .sub-tab-wrapper li').length > 0) {
-        change_size('wrapper', $(window).width(), $(window).height());
-        var tab_width = 0;
-        clearTimeout($.data(this, 'health-tips-tab'));
-        $.data(this, 'health-tips-tab', setTimeout(function() {
-          $('#health-tips .sub-tab-wrapper li').each(function() {
-            tab_width += $(this).width();
-          });
-          $('#health-tips .sub-tab-wrapper').width(tab_width);
-        }, 500));
-      }
 
-      function health_tips() {
-        change_size('wrapper', $(window).width(), $(window).height());
-        if ($(window).width() >= 768) {
-          $('#health-tips .function-wrapper .function-btn').each(function() {
-            if ($('#health-tips').hasClass('cold_and_flu')) $(this).height($(this).width() / 280 * 195);
-            else if ($('#health-tips').hasClass('children')) $(this).height($(this).width() / 100 * 50);
-            else if ($('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height($(this).width() / 280 * 196);
-          });
-          $('.function-middle-wrapper').height($('.function-left-wrapper:visible').height());
-        } else {
-          $('#health-tips .function-wrapper .function-btn').each(function() {
-            if ($('#health-tips').hasClass('cold_and_flu') || $('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height(Math.floor($(this).width() / 385 * 293));
-            if ($('#health-tips').hasClass('children')) $(this).height(Math.floor($(this).width() / 516 * 293));
-          });
-        }
+    /* healthtips */
+    if ($('#health-tips .sub-tab-wrapper li').length > 0) {
+      change_size('wrapper', $(window).width(), $(window).height());
+      var tab_width = 0;
+      clearTimeout($.data(this, 'health-tips-tab'));
+      $.data(this, 'health-tips-tab', setTimeout(function() {
+        $('#health-tips .sub-tab-wrapper li').each(function() {
+          tab_width += $(this).width();
+        });
+        $('#health-tips .sub-tab-wrapper').width(tab_width);
+      }, 500));
+    }
+
+    function health_tips() {
+      change_size('wrapper', $(window).width(), $(window).height());
+      if ($(window).width() >= 768) {
+        $('#health-tips .function-wrapper .function-btn').each(function() {
+          if ($('#health-tips').hasClass('cold_and_flu')) $(this).height($(this).width() / 280 * 195);
+          else if ($('#health-tips').hasClass('children')) $(this).height($(this).width() / 100 * 50);
+          else if ($('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height($(this).width() / 280 * 196);
+        });
+        $('.function-middle-wrapper').height($('.function-left-wrapper:visible').height());
+      } else {
+        $('#health-tips .function-wrapper .function-btn').each(function() {
+          if ($('#health-tips').hasClass('cold_and_flu') || $('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height(Math.floor($(this).width() / 385 * 293));
+          if ($('#health-tips').hasClass('children')) $(this).height(Math.floor($(this).width() / 516 * 293));
+        });
       }
-      if ($('#health-tips .function-wrapper .function-btn').length > 0) {
-        $.data(this, 'function', setTimeout(function() {
+    }
+    if ($('#health-tips .function-wrapper .function-btn').length > 0) {
+      $.data(this, 'function', setTimeout(function() {
+        health_tips();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'health-btn'));
+        $.data(this, 'health-btn', setTimeout(function() {
           health_tips();
-        }, 200));
-        $(window).resize(function() {
-          clearTimeout($.data(this, 'health-btn'));
-          $.data(this, 'health-btn', setTimeout(function() {
-            health_tips();
-          }, 800));
-        });
-        $('#health-tips .function-wrapper .function-btn').click(function() {
-          if (typeof($(this).attr('rel')) !== 'undefined') {
-            var rel = $(this).attr('rel');
-            $('#health-tips .function-wrapper .function-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-btn[rel="' + rel + '"]').addClass('active');
-            $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel + '"]').addClass('active');
-            if ($('#health-tips .function-wrapper .function-middle-wrapper p').length > 0) {
-              $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
-                $(this).removeClass('active');
-              });
-              $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel + '"]').addClass('active');
-            }
-            if ($('#health-tips .function-detail-wrapper .detail-right-wrapper').length > 0) {
-              $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
-                $(this).removeClass('active');
-              });
-              $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel + '"]').addClass('active');
-            }
-          }
-        });
-        $('#health-tips .function-tab-wrapper .function-tab-btn').click(function() {
-          if (typeof($(this).attr('rel')) !== 'undefined') {
-            var rel = $(this).attr('rel');
-            $('#health-tips .function-tab-wrapper .function-tab-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-tab-wrapper .function-tab-btn[rel="' + rel + '"]').addClass('active');
-            if ($(window).width() >= 768) {
-              var temp = 'left';
-            } else {
-              var temp = 'right';
-            }
-            $('#health-tips .function-' + temp + '-wrapper').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-' + temp + '-wrapper[rel="' + rel + '"]').addClass('active');
-            health_tips();
-            $('.function-' + temp + '-wrapper:visible .function-btn').each(function() {
-              $(this).removeClass('active');
-            });
-            $('.function-' + temp + '-wrapper:visible .function-btn:first-child').addClass('active');
-            var rel2 = $('.function-' + temp + '-wrapper:visible .function-btn:first-child').attr('rel');
-            $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
-              $(this).removeClass('active');
-            });
-            $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel2 + '"]').addClass('active');
+        }, 800));
+      });
+      $('#health-tips .function-wrapper .function-btn').click(function() {
+        if (typeof($(this).attr('rel')) !== 'undefined') {
+          var rel = $(this).attr('rel');
+          $('#health-tips .function-wrapper .function-btn').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-wrapper .function-btn[rel="' + rel + '"]').addClass('active');
+          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel + '"]').addClass('active');
+          if ($('#health-tips .function-wrapper .function-middle-wrapper p').length > 0) {
             $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
               $(this).removeClass('active');
             });
-            $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel2 + '"]').addClass('active');
+            $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel + '"]').addClass('active');
+          }
+          if ($('#health-tips .function-detail-wrapper .detail-right-wrapper').length > 0) {
             $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
               $(this).removeClass('active');
             });
-            $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel2 + '"]').addClass('active');
+            $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel + '"]').addClass('active');
           }
-        });
-      }
-      /*health-tips*/
-    });
-    //healthtips---------------------end
+        }
+      });
+      $('#health-tips .function-tab-wrapper .function-tab-btn').click(function() {
+        if (typeof($(this).attr('rel')) !== 'undefined') {
+          var rel = $(this).attr('rel');
+          $('#health-tips .function-tab-wrapper .function-tab-btn').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-tab-wrapper .function-tab-btn[rel="' + rel + '"]').addClass('active');
+          if ($(window).width() >= 768) {
+            var temp = 'left';
+          } else {
+            var temp = 'right';
+          }
+          $('#health-tips .function-' + temp + '-wrapper').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-' + temp + '-wrapper[rel="' + rel + '"]').addClass('active');
+          health_tips();
+          $('.function-' + temp + '-wrapper:visible .function-btn').each(function() {
+            $(this).removeClass('active');
+          });
+          $('.function-' + temp + '-wrapper:visible .function-btn:first-child').addClass('active');
+          var rel2 = $('.function-' + temp + '-wrapper:visible .function-btn:first-child').attr('rel');
+          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel2 + '"]').addClass('active');
+          $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel2 + '"]').addClass('active');
+          $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
+            $(this).removeClass('active');
+          });
+          $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel2 + '"]').addClass('active');
+        }
+      });
+    }
+    /*health-tips*/
+    
     /**** Mobile menu ****/
     /*sidebar*/
     var trigger = $('.hamburger'),
@@ -668,7 +724,7 @@ Drupal.behaviors.yourmodulename = {
     });
     // Remove first existant
     $('.sidebar-nav > li.parent').each(function() {
-      $( this ).find('li').first().remove();
+      $(this).find('li').first().remove();
     });
     /*sidebar*/
     /**** Mobile menu ****/
