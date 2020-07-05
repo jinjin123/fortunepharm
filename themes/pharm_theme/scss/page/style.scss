@@ -28,8 +28,8 @@ i {
   margin: 0 auto;
 }
 nav#block-mainnavigation #menu li a {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #banner-wrapper {
   position: relative;
@@ -747,7 +747,7 @@ nav#block-mainnavigation #menu li a {
     padding-right: 0;
   }
 }
-// For Eglish Pages
+// For English Pages
 .lang-en {
   .main-wrapper {
     .index-wrapper {
@@ -804,7 +804,6 @@ nav#block-mainnavigation #menu li a {
   #banner-wrapper {
     .page_banner {
       img {
-        max-height: 130px;
         min-height: 90px;
         width: 100%;
       }

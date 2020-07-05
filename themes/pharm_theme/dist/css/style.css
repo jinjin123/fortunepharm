@@ -634,6 +634,10 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
     padding: 0; } }
 
 /********** helathtips SASS ***/
+div.container-fluid {
+  max-width: 1680px;
+  margin: 0 auto; }
+
 .container-fluid-healthtips {
   padding-left: 0;
   padding-right: 0;
@@ -1843,8 +1847,8 @@ i {
   margin: 0 auto; }
 
 nav#block-mainnavigation #menu li a {
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 #banner-wrapper {
   position: relative;
@@ -2429,7 +2433,6 @@ nav#block-mainnavigation #menu li a {
 
 @media only screen and (max-width: 991px) {
   #banner-wrapper .page_banner img {
-    max-height: 130px;
     min-height: 90px;
     width: 100%; } }
 
