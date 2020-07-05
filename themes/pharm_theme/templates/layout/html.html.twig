@@ -43,9 +43,12 @@
     <a href="#main-content" class="visually-hidden focusable skip-link">
       {{ 'Skip to main content'|t }}
     </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
+    <div id="wrapper">
+      <div class="overlay"></div>
+      {{ page_top }}
+      {{ page }}
+      {{ page_bottom }}
+    </div>
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
   </body>
 </html>

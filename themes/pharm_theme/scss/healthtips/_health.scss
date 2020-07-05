@@ -6,6 +6,11 @@
 .container-fluid-healthtips {
     padding-left: 0;
     padding-right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #F7F7F7;
+    background-image: none;
+    margin-bottom: 20px!important;
 }
 
 .container-healthtips-submenu nav#block-mainnavigation {
@@ -15,17 +20,30 @@
         width: 100%;
         height: 50px;
         background-color: #F7F7F7;
-        li.navbar-item {
-            width: 160px;
-            a.navbar-link {
-                text-align: center;
+        li {
+            background-image: none;
+            &.navbar-item {
+                width: 160px;
                 font-size: 9pt;
-                color: #677D3A;
+                a.navbar-link {
+                    color: #677D3A;
+                    text-align: center;
+                    font-size: 9pt;
+                    color: #677D3A;
+                }
+                a:focus,
+                a:hover {
+                    background-color: #677D3A;
+                    color: #eee;
+                    text-decoration: none;
+                }
             }
-            a:focus,
-            a:hover {
+            &.active {
                 background-color: #677D3A;
-                color: #eee;
+                a {
+                    color: #fff!important;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -133,7 +151,7 @@
     }
 }
 
-#health-tips .detail-wrapper {
+.detail-wrapper {
     position: relative;
     overflow: hidden;
     margin: 20px 0;
@@ -141,6 +159,14 @@
         height: 150px;
         background-color: #A1AE75;
         z-index: 2;
+        h4 {
+            color: #fff;
+        }
+    }
+    .detail-right-wrapper {
+        ul {
+            padding: 0 15px 15px 40px;
+        }
     }
     h4,
     p {
@@ -194,30 +220,30 @@
 }
 
 #health-tips.cold_and_flu .function-wrapper .function-left-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_left_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_left_btn.png");
 }
 
 #health-tips.cold_and_flu .function-wrapper .function-right-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_right_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_right_btn.png");
 }
 
 #health-tips.children .function-wrapper .function-left-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_3_left_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_left_btn.png");
 }
 
 #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_3_right_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_right_btn.png");
 }
 
 #health-tips.allergy .function-wrapper .function-left-wrapper .function-btn,
 #health-tips.gerd .function-wrapper .function-left-wrapper .function-btn,
 #health-tips.pain .function-wrapper .function-left-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_4_left_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_4_left_btn.png");
 }
 
 #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn,
 #health-tips.pain .function-wrapper .function-right-wrapper .function-btn {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_4_right_btn.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_4_right_btn.png");
 }
 
 #health-tips .function-wrapper .function-btn.active,
@@ -251,8 +277,7 @@
     padding: 20px;
     margin: 0 !important;
     font-size: 1.2em;
-    width: 80%;
-    // text-align: left;
+    width: 80%; // text-align: left;
 }
 
 #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn>p,
@@ -301,17 +326,17 @@
 #health-tips.gerd .function-wrapper .function-btn.function-logo:hover,
 #health-tips.pain .function-wrapper .function-btn.function-logo,
 #health-tips.pain .function-wrapper .function-btn.function-logo:hover {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_8.png") !important;
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_8.png") !important;
 }
 
 #health-tips.children .function-wrapper .function-btn.function-logo,
 #health-tips.children .function-wrapper .function-btn.function-logo:hover {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_3_6.png") !important;
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_6.png") !important;
 }
 
 #health-tips.allergy .function-wrapper .function-btn.function-logo,
 #health-tips.allergy .function-wrapper .function-btn.function-logo:hover {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_7_btn_3.png") !important;
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_7_btn_3.png") !important;
 }
 
 #health-tips .function-wrapper .function-middle-wrapper {
@@ -319,7 +344,7 @@
 }
 
 #health-tips.gerd .function-wrapper .function-middle-wrapper {
-    background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_8_bg.png");
+    background-image: url("/themes/pharm_theme/dist/images/tips/trip_8_bg.png");
     background-size: 100%;
     background-position: bottom center;
 }
@@ -484,7 +509,17 @@
     }
 }
 
-@media only screen and (max-width: 991px) {}
+@media only screen and (max-width: 1199px) {
+    .container-healthtips-submenu nav#block-mainnavigation {
+        #menu {
+            li {
+                &.navbar-item {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .scroll-wrapper {
@@ -637,28 +672,28 @@
         background-position: 0 0 !important;
     }
     #health-tips.cold_and_flu .function-wrapper .function-left-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_top_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_top_btn.png");
     }
     #health-tips.cold_and_flu .function-wrapper .function-right-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_bottom_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_bottom_btn.png");
     }
     #health-tips.children .function-wrapper .function-left-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_5_top_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_top_btn.png");
     }
     #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_5_bottom_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_bottom_btn.png");
     }
     #health-tips.gerd .function-wrapper .function-left-wrapper .function-btn,
     #health-tips.pain .function-wrapper .function-left-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_3_top_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_top_btn.png");
     }
     #health-tips.allergy .function-wrapper .function-right-wrapper .function-btn,
     #health-tips.gerd .function-wrapper .function-right-wrapper .function-btn,
     #health-tips.pain .function-wrapper .function-right-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_3_bottom_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_bottom_btn.png");
     }
     #health-tips.gerd .function-wrapper .function-right-wrapper.function-bottom-wrapper .function-btn {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_4_bottom_btn.png");
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_4_bottom_btn.png");
     }
     #health-tips.allergy .function-wrapper .function-btn.function-logo,
     #health-tips.allergy .function-wrapper .function-btn.function-logo:hover,
@@ -666,11 +701,11 @@
     #health-tips.cold_and_flu .function-wrapper .function-btn.function-logo:hover,
     #health-tips.pain .function-wrapper .function-btn.function-logo,
     #health-tips.pain .function-wrapper .function-btn.function-logo:hover {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_2_print.png") !important;
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_print.png") !important;
     }
     #health-tips.children .function-wrapper .function-btn.function-logo,
     #health-tips.children .function-wrapper .function-btn.function-logo:hover {
-        background-image: url("https://www.fortunepharm.com/assets/img/tips/trip_5_print.png") !important;
+        background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_print.png") !important;
     }
     #health-tips .healthtips-right-col {
         position: absolute;
