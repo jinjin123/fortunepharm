@@ -1579,6 +1579,77 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
   .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
     height: auto; } }
 
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
+body.path-frontpage .slick-slide img {
+  height: 100%; }
+
+body.path-frontpage .slick-dots {
+  bottom: 20px; }
+  body.path-frontpage .slick-dots li {
+    width: 12px;
+    height: 12px; }
+    body.path-frontpage .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      border: #fff solid 1px;
+      background: transparent; }
+      body.path-frontpage .slick-dots li button::before {
+        display: none; }
+    body.path-frontpage .slick-dots li.slick-active button {
+      background-color: #fff;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px; }
+
+body.path-frontpage .slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
+.main-wrapper {
+  margin-right: -5px; }
+
+.index-wrapper a {
+  color: #fff; }
+
+.index-wrapper .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #6ECCF4;
+  background-image: url(../images/index_img_video.png);
+  background-size: 20%;
+  background-position: 30% 40%; }
+  .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 1.2em;
+    top: 30%; }
+  .index-wrapper .video-wrapper p.video-text2 {
+    font-size: 0.7em;
+    top: 50%; }
+
+.index-wrapper .info-label {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 0;
+  background-color: #6ECCF4;
+  line-height: 30px;
+  color: #FFF;
+  padding-left: 25px;
+  padding-right: 10px; }
+
+@media only screen and (max-width: 767px) {
+  body.path-frontpage .slick-dotted.slick-slider {
+    padding: 0 5px 5px 0; } }
+
+@media only screen and (max-width: 768px) {
+  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
+    height: 100%; } }
+
 #block-nyu-theme-breadcrumbs {
   line-height: 40px; }
   #block-nyu-theme-breadcrumbs ol {
@@ -2332,74 +2403,3 @@ nav#block-mainnavigation #menu li a {
     font-size: 0.8em; }
   .lang-en .main-wrapper .index-wrapper .video-wrapper p.video-text1 {
     font-size: 0.8em; } }
-
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
-body.path-frontpage .slick-slide img {
-  height: 100%; }
-
-body.path-frontpage .slick-dots {
-  bottom: 20px; }
-  body.path-frontpage .slick-dots li {
-    width: 12px;
-    height: 12px; }
-    body.path-frontpage .slick-dots li button {
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
-      border: #fff solid 1px;
-      background: transparent; }
-      body.path-frontpage .slick-dots li button::before {
-        display: none; }
-    body.path-frontpage .slick-dots li.slick-active button {
-      background-color: #fff;
-      width: 12px;
-      height: 12px;
-      border-radius: 12px; }
-
-body.path-frontpage .slick-dotted.slick-slider {
-  margin-bottom: 0; }
-
-.main-wrapper {
-  margin-right: -5px; }
-
-.index-wrapper a {
-  color: #fff; }
-
-.index-wrapper .video-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-color: #6ECCF4;
-  background-image: url(../images/index_img_video.png);
-  background-size: 20%;
-  background-position: 30% 40%; }
-  .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 1.2em;
-    top: 30%; }
-  .index-wrapper .video-wrapper p.video-text2 {
-    font-size: 0.7em;
-    top: 50%; }
-
-.index-wrapper .info-label {
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  left: 0;
-  background-color: #6ECCF4;
-  line-height: 30px;
-  color: #FFF;
-  padding-left: 25px;
-  padding-right: 10px; }
-
-@media only screen and (max-width: 767px) {
-  body.path-frontpage .slick-dotted.slick-slider {
-    padding: 0 5px 5px 0; } }
-
-@media only screen and (max-width: 768px) {
-  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
-    height: 100%; } }
