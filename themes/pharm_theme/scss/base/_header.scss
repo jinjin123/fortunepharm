@@ -253,5 +253,13 @@
                 }
             }
         }
+        .sidebar-nav li {
+          a{
+            width: 130px;
+          }
+          a:focus,a:hover {
+            background-color: transparent;
+          }
+        }
     }
 }
