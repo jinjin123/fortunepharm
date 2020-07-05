@@ -518,6 +518,64 @@ Drupal.behaviors.yourmodulename = {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
+    //chs
+    if($('#main #block-latestofferschs ').length > 0){
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('#main #block-latestofferschs  .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#main #block-latestofferschs  .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'lastest-offers2'));
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('#main #block-latestofferschs .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#main #block-latestofferschs  .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#main #block-latestofferschs  .more-btn').click(function(){
+      $('#main #block-latestofferschs  > div.hide').each(function(key){
+        if(key < 3)
+          $(this).removeClass('hide');
+        if($('#main #block-latestofferschs  > div.hide').length == 0)
+          $('#main #block-latestofferschs  .more-btn').remove();
+      });
+      $('#main #block-latestofferschs  .img-wrapper').each(function(){
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
+    //cht
+    if($('#main #block-zuixinyouhuifanti ').length > 0){
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function(){
+          $(this).siblings('.content-wrapper').height($(this).height());
+        });
+        $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
+      }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'lastest-offers2'));
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('#main #block-zuixinyouhuifanti .img-wrapper').each(function(){
+            $(this).siblings('.content-wrapper').height($(this).height());
+          });
+          $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
+        }, 800));
+      });
+    }
+    $('#main #block-zuixinyouhuifanti  .more-btn').click(function(){
+      $('#main #block-zuixinyouhuifanti  > div.hide').each(function(key){
+        if(key < 3)
+          $(this).removeClass('hide');
+        if($('#main #block-zuixinyouhuifanti  > div.hide').length == 0)
+          $('#main #block-zuixinyouhuifanti  .more-btn').remove();
+      });
+      $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function(){
+        $(this).siblings('.content-wrapper').height($(this).height());
+      });
+    });
     /*lastest-offers*/
     //  healthtips--------------------start
     $(document).ready(function() {
