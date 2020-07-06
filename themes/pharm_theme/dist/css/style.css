@@ -648,7 +648,7 @@ div.container-fluid {
   margin-bottom: 20px !important; }
 
 .container-healthtips-submenu ::-webkit-scrollbar {
-  width: 5px; }
+  scrollbar-width: none; }
 
 .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
