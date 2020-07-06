@@ -2470,8 +2470,12 @@ nav#block-mainnavigation #menu li a {
 
 @media only screen and (max-width: 399px) {
   .views-field-field-banner-photo .field-content img {
+    display: none; }
+  .hidden-xs img {
     display: none; } }
 
 @media only screen and (min-width: 768px) {
   .views-field-field-mobile-banner-photo .field-content img {
+    display: none; }
+  .visible-xs img {
     display: none; } }
