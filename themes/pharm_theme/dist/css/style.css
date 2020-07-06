@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
   src: url("https://cdn.shanghai.nyu.edu/sites/default/files/icomoon.ttf"); }
@@ -556,7 +557,8 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
         color: #878787; }
         #sidebar-wrapper #lang-sidebar li a:hover {
           color: #040C4A;
-          text-decoration: none; }
+          text-decoration: none;
+          background-color: inherit; }
     #sidebar-wrapper #lang-sidebar.active {
       color: #040C4A; }
     #sidebar-wrapper #lang-sidebar a:hover {
@@ -633,6 +635,21 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
   #footer ul {
     padding: 0; } }
 
+body.lang-zh-hans {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+  body.lang-zh-hans h3 {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+
+.lang-en .main-wrapper .index-wrapper .link-wrapper span {
+  font-size: 1.2em;
+  top: 30%; }
+
+.lang-en .main-wrapper .index-wrapper:hover span {
+  top: 15%; }
+
+body.lang-zh-hant {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+
 /********** helathtips SASS ***/
 div.container-fluid {
   max-width: 1680px;
@@ -647,11 +664,16 @@ div.container-fluid {
   background-image: none;
   margin-bottom: 20px !important; }
 
+.container-healthtips-submenu ::-webkit-scrollbar {
+  width: 5px; }
+
 .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  overflow-x: auto;
+  scrollbar-width: none; }
   .container-healthtips-submenu nav#block-mainnavigation #menu {
-    width: 100%;
+    width: max-content;
     height: 50px;
     background-color: #F7F7F7; }
     .container-healthtips-submenu nav#block-mainnavigation #menu li {
@@ -1038,7 +1060,7 @@ div.container-fluid {
 
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
-    width: auto; } }
+    width: 160px; } }
 
 @media only screen and (max-width: 767px) {
   .scroll-wrapper {
@@ -1314,7 +1336,7 @@ div.container-fluid {
 #block-contactus #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right ul li {
-  padding: 15px 20px;
+  padding: 15px 15px;
   width: 100%;
   border-bottom: 1px solid #E1ECEE;
   color: #848788; }
@@ -2028,7 +2050,7 @@ nav#block-mainnavigation #menu li a {
   background-position: center 75%; }
   .main-wrapper .index-wrapper .link-wrapper span {
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -2406,13 +2428,6 @@ nav#block-mainnavigation #menu li a {
   padding-left: 0;
   padding-right: 0; }
 
-.lang-en .main-wrapper .index-wrapper .link-wrapper span {
-  font-size: 1.2em;
-  top: 30%; }
-
-.lang-en .main-wrapper .index-wrapper:hover span {
-  top: 15%; }
-
 @media only screen and (min-width: 1200px) {
   .main-wrapper .index-wrapper .link-wrapper span {
     font-size: 1.5em; } }
@@ -2471,7 +2486,16 @@ nav#block-mainnavigation #menu li a {
   .views-field-field-banner-photo .field-content img {
     display: none; }
   .hidden-xs img {
-    display: none; } }
+    display: none; }
+  .container-fluid-healthtips {
+    display: block !important; }
+    .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu {
+      margin: 0; }
+      .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
+        display: inline-block; }
+        .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a {
+          padding-top: 15px;
+          padding-bottom: 15px; } }
 
 @media only screen and (min-width: 768px) {
   .views-field-field-mobile-banner-photo .field-content img {

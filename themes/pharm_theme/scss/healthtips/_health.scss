@@ -17,11 +17,18 @@ div.container-fluid {
     margin-bottom: 20px!important;
 }
 
+.container-healthtips-submenu {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
 .container-healthtips-submenu nav#block-mainnavigation {
     margin-right: auto;
     margin-left: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
     #menu {
-        width: 100%;
+        width: max-content;
         height: 50px;
         background-color: #F7F7F7;
         li {
@@ -518,7 +525,7 @@ div.container-fluid {
         #menu {
             li {
                 &.navbar-item {
-                    width: auto;
+                    width: 160px;
                 }
             }
         }
