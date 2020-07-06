@@ -647,11 +647,16 @@ div.container-fluid {
   background-image: none;
   margin-bottom: 20px !important; }
 
+.container-healthtips-submenu ::-webkit-scrollbar {
+  width: 5px; }
+
 .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  overflow-x: auto;
+  scrollbar-width: none; }
   .container-healthtips-submenu nav#block-mainnavigation #menu {
-    width: 100%;
+    width: max-content;
     height: 50px;
     background-color: #F7F7F7; }
     .container-healthtips-submenu nav#block-mainnavigation #menu li {
@@ -1038,7 +1043,7 @@ div.container-fluid {
 
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
-    width: auto; } }
+    width: 160px; } }
 
 @media only screen and (max-width: 767px) {
   .scroll-wrapper {
