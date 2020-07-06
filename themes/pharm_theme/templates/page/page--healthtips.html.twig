@@ -84,17 +84,12 @@
         {{ page.page_banner }}
       </div>
     </section>
-    <div id="health-tips">
-      <div class="sub-tab-session">
-        <div class="sub-tab-outer-wrapper scroll-wrapper"
-             style="overflow: hidden; outline: none; cursor: -webkit-grab;">
-          <ul class="sub-tab-wrapper nav navbar-nav container-fluid-healthtips">
-            {{ page.sub_menu }}
-          </ul>
-        </div>
-        <a class="arrow arrow-left"></a>
-        <a class="arrow arrow-right"></a>
+    <nav id="contact-nav" class="container-fluid hidden-xs container-fluid-healthtips">
+      <div class="container-healthtips-submenu">
+        {{ page.sub_menu }}
       </div>
+    </nav>
+  </div>
       <section id="os-wrapper">
         <div class="health-tips-ful">
           {% for item in node.field_healthtips_paragraph %}
@@ -118,7 +113,6 @@
       <section id="content_bottom">
         {{ page.content_bottom }}
       </section>
-    </div>
   </div>
 
   {# Content section #} {# Footer section #}
