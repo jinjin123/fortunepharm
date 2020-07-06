@@ -27,24 +27,36 @@
     </ul>
     <ul class="nav sidebar-nav">
       {% for menu_item in mobile_menu.menu_tree %}
-          {% if menu_item.submenu %}
-            <li class="parent"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+        {{ menu_item }}
+        {%
+          set classes = [
+          'navbar-item',
+          menu_item.is_expanded ? 'menu-item--expanded',
+          menu_item.is_expanded ? 'dropdown',
+          menu_item.is_collapsed ? 'menu-item--collapsed',
+          menu_item.in_active_trail ? 'menu-item--active-trail',
+          menu_item.in_active_trail ? 'active',
+        ]
+        %}
+          {% if menu_item.submenu   %}
+            <li {{ attributes.addClass('parent',classes) }} ><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+{#          <li class="parent"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>#}
           {% else %}
             <li class="">
               <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
           {% endif %}
-          {% if menu_item.submenu %}
-            <ul class="sub-sidebar-nav">
+        {% if menu_item.submenu %}
+          <ul class="sub-sidebar-nav">
+            <li>
+              <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+            </li>
+            {% for sub_menu_item in menu_item.submenu %}
               <li>
-                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+                <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
               </li>
-              {% for sub_menu_item in menu_item.submenu %}
-                <li>
-                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
         </li>
       {% endfor %}
     </ul>
