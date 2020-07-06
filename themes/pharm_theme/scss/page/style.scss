@@ -911,7 +911,7 @@ nav#block-mainnavigation #menu li a {
     }
   }
   .container-fluid-healthtips{
-    display: block;
+    display: block !important;
     .container-healthtips-submenu nav#block-mainnavigation #menu {
       margin: 0;
       li.navbar-item {

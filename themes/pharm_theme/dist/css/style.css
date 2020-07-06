@@ -2478,7 +2478,7 @@ nav#block-mainnavigation #menu li a {
   .hidden-xs img {
     display: none; }
   .container-fluid-healthtips {
-    display: block; }
+    display: block !important; }
     .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu {
       margin: 0; }
       .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
