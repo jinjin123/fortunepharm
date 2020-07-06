@@ -295,6 +295,9 @@ table {
   margin-right: auto;
   margin-left: auto;
   overflow: hidden; }
+  .container-fluid-125.submenu {
+    padding-right: 140px;
+    padding-left: 140px; }
 
 .nopadding {
   padding: 0 !important;
@@ -651,7 +654,7 @@ body.lang-zh-hant {
   font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
 
 /********** helathtips SASS ***/
-div.container-fluid {
+.page-node-type-healthtips div.container-fluid {
   max-width: 1680px;
   margin: 0 auto; }
 
@@ -1869,8 +1872,8 @@ i {
   margin: 0 auto; }
 
 nav#block-mainnavigation #menu li a {
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 20px;
+  padding-right: 20px; }
 
 #banner-wrapper {
   position: relative;
