@@ -910,6 +910,19 @@ nav#block-mainnavigation #menu li a {
       display: none;
     }
   }
+  .container-fluid-healthtips{
+    display: block;
+    .container-healthtips-submenu nav#block-mainnavigation #menu {
+      margin: 0;
+      li.navbar-item {
+        display: inline-block;
+        a {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
 }
 //for mobile banner
 @media only screen and (min-width: 768px ){
