@@ -5,10 +5,20 @@
 {# Mobile menu #}
 {% if mobile_menu %}
   <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    {{ elements.pharm_theme_main_menu }}
+    {% if language == 'en' %}
+      {% set active_en = 'active' %}
+    {% endif %}
+    {% if language == 'zh-hant' %}
+      {% set active_cht = 'active' %}
+    {% endif %}
+    {% if language == 'zh-hans' %}
+      {% set active_chs = 'active' %}
+    {% endif %}
     <ul id="lang-sidebar" class="nav navbar-nav">
-      <li class=""><a href="https://www.fortunepharm.com/cht/home">繁</a></li>
-      <li class=""><a href="https://www.fortunepharm.com/chs/home">簡</a></li>
-      <li class=""><a href="https://www.fortunepharm.com/eng/home">ENG</a></li>
+      <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
+      <li class="{{active_cht}}"><a href="/chs{{ current_url }}">简</a></li>
+      <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
     </ul>
     <ul id="social-icon-sidebar" class="nav">
       <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
