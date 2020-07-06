@@ -315,6 +315,10 @@ table {
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+    &.submenu {
+      padding-right: 140px;
+      padding-left: 140px;
+    }
 }
 
 .nopadding {

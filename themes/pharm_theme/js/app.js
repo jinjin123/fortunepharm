@@ -30,8 +30,7 @@ Drupal.behaviors.yourmodulename = {
             date: data[i]["date"].substring(0, 4),
             title: data[i]["date"].substring(0, 4),
             content: content,
-            images: img*/
-s
+            images: imgs
           };
         }
         timeline = new Timeline($('#company-timeline'), timeline_data);
@@ -100,7 +99,7 @@ s
         }
       }]
     })
-    /*sub-tab-session health tips scroll bar*/
+    // scroll bar for health tips or other has scroll bar page
     if ($('.scroll-wrapper').length > 0){
       clearTimeout($.data(this, 'scroll-wrapper'));
       $.data(this, 'scroll-wrapper', setTimeout(function() {
@@ -134,7 +133,52 @@ s
         }, 800));
       });
     }
-    /*sub-tab-session health tips scroll bar*/
+
+    /*sub-tab-session*/
+    if($('.sub-tab-session').length > 0){
+      clearTimeout($.data(this, 'sub-tab-session'));
+      $.data(this, 'sub-tab-session', setTimeout(function() {
+        if($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()){
+          $('.sub-tab-session .arrow-right').fadeOut();
+        }else{
+          $('.sub-tab-session .arrow-right').fadeIn();
+        }
+      }, 500));
+
+
+      $('.sub-tab-outer-wrapper').scroll(function() {
+        if($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()){
+          $('.sub-tab-session .arrow-right').fadeOut();
+        }else{
+          $('.sub-tab-session .arrow-right').fadeIn();
+        }
+
+        if($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()){
+          $('.sub-tab-session .arrow-left').fadeIn();
+        }else{
+          $('.sub-tab-session .arrow-left').fadeOut();
+        }
+      });
+
+      $(".sub-tab-session .arrow").on("click" ,function(){
+        var target = $('.sub-tab-session .sub-tab-outer-wrapper');
+        var arrow = $(this);
+        if (!$(target).is(':animated')){
+          scrolled = $(target).scrollLeft();
+          if($(arrow).hasClass('arrow-left')){
+            scrolled -= 100;
+          }
+          if($(arrow).hasClass('arrow-right')){
+            scrolled += 100;
+          }
+          $(target).animate({
+            scrollLeft:  scrolled
+          });
+        }
+      });
+    }
+    /*sub-tab-session*/
+    // scroll bar for health tips or other has scroll bar page
     /*index*/
     if ($('.homepage .body .main-wrapper').length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
@@ -167,8 +211,7 @@ s
     }
     /*window resize*/
     change_size('wrapper', $(window).width(), $(window).height());
-    $('body').show()*/
-;
+    $('body').show();
     $(window).resize(function() {
       clearTimeout($.data(this, 'resizeTimer2'));
       $.data(this, 'resizeTimer2', setTimeout(function() {
@@ -315,8 +358,7 @@ s
         window.location.assign("/" + lang + "advertisements/" + page);
       });
     }
-    /*advertisements**/
-/
+    /*advertisements*/
     /*Charity Fund*/
     if ($('#fund-timeline').length > 0) {
       var timeline_data = [];
@@ -373,8 +415,7 @@ s
       var title_lang = "title_" + json_lang;
       var zoom_in_detail_lang = "zoom_in_detail_" + json_lang;
       var JsonAPI = "/" + lang + lang + "timeline-json/" + crt_path;
-      $.getJSON(JsonAPI, callbackFundWithData)*/
-;
+      $.getJSON(JsonAPI, callbackFundWithData);
 
       function callbackFundWithData(charList) {
         var imgString = '';
@@ -425,8 +466,7 @@ s
         title: {
           type: 'inside'
         }
-      */
-}
+      }
     });
     var hash = document.URL.substr(document.URL.indexOf('#') + 1);
     change_size('wrapper', $(window).width(), $(window).height());
@@ -617,50 +657,6 @@ s
       });
     });
     /*lastest-offers*/
-    /*sub-tab-session health tips scroll bar*/
-    if($('.sub-tab-session').length > 0){
-      clearTimeout($.data(this, 'sub-tab-session'));
-      $.data(this, 'sub-tab-session', setTimeout(function() {
-        if($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()){
-          $('.sub-tab-session .arrow-right').fadeOut();
-        }else{
-          $('.sub-tab-session .arrow-right').fadeIn();
-        }
-      }, 500));
-
-
-      $('.sub-tab-outer-wrapper').scroll(function() {
-        if($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()){
-          $('.sub-tab-session .arrow-right').fadeOut();
-        }else{
-          $('.sub-tab-session .arrow-right').fadeIn();
-        }
-
-        if($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()){
-          $('.sub-tab-session .arrow-left').fadeIn();
-        }else{
-          $('.sub-tab-session .arrow-left').fadeOut();
-        }
-      });
-
-      $(".sub-tab-session .arrow").on("click" ,function(){
-        var target = $('.sub-tab-session .sub-tab-outer-wrapper');
-        var arrow = $(this);
-        if (!$(target).is(':animated')){
-          scrolled = $(target).scrollLeft();
-          if($(arrow).hasClass('arrow-left')){
-            scrolled -= 100;
-          }
-          if($(arrow).hasClass('arrow-right')){
-            scrolled += 100;
-          }
-          $(target).animate({
-            scrollLeft:  scrolled
-          });
-        }
-      });
-    }
-    /*sub-tab-session*/
 
     /*health-tips*/
     if ($('#health-tips .sub-tab-wrapper li').length > 0) {

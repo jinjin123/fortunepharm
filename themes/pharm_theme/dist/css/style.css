@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
   src: url("https://cdn.shanghai.nyu.edu/sites/default/files/icomoon.ttf"); }
@@ -294,6 +295,9 @@ table {
   margin-right: auto;
   margin-left: auto;
   overflow: hidden; }
+  .container-fluid-125.submenu {
+    padding-right: 140px;
+    padding-left: 140px; }
 
 .nopadding {
   padding: 0 !important;
@@ -556,7 +560,8 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
         color: #878787; }
         #sidebar-wrapper #lang-sidebar li a:hover {
           color: #040C4A;
-          text-decoration: none; }
+          text-decoration: none;
+          background-color: inherit; }
     #sidebar-wrapper #lang-sidebar.active {
       color: #040C4A; }
     #sidebar-wrapper #lang-sidebar a:hover {
@@ -633,10 +638,29 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
   #footer ul {
     padding: 0; } }
 
+body.lang-zh-hans {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+  body.lang-zh-hans h3 {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+
+.lang-en .main-wrapper .index-wrapper .link-wrapper span {
+  font-size: 1.2em;
+  top: 30%; }
+
+.lang-en .main-wrapper .index-wrapper:hover span {
+  top: 15%; }
+
+body.lang-zh-hant {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+
 /********** helathtips SASS ***/
-div.container-fluid {
+.page-node-type-healthtips div.container-fluid-healthtipsbanner {
   max-width: 1680px;
   margin: 0 auto; }
+
+.page-node-type-healthtips nav#block-mainnavigation #menu li a {
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .container-fluid-healthtips {
   padding-left: 0;
@@ -1369,7 +1393,7 @@ div.container-fluid {
 #block-contactus #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right ul li {
-  padding: 15px 20px;
+  padding: 15px 15px;
   width: 100%;
   border-bottom: 1px solid #E1ECEE;
   color: #848788; }
@@ -1902,8 +1926,8 @@ i {
   margin: 0 auto; }
 
 nav#block-mainnavigation #menu li a {
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 20px;
+  padding-right: 20px; }
 
 #banner-wrapper {
   position: relative;
@@ -2083,7 +2107,7 @@ nav#block-mainnavigation #menu li a {
   background-position: center 75%; }
   .main-wrapper .index-wrapper .link-wrapper span {
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -2461,13 +2485,6 @@ nav#block-mainnavigation #menu li a {
   padding-left: 0;
   padding-right: 0; }
 
-.lang-en .main-wrapper .index-wrapper .link-wrapper span {
-  font-size: 1.2em;
-  top: 30%; }
-
-.lang-en .main-wrapper .index-wrapper:hover span {
-  top: 15%; }
-
 @media only screen and (min-width: 1200px) {
   .main-wrapper .index-wrapper .link-wrapper span {
     font-size: 1.5em; } }
@@ -2526,7 +2543,16 @@ nav#block-mainnavigation #menu li a {
   .views-field-field-banner-photo .field-content img {
     display: none; }
   .hidden-xs img {
-    display: none; } }
+    display: none; }
+  .container-fluid-healthtips {
+    display: block !important; }
+    .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu {
+      margin: 0; }
+      .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
+        display: inline-block; }
+        .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a {
+          padding-top: 15px;
+          padding-bottom: 15px; } }
 
 @media only screen and (min-width: 768px) {
   .views-field-field-mobile-banner-photo .field-content img {
