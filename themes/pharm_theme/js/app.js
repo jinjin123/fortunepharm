@@ -99,6 +99,40 @@ Drupal.behaviors.yourmodulename = {
         }
       }]
     })
+    if ($('.scroll-wrapper').length > 0){
+      console.log("heree");
+      clearTimeout($.data(this, 'scroll-wrapper'));
+      $.data(this, 'scroll-wrapper', setTimeout(function() {
+        $('.scroll-wrapper').each(function(){
+          if($(this).children().width() - $(this).width() > 10){
+            nice = $(this).niceScroll();
+            var _super = nice.getContentSize;
+            nice.getContentSize = function() {
+              var page = _super.call(nice);
+              page.h = nice.win.height();
+              return page;
+            }
+          }
+        });
+      }, 800));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'scroll-wrapper2'));
+        $.data(this, 'scroll-wrapper2', setTimeout(function() {
+          $('.scroll-wrapper').each(function(){
+            $(this).getNiceScroll().remove();
+            if($(this).children().width() - $(this).width() > 10){
+              nice = $(this).niceScroll();
+              var _super = nice.getContentSize;
+              nice.getContentSize = function() {
+                var page = _super.call(nice);
+                page.h = nice.win.height();
+                return page;
+              }
+            }
+          });
+        }, 800));
+      });
+    }
     /*index*/
     if ($('.homepage .body .main-wrapper').length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
@@ -577,6 +611,50 @@ Drupal.behaviors.yourmodulename = {
       });
     });
     /*lastest-offers*/
+    /*sub-tab-session*/
+    if($('.sub-tab-session').length > 0){
+      clearTimeout($.data(this, 'sub-tab-session'));
+      $.data(this, 'sub-tab-session', setTimeout(function() {
+        if($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()){
+          $('.sub-tab-session .arrow-right').fadeOut();
+        }else{
+          $('.sub-tab-session .arrow-right').fadeIn();
+        }
+      }, 500));
+
+
+      $('.sub-tab-outer-wrapper').scroll(function() {
+        if($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()){
+          $('.sub-tab-session .arrow-right').fadeOut();
+        }else{
+          $('.sub-tab-session .arrow-right').fadeIn();
+        }
+
+        if($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()){
+          $('.sub-tab-session .arrow-left').fadeIn();
+        }else{
+          $('.sub-tab-session .arrow-left').fadeOut();
+        }
+      });
+
+      $(".sub-tab-session .arrow").on("click" ,function(){
+        var target = $('.sub-tab-session .sub-tab-outer-wrapper');
+        var arrow = $(this);
+        if (!$(target).is(':animated')){
+          scrolled = $(target).scrollLeft();
+          if($(arrow).hasClass('arrow-left')){
+            scrolled -= 100;
+          }
+          if($(arrow).hasClass('arrow-right')){
+            scrolled += 100;
+          }
+          $(target).animate({
+            scrollLeft:  scrolled
+          });
+        }
+      });
+    }
+    /*sub-tab-session*/
 
     /*health-tips*/
     if ($('#health-tips .sub-tab-wrapper li').length > 0) {

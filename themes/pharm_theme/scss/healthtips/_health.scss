@@ -723,3 +723,59 @@ div.container-fluid {
         bottom: 20%;
     }
 }
+
+
+#health-tips .sub-tab-outer-wrapper{
+  width: 100%;
+  height: 50px;
+  background-color: #F7F7F7;
+  background-image: url(../images/menu_shadow.png);
+  background-position: bottom;
+}
+
+#health-tips  .sub-tab-wrapper li a{
+  width: 120px;
+  text-align: center;
+  font-size: 9pt;
+  color: #1D778F;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sub-tab-session{
+  position: relative;
+}
+.sub-tab-session .arrow{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  top: 0;
+  display: none;
+}
+.sub-tab-session .arrow-left{
+  background-image: url(../images/sub_bar_tap_left.png);
+  left: 0;
+}
+.sub-tab-session .arrow-right{
+  background-image: url(../images/sub_bar_tap.png);
+  right: 0;
+}
+
+#health-tips .sub-tab-outer-wrapper{
+  background-image: none;
+  margin-bottom: 20px;
+}
+#health-tips .sub-tab-wrapper{
+  margin: 0;
+}
+#health-tips .sub-tab-wrapper li a{
+  width: 160px;
+  color: #677D3A;
+}
+#health-tips .sub-tab-wrapper li.arrow a{
+  width: 50px;
+  text-align: center;
+  color: #C8C8C8;
+}
+
