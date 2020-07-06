@@ -30,7 +30,8 @@ Drupal.behaviors.yourmodulename = {
             date: data[i]["date"].substring(0, 4),
             title: data[i]["date"].substring(0, 4),
             content: content,
-            images: imgs
+            images: img*/
+s
           };
         }
         timeline = new Timeline($('#company-timeline'), timeline_data);
@@ -99,8 +100,8 @@ Drupal.behaviors.yourmodulename = {
         }
       }]
     })
+    /*sub-tab-session health tips scroll bar*/
     if ($('.scroll-wrapper').length > 0){
-      console.log("heree");
       clearTimeout($.data(this, 'scroll-wrapper'));
       $.data(this, 'scroll-wrapper', setTimeout(function() {
         $('.scroll-wrapper').each(function(){
@@ -133,6 +134,7 @@ Drupal.behaviors.yourmodulename = {
         }, 800));
       });
     }
+    /*sub-tab-session health tips scroll bar*/
     /*index*/
     if ($('.homepage .body .main-wrapper').length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
@@ -165,7 +167,8 @@ Drupal.behaviors.yourmodulename = {
     }
     /*window resize*/
     change_size('wrapper', $(window).width(), $(window).height());
-    $('body').show();
+    $('body').show()*/
+;
     $(window).resize(function() {
       clearTimeout($.data(this, 'resizeTimer2'));
       $.data(this, 'resizeTimer2', setTimeout(function() {
@@ -312,7 +315,8 @@ Drupal.behaviors.yourmodulename = {
         window.location.assign("/" + lang + "advertisements/" + page);
       });
     }
-    /*advertisements*/
+    /*advertisements**/
+/
     /*Charity Fund*/
     if ($('#fund-timeline').length > 0) {
       var timeline_data = [];
@@ -369,7 +373,8 @@ Drupal.behaviors.yourmodulename = {
       var title_lang = "title_" + json_lang;
       var zoom_in_detail_lang = "zoom_in_detail_" + json_lang;
       var JsonAPI = "/" + lang + lang + "timeline-json/" + crt_path;
-      $.getJSON(JsonAPI, callbackFundWithData);
+      $.getJSON(JsonAPI, callbackFundWithData)*/
+;
 
       function callbackFundWithData(charList) {
         var imgString = '';
@@ -420,7 +425,8 @@ Drupal.behaviors.yourmodulename = {
         title: {
           type: 'inside'
         }
-      }
+      */
+}
     });
     var hash = document.URL.substr(document.URL.indexOf('#') + 1);
     change_size('wrapper', $(window).width(), $(window).height());
@@ -611,7 +617,7 @@ Drupal.behaviors.yourmodulename = {
       });
     });
     /*lastest-offers*/
-    /*sub-tab-session*/
+    /*sub-tab-session health tips scroll bar*/
     if($('.sub-tab-session').length > 0){
       clearTimeout($.data(this, 'sub-tab-session'));
       $.data(this, 'sub-tab-session', setTimeout(function() {
