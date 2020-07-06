@@ -538,6 +538,14 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .page-node-type-healthtips #block-mainnavigation .navbar-nav {
+      margin: 0px;
+    }
+    .page-node-type-healthtips .health-tips-ful {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
     .scroll-wrapper {
         overflow-y: hidden;
         overflow-x: auto;
@@ -783,4 +791,3 @@
   text-align: center;
   color: #C8C8C8;
 }
-
