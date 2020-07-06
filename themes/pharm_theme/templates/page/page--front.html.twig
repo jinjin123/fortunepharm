@@ -27,10 +27,14 @@
     </ul>
     <ul class="nav sidebar-nav">
       {% for menu_item in mobile_menu.menu_tree %}
+        {% set active_trail = '' %}
+          {% if menu_item.active_trail %}
+          {% set active_trail = 'active' %}
+        {% endif %}
           {% if menu_item.submenu %}
-            <li class="parent"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
           {% else %}
-            <li class="">
+            <li class="{{active_trail}}">
               <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
           {% endif %}
           {% if menu_item.submenu %}
