@@ -21,7 +21,9 @@ div.container-fluid {
     margin-right: auto;
     margin-left: auto;
     overflow-x: auto;
-
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
     #menu {
         width: max-content;
         height: 50px;
