@@ -647,12 +647,13 @@ div.container-fluid {
   background-image: none;
   margin-bottom: 20px !important; }
 
+.container-healthtips-submenu ::-webkit-scrollbar {
+  width: 5px; }
+
 .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
   margin-left: auto;
   overflow-x: auto; }
-  .container-healthtips-submenu nav#block-mainnavigation ::-webkit-scrollbar {
-    width: 5px; }
   .container-healthtips-submenu nav#block-mainnavigation #menu {
     width: max-content;
     height: 50px;
@@ -1647,66 +1648,6 @@ div.container-fluid {
   .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
     height: auto; } }
 
-#block-nyu-theme-breadcrumbs {
-  line-height: 40px; }
-  #block-nyu-theme-breadcrumbs ol {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; }
-    #block-nyu-theme-breadcrumbs ol li {
-      margin-right: 5px; }
-      #block-nyu-theme-breadcrumbs ol li:after {
-        content: '>'; }
-      #block-nyu-theme-breadcrumbs ol li:last-child:after {
-        display: none; }
-
-#block-nyu-theme-local-tasks {
-  line-height: 40px; }
-  #block-nyu-theme-local-tasks > ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #block-nyu-theme-local-tasks > ul li {
-      flex-grow: 1;
-      border-bottom: 1px solid #ccc;
-      background: #eee; }
-      #block-nyu-theme-local-tasks > ul li a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #220337;
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        #block-nyu-theme-local-tasks > ul li a:hover {
-          background: #220337;
-          color: #fff; }
-
-#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-@media (max-width: 991.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: 100%;
-      height: auto;
-      overflow-x: hidden; } }
-
-@media screen and (max-width: 575.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: auto;
-      max-height: 400px;
-      overflow-x: hidden;
-      transform: translateX(-36%); } }
-
-
 body.fontyourface {
   overflow-x: hidden; }
   body.fontyourface .homepage .banner {
@@ -2481,3 +2422,63 @@ nav#block-mainnavigation #menu li a {
     display: none; }
   .visible-xs img {
     display: none; } }
+
+#block-nyu-theme-breadcrumbs {
+  line-height: 40px; }
+  #block-nyu-theme-breadcrumbs ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; }
+    #block-nyu-theme-breadcrumbs ol li {
+      margin-right: 5px; }
+      #block-nyu-theme-breadcrumbs ol li:after {
+        content: '>'; }
+      #block-nyu-theme-breadcrumbs ol li:last-child:after {
+        display: none; }
+
+#block-nyu-theme-local-tasks {
+  line-height: 40px; }
+  #block-nyu-theme-local-tasks > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #block-nyu-theme-local-tasks > ul li {
+      flex-grow: 1;
+      border-bottom: 1px solid #ccc;
+      background: #eee; }
+      #block-nyu-theme-local-tasks > ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #220337;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+        #block-nyu-theme-local-tasks > ul li a:hover {
+          background: #220337;
+          color: #fff; }
+
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden; } }
+
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+      transform: translateX(-36%); } }
+

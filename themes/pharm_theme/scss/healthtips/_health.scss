@@ -17,13 +17,14 @@ div.container-fluid {
     margin-bottom: 20px!important;
 }
 
+.container-healthtips-submenu ::-webkit-scrollbar {
+  width: 5px;
+}
+
 .container-healthtips-submenu nav#block-mainnavigation {
     margin-right: auto;
     margin-left: auto;
     overflow-x: auto;
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
     #menu {
         width: max-content;
         height: 50px;
