@@ -20,10 +20,11 @@ div.container-fluid {
 .container-healthtips-submenu nav#block-mainnavigation {
     margin-right: auto;
     margin-left: auto;
+    overflow-x: auto;
+
     #menu {
-        width: 100%;
+        width: max-content;
         height: 50px;
-        overflow: auto;
         background-color: #F7F7F7;
         li {
             background-image: none;
