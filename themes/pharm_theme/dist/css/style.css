@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
   src: url("https://cdn.shanghai.nyu.edu/sites/default/files/icomoon.ttf"); }
@@ -556,7 +557,8 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
         color: #878787; }
         #sidebar-wrapper #lang-sidebar li a:hover {
           color: #040C4A;
-          text-decoration: none; }
+          text-decoration: none;
+          background-color: inherit; }
     #sidebar-wrapper #lang-sidebar.active {
       color: #040C4A; }
     #sidebar-wrapper #lang-sidebar a:hover {
@@ -632,6 +634,21 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
     padding-left: 10px; }
   #footer ul {
     padding: 0; } }
+
+body.lang-zh-hans {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+  body.lang-zh-hans h3 {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
+
+.lang-en .main-wrapper .index-wrapper .link-wrapper span {
+  font-size: 1.2em;
+  top: 30%; }
+
+.lang-en .main-wrapper .index-wrapper:hover span {
+  top: 15%; }
+
+body.lang-zh-hant {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
 
 /********** helathtips SASS ***/
 div.container-fluid {
@@ -1319,7 +1336,7 @@ div.container-fluid {
 #block-contactus #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul li,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right ul li {
-  padding: 15px 20px;
+  padding: 15px 15px;
   width: 100%;
   border-bottom: 1px solid #E1ECEE;
   color: #848788; }
@@ -1649,66 +1666,6 @@ div.container-fluid {
   .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
     height: auto; } }
 
-#block-nyu-theme-breadcrumbs {
-  line-height: 40px; }
-  #block-nyu-theme-breadcrumbs ol {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; }
-    #block-nyu-theme-breadcrumbs ol li {
-      margin-right: 5px; }
-      #block-nyu-theme-breadcrumbs ol li:after {
-        content: '>'; }
-      #block-nyu-theme-breadcrumbs ol li:last-child:after {
-        display: none; }
-
-#block-nyu-theme-local-tasks {
-  line-height: 40px; }
-  #block-nyu-theme-local-tasks > ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #block-nyu-theme-local-tasks > ul li {
-      flex-grow: 1;
-      border-bottom: 1px solid #ccc;
-      background: #eee; }
-      #block-nyu-theme-local-tasks > ul li a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: #220337;
-        display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center; }
-        #block-nyu-theme-local-tasks > ul li a:hover {
-          background: #220337;
-          color: #fff; }
-
-#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-@media (max-width: 991.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: 100%;
-      height: auto;
-      overflow-x: hidden; } }
-
-@media screen and (max-width: 575.98px) {
-  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
-    overflow-x: hidden; }
-    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
-      width: auto;
-      max-height: 400px;
-      overflow-x: hidden;
-      transform: translateX(-36%); } }
-
-
 body.fontyourface {
   overflow-x: hidden; }
   body.fontyourface .homepage .banner {
@@ -1779,6 +1736,66 @@ body.path-frontpage .slick-dotted.slick-slider {
 @media only screen and (max-width: 768px) {
   .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
     height: 100%; } }
+
+#block-nyu-theme-breadcrumbs {
+  line-height: 40px; }
+  #block-nyu-theme-breadcrumbs ol {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; }
+    #block-nyu-theme-breadcrumbs ol li {
+      margin-right: 5px; }
+      #block-nyu-theme-breadcrumbs ol li:after {
+        content: '>'; }
+      #block-nyu-theme-breadcrumbs ol li:last-child:after {
+        display: none; }
+
+#block-nyu-theme-local-tasks {
+  line-height: 40px; }
+  #block-nyu-theme-local-tasks > ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #block-nyu-theme-local-tasks > ul li {
+      flex-grow: 1;
+      border-bottom: 1px solid #ccc;
+      background: #eee; }
+      #block-nyu-theme-local-tasks > ul li a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #220337;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+        #block-nyu-theme-local-tasks > ul li a:hover {
+          background: #220337;
+          color: #fff; }
+
+#block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 991.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: 100%;
+      height: auto;
+      overflow-x: hidden; } }
+
+@media screen and (max-width: 575.98px) {
+  #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content {
+    overflow-x: hidden; }
+    #block-nyu-theme-views-block-basic-page-banner-image-block .views-field-field-bannerimage .field-content img {
+      width: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+      transform: translateX(-36%); } }
+
 
 body {
   color: #656565; }
@@ -2033,7 +2050,7 @@ nav#block-mainnavigation #menu li a {
   background-position: center 75%; }
   .main-wrapper .index-wrapper .link-wrapper span {
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -2410,13 +2427,6 @@ nav#block-mainnavigation #menu li a {
 .health-tips-ful .container-fluid {
   padding-left: 0;
   padding-right: 0; }
-
-.lang-en .main-wrapper .index-wrapper .link-wrapper span {
-  font-size: 1.2em;
-  top: 30%; }
-
-.lang-en .main-wrapper .index-wrapper:hover span {
-  top: 15%; }
 
 @media only screen and (min-width: 1200px) {
   .main-wrapper .index-wrapper .link-wrapper span {

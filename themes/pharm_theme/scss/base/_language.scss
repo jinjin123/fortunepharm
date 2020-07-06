@@ -1,0 +1,36 @@
+@import '../variable';
+// Eng = lang-eng
+// Cht = lang-zh-hans
+// Chs = lang-zh-hant
+
+body.lang-zh-hans {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+  h3 {
+    font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+  }
+}
+
+// For English Pages
+.lang-en {
+  .main-wrapper {
+    .index-wrapper {
+      .link-wrapper {
+        span {
+          font-size: 1.2em;
+          top: 30%;
+        }
+      }
+      &:hover {
+        span {
+          top: 15%;
+        }
+      }
+    }
+  }
+}
+
+
+// For Chs Pages
+body.lang-zh-hant{
+  font-family:"微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
+}
