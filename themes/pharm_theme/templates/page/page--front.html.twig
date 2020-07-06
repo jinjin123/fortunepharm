@@ -2,56 +2,61 @@
 {% set mobile_menu = simplify_menu('main') %}
 <div class="layout-container homepage">
 
-{# Mobile menu #}
-{% if mobile_menu %}
-  <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-    {{ elements.pharm_theme_main_menu }}
-    {% if language == 'en' %}
-      {% set active_en = 'active' %}
-    {% endif %}
-    {% if language == 'zh-hant' %}
-      {% set active_cht = 'active' %}
-    {% endif %}
-    {% if language == 'zh-hans' %}
-      {% set active_chs = 'active' %}
-    {% endif %}
-    <ul id="lang-sidebar" class="nav navbar-nav">
-      <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
-      <li class="{{active_cht}}"><a href="/chs{{ current_url }}">简</a></li>
-      <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
-    </ul>
-    <ul id="social-icon-sidebar" class="nav">
-      <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
-      <li><a href="http://weibo.com/fortunepharmacal" target="_blank" class="weibo-icon"></a></li>
-      <li><a href="https://www.youtube.com/user/FortunePharmHK" target="_blank" class="youtube-icon"></a></li>
-    </ul>
-    <ul class="nav sidebar-nav">
-      {% for menu_item in mobile_menu.menu_tree %}
-        {% if menu_item.submenu %}
-          <li class="parent"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
-        {% else %}
-          <li class="">
-          <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
-        {% endif %}
-        {% if menu_item.submenu %}
-          <ul class="sub-sidebar-nav">
-            <li>
-              <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
-            </li>
-            {% for sub_menu_item in menu_item.submenu %}
+
+  {# Mobile menu #}
+  {% if mobile_menu %}
+    <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+      {{ elements.pharm_theme_main_menu }}
+      {% if language == 'en' %}
+        {% set active_en = 'active' %}
+      {% endif %}
+      {% if language == 'zh-hant' %}
+        {% set active_cht = 'active' %}
+      {% endif %}
+      {% if language == 'zh-hans' %}
+        {% set active_chs = 'active' %}
+      {% endif %}
+      <ul id="lang-sidebar" class="nav navbar-nav">
+        <li class="{{active_chs}}"><a href="/cht{{ current_url }}">繁</a></li>
+        <li class="{{active_cht}}"><a href="/chs{{ current_url }}">简</a></li>
+        <li class="{{active_en}}"><a href="/eng{{ current_url }}">ENG</a></li>
+      </ul>
+      <ul id="social-icon-sidebar" class="nav">
+        <li><a href="https://www.facebook.com/Fortune.Pharmacal" target="_blank" class="fb-icon"></a></li>
+        <li><a href="http://weibo.com/fortunepharmacal" target="_blank" class="weibo-icon"></a></li>
+        <li><a href="https://www.youtube.com/user/FortunePharmHK" target="_blank" class="youtube-icon"></a></li>
+      </ul>
+      <ul class="nav sidebar-nav">
+        {% for menu_item in mobile_menu.menu_tree %}
+          {% set active_trail = '' %}
+          {% if menu_item.active_trail %}
+            {% set active_trail = 'active' %}
+          {% endif %}
+          {% if menu_item.submenu %}
+          <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+          {% else %}
+            <li class="{{active_trail}}">
+            <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+          {% endif %}
+          {% if menu_item.submenu %}
+            <ul class="sub-sidebar-nav">
               <li>
-                <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
+                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
               </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-    <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>
-  </nav>
-{% endif %}
-{# Mobile menu #}
+              {% for sub_menu_item in menu_item.submenu %}
+                <li>
+                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>
+    </nav>
+  {% endif %}
+  {# Mobile menu #}
 
   <header id="header" class="navbar">
     <div class="container-fluid">
