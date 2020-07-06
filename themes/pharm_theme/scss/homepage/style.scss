@@ -86,27 +86,3 @@ body {
     padding-right: 10px;
   }
 }
-@media only screen and (max-width: 767px) {
-  body {
-    &.path-frontpage {
-      .slick-dotted {
-        &.slick-slider {
-          padding: 0 5px 5px 0;
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 768px) {
-  .mobile-main {
-    .col-xs-4, .col-xs-8 {
-      &.row-xs-4 {
-        &.nopadding {
-          div {
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-}
