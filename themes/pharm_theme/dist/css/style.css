@@ -2395,7 +2395,8 @@ nav#block-mainnavigation #menu li a {
   padding-bottom: 5px; }
   .page-node-20 #block-pharm-theme-content h2 {
     text-align: center;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 1.6em; }
 
 .page-node-20 #fund-timeline {
   width: 90%;
