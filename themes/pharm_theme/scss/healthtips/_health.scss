@@ -23,6 +23,7 @@ div.container-fluid {
     #menu {
         width: 100%;
         height: 50px;
+        overflow: auto;
         background-color: #F7F7F7;
         li {
             background-image: none;
@@ -518,7 +519,7 @@ div.container-fluid {
         #menu {
             li {
                 &.navbar-item {
-                    width: auto;
+                    width: 160px;
                 }
             }
         }
