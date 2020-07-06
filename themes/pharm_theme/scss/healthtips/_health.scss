@@ -21,12 +21,12 @@ div.container-fluid {
   ::-webkit-scrollbar {
     width: 5px;
   }
-  scrollbar-width: none;
 }
 .container-healthtips-submenu nav#block-mainnavigation {
     margin-right: auto;
     margin-left: auto;
     overflow-x: auto;
+    scrollbar-width: none;
     #menu {
         width: max-content;
         height: 50px;
