@@ -1,32 +1,3 @@
-#block-nyu-theme-page-title h1 span {
-  background: #4120a0;
-  /* Old Browsers */
-  /*Safari 5.1-6*/
-  /*Opera 11.1-12*/
-  /*Fx 3.6-15*/
-  background: -webkit-gradient(linear, left top, right top, color-stop(1%, #4120a0), to(#b22045));
-  background: linear-gradient(left, #4120a0 1%, #b22045 100%);
-  /*Standard*/
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  font-size: 50px;
-  display: block;
-}
-
-@media (max-width: 1091.98px) {
-  #block-nyu-theme-page-title h1 span {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  #block-nyu-theme-page-title h1 span {
-    font-size: 30px;
-  }
-}
-
 .navigation {
   width: 23%;
   float: left;
@@ -45,10 +16,6 @@
   line-height: 1.5;
   background-position: 98% 12px !important;
   background-repeat: no-repeat !important;
-}
-
-.navigation ul li.root {
-  background: url("https://cdn.shanghai.nyu.edu/sites/all/themes/shanghai/images/icon-expand.png");
 }
 
 .navigation ul li:last-child {
@@ -111,23 +78,6 @@
     margin-left: 0;
   }
 }
-
-.homepage #block-nyu-theme-content {
-  padding: 30px 0;
-}
-
-#block-nyu-theme-content .views-row {
-  overflow-x: hidden;
-}
-
-#block-nyu-theme-content ul, #block-nyu-theme-content ol {
-  padding-left: 20px;
-}
-
-#block-nyu-theme-content ul li, #block-nyu-theme-content ol li {
-  color: #656565;
-}
-
 .news-teaser-section .contextual {
   display: none !important;
 }

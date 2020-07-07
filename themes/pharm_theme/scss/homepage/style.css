@@ -1,9 +1,4 @@
 
-.homepage #block-nyu-theme-page-title,
-.homepage #block-nyu-theme-local-tasks {
-  display: none;
-}
-
 .homepage section.homepage-highlight > div {
   width: 100%;
 }
@@ -49,95 +44,6 @@
 }
 
 .homepage .body .slick-active div {
-  display: block;
-}
-
-.homepage .body #block-nyu-theme-content {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  width: 100%;
-  /*
-      @media (max-width: 1400px) {
-        & {
-          top: $header_height * 2;
-        }
-        article {
-            width: 85%;
-        }
-      }
-
-      @media (max-width: 1200px) {
-        & {
-          top: $header_height * 1.5;
-        }
-        article {
-            top: -75px;
-        }
-      }
-
-      @media (max-width: $desktop) {
-        & {
-          top: $header_height * 1.5;
-        }
-        article {
-            width: 85%;
-        }
-      }*/
-  /*
-      @media (max-width: 950px) {
-        article {
-          padding-top: $content-padding !important;
-          padding-bottom: $content-padding !important;
-        }
-      }
-
-      @media (max-width: $pad) {
-        & {
-          top: $header_height * 3;
-
-          article {
-            padding: $content-padding;
-          }
-        }
-      }
-      */
-}
-
-.homepage .body #block-nyu-theme-content article {
-  color: #FFFFFF;
-  width: 100%;
-  max-width: 1000px;
-  padding: 40px 40px 20px;
-}
-
-.homepage .body #block-nyu-theme-content article h3 {
-  line-height: 75px;
-}
-
-.homepage .body #block-nyu-theme-content article .font-color p {
-  color: #522E91;
-}
-
-.homepage .body #block-nyu-theme-content article p {
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-}
-
-.homepage .body #block-nyu-theme-content article a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.homepage .body #block-nyu-theme-content {
-  display: none;
-}
-
-.homepage .body .views-view-grid #block-nyu-theme-content {
   display: block;
 }
 
@@ -358,49 +264,10 @@
   }
 }
 
-/* Responsive Setting */
-@media (max-width: 1400px) {
-  .homepage .body #block-nyu-theme-content {
-    top: 187.5px;
-  }
-  .homepage .body #block-nyu-theme-content article {
-    width: 50%;
-  }
-}
 
 @media (max-width: 1199.98px) {
   .homepage .body h1 {
     margin: 0.3em 0;
-  }
-  .homepage .body #block-nyu-theme-content {
-    max-height: 100%;
-    position: relative;
-    top: -75px;
-    min-height: 100%;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    background: none;
-  }
-  .homepage .body #block-nyu-theme-content article {
-    opacity: 1;
-    left: 0;
-    width: 80%;
-    left: 10%;
-    padding: 40px;
-    position: relative;
-    background-color: #FFFFFF;
-    bottom: initial;
-  }
-  .homepage .body #block-nyu-theme-content article h3 {
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  .homepage .body #block-nyu-theme-content article p {
-    color: #777;
-  }
-  .homepage .body #block-nyu-theme-content article a {
-    color: #522E91;
   }
   .homepage .body .slick-dots {
     bottom: 40px;
