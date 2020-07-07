@@ -589,39 +589,39 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
         #sidebar-wrapper #social-icon-sidebar li a.youtube-icon {
           background-image: url(../images/youtube_icon_mobile.png); } }
 
-#footer {
-  border-top: 2px solid #EFEFEF; }
-  #footer .container-fluid-40 {
+#footer .container-fluid-40 {
+  overflow: hidden;
+  margin: 20px 0 25px 0; }
+
+#footer .copyright {
+  float: left;
+  line-height: 14px; }
+  #footer .copyright p {
+    height: 14px;
+    line-height: 14px;
+    margin: 0; }
+
+#footer .footer-link {
+  float: right; }
+  #footer .footer-link ul {
     overflow: hidden;
-    margin: 20px 0 25px 0; }
-  #footer .copyright {
-    float: left;
-    line-height: 14px; }
-    #footer .copyright p {
+    list-style-type: none; }
+    #footer .footer-link ul li {
+      float: left;
       height: 14px;
       line-height: 14px;
-      margin: 0; }
-  #footer .footer-link {
-    float: right; }
-    #footer .footer-link ul {
-      overflow: hidden;
-      list-style-type: none; }
-      #footer .footer-link ul li {
-        float: left;
+      border-left: 1px solid black; }
+      #footer .footer-link ul li a {
+        padding: 0 10px;
         height: 14px;
         line-height: 14px;
-        border-left: 1px solid black; }
-        #footer .footer-link ul li a {
-          padding: 0 10px;
-          height: 14px;
-          line-height: 14px;
-          margin: 0; }
-        #footer .footer-link ul li p {
-          height: 14px;
-          line-height: 14px;
-          margin: 0; }
-        #footer .footer-link ul li:first-child {
-          border: 0; }
+        margin: 0; }
+      #footer .footer-link ul li p {
+        height: 14px;
+        line-height: 14px;
+        margin: 0; }
+      #footer .footer-link ul li:first-child {
+        border: 0; }
 
 .homepage #footer {
   border: 0; }
@@ -1450,20 +1450,34 @@ body.lang-zh-hant {
 
 @media only screen and (max-width: 767px) {
   /*lastest-offers*/
-  #block-contactus #offers-wrapper .content-wrapper {
+  #block-contactus #offers-wrapper .content-wrapper,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper {
     height: auto !important; }
-  #block-contactus #offers-wrapper .content-wrapper h3 {
+  #block-contactus #offers-wrapper .content-wrapper h3,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper h3,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper h3 {
     padding: 30px 0; }
   /*contact-us*/
-  #block-contactus #offers-wrapper .content-wrapper {
+  #block-contactus #offers-wrapper .content-wrapper,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper {
     height: 304px !important; }
-  #block-contactus #offers-wrapper .content-wrapper.with-image {
+  #block-contactus #offers-wrapper .content-wrapper.with-image,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper.with-image,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper.with-image {
     height: 230px !important; }
-  #block-contactus #offers-wrapper .content-wrapper h3 {
+  #block-contactus #offers-wrapper .content-wrapper h3,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper h3,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper h3 {
     padding: 0; }
-  #block-contactus #offers-wrapper .content-wrapper .content-right ul li {
+  #block-contactus #offers-wrapper .content-wrapper .content-right ul li,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul li,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right ul li {
     padding: 15px 10px; }
-  #block-contactus #offers-wrapper .content-wrapper .content-right ul li label {
+  #block-contactus #offers-wrapper .content-wrapper .content-right ul li label,
+  #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul li label,
+  #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right ul li label {
     display: block; } }
 
 #block-contactus #offers-wrapper,
@@ -2395,7 +2409,8 @@ nav#block-mainnavigation #menu li a {
   padding-bottom: 5px; }
   .page-node-20 #block-pharm-theme-content h2 {
     text-align: center;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 1.6em; }
 
 .page-node-20 #fund-timeline {
   width: 90%;
