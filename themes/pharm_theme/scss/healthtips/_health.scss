@@ -554,3 +554,349 @@
             }
         }
     }
+    
+    @media only screen and (min-width: 768px) {
+        /*product-children*/
+        .healthcare {
+            .healthcare-wrapper:nth-child(odd) {
+                padding-right: 3px;
+            }
+            .healthcare-wrapper:nth-child(even) {
+                padding-left: 3px;
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        /*health-tips*/
+        #health-tips {
+            &.allergy,
+            &.gerd,
+            &.pain {
+                .function-wrapper {
+                    .function-btn>p {
+                        padding: 10px;
+                        font-size: 1em;
+                        width: 85%;
+                    }
+                    .function-right-wrapper .function-btn>p {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        /*health-tips*/
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .healthcare .healthcare-wrapper .image-wrapper {
+            height: 330px;
+        }
+        #health-tips {
+            &.allergy,
+            &.gerd,
+            &.pain {
+                .function-wrapper {
+                    .function-btn>p {
+                        padding: 5px;
+                        font-size: 0.6em;
+                        width: 90%;
+                    }
+                    .function-right-wrapper {
+                        .function-btn>p {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 1199px) {
+        .container-healthtips-submenu nav#block-mainnavigation {
+            #menu {
+                li {
+                    &.navbar-item {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .scroll-wrapper {
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        .pagination-wrapper {
+            .right-s {
+                margin-right: 5px;
+            }
+            .right-l {
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+        }
+        .pagination-btn,
+        .pagination-skip {
+            padding: 15px 10px;
+        }
+        .pagination-btn.with-select:before {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #health-tips {
+            .sub-tab-wrapper {
+                li {
+                    float: left;
+                }
+            }
+            .notice-wrapper {
+                padding: 10px 20px;
+                background-color: #5a5e4f;
+            }
+            .detail-wrapper {
+                .detail-left-wrapper {
+                    height: 80px;
+                    background-color: #D2DCB4;
+                    margin-bottom: 20px;
+                    h4 {
+                        line-height: 80px;
+                    }
+                }
+            }
+            .function-wrapper {
+                padding: 0;
+                margin-top: 3px;
+                margin-bottom: 0;
+                .function-btn {
+                    float: left;
+                    margin-right: 1%;
+                    background-position: 0 0;
+                     :last-child {
+                        margin-right: 0;
+                    }
+                    .function-middle-wrapper {
+                        img {
+                            position: relative;
+                        }
+                        p {
+                            display: none;
+                        }
+                    }
+                    >p {
+                        width: 100%;
+                        margin: 0 !important;
+                        font-size: 0.6em;
+                    }
+                    >img {
+                        width: 35%;
+                        margin: 5% auto 0 !important;
+                        display: block;
+                    }
+                    .function-right-wrapper {
+                        .function-btn>img {
+                            margin-top: 13% !important;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.active {
+                        background-position: 0 100%;
+                    }
+                    &.function-log,
+                    &.function-log:hover {
+                        background-position: 0 0 !important;
+                    }
+                }
+                .function-tab-wrapper {
+                    margin: 0;
+                }
+            }
+            .healthtips-left-col {
+                position: absolute;
+                bottom: 10%;
+            }
+            &.children {
+                .function-wrapper {
+                    .function-btn {
+                        &>p {
+                            width: 100%;
+                            &.two_icons {
+                                width: 50%;
+                            }
+                        }
+                        >img {
+                            width: 55%;
+                        }
+                        &.function-logo,
+                        &.function-logo:hover {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_print.png") !important;
+                        }
+                    }
+                    .function-left-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_top_btn.png");
+                        }
+                    }
+                    .function-right-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_5_bottom_btn.png");
+                        }
+                    }
+                }
+            }
+            &.allergy,
+            &.gerd,
+            &.pain {
+                .function-wrapper {
+                    .function-btn>p {
+                        padding: 5% !important;
+                        font-size: 0.8em;
+                        margin: 0 !important;
+                        width: 100%;
+                        line-height: 100%;
+                    }
+                    .function-right-wrapper {
+                        .function-btn>p {
+                            padding-top: 15% !important;
+                        }
+                    }
+                }
+            }
+            &.allergy {
+                .function-wrapper {
+                    .function-middle-wrapper {
+                        margin: 0;
+                    }
+                    .function-right-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_bottom_btn.png");
+                        }
+                    }
+                    .function-btn {
+                        &.function-logo,
+                        &function-logo:hover {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_print.png") !important;
+                        }
+                    }
+                }
+            }
+            &.gerd {
+                .function-wrapper {
+                    .function-middle-wrapper {
+                        background-position: center center;
+                        img {
+                            width: 100%;
+                            left: 0;
+                            top: 0;
+                        }
+                    }
+                    .function-left-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_top_btn.png");
+                        }
+                    }
+                    .function-right-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_bottom_btn.png");
+                        }
+                        &.function-bottom-wrapper {
+                            .function-btn {
+                                background-image: url("/themes/pharm_theme/dist/images/tips/trip_4_bottom_btn.png");
+                            }
+                        }
+                    }
+                }
+            }
+            &.bloating {
+                .function-wrapper {
+                    .function-full-wrapper {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &.allergy {
+                .function-wrapper {
+                    .function-full-wrapper {
+                        height: 300px;
+                    }
+                    .function-btn {
+                        width: 24.25%;
+                    }
+                    .function-btn[rel="10"],
+                    .function-btn[rel="5"],
+                    .function-btn[rel="6"],
+                    .function-btn[rel="7"],
+                    .function-btn[rel="8"],
+                    .function-btn[rel="9"] {
+                        width: 32.6666%;
+                    }
+                    .function-right-wrapper {
+                        display: none;
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            &.cold_and_flu {
+                .function-wrapper {
+                    .function-btn {
+                        width: 24.25%;
+                        &.function-logo,
+                        &.function-logo:hover {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_print.png") !important;
+                        }
+                    }
+                    .function-left-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_top_btn.png");
+                        }
+                    }
+                    .function-right-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_bottom_btn.png");
+                        }
+                    }
+                }
+            }
+            .children,
+            .gerd,
+            .pain {
+                .function-wrapper {
+                    .function-btn {
+                        width: 32.6666%;
+                    }
+                }
+            }
+            &.pain {
+                .function-wrapper {
+                    .function-left-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_top_btn.png");
+                        }
+                    }
+                    .function-right-wrapper {
+                        .function-btn {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_bottom_btn.png");
+                        }
+                    }
+                    .function-btn {
+                        &.function-logo,
+                        &.function-logo:hover {
+                            background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_print.png") !important;
+                        }
+                    }
+                }
+            }
+            .healthtips-right-col {
+                position: absolute;
+                bottom: 20%;
+            }
+        }
+    }
