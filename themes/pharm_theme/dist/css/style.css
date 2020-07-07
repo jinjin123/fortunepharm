@@ -690,7 +690,8 @@ body.lang-zh-hant {
           text-align: center;
           font-size: 9pt;
           color: #677D3A; }
-        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:focus, .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:hover {
+        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:focus,
+        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:hover {
           background-color: #677D3A;
           color: #eee;
           text-decoration: none; }
@@ -726,7 +727,8 @@ body.lang-zh-hant {
   text-align: center;
   display: none; }
 
-#health-tips .healthtips-right-col, #health-tips .healthtips-left-col {
+#health-tips .healthtips-right-col,
+#health-tips .healthtips-left-col {
   position: absolute;
   bottom: 5%; }
 
@@ -800,9 +802,11 @@ body.lang-zh-hant {
       margin-right: 0; }
     #health-tips .function-wrapper .function-tab-btn.active, #health-tips .function-wrapper .function-tab-btn:hover {
       background-color: #677D3A; }
-  #health-tips .function-wrapper .function-left-wrapper .function-btn > img, #health-tips .function-wrapper .function-left-wrapper .function-btn > p {
+  #health-tips .function-wrapper .function-left-wrapper .function-btn > img,
+  #health-tips .function-wrapper .function-left-wrapper .function-btn > p {
     margin-left: 20%; }
-  #health-tips .function-wrapper .function-right-wrapper .function-btn > img, #health-tips .function-wrapper .function-right-wrapper .function-btn > p {
+  #health-tips .function-wrapper .function-right-wrapper .function-btn > img,
+  #health-tips .function-wrapper .function-right-wrapper .function-btn > p {
     margin-left: 20%; }
   #health-tips .function-wrapper .function-middle-wrapper {
     position: relative; }
@@ -848,7 +852,8 @@ body.lang-zh-hant {
 #health-tips.cold_and_flu .function-right-wrapper .function-btn {
   background-image: url("../images/tips/trip_2_right_btn.png"); }
 
-#health-tips.children .function-wrapper .function-btn > img, #health-tips.children .function-wrapper .function-btn > p {
+#health-tips.children .function-wrapper .function-btn > img,
+#health-tips.children .function-wrapper .function-btn > p {
   width: 70%; }
 
 #health-tips.children .function-wrapper .function-btn > p.two_icons {
@@ -862,7 +867,8 @@ body.lang-zh-hant {
 
 #health-tips.children .function-wrapper .function-left-wrapper .function-btn {
   background-image: url("../images/tips/trip_3_left_btn.png"); }
-  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img, #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p {
+  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img,
+  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p {
     margin-left: 10%; }
 
 #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
@@ -892,9 +898,11 @@ body.lang-zh-hant {
   height: 500px;
   overflow: auto; }
 
-#health-tips.allergy .function-wrapper .function-left-wrapper, #health-tips.allergy .function-wrapper .function-right-wrapper {
+#health-tips.allergy .function-wrapper .function-left-wrapper,
+#health-tips.allergy .function-wrapper .function-right-wrapper {
   display: none; }
-  #health-tips.allergy .function-wrapper .function-left-wrapper.active, #health-tips.allergy .function-wrapper .function-right-wrapper.active {
+  #health-tips.allergy .function-wrapper .function-left-wrapper.active,
+  #health-tips.allergy .function-wrapper .function-right-wrapper.active {
     display: block; }
 
 #health-tips.allergy .function-wrapper .function-middle-wrapper {
@@ -979,7 +987,8 @@ body.lang-zh-hant {
   position: relative;
   overflow: hidden;
   margin: 20px 0; }
-  .detail-wrapper h4, .detail-wrapper p {
+  .detail-wrapper h4,
+  .detail-wrapper p {
     color: #FFF; }
   .detail-wrapper .detail-left-wrapper {
     height: 150px;
@@ -989,7 +998,10 @@ body.lang-zh-hant {
       color: #fff; }
   .detail-wrapper .detail-right-wrapper ul {
     padding: 0 15px 15px 40px; }
-  .detail-wrapper .detail-right-wrapper h2, .detail-wrapper .detail-right-wrapper h3, .detail-wrapper .detail-right-wrapper h4, .detail-wrapper .detail-right-wrapper p {
+  .detail-wrapper .detail-right-wrapper h2,
+  .detail-wrapper .detail-right-wrapper h3,
+  .detail-wrapper .detail-right-wrapper h4,
+  .detail-wrapper .detail-right-wrapper p {
     color: #666666;
     margin: 0;
     font-size: 1em; }
@@ -1001,6 +1013,11 @@ body.lang-zh-hant {
     font-weight: bold; }
   .detail-wrapper .detail-right-wrapper p {
     margin-bottom: 20px; }
+
+#health-tips .function-detail-wrapper .detail-right-wrapper {
+  display: none; }
+  #health-tips .function-detail-wrapper .detail-right-wrapper.active {
+    display: block; }
 
 /*contact*/
 .contact-section #header {
