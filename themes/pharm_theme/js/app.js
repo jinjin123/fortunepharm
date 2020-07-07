@@ -659,15 +659,15 @@ Drupal.behaviors.yourmodulename = {
     /*lastest-offers*/
 
     /*health-tips*/
-    if ($('#health-tips .sub-tab-wrapper li').length > 0) {
+    if ($('.page-node-type-healthtips .sub-tab-wrapper li').length > 0) {
       change_size('wrapper', $(window).width(), $(window).height());
       var tab_width = 0;
       clearTimeout($.data(this, 'health-tips-tab'));
       $.data(this, 'health-tips-tab', setTimeout(function() {
-        $('#health-tips .sub-tab-wrapper li').each(function() {
+        $('.page-node-type-healthtips .sub-tab-wrapper li').each(function() {
           tab_width += $(this).width();
         });
-        $('#health-tips .sub-tab-wrapper').width(tab_width);
+        $('.page-node-type-healthtips .sub-tab-wrapper').width(tab_width);
       }, 500));
     }
 
