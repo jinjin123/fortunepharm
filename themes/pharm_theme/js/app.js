@@ -100,11 +100,11 @@ Drupal.behaviors.yourmodulename = {
       }]
     })
     // scroll bar for health tips or other has scroll bar page
-    if ($('.scroll-wrapper').length > 0){
+    if ($('.scroll-wrapper').length > 0) {
       clearTimeout($.data(this, 'scroll-wrapper'));
       $.data(this, 'scroll-wrapper', setTimeout(function() {
-        $('.scroll-wrapper').each(function(){
-          if($(this).children().width() - $(this).width() > 10){
+        $('.scroll-wrapper').each(function() {
+          if ($(this).children().width() - $(this).width() > 10) {
             nice = $(this).niceScroll();
             var _super = nice.getContentSize;
             nice.getContentSize = function() {
@@ -118,9 +118,9 @@ Drupal.behaviors.yourmodulename = {
       $(window).resize(function() {
         clearTimeout($.data(this, 'scroll-wrapper2'));
         $.data(this, 'scroll-wrapper2', setTimeout(function() {
-          $('.scroll-wrapper').each(function(){
+          $('.scroll-wrapper').each(function() {
             $(this).getNiceScroll().remove();
-            if($(this).children().width() - $(this).width() > 10){
+            if ($(this).children().width() - $(this).width() > 10) {
               nice = $(this).niceScroll();
               var _super = nice.getContentSize;
               nice.getContentSize = function() {
@@ -133,46 +133,41 @@ Drupal.behaviors.yourmodulename = {
         }, 800));
       });
     }
-
     /*sub-tab-session*/
-    if($('.sub-tab-session').length > 0){
+    if ($('.sub-tab-session').length > 0) {
       clearTimeout($.data(this, 'sub-tab-session'));
       $.data(this, 'sub-tab-session', setTimeout(function() {
-        if($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()){
+        if ($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
-        }else{
+        } else {
           $('.sub-tab-session .arrow-right').fadeIn();
         }
       }, 500));
-
-
       $('.sub-tab-outer-wrapper').scroll(function() {
-        if($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()){
+        if ($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
-        }else{
+        } else {
           $('.sub-tab-session .arrow-right').fadeIn();
         }
-
-        if($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()){
+        if ($(this).width() + $(this).scrollLeft() - 20 >= $(this).width()) {
           $('.sub-tab-session .arrow-left').fadeIn();
-        }else{
+        } else {
           $('.sub-tab-session .arrow-left').fadeOut();
         }
       });
-
-      $(".sub-tab-session .arrow").on("click" ,function(){
+      $(".sub-tab-session .arrow").on("click", function() {
         var target = $('.sub-tab-session .sub-tab-outer-wrapper');
         var arrow = $(this);
-        if (!$(target).is(':animated')){
+        if (!$(target).is(':animated')) {
           scrolled = $(target).scrollLeft();
-          if($(arrow).hasClass('arrow-left')){
+          if ($(arrow).hasClass('arrow-left')) {
             scrolled -= 100;
           }
-          if($(arrow).hasClass('arrow-right')){
+          if ($(arrow).hasClass('arrow-right')) {
             scrolled += 100;
           }
           $(target).animate({
-            scrollLeft:  scrolled
+            scrollLeft: scrolled
           });
         }
       });
@@ -269,7 +264,6 @@ Drupal.behaviors.yourmodulename = {
       }
     }
     /*index*/
-
     /*** News page ****/
     $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
     if ($('.path-news .content-row').length > 0) {
@@ -311,7 +305,6 @@ Drupal.behaviors.yourmodulename = {
       window.location.assign(path);
     });
     /*** News page ****/
-
     /*advertisements*/
     if ($('.path-advertisements').length > 0) {
       $('.path-advertisements .rightmove').click(function() {
@@ -451,13 +444,11 @@ Drupal.behaviors.yourmodulename = {
         }
       }
     }
-
     /*Charity Fund*/
     if ($('.fancybox').length > 0) {
       $(".fancybox").fancybox();
     }
     /*news */
-
     $(".fancybox_popup").fancybox().trigger('click');
     $(".fancybox_popup").fancybox({
       openEffect: 'elastic',
@@ -487,7 +478,6 @@ Drupal.behaviors.yourmodulename = {
       }
     });
     /*index*/
-
     /*contact-us-offers*/
     if ($('#block-contactus #offers-wrapper').length > 0) {
       $.data(this, 'blcok-contactus', setTimeout(function() {
@@ -568,7 +558,6 @@ Drupal.behaviors.yourmodulename = {
       });
     });
     /*contact-us-offers*/
-
     /*lastest-offers*/
     if ($('#main #block-latestoffers ').length > 0) {
       $.data(this, 'lastest-offers', setTimeout(function() {
@@ -589,10 +578,8 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#main #block-latestoffers  .more-btn').click(function() {
       $('#main #block-latestoffers  > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#main #block-latestoffers  > div.hide').length == 0)
-          $('#main #block-latestoffers  .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#main #block-latestoffers  > div.hide').length == 0) $('#main #block-latestoffers  .more-btn').remove();
       });
       $('#main #block-latestoffers  .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
@@ -618,10 +605,8 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#main #block-latestofferschs  .more-btn').click(function() {
       $('#main #block-latestofferschs  > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#main #block-latestofferschs  > div.hide').length == 0)
-          $('#main #block-latestofferschs  .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#main #block-latestofferschs  > div.hide').length == 0) $('#main #block-latestofferschs  .more-btn').remove();
       });
       $('#main #block-latestofferschs  .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
@@ -647,17 +632,14 @@ Drupal.behaviors.yourmodulename = {
     }
     $('#main #block-zuixinyouhuifanti  .more-btn').click(function() {
       $('#main #block-zuixinyouhuifanti  > div.hide').each(function(key) {
-        if (key < 3)
-          $(this).removeClass('hide');
-        if ($('#main #block-zuixinyouhuifanti  > div.hide').length == 0)
-          $('#main #block-zuixinyouhuifanti  .more-btn').remove();
+        if (key < 3) $(this).removeClass('hide');
+        if ($('#main #block-zuixinyouhuifanti  > div.hide').length == 0) $('#main #block-zuixinyouhuifanti  .more-btn').remove();
       });
       $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     /*lastest-offers*/
-
     /*health-tips*/
     if ($('.page-node-type-healthtips .sub-tab-wrapper li').length > 0) {
       change_size('wrapper', $(window).width(), $(window).height());
@@ -761,7 +743,6 @@ Drupal.behaviors.yourmodulename = {
     }
     /*health-tips*/
     /*health-tips*/
-
     /**** Mobile menu ****/
     /*sidebar*/
     var trigger = $('.hamburger'),
@@ -856,6 +837,16 @@ Drupal.behaviors.yourmodulename = {
       $(this).parent().parent().hide();
       $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
     });
+    if ($('.path-faq .sub-tab-wrapper li').length > 0) {
+      var tab_width = 0;
+      clearTimeout($.data(this, 'faq-tab'));
+      $.data(this, 'faq-tab', setTimeout(function() {
+        $('.path-faq .sub-tab-wrapper li').each(function() {
+          tab_width += $(this).width();
+        });
+        $('.path-faq .sub-tab-wrapper').width(tab_width);
+      }, 500));
+    }
     /***** code end ******/
   }
 };
