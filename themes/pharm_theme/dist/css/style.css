@@ -646,6 +646,11 @@ body.lang-zh-hans {
 .lang-en .main-wrapper .index-wrapper:hover span {
   top: 15%; }
 
+.lang-en.path-faq .sub-tab-outer-wrapper {
+  height: 70px; }
+  .lang-en.path-faq .sub-tab-outer-wrapper li a {
+    height: 70px; }
+
 body.lang-zh-hant {
   font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
 
@@ -1536,19 +1541,28 @@ body.lang-zh-hant {
 
 .path-faq .sub-tab-outer-wrapper {
   background-image: none;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #F7F7F7;
+  background-position: bottom; }
 
 .path-faq .sub-tab-wrapper {
   margin: 0; }
-  .path-faq .sub-tab-wrapper li.active, .path-faq .sub-tab-wrapper li:hover {
-    background-color: #FFF5C9; }
   .path-faq .sub-tab-wrapper li a {
     width: 160px;
-    color: #CFBC90; }
-  .path-faq .sub-tab-wrapper li:hover a {
-    color: #666666; }
-  .path-faq .sub-tab-wrapper li.active a {
-    color: #666666; }
+    text-align: center;
+    font-size: 9pt;
+    color: #CFBC90;
+    padding: 10px 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+    line-height: 20px; }
+  .path-faq .sub-tab-wrapper li.active, .path-faq .sub-tab-wrapper li:hover {
+    background-color: #FFF5C9; }
+    .path-faq .sub-tab-wrapper li.active a, .path-faq .sub-tab-wrapper li:hover a {
+      color: #666666; }
   .path-faq .sub-tab-wrapper li.arrow a {
     width: 50px;
     text-align: center;
@@ -1661,14 +1675,21 @@ body.lang-zh-hant {
 .path-faq .pluginButtonImage {
   display: inline-block; }
 
-/**** @media scss *****/
-@media only screen and (max-width: 767px) {
-  .path-faq .sub-tab-wrapper li {
-    float: left; }
-  .path-faq .content-outer-wrapper .detail-wrapper {
-    width: 100%; }
-  .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
-    height: auto; } }
+.path-faq .sub-tab-session {
+  position: relative; }
+  .path-faq .sub-tab-session .arrow-left {
+    background-image: url(../images/sub_bar_tap_left.png);
+    left: 0; }
+  .path-faq .sub-tab-session .arrow-right {
+    background-image: url(../images/sub_bar_tap.png);
+    right: 0; }
+  .path-faq .sub-tab-session .arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    top: 0;
+    display: none; }
 
 @media only screen and (min-width: 1200px) {
   .main-wrapper .index-wrapper .link-wrapper span {
@@ -1735,6 +1756,12 @@ body.lang-zh-hant {
   .path-news .views-row .content-row .colume2 .title-wrapper a {
     top: 10px;
     right: 10px; }
+  .path-faq .sub-tab-wrapper li {
+    float: left; }
+  .path-faq .content-outer-wrapper .detail-wrapper {
+    width: 100%; }
+  .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
+    height: auto; }
   #banner-wrapper .page_title {
     width: 50%; }
     #banner-wrapper .page_title h1 {

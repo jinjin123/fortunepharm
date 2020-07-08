@@ -168,6 +168,22 @@
       }
     }
   }
+  .path-faq {
+    .sub-tab-wrapper li {
+      float: left;
+    }
+    .content-outer-wrapper {
+      .detail-wrapper {
+        width: 100%;
+      }
+      .content-wrapper {
+        .text-wrapper {
+          height: auto;
+        }
+      }
+    }
+  }
+
   #banner-wrapper {
     .page_title {
       width: 50%;
