@@ -1188,6 +1188,15 @@ body.lang-zh-hant {
     position: absolute;
     bottom: 20%; } }
 
+.page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a.navbar-link {
+  color: #677D3A;
+  text-align: center;
+  font-size: 8pt;
+  color: #677D3A; }
+
+#health-tips {
+  font-size: small; }
+
 /*contact*/
 .contact-section #header {
   border: 0;
