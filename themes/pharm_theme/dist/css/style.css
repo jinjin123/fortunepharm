@@ -1193,7 +1193,8 @@ body.lang-zh-hant {
   font-size: 8pt; }
 
 #health-tips {
-  font-size: small; }
+  font-size: small;
+  color: #333; }
 
 /*contact*/
 .contact-section #header {
