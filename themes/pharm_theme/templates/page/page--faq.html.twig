@@ -84,12 +84,14 @@
       </div>
       </section>
       {# Sub menu #}
-        <div class="sub-tab-session">
-            <div class="sub-tab-outer-wrapper scroll-wrapper" tabindex="0">
-              {{ page.sub_menu }}
-            </div>
-            <a class="arrow arrow-right"></a>
+      <div class="sub-tab-session">
+        <div class="sub-tab-outer-wrapper scroll-wrapper" style="overflow: hidden; outline: none; cursor: -webkit-grab;">
+          <div class="sub-tab-wrapper container-healthtips-submenu">
+            {{ page.sub_menu }}
+          </div>
         </div>
+        <a class="arrow arrow-right"></a>
+      </div
        {# Sub menu #}
       <section id="os-wrapper">
         {{ page.content }}
