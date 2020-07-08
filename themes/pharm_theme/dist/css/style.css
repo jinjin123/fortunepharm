@@ -1580,7 +1580,8 @@ body.lang-zh-hant {
     padding-right: 5px;
     padding-bottom: 20px; }
     .path-faq .content-outer-wrapper .content-wrapper img {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
     .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
       position: relative;
       padding: 10px 15px 40px;
