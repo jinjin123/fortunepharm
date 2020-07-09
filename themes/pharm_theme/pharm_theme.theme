@@ -105,6 +105,12 @@ function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $va
       $suggestions[] = 'page__' . $content_type;
     }
   }
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $current_path);
+  if (isset($path_args[1]) && $path_args[1] == 'faq') {
+    $suggestions[] = 'page__faq';
+  }
 }
 
 /**

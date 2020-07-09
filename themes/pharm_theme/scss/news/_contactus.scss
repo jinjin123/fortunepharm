@@ -254,28 +254,56 @@
 @media only screen and (max-width: 767px){
 
   /*lastest-offers*/
-  #block-contactus #offers-wrapper .content-wrapper{
-    height: auto !important;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper {
+      height: auto !important;
+    }
   }
-  #block-contactus #offers-wrapper .content-wrapper h3{
-    padding: 30px 0;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper h3 {
+      padding: 30px 0;
+    }
   }
 
   /*contact-us*/
-  #block-contactus #offers-wrapper .content-wrapper{
-    height: 304px !important;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper {
+      height: 304px !important;
+    }
   }
-  #block-contactus #offers-wrapper .content-wrapper.with-image{
-    height: 230px !important;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper.with-image {
+      height: 230px !important;
+    }
   }
-  #block-contactus #offers-wrapper .content-wrapper h3{
-    padding: 0;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper h3 {
+      padding: 0;
+    }
   }
-  #block-contactus #offers-wrapper .content-wrapper .content-right ul li{
-    padding: 15px 10px;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper .content-right ul li {
+      padding: 15px 10px;
+    }
   }
-  #block-contactus #offers-wrapper .content-wrapper .content-right ul li label{
-    display: block;
+  #block-contactus,
+  #block-lianxiwomenjizhaopindibuneirongjianti,
+  #block-lianxiwomenjizhaopindibuneirongfanti {
+    #offers-wrapper .content-wrapper .content-right ul li label {
+      display: block;
+    }
   }
 
 }
