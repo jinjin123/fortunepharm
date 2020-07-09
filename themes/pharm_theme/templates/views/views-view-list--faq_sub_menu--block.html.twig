@@ -26,10 +26,19 @@
   {% endif %}
 
   <{{ list.type }}{{ list.attributes }} class="sub-tab-wrapper nav navbar-nav">
-    <li class=""><a href="/faq/0" rel="0">{{ 'ALL'|t }}</a></li>
+    {% if language == 'en' %}
+      {% set lang = '/eng' %}
+    {% endif %}
+    {% if language == 'zh-hant' %}
+      {% set lang = '/cht' %}
+    {% endif %}
+    {% if language == 'zh-hans' %}
+      {% set lang = '/chs' %}
+    {% endif %}
+    <li class=""><a href="{{lang}}/faq/0" rel="0">{{ 'ALL'|t }}</a></li>
     {% for row in rows %}
       <li{{ row.attributes }}>
-        {{- row.content -}}
+        <a href="{{lang}}/faq/{{ row.content['#row']._entity.tid.value }}" title="{{ row.content['#row']._entity.name.value|t }}">{{ row.content['#row']._entity.name.value|t }}</a>
       </li>
     {% endfor %}
 

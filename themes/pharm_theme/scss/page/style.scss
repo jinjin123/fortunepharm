@@ -546,8 +546,6 @@ nav#block-mainnavigation #menu li a {
     }
   }
 }
-
-
 // OtherServices
 .page-node-2 #contact-nav, .page-node-178 #contact-nav {
   display: none;
@@ -559,7 +557,7 @@ nav#block-mainnavigation #menu li a {
     h2 {
       text-align: center;
       margin-bottom: 25px;
-      font-size:1.6em;
+      font-size: 1.6em;
     }
   }
   #fund-timeline {
@@ -682,5 +680,59 @@ nav#block-mainnavigation #menu li a {
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+//Admin user
+.path-user {
+  #banner-wrapper, #contact-nav {
+    display: none;
+  }
+  #main {
+    background-color: #f7f7f7;
+    #os-wrapper {
+      max-width: 420px;
+      margin: 100px auto;
+      padding: $space-15;
+      background-color: #fff;
+      #block-pharm-theme-local-tasks {
+        ul {
+          li {
+            border: 0;
+            background-color: #111520;
+            a {
+              color: #fff;
+              &:hover {
+                background-color: #ef371d;
+              }
+            }
+          }
+        }
+      }
+      p {
+        line-height: 1.5;
+      }
+      .description {
+        font-size: 13px;
+        font-style: italic;
+        color: #878787;
+        line-height: 1.5;
+        padding: 5px 0;
+      }
+      #edit-submit {
+        background-color: #ef371d;
+        width: 100%;
+        text-transform: uppercase;
+      }
+      .js-form-item-contact {
+        .form-checkbox {
+          float: left;
+          border: 0;
+          box-shadow: none;
+          width: 20px;
+          margin: -3px 10px 0 0;
+        }
+      }
+    }
   }
 }

@@ -859,6 +859,12 @@ Drupal.behaviors.yourmodulename = {
         });
         $('.path-faq .sub-tab-wrapper').width(tab_width);
       }, 500));
+
+      $('.path-faq .sub-tab-wrapper li a').each(function(){
+        if( $(this).attr('href') == window.location.pathname){
+          $(this).parent().addClass('active');
+        }
+      });
     }
     /***** code end ******/
   }
