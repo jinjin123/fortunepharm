@@ -716,10 +716,10 @@ body.lang-zh-hant {
     top: 0;
     display: none; }
   .page-node-type-healthtips .sub-tab-session .arrow-left {
-    background-image: url(../images/sub_bar_tap_left.png);
+    background-image: url("../images/sub_bar_tap_left.png");
     left: 0; }
   .page-node-type-healthtips .sub-tab-session .arrow-right {
-    background-image: url(../images/sub_bar_tap.png);
+    background-image: url("../images/sub_bar_tap.png");
     right: 0; }
 
 #health-tips .detail-wrapper .detail-left-wrapper h4 {
@@ -732,8 +732,8 @@ body.lang-zh-hant {
   text-align: center;
   display: none; }
 
-#health-tips .healthtips-right-col,
-#health-tips .healthtips-left-col {
+#health-tips .healthtips-left-col,
+#health-tips .healthtips-right-col {
   position: absolute;
   bottom: 5%; }
 
@@ -807,11 +807,11 @@ body.lang-zh-hant {
       margin-right: 0; }
     #health-tips .function-wrapper .function-tab-btn.active, #health-tips .function-wrapper .function-tab-btn:hover {
       background-color: #677D3A; }
-  #health-tips .function-wrapper .function-left-wrapper .function-btn > img,
-  #health-tips .function-wrapper .function-left-wrapper .function-btn > p {
+  #health-tips .function-wrapper .function-left-wrapper .function-btn > p,
+  #health-tips .function-wrapper .function-left-wrapper .function-btn > img {
     margin-left: 20%; }
-  #health-tips .function-wrapper .function-right-wrapper .function-btn > img,
-  #health-tips .function-wrapper .function-right-wrapper .function-btn > p {
+  #health-tips .function-wrapper .function-right-wrapper .function-btn > p,
+  #health-tips .function-wrapper .function-right-wrapper .function-btn > img {
     margin-left: 20%; }
   #health-tips .function-wrapper .function-middle-wrapper {
     position: relative; }
@@ -857,8 +857,8 @@ body.lang-zh-hant {
 #health-tips.cold_and_flu .function-right-wrapper .function-btn {
   background-image: url("../images/tips/trip_2_right_btn.png"); }
 
-#health-tips.children .function-wrapper .function-btn > img,
-#health-tips.children .function-wrapper .function-btn > p {
+#health-tips.children .function-wrapper .function-btn > p,
+#health-tips.children .function-wrapper .function-btn > img {
   width: 70%; }
 
 #health-tips.children .function-wrapper .function-btn > p.two_icons {
@@ -872,8 +872,8 @@ body.lang-zh-hant {
 
 #health-tips.children .function-wrapper .function-left-wrapper .function-btn {
   background-image: url("../images/tips/trip_3_left_btn.png"); }
-  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img,
-  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p {
+  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p,
+  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img {
     margin-left: 10%; }
 
 #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
