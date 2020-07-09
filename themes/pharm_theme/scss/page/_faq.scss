@@ -1,19 +1,23 @@
 @import '../variable';
 @import '../mixins';
+
 .path-faq {
   #header {
     padding-bottom: 10px;
     border: 2px solid #EFEFEF;
   }
+
   ul {
     &.pager {
       margin-bottom: 30px;
       padding: 0;
       background-color: #F7F7F7;
+
       li {
         padding: 15px 0;
         width: 100%;
         display: inline-block;
+
         a {
           &.button {
             position: relative;
@@ -24,23 +28,27 @@
             background: none;
             border: 0;
             padding: 0;
+
             &::after {
               content: '';
               position: absolute;
               width: 14px;
               height: 8px;
-              background-image: url(../images/offers_arrow_icon.png);
+              background-image: url("../images/offers_arrow_icon.png");
               right: -14px;
               top: 8px;
             }
           }
-          &:hover, &:focus {
+
+          &:focus,
+          &:hover {
             color: #000;
           }
         }
       }
     }
   }
+
   .sub-tab-outer-wrapper {
     background-image: none;
     margin-bottom: 20px;
@@ -49,26 +57,30 @@
     background-color: #F7F7F7;
     background-position: bottom;
   }
+
   .sub-tab-wrapper {
     margin: 0;
+
     li {
       a {
         width: 160px;
         text-align: center;
         font-size: 9pt;
         color: #CFBC90;
-        padding: 10px 15px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 15px;
         display: block;
         line-height: 20px;
       }
-      &.active, &:hover {
+
+      &.active,
+      &:hover {
         background-color: #FFF5C9;
+
         a {
           color: #666666;
         }
       }
+
       &.arrow {
         a {
           width: 50px;
@@ -78,27 +90,30 @@
       }
     }
   }
+
   .content-outer-wrapper {
     position: relative;
     z-index: 2;
+
     &:after {
       content: '';
       display: block;
       clear: both;
     }
+
     .content-wrapper {
       img {
         width: 100%;
         height: auto;
       }
-      padding: 0;
-      padding-right: 5px;
-      padding-bottom: 20px;
+      padding: 0 5px 20px 0;
+
       .text-wrapper {
         position: relative;
         padding: 10px 15px 40px;
         height: 140px;
         background-color: #F0EDD2;
+
         .detail {
           position: absolute;
           width: 90px;
@@ -112,18 +127,22 @@
         }
       }
     }
+
     .detail-wrapper {
       position: absolute;
       width: 66.66%;
       padding-right: 5px;
       display: none;
       border-bottom: 10px solid #FFF;
+
       img {
         width: 100%;
       }
+
       h4 {
         color: #000;
       }
+
       .text-wrapper {
         position: relative;
         padding: 10px 15px 40px;
@@ -131,6 +150,7 @@
         background-color: #F0EDD2;
         height: auto;
         z-index: 2;
+
         .detail {
           position: absolute;
           width: 90px;
@@ -143,30 +163,35 @@
           color: #FFF;
         }
       }
+
       .description {
         max-height: 300px;
         overflow: auto;
         padding-top: 15px;
         margin-top: 10px;
         border-top: 1px #FFF solid;
+
         p {
           color: #666666;
         }
       }
     }
   }
+
   .share-wrapper {
     div {
       display: inline-block;
     }
   }
+
   .facebook-share {
     height: 45pt;
     width: 100pt;
     background-image: url("../images/facebook_share_btn.png");
     background-size: 60pt 20pt;
-    background-position: 0% 100%;
+    background-position: 0 100%;
   }
+
   .pluginButton {
     background: #4c69ba;
     background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
@@ -181,6 +206,7 @@
     padding: 0;
     text-shadow: 0 -1px 0 #354c8c;
     white-space: nowrap;
+
     button {
       background: transparent;
       border: 0;
@@ -194,25 +220,31 @@
       text-shadow: 0 -1px 0 #354c8c;
     }
   }
+
   span {
     color: #FFF;
     font-size: 8px;
     padding-right: 5pt;
     -webkit-font-smoothing: antialiased;
   }
+
   .pluginButtonImage {
     display: inline-block;
   }
+
   .sub-tab-session {
     position: relative;
+
     .arrow-left {
-      background-image: url(../images/sub_bar_tap_left.png);
+      background-image: url("../images/sub_bar_tap_left.png");
       left: 0;
     }
+
     .arrow-right {
-      background-image: url(../images/sub_bar_tap.png);
+      background-image: url("../images/sub_bar_tap.png");
       right: 0;
     }
+
     .arrow {
       position: absolute;
       width: 50px;
