@@ -1,28 +1,42 @@
 @import '../variable';
 @import '../mixins';
 .path-faq {
-  .more-btn {
-    margin-bottom: 30px;
-    padding: 0;
-    background-color: #F7F7F7;
-    a {
-      padding: 15px 0;
-      width: 100%;
-      display: inline-block;
-      span {
-        position: relative;
-        margin: 0 auto;
-        width: 70px;
-        text-align: center;
-        display: block;
-        &:after {
-          content: '';
-          position: absolute;
-          width: 14px;
-          height: 8px;
-          background-image: url(../images/offers_arrow_icon.png);
-          right: -14px;
-          top: 8px;
+  #header {
+    padding-bottom: 10px;
+    border: 2px solid #EFEFEF;
+  }
+  ul {
+    &.pager {
+      margin-bottom: 30px;
+      padding: 0;
+      background-color: #F7F7F7;
+      li {
+        padding: 15px 0;
+        width: 100%;
+        display: inline-block;
+        a {
+          &.button {
+            position: relative;
+            margin: 0 auto;
+            width: 70px;
+            text-align: center;
+            display: block;
+            background: none;
+            border: 0;
+            padding: 0;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 14px;
+              height: 8px;
+              background-image: url(../images/offers_arrow_icon.png);
+              right: -14px;
+              top: 8px;
+            }
+          }
+          &:hover, &:focus {
+            color: #000;
+          }
         }
       }
     }
@@ -106,6 +120,9 @@
       border-bottom: 10px solid #FFF;
       img {
         width: 100%;
+      }
+      h4 {
+        color: #000;
       }
       .text-wrapper {
         position: relative;

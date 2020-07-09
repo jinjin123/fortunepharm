@@ -107,6 +107,9 @@
       }
     }
   }
+  #footer {
+    border-top: 2px solid #EFEFEF;
+  }
 }
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu {
@@ -183,7 +186,6 @@
       }
     }
   }
-
   #banner-wrapper {
     .page_title {
       width: 50%;

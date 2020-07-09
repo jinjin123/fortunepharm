@@ -49,6 +49,9 @@ body {
 h1, h2, h3, h4, h5, h6, p, a, span, label {
   color: #000; }
 
+a:hover, a:focus {
+  color: #000; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -695,8 +698,7 @@ body.lang-zh-hant {
           text-align: center;
           font-size: 9pt;
           color: #677D3A; }
-        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:focus,
-        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:hover {
+        .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:focus, .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a:hover {
           background-color: #677D3A;
           color: #eee;
           text-decoration: none; }
@@ -732,8 +734,7 @@ body.lang-zh-hant {
   text-align: center;
   display: none; }
 
-#health-tips .healthtips-left-col,
-#health-tips .healthtips-right-col {
+#health-tips .healthtips-left-col, #health-tips .healthtips-right-col {
   position: absolute;
   bottom: 5%; }
 
@@ -807,11 +808,9 @@ body.lang-zh-hant {
       margin-right: 0; }
     #health-tips .function-wrapper .function-tab-btn.active, #health-tips .function-wrapper .function-tab-btn:hover {
       background-color: #677D3A; }
-  #health-tips .function-wrapper .function-left-wrapper .function-btn > p,
-  #health-tips .function-wrapper .function-left-wrapper .function-btn > img {
+  #health-tips .function-wrapper .function-left-wrapper .function-btn > p, #health-tips .function-wrapper .function-left-wrapper .function-btn > img {
     margin-left: 20%; }
-  #health-tips .function-wrapper .function-right-wrapper .function-btn > p,
-  #health-tips .function-wrapper .function-right-wrapper .function-btn > img {
+  #health-tips .function-wrapper .function-right-wrapper .function-btn > p, #health-tips .function-wrapper .function-right-wrapper .function-btn > img {
     margin-left: 20%; }
   #health-tips .function-wrapper .function-middle-wrapper {
     position: relative; }
@@ -857,8 +856,7 @@ body.lang-zh-hant {
 #health-tips.cold_and_flu .function-right-wrapper .function-btn {
   background-image: url("../images/tips/trip_2_right_btn.png"); }
 
-#health-tips.children .function-wrapper .function-btn > p,
-#health-tips.children .function-wrapper .function-btn > img {
+#health-tips.children .function-wrapper .function-btn > p, #health-tips.children .function-wrapper .function-btn > img {
   width: 70%; }
 
 #health-tips.children .function-wrapper .function-btn > p.two_icons {
@@ -872,8 +870,7 @@ body.lang-zh-hant {
 
 #health-tips.children .function-wrapper .function-left-wrapper .function-btn {
   background-image: url("../images/tips/trip_3_left_btn.png"); }
-  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p,
-  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img {
+  #health-tips.children .function-wrapper .function-left-wrapper .function-btn > p, #health-tips.children .function-wrapper .function-left-wrapper .function-btn > img {
     margin-left: 10%; }
 
 #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
@@ -903,11 +900,9 @@ body.lang-zh-hant {
   height: 500px;
   overflow: auto; }
 
-#health-tips.allergy .function-wrapper .function-left-wrapper,
-#health-tips.allergy .function-wrapper .function-right-wrapper {
+#health-tips.allergy .function-wrapper .function-left-wrapper, #health-tips.allergy .function-wrapper .function-right-wrapper {
   display: none; }
-  #health-tips.allergy .function-wrapper .function-left-wrapper.active,
-  #health-tips.allergy .function-wrapper .function-right-wrapper.active {
+  #health-tips.allergy .function-wrapper .function-left-wrapper.active, #health-tips.allergy .function-wrapper .function-right-wrapper.active {
     display: block; }
 
 #health-tips.allergy .function-wrapper .function-middle-wrapper {
@@ -992,8 +987,7 @@ body.lang-zh-hant {
   position: relative;
   overflow: hidden;
   margin: 20px 0; }
-  .detail-wrapper h4,
-  .detail-wrapper p {
+  .detail-wrapper h4, .detail-wrapper p {
     color: #FFF; }
   .detail-wrapper .detail-left-wrapper {
     height: 150px;
@@ -1003,10 +997,7 @@ body.lang-zh-hant {
       color: #fff; }
   .detail-wrapper .detail-right-wrapper ul {
     padding: 0 15px 15px 40px; }
-  .detail-wrapper .detail-right-wrapper h2,
-  .detail-wrapper .detail-right-wrapper h3,
-  .detail-wrapper .detail-right-wrapper h4,
-  .detail-wrapper .detail-right-wrapper p {
+  .detail-wrapper .detail-right-wrapper h2, .detail-wrapper .detail-right-wrapper h3, .detail-wrapper .detail-right-wrapper h4, .detail-wrapper .detail-right-wrapper p {
     color: #666666;
     margin: 0;
     font-size: 1em; }
@@ -1064,8 +1055,7 @@ body.lang-zh-hant {
   .pagination-wrapper .right-l {
     margin-right: 10px;
     margin-bottom: 5px; }
-  .pagination-btn,
-  .pagination-skip {
+  .pagination-btn, .pagination-skip {
     padding: 15px 10px; }
   .pagination-btn.with-select:before {
     padding-left: 10px;
@@ -1160,12 +1150,7 @@ body.lang-zh-hant {
     height: 300px; }
   #health-tips.allergy .function-wrapper .function-btn {
     width: 24.25%; }
-  #health-tips.allergy .function-wrapper .function-btn[rel="10"],
-  #health-tips.allergy .function-wrapper .function-btn[rel="5"],
-  #health-tips.allergy .function-wrapper .function-btn[rel="6"],
-  #health-tips.allergy .function-wrapper .function-btn[rel="7"],
-  #health-tips.allergy .function-wrapper .function-btn[rel="8"],
-  #health-tips.allergy .function-wrapper .function-btn[rel="9"] {
+  #health-tips.allergy .function-wrapper .function-btn[rel="10"], #health-tips.allergy .function-wrapper .function-btn[rel="5"], #health-tips.allergy .function-wrapper .function-btn[rel="6"], #health-tips.allergy .function-wrapper .function-btn[rel="7"], #health-tips.allergy .function-wrapper .function-btn[rel="8"], #health-tips.allergy .function-wrapper .function-btn[rel="9"] {
     width: 32.6666%; }
   #health-tips.allergy .function-wrapper .function-right-wrapper {
     display: none; }
@@ -1179,9 +1164,7 @@ body.lang-zh-hant {
     background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_top_btn.png"); }
   #health-tips.cold_and_flu .function-wrapper .function-right-wrapper .function-btn {
     background-image: url("/themes/pharm_theme/dist/images/tips/trip_2_bottom_btn.png"); }
-  #health-tips .children .function-wrapper .function-btn,
-  #health-tips .gerd .function-wrapper .function-btn,
-  #health-tips .pain .function-wrapper .function-btn {
+  #health-tips .children .function-wrapper .function-btn, #health-tips .gerd .function-wrapper .function-btn, #health-tips .pain .function-wrapper .function-btn {
     width: 32.6666%; }
   #health-tips.pain .function-wrapper .function-left-wrapper .function-btn {
     background-image: url("/themes/pharm_theme/dist/images/tips/trip_3_top_btn.png"); }
@@ -1516,21 +1499,28 @@ body.lang-zh-hant {
   #block-lianxiwomenjizhaopindibuneirongfanti .content-wrapper.with-image .content-right a {
     color: #848788; }
 
-.path-faq .more-btn {
+.path-faq #header {
+  padding-bottom: 10px;
+  border: 2px solid #EFEFEF; }
+
+.path-faq ul.pager {
   margin-bottom: 30px;
   padding: 0;
   background-color: #F7F7F7; }
-  .path-faq .more-btn a {
+  .path-faq ul.pager li {
     padding: 15px 0;
     width: 100%;
     display: inline-block; }
-    .path-faq .more-btn a span {
+    .path-faq ul.pager li a.button {
       position: relative;
       margin: 0 auto;
       width: 70px;
       text-align: center;
-      display: block; }
-      .path-faq .more-btn a span:after {
+      display: block;
+      background: none;
+      border: 0;
+      padding: 0; }
+      .path-faq ul.pager li a.button::after {
         content: '';
         position: absolute;
         width: 14px;
@@ -1538,6 +1528,8 @@ body.lang-zh-hant {
         background-image: url(../images/offers_arrow_icon.png);
         right: -14px;
         top: 8px; }
+    .path-faq ul.pager li a:hover, .path-faq ul.pager li a:focus {
+      color: #000; }
 
 .path-faq .sub-tab-outer-wrapper {
   background-image: none;
@@ -1605,6 +1597,8 @@ body.lang-zh-hant {
     border-bottom: 10px solid #FFF; }
     .path-faq .content-outer-wrapper .detail-wrapper img {
       width: 100%; }
+    .path-faq .content-outer-wrapper .detail-wrapper h4 {
+      color: #000; }
     .path-faq .content-outer-wrapper .detail-wrapper .text-wrapper {
       position: relative;
       padding: 10px 15px 40px;
@@ -1734,7 +1728,9 @@ body.lang-zh-hant {
   .healthcare .healthcare-wrapper:nth-child(odd) {
     padding-right: 3px; }
   .healthcare .healthcare-wrapper:nth-child(even) {
-    padding-left: 3px; } }
+    padding-left: 3px; }
+  #footer {
+    border-top: 2px solid #EFEFEF; } }
 
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
@@ -2594,3 +2590,39 @@ nav#block-mainnavigation #menu li a {
 .health-tips-ful .container-fluid {
   padding-left: 0;
   padding-right: 0; }
+
+.path-user #banner-wrapper, .path-user #contact-nav {
+  display: none; }
+
+.path-user #main {
+  background-color: #f7f7f7; }
+  .path-user #main #os-wrapper {
+    max-width: 420px;
+    margin: 100px auto;
+    padding: 15px;
+    background-color: #fff; }
+    .path-user #main #os-wrapper #block-pharm-theme-local-tasks ul li {
+      border: 0;
+      background-color: #111520; }
+      .path-user #main #os-wrapper #block-pharm-theme-local-tasks ul li a {
+        color: #fff; }
+        .path-user #main #os-wrapper #block-pharm-theme-local-tasks ul li a:hover {
+          background-color: #ef371d; }
+    .path-user #main #os-wrapper p {
+      line-height: 1.5; }
+    .path-user #main #os-wrapper .description {
+      font-size: 13px;
+      font-style: italic;
+      color: #878787;
+      line-height: 1.5;
+      padding: 5px 0; }
+    .path-user #main #os-wrapper #edit-submit {
+      background-color: #ef371d;
+      width: 100%;
+      text-transform: uppercase; }
+    .path-user #main #os-wrapper .js-form-item-contact .form-checkbox {
+      float: left;
+      border: 0;
+      box-shadow: none;
+      width: 20px;
+      margin: -3px 10px 0 0; }
