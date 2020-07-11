@@ -867,5 +867,200 @@ Drupal.behaviors.yourmodulename = {
       });
     }
     /***** code end ******/
+    /*product-take*/
+    //global  product_finder index
+    var SymptomsDataSymptoms = {
+      "field_symptom_running_nose":1,
+      "field_symptom_sneezing":2,
+      "field_symptom_nasal_congestion":3,
+      "field_symptom_fever":4,
+      "field_headache":5,
+      "field_symptom_sore_throat":6,
+      "field_symptom_menstrual_pain":7,
+      "field_symptom_toothache":8,
+      "field_watery_eyes":9,
+      "field_symptom_dry_cough":10,
+      "field_symptom_productive_cough":11,
+      "field_symptom_heartbum":12,
+      "field_symptomstomach_pain":13,
+      "field_symptomflatulence":14,
+      "field_symptom_acid_reflux":15,
+      "field_symptom_diarrhea":16,
+      "field_symptom_motion_sickness":17,
+    }
+    var lang = settings.path.pathPrefix;
+    var langname = lang.replace('/', '');
+    // view size design
+    if ($('.path-product-finder #product-take-wrapper .content-left > div').length > 0) {
+      $.data(this, 'product-take', setTimeout(function () {
+        $('.path-product-finder #product-take-wrapper .content-right').each(function () {
+          $(this).height($(this).width() * 3 / 2);
+        });
+        index_row_wrapper('content-left', 'content-left', 12);
+      }, 200));
+      $(window).resize(function () {
+        clearTimeout($.data(this, 'product-take2'));
+        $.data(this, 'product-take2', setTimeout(function () {
+          $('.path-product-finder #product-take-wrapper .content-right').each(function () {
+            $(this).height($(this).width() * 3 / 2);
+          });
+          index_row_wrapper('content-left', 'content-left', 12);
+        }, 800));
+      });
+      var product = [];
+      //reset choose symptoms
+      $('.path-product-finder #product-take-wrapper .content-left .index-wrapper .clear-select').click(function () {
+        $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function () {
+          $(this).removeClass('active inactive');
+        });
+      });
+      //active : blue  inactive: grey  nil: yellow
+      var symptomsData = {
+        1: "field_symptom_running_nose",
+        2: "field_symptom_sneezing",
+        3: "field_symptom_nasal_congestion",
+        4: "field_symptom_fever",
+        5: "field_headache",
+        6: "field_symptom_sore_throat",
+        7: "field_symptom_menstrual_pain",
+        8: "field_symptom_toothache",
+        9: "field_watery_eyes",
+        10: "field_symptom_dry_cough",
+        11: "field_symptom_productive_cough",
+        12: "field_symptom_heartbum",
+        13: "field_symptomstomach_pain",
+        14: "field_symptomflatulence",
+        15: "field_symptom_acid_reflux",
+        16: "field_symptom_diarrhea",
+        17: "field_symptom_motion_sickness",
+      }
+      $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').click(function () {
+        // init, add color status
+        if (!$(this).hasClass('inactive')) {
+          if (!$(this).hasClass('active')) {
+            var target = $(this);
+            $(target).addClass('active');
+          } else {
+            var target = $(this);
+            $(this).removeClass('active');
+          }
+          var symptoms = [];
+          var symptomsDataarr = [];
+          //loop choose the symptoms put into array
+          $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function () {
+            symptoms.unshift($(this).attr('rel'));
+          });
+          if (symptoms.length > 0) {
+            $.get( langname + '/product-finder-json?_format=json', function (data) {
+              for (var p_index in data) {
+                for (var s_index in symptoms) {
+                  //get the product of choose symptoms field
+                  if(data[p_index][symptomsData[symptoms[s_index]]] == "True"){
+                    symptomsDataarr.push(data[p_index])
+                  }
+                }
+                product = symptomsDataarr;
+              }
+              //render product box content
+              var temp = [];
+              if (product.length == 0) {
+                if ($(window).width() < 768) {
+                  $('.content-right').hide();
+                }
+                $('.level-wrapper').hide();
+                $('.matched-product-wrapper').html('');
+                $('.arrow').hide();
+              } else {
+                $('.matched-product-wrapper').html('');
+                $(product).each(function (index, value) {
+                  for (var sym_index in SymptomsDataSymptoms){
+                    if (product[index][sym_index] == "True"){
+                      temp.push(SymptomsDataSymptoms[sym_index]);
+                    }
+                  }
+                  // add grey color when the match product symptoms field is false
+                  $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function(){
+                    if($.inArray(parseInt($(this).attr('rel')), temp) != -1){
+                      $(this).removeClass('inactive');
+                    }else{
+                      $(this).addClass('inactive');
+                    }
+                  })
+                  var text = '<div class="matched-product"><a href="' + value.id + '"><img src=' + value.field_product_image + '><h4>' + value.field_product_name + '</h4>';
+                  if(value.field_symptoms_level  == "Onset"){
+                    if(langname == "eng")
+                      text += '<p class="level1 grey">Onset</p>';
+                    else if(langname == "cht")
+                      text += '<p class="level1 grey">初發</p>';
+                    else if(langname == "chs")
+                      text += '<p class="level1 grey">初发</p>';
+                  }else if(value.field_symptoms_level  == "Slight"){
+                    if(langname == "eng")
+                      text += '<p class="level2 grey">Slight</p>';
+                    else if(langname == "cht")
+                      text += '<p class="level2 grey">輕微</p>';
+                    else if(langname == "chs")
+                      text += '<p class="level2 grey">轻微</p>';
+                  }else if(value.field_symptoms_level  == "Critical"){
+                    if(langname == "eng")
+                      text += '<p class="level3 grey">Crictical</p>';
+                    else if(langname == "cht")
+                      text += '<p class="level3 grey">嚴重</p>';
+                    else if(langname == "chs")
+                      text += '<p class="level3 grey">严重</p>';
+                  }
+                  text += '</a></div>';
+                  $('.level-wrapper').show();
+                  $('.matched-product-wrapper').append(text);
+                });
+                if ($('.matched-product-wrapper').height() > $('.matched-outer').height()) {
+                  $('.arrow-down').show();
+                }
+                if ($(window).width() < 768) {
+                  $('.content-right').show();
+                }
+              }
+            });
+          } else {
+            product = [];
+          }
+        }else {
+          // reset color status
+          var target = $(this);
+          if ($(this).hasClass('inactive')) {
+            $(target).removeClass('inactive');
+          } else {
+            $(target).removeClass('active');
+          }
+        }
+      });
+      // scroll overflow on right box
+      $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').scroll(function () {
+        if ($(this).scrollTop() == 0) {
+          $(".path-product-finder #product-take-wrapper .content-right .arrow-up").hide();
+        } else if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+          $(".path-product-finder #product-take-wrapper .content-right .arrow-down").hide();
+        } else {
+          $(".path-product-finder #product-take-wrapper .content-right .arrow").show();
+        }
+      });
+      $(".path-product-finder #product-take-wrapper .content-right .arrow").on("click", function () {
+        var target = $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer');
+        var arrow = $(this);
+        if (!$(target).is(':animated')) {
+          scrolled = $(target).scrollTop();
+          if ($(arrow).hasClass('arrow-up')) {
+            scrolled -= 200;
+          }
+          if ($(arrow).hasClass('arrow-down')) {
+            scrolled += 200;
+          }
+          $(target).animate({
+            scrollTop: scrolled
+          });
+        }
+      });
+    }
+    /*product-take*/
   }
 };
