@@ -104,6 +104,7 @@
   }
 }
 // Health tips
+
 #health-tips {
   .detail-wrapper {
     .detail-left-wrapper {
@@ -239,8 +240,8 @@
 
     .function-left-wrapper {
       .function-btn {
-         > p,
-        > img {
+         > img,
+        > p {
           margin-left: 20%;
         }
       }
@@ -248,8 +249,8 @@
 
     .function-right-wrapper {
       .function-btn {
-         > p,
-        > img {
+         > img,
+        > p {
           margin-left: 20%;
         }
       }
@@ -342,8 +343,8 @@
   &.children {
     .function-wrapper {
       .function-btn {
-         > p,
-        > img {
+         > img,
+        > p {
           width: 70%;
         }
 
@@ -368,8 +369,8 @@
         .function-btn {
           background-image: url("../images/tips/trip_3_left_btn.png");
 
-           > p,
-          > img {
+           > img,
+          > p {
             margin-left: 10%;
           }
         }
@@ -540,6 +541,7 @@
   }
 }
 // Healthcare
+
 .healthcare {
   .healthcare-wrapper {
     padding: 0;

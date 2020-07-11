@@ -130,3 +130,11 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view_list().
+ */
+function pharm_theme_preprocess_views_view_list(&$variables) {
+  $language         = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['language'] = $language;
+}
