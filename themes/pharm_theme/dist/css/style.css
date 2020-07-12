@@ -2457,7 +2457,10 @@ nav#block-mainnavigation #menu li a {
 .path-latest-offers {
   margin-bottom: 25px; }
   .path-latest-offers .img-wrapper {
-    padding-right: 3px; }
+    padding-right: 3px;
+    padding-left: 0; }
+    .path-latest-offers .img-wrapper img {
+      height: auto; }
   .path-latest-offers .content-wrapper {
     padding-left: 3px; }
     .path-latest-offers .content-wrapper > div {

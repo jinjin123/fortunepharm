@@ -106,6 +106,10 @@ nav#block-mainnavigation #menu li a {
   margin-bottom: 25px;
   .img-wrapper {
     padding-right: 3px;
+    padding-left: 0;
+    img {
+      height: auto;
+    }
   }
   .content-wrapper {
     padding-left: 3px;
