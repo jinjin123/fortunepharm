@@ -570,83 +570,29 @@ Drupal.behaviors.yourmodulename = {
     /*contact-us-offers*/
 
     /*lastest-offers*/
-    if ($('#main #block-latestoffers ').length > 0) {
+    if ($('.path-latest-offers').length > 0) {
       $.data(this, 'lastest-offers', setTimeout(function() {
-        $('#main #block-latestoffers  .img-wrapper').each(function() {
+        $('.path-latest-offers .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
-        $('#main #block-latestoffers  .content-wrapper').show();
+        $('.path-latest-offers .content-wrapper').show();
       }, 200));
       $(window).resize(function() {
         clearTimeout($.data(this, 'lastest-offers2'));
         $.data(this, 'lastest-offers2', setTimeout(function() {
-          $('#main #block-latestoffers .img-wrapper').each(function() {
+          $('.path-latest-offers .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
-          $('#main #block-latestoffers  .content-wrapper').show();
+          $('.path-latest-offers .content-wrapper').show();
         }, 800));
       });
     }
-    $('#main #block-latestoffers  .more-btn').click(function() {
-      $('#main #block-latestoffers  > div.hide').each(function(key) {
+    $('.path-latest-offers .more-btn').click(function() {
+      $('.path-latest-offers > div.hide').each(function(key) {
         if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-latestoffers  > div.hide').length == 0) $('#main #block-latestoffers  .more-btn').remove();
+        if ($('.path-latest-offers > div.hide').length == 0) $('.path-latest-offers .more-btn').remove();
       });
-      $('#main #block-latestoffers  .img-wrapper').each(function() {
-        $(this).siblings('.content-wrapper').height($(this).height());
-      });
-    });
-    //chs
-    if ($('#main #block-latestofferschs ').length > 0) {
-      $.data(this, 'lastest-offers', setTimeout(function() {
-        $('#main #block-latestofferschs  .img-wrapper').each(function() {
-          $(this).siblings('.content-wrapper').height($(this).height());
-        });
-        $('#main #block-latestofferschs  .content-wrapper').show();
-      }, 200));
-      $(window).resize(function() {
-        clearTimeout($.data(this, 'lastest-offers2'));
-        $.data(this, 'lastest-offers2', setTimeout(function() {
-          $('#main #block-latestofferschs .img-wrapper').each(function() {
-            $(this).siblings('.content-wrapper').height($(this).height());
-          });
-          $('#main #block-latestofferschs  .content-wrapper').show();
-        }, 800));
-      });
-    }
-    $('#main #block-latestofferschs  .more-btn').click(function() {
-      $('#main #block-latestofferschs  > div.hide').each(function(key) {
-        if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-latestofferschs  > div.hide').length == 0) $('#main #block-latestofferschs  .more-btn').remove();
-      });
-      $('#main #block-latestofferschs  .img-wrapper').each(function() {
-        $(this).siblings('.content-wrapper').height($(this).height());
-      });
-    });
-    //cht
-    if ($('#main #block-zuixinyouhuifanti ').length > 0) {
-      $.data(this, 'lastest-offers', setTimeout(function() {
-        $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function() {
-          $(this).siblings('.content-wrapper').height($(this).height());
-        });
-        $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
-      }, 200));
-      $(window).resize(function() {
-        clearTimeout($.data(this, 'lastest-offers2'));
-        $.data(this, 'lastest-offers2', setTimeout(function() {
-          $('#main #block-zuixinyouhuifanti .img-wrapper').each(function() {
-            $(this).siblings('.content-wrapper').height($(this).height());
-          });
-          $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
-        }, 800));
-      });
-    }
-    $('#main #block-zuixinyouhuifanti  .more-btn').click(function() {
-      $('#main #block-zuixinyouhuifanti  > div.hide').each(function(key) {
-        if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-zuixinyouhuifanti  > div.hide').length == 0) $('#main #block-zuixinyouhuifanti  .more-btn').remove();
-      });
-      $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function() {
+      $('.path-latest-offers .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
