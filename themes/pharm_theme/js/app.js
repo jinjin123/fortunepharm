@@ -813,7 +813,9 @@ Drupal.behaviors.yourmodulename = {
       });
     }
     /***** code end ******/
-    /*product-take*/
+    function unique(arr){
+      return Array.from(new Set(arr))
+    }
     //global  product_finder index
     var SymptomsDataSymptoms = {
       "field_symptom_running_nose":1,
@@ -887,7 +889,7 @@ Drupal.behaviors.yourmodulename = {
             var target = $(this);
             $(target).addClass('active');
           } else {
-            var target = $(this);
+            // var target = $(this);
             $(this).removeClass('active');
           }
           var symptoms = [];
@@ -896,16 +898,33 @@ Drupal.behaviors.yourmodulename = {
           $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function () {
             symptoms.unshift($(this).attr('rel'));
           });
+          var oldtmp = []
           if (symptoms.length > 0) {
             $.get( langname + '/product-finder-json?_format=json', function (data) {
               for (var p_index in data) {
                 for (var s_index in symptoms) {
-                  //get the product of choose symptoms field
+                  //get the product of choose symptoms field True first
                   if(data[p_index][symptomsData[symptoms[s_index]]] == "True"){
                     symptomsDataarr.push(data[p_index])
                   }
                 }
                 product = symptomsDataarr;
+              }
+              var count =0;
+              if(symptoms.length>1){
+                for(var t1=0; t1< product.length;t1++ ){
+                  for(var t2=0;t2<symptoms.length;t2++){ //loop symptoms for every product
+                    if(product[t1][symptomsData[symptoms[t2]]] == "True"  ){
+                      count++
+                    }
+                  }
+                  //untill count match all symptoms
+                  if(count>=symptoms.length){
+                    oldtmp.push(product[t1])
+                  }
+                  count = 0
+                }
+                product = unique(oldtmp)
               }
               //render product box content
               var temp = [];
@@ -968,7 +987,13 @@ Drupal.behaviors.yourmodulename = {
               }
             });
           } else {
+            // go back origin state
             product = [];
+            $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function(){
+              $(this).removeClass('inactive');
+              $(this).removeClass('active');
+            });
+            $('.matched-product-wrapper').html('');
           }
         }else {
           // reset color status
