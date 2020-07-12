@@ -1,5 +1,5 @@
 Drupal.behaviors.yourmodulename = {
-  attach: function (context, settings) {
+  attach: function(context, settings) {
     var $ = jQuery.noConflict();
     if ($('#company-timeline').length > 0) {
       var lang = settings.path.pathPrefix;
@@ -102,12 +102,12 @@ Drupal.behaviors.yourmodulename = {
     // scroll bar for health tips or other has scroll bar page
     if ($('.scroll-wrapper').length > 0) {
       clearTimeout($.data(this, 'scroll-wrapper'));
-      $.data(this, 'scroll-wrapper', setTimeout(function () {
-        $('.scroll-wrapper').each(function () {
+      $.data(this, 'scroll-wrapper', setTimeout(function() {
+        $('.scroll-wrapper').each(function() {
           if ($(this).children().width() - $(this).width() > 10) {
             nice = $(this).niceScroll();
             var _super = nice.getContentSize;
-            nice.getContentSize = function () {
+            nice.getContentSize = function() {
               var page = _super.call(nice);
               page.h = nice.win.height();
               return page;
@@ -115,15 +115,15 @@ Drupal.behaviors.yourmodulename = {
           }
         });
       }, 800));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'scroll-wrapper2'));
-        $.data(this, 'scroll-wrapper2', setTimeout(function () {
-          $('.scroll-wrapper').each(function () {
+        $.data(this, 'scroll-wrapper2', setTimeout(function() {
+          $('.scroll-wrapper').each(function() {
             $(this).getNiceScroll().remove();
             if ($(this).children().width() - $(this).width() > 10) {
               nice = $(this).niceScroll();
               var _super = nice.getContentSize;
-              nice.getContentSize = function () {
+              nice.getContentSize = function() {
                 var page = _super.call(nice);
                 page.h = nice.win.height();
                 return page;
@@ -137,7 +137,7 @@ Drupal.behaviors.yourmodulename = {
     /*sub-tab-session*/
     if ($('.sub-tab-session').length > 0) {
       clearTimeout($.data(this, 'sub-tab-session'));
-      $.data(this, 'sub-tab-session', setTimeout(function () {
+      $.data(this, 'sub-tab-session', setTimeout(function() {
         if ($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
         } else {
@@ -146,7 +146,7 @@ Drupal.behaviors.yourmodulename = {
       }, 500));
 
 
-      $('.sub-tab-outer-wrapper').scroll(function () {
+      $('.sub-tab-outer-wrapper').scroll(function() {
         if ($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
         } else {
@@ -160,7 +160,7 @@ Drupal.behaviors.yourmodulename = {
         }
       });
 
-      $(".sub-tab-session .arrow").on("click", function () {
+      $(".sub-tab-session .arrow").on("click", function() {
         var target = $('.sub-tab-session .sub-tab-outer-wrapper');
         var arrow = $(this);
         if (!$(target).is(':animated')) {
@@ -182,9 +182,9 @@ Drupal.behaviors.yourmodulename = {
     /*index*/
     if ($('.homepage .body .main-wrapper').length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'resizeTimer'));
-        $.data(this, 'resizeTimer', setTimeout(function () {
+        $.data(this, 'resizeTimer', setTimeout(function() {
           index_row_wrapper('desktop-main', 'mobile-main', 9);
         }, 800));
       });
@@ -194,7 +194,6 @@ Drupal.behaviors.yourmodulename = {
         interval: false
       });
     }
-
     /*all*/
     function change_size(id_name, width, height) {
       if ($('#' + id_name).length > 0) {
@@ -205,18 +204,17 @@ Drupal.behaviors.yourmodulename = {
 
     function change_height(class_name, height) {
       if ($('.' + class_name).length > 0) {
-        $('.' + class_name).each(function () {
+        $('.' + class_name).each(function() {
           $(this).height(height);
         });
       }
     }
-
     /*window resize*/
     change_size('wrapper', $(window).width(), $(window).height());
     $('body').show();
-    $(window).resize(function () {
+    $(window).resize(function() {
       clearTimeout($.data(this, 'resizeTimer2'));
-      $.data(this, 'resizeTimer2', setTimeout(function () {
+      $.data(this, 'resizeTimer2', setTimeout(function() {
         change_size('wrapper', $(window).width(), $(window).height());
       }, 200));
       if ($(window).width() >= 768) {
@@ -229,7 +227,6 @@ Drupal.behaviors.yourmodulename = {
         }
       }
     });
-
     /*window resize*/
     function index_row_wrapper(desktop_class, mobile_class, unit) {
       if ($(window).width() >= 768) var main_width = $('.' + desktop_class).width();
@@ -271,37 +268,36 @@ Drupal.behaviors.yourmodulename = {
         change_height('row-lg-' + unit + '-1', Math.round(main_width / unit));
       }
     }
-
     /*index*/
 
     /*** News page ****/
     $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
     if ($('.path-news .content-row').length > 0) {
       $('.path-news .content-row')[0].className = "content-row active";
-      $.data(this, 'news', setTimeout(function () {
-        $('.path-news .content-row .colume2').each(function () {
+      $.data(this, 'news', setTimeout(function() {
+        $('.path-news .content-row .colume2').each(function() {
           $(this).siblings('.colume1').height($(this).height());
         });
         $('.path-news .content-row').show();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'news2'));
-        $.data(this, 'news2', setTimeout(function () {
-          $('.path-news .content-row .colume2').each(function () {
+        $.data(this, 'news2', setTimeout(function() {
+          $('.path-news .content-row .colume2').each(function() {
             $(this).siblings('.colume1').height($(this).height());
           });
           $('.path-news  .content-row').show();
         }, 800));
       });
     }
-    $('.path-news .content-row .colume2 .title-wrapper a').click(function () {
+    $('.path-news .content-row .colume2 .title-wrapper a').click(function() {
       if ($(this).parent().parent().parent().hasClass('active')) {
-        $(this).parent().siblings('.content-wrapper').slideUp(400, function () {
+        $(this).parent().siblings('.content-wrapper').slideUp(400, function() {
           $(this).parent().siblings('.colume1').height($(this).parent().height());
           $(this).parent().parent().removeClass('active');
         });
       } else {
-        $(this).parent().siblings('.content-wrapper').slideDown(400, function () {
+        $(this).parent().siblings('.content-wrapper').slideDown(400, function() {
           $(this).parent().siblings('.colume1').height($(this).parent().height());
           $(this).parent().parent().addClass('active');
         });
@@ -310,7 +306,7 @@ Drupal.behaviors.yourmodulename = {
     // Pager
     var pager = settings.path.currentQuery.page;
     $('.path-news .pagination-btn .pagination-change option[rel=' + pager + ']').attr('selected', 'selected');
-    $('.path-news .pagination-btn .pagination-change').change(function () {
+    $('.path-news .pagination-btn .pagination-change').change(function() {
       var path = $(this).val();
       window.location.assign(path);
     });
@@ -318,12 +314,12 @@ Drupal.behaviors.yourmodulename = {
 
     /*advertisements*/
     if ($('.path-advertisements').length > 0) {
-      $('.path-advertisements .rightmove').click(function () {
+      $('.path-advertisements .rightmove').click(function() {
         var current_page = $('#next_page').attr('rel');
         var lang = settings.path.pathPrefix;
         window.location.assign(current_page);
       });
-      $('.path-advertisements .leftmove').click(function () {
+      $('.path-advertisements .leftmove').click(function() {
         var current_page = $('#prev_page').attr('rel');
         var lang = settings.path.pathPrefix;
         window.location.assign(current_page);
@@ -337,7 +333,7 @@ Drupal.behaviors.yourmodulename = {
       $('.advertisements-top .content1 h3').html(title);
       $('.advertisements-top .content1 p').html(date);
       $('.advertisements-top .content2').html(body);
-      $('.path-advertisements .view-video').click(function () {
+      $('.path-advertisements .view-video').click(function() {
         var title = $(this).parent().find('#vid-content .vid-title').html();
         var date = $(this).parent().find('#vid-content .vid-date').html();
         var body = $(this).parent().find('#vid-content .vid-body').html();
@@ -351,13 +347,12 @@ Drupal.behaviors.yourmodulename = {
           scrollTop: $('.advertisements-top').offset().top - 5
         });
       });
-      $(".path-advertisements .pagination-change").on('focus', function () {
-      }).change(function () {
+      $(".path-advertisements .pagination-change").on('focus', function() {}).change(function() {
         var yr = $(this).val();
         var lang = settings.path.pathPrefix;
         window.location.assign("/" + lang + "advertisements/" + yr);
       });
-      $('.path-advertisements .pagination-btn.withmovebutt').click(function () {
+      $('.path-advertisements .pagination-btn.withmovebutt').click(function() {
         var lang = settings.path.pathPrefix;
         var page = $(this).attr('rel');
         window.location.assign("/" + lang + "advertisements/" + page);
@@ -369,20 +364,20 @@ Drupal.behaviors.yourmodulename = {
       var timeline_data = [];
       var firstYear = '';
       var secondYear = '';
-      $('#first-year').click(function () {
+      $('#first-year').click(function() {
         changeYear('2016')
       });
-      $('#second-year').click(function () {
+      $('#second-year').click(function() {
         changeYear('2015')
       });
-      $('#year-drop-down').change(function () {
+      $('#year-drop-down').change(function() {
         changeYear($(this).val());
       });
 
       function changeYear(passInYear) {
         var selectedYear = passInYear ? passInYear : $('#year-drop-down').val();
         var finalRes = [];
-        _.forEach(timeline_data, function (o) {
+        _.forEach(timeline_data, function(o) {
           var year = _.split(o.date, '-')[0];
           if (_.toString(year) === _.toString(selectedYear)) {
             finalRes.push(o);
@@ -411,7 +406,6 @@ Drupal.behaviors.yourmodulename = {
           $(".fancybox").fancybox();
         }
       }
-
       firstYear = 2016;
       secondYear = 2015;
       var lang = settings.path.pathPrefix;
@@ -477,9 +471,9 @@ Drupal.behaviors.yourmodulename = {
     var hash = document.URL.substr(document.URL.indexOf('#') + 1);
     change_size('wrapper', $(window).width(), $(window).height());
     $('body').show();
-    $(window).resize(function () {
+    $(window).resize(function() {
       clearTimeout($.data(this, 'resizeTimer2'));
-      $.data(this, 'resizeTimer2', setTimeout(function () {
+      $.data(this, 'resizeTimer2', setTimeout(function() {
         change_size('wrapper', $(window).width(), $(window).height());
       }, 200));
       if ($(window).width() >= 768) {
@@ -496,163 +490,109 @@ Drupal.behaviors.yourmodulename = {
 
     /*contact-us-offers*/
     if ($('#block-contactus #offers-wrapper').length > 0) {
-      $.data(this, 'blcok-contactus', setTimeout(function () {
-        $('#block-contactus #offers-wrapper .img-wrapper').each(function () {
+      $.data(this, 'blcok-contactus', setTimeout(function() {
+        $('#block-contactus #offers-wrapper .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
         $('#block-contactus #offers-wrapper .content-wrapper').show();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'blcok-contactus2'));
-        $.data(this, 'blcok-contactus2', setTimeout(function () {
-          $('#block-contactus #offers-wrapper .img-wrapper').each(function () {
+        $.data(this, 'blcok-contactus2', setTimeout(function() {
+          $('#block-contactus #offers-wrapper .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
           $('#block-contactus #offers-wrapper .content-wrapper').show();
         }, 800));
       });
     }
-    $('#block-contactus #offers-wrapper .more-btn').click(function () {
-      $('#block-contactus #offers-wrapper > div.hide').each(function (key) {
+    $('#block-contactus #offers-wrapper .more-btn').click(function() {
+      $('#block-contactus #offers-wrapper > div.hide').each(function(key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-contactus #offers-wrapper > div.hide').length == 0) $('#block-contactus #offers-wrapper .more-btn').remove();
       });
-      $('#block-contactus #offers-wrapper .img-wrapper').each(function () {
+      $('#block-contactus #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper').length > 0) {
-      $.data(this, 'blcok-contactus', setTimeout(function () {
-        $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function () {
+      $.data(this, 'blcok-contactus', setTimeout(function() {
+        $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
         $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper').show();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'blcok-contactus2'));
-        $.data(this, 'blcok-contactus2', setTimeout(function () {
-          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function () {
+        $.data(this, 'blcok-contactus2', setTimeout(function() {
+          $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
           $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper').show();
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function () {
-      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function (key) {
+    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function() {
+      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function(key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
       });
-      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function () {
+      $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper').length > 0) {
-      $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti', setTimeout(function () {
-        $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function () {
+      $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti', setTimeout(function() {
+        $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
         $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper').show();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti2'));
-        $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti2', setTimeout(function () {
-          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function () {
+        $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti2', setTimeout(function() {
+          $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
           $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper').show();
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function () {
-      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function (key) {
+    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function() {
+      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function(key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
       });
-      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function () {
+      $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
     /*contact-us-offers*/
 
     /*lastest-offers*/
-    if ($('#main #block-latestoffers ').length > 0) {
-      $.data(this, 'lastest-offers', setTimeout(function () {
-        $('#main #block-latestoffers  .img-wrapper').each(function () {
+    if ($('.path-latest-offers').length > 0) {
+      $.data(this, 'lastest-offers', setTimeout(function() {
+        $('.path-latest-offers .img-wrapper').each(function() {
           $(this).siblings('.content-wrapper').height($(this).height());
         });
-        $('#main #block-latestoffers  .content-wrapper').show();
+        $('.path-latest-offers .content-wrapper').show();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'lastest-offers2'));
-        $.data(this, 'lastest-offers2', setTimeout(function () {
-          $('#main #block-latestoffers .img-wrapper').each(function () {
+        $.data(this, 'lastest-offers2', setTimeout(function() {
+          $('.path-latest-offers .img-wrapper').each(function() {
             $(this).siblings('.content-wrapper').height($(this).height());
           });
-          $('#main #block-latestoffers  .content-wrapper').show();
+          $('.path-latest-offers .content-wrapper').show();
         }, 800));
       });
     }
-    $('#main #block-latestoffers  .more-btn').click(function () {
-      $('#main #block-latestoffers  > div.hide').each(function (key) {
+    $('.path-latest-offers .more-btn').click(function() {
+      $('.path-latest-offers > div.hide').each(function(key) {
         if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-latestoffers  > div.hide').length == 0) $('#main #block-latestoffers  .more-btn').remove();
+        if ($('.path-latest-offers > div.hide').length == 0) $('.path-latest-offers .more-btn').remove();
       });
-      $('#main #block-latestoffers  .img-wrapper').each(function () {
-        $(this).siblings('.content-wrapper').height($(this).height());
-      });
-    });
-    //chs
-    if ($('#main #block-latestofferschs ').length > 0) {
-      $.data(this, 'lastest-offers', setTimeout(function () {
-        $('#main #block-latestofferschs  .img-wrapper').each(function () {
-          $(this).siblings('.content-wrapper').height($(this).height());
-        });
-        $('#main #block-latestofferschs  .content-wrapper').show();
-      }, 200));
-      $(window).resize(function () {
-        clearTimeout($.data(this, 'lastest-offers2'));
-        $.data(this, 'lastest-offers2', setTimeout(function () {
-          $('#main #block-latestofferschs .img-wrapper').each(function () {
-            $(this).siblings('.content-wrapper').height($(this).height());
-          });
-          $('#main #block-latestofferschs  .content-wrapper').show();
-        }, 800));
-      });
-    }
-    $('#main #block-latestofferschs  .more-btn').click(function () {
-      $('#main #block-latestofferschs  > div.hide').each(function (key) {
-        if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-latestofferschs  > div.hide').length == 0) $('#main #block-latestofferschs  .more-btn').remove();
-      });
-      $('#main #block-latestofferschs  .img-wrapper').each(function () {
-        $(this).siblings('.content-wrapper').height($(this).height());
-      });
-    });
-    //cht
-    if ($('#main #block-zuixinyouhuifanti ').length > 0) {
-      $.data(this, 'lastest-offers', setTimeout(function () {
-        $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function () {
-          $(this).siblings('.content-wrapper').height($(this).height());
-        });
-        $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
-      }, 200));
-      $(window).resize(function () {
-        clearTimeout($.data(this, 'lastest-offers2'));
-        $.data(this, 'lastest-offers2', setTimeout(function () {
-          $('#main #block-zuixinyouhuifanti .img-wrapper').each(function () {
-            $(this).siblings('.content-wrapper').height($(this).height());
-          });
-          $('#main #block-zuixinyouhuifanti  .content-wrapper').show();
-        }, 800));
-      });
-    }
-    $('#main #block-zuixinyouhuifanti  .more-btn').click(function () {
-      $('#main #block-zuixinyouhuifanti  > div.hide').each(function (key) {
-        if (key < 3) $(this).removeClass('hide');
-        if ($('#main #block-zuixinyouhuifanti  > div.hide').length == 0) $('#main #block-zuixinyouhuifanti  .more-btn').remove();
-      });
-      $('#main #block-zuixinyouhuifanti  .img-wrapper').each(function () {
+      $('.path-latest-offers .img-wrapper').each(function() {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
@@ -663,8 +603,8 @@ Drupal.behaviors.yourmodulename = {
       change_size('wrapper', $(window).width(), $(window).height());
       var tab_width = 0;
       clearTimeout($.data(this, 'health-tips-tab'));
-      $.data(this, 'health-tips-tab', setTimeout(function () {
-        $('.page-node-type-healthtips .sub-tab-wrapper li').each(function () {
+      $.data(this, 'health-tips-tab', setTimeout(function() {
+        $('.page-node-type-healthtips .sub-tab-wrapper li').each(function() {
           tab_width += $(this).width();
         });
         $('.page-node-type-healthtips .sub-tab-wrapper').width(tab_width);
@@ -674,59 +614,58 @@ Drupal.behaviors.yourmodulename = {
     function health_tips() {
       change_size('wrapper', $(window).width(), $(window).height());
       if ($(window).width() >= 768) {
-        $('#health-tips .function-wrapper .function-btn').each(function () {
+        $('#health-tips .function-wrapper .function-btn').each(function() {
           if ($('#health-tips').hasClass('cold_and_flu')) $(this).height($(this).width() / 280 * 195);
           else if ($('#health-tips').hasClass('children')) $(this).height($(this).width() / 100 * 50);
           else if ($('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height($(this).width() / 280 * 196);
         });
         $('.function-middle-wrapper').height($('.function-left-wrapper:visible').height());
       } else {
-        $('#health-tips .function-wrapper .function-btn').each(function () {
+        $('#health-tips .function-wrapper .function-btn').each(function() {
           if ($('#health-tips').hasClass('cold_and_flu') || $('#health-tips').hasClass('pain') || $('#health-tips').hasClass('allergy') || $('#health-tips').hasClass('gerd')) $(this).height(Math.floor($(this).width() / 385 * 293));
           if ($('#health-tips').hasClass('children')) $(this).height(Math.floor($(this).width() / 516 * 293));
         });
       }
     }
-
     if ($('#health-tips .function-wrapper .function-btn').length > 0) {
-      $.data(this, 'function', setTimeout(function () {
+      $.data(this, 'function', setTimeout(function() {
         health_tips();
       }, 200));
-      $(window).resize(function () {
+      $(window).resize(function() {
         clearTimeout($.data(this, 'health-btn'));
-        $.data(this, 'health-btn', setTimeout(function () {
+        $.data(this, 'health-btn', setTimeout(function() {
           health_tips();
         }, 800));
       });
-      $('#health-tips .function-wrapper .function-btn').click(function () {
-        if (typeof ($(this).attr('rel')) !== 'undefined') {
+      $('#health-tips .function-wrapper .function-btn').click(function() {
+        if (typeof($(this).attr('rel')) !== 'undefined') {
           var rel = $(this).attr('rel');
-          $('#health-tips .function-wrapper .function-btn').each(function () {
+          $('#health-tips .function-wrapper .function-btn').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-wrapper .function-btn[rel="' + rel + '"]').addClass('active');
-          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function () {
+          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel + '"]').addClass('active');
           if ($('#health-tips .function-wrapper .function-middle-wrapper p').length > 0) {
-            $('#health-tips .function-wrapper .function-middle-wrapper p').each(function () {
+            $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
               $(this).removeClass('active');
             });
             $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel + '"]').addClass('active');
           }
           if ($('#health-tips .function-detail-wrapper .detail-right-wrapper').length > 0) {
-            $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function () {
+            $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
               $(this).removeClass('active');
             });
             $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel + '"]').addClass('active');
           }
         }
       });
-      $('#health-tips .function-tab-wrapper .function-tab-btn').click(function () {
-        if (typeof ($(this).attr('rel')) !== 'undefined') {
+      $('#health-tips .function-tab-wrapper .function-tab-btn').click(function() {
+        if (typeof($(this).attr('rel')) !== 'undefined') {
           var rel = $(this).attr('rel');
-          $('#health-tips .function-tab-wrapper .function-tab-btn').each(function () {
+          $('#health-tips .function-tab-wrapper .function-tab-btn').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-tab-wrapper .function-tab-btn[rel="' + rel + '"]').addClass('active');
@@ -735,25 +674,25 @@ Drupal.behaviors.yourmodulename = {
           } else {
             var temp = 'right';
           }
-          $('#health-tips .function-' + temp + '-wrapper').each(function () {
+          $('#health-tips .function-' + temp + '-wrapper').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-' + temp + '-wrapper[rel="' + rel + '"]').addClass('active');
           health_tips();
-          $('.function-' + temp + '-wrapper:visible .function-btn').each(function () {
+          $('.function-' + temp + '-wrapper:visible .function-btn').each(function() {
             $(this).removeClass('active');
           });
           $('.function-' + temp + '-wrapper:visible .function-btn:first-child').addClass('active');
           var rel2 = $('.function-' + temp + '-wrapper:visible .function-btn:first-child').attr('rel');
-          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function () {
+          $('#health-tips .function-wrapper .function-middle-wrapper img').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-wrapper .function-middle-wrapper img[rel="' + rel2 + '"]').addClass('active');
-          $('#health-tips .function-wrapper .function-middle-wrapper p').each(function () {
+          $('#health-tips .function-wrapper .function-middle-wrapper p').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-wrapper .function-middle-wrapper p[rel="' + rel2 + '"]').addClass('active');
-          $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function () {
+          $('#health-tips .function-detail-wrapper .detail-right-wrapper').each(function() {
             $(this).removeClass('active');
           });
           $('#health-tips .function-detail-wrapper .detail-right-wrapper[rel="' + rel2 + '"]').addClass('active');
@@ -768,7 +707,7 @@ Drupal.behaviors.yourmodulename = {
     var trigger = $('.hamburger'),
       overlay = $('.overlay'),
       isClosed = false;
-    trigger.click(function () {
+    trigger.click(function() {
       hamburger_cross();
     });
 
@@ -785,19 +724,18 @@ Drupal.behaviors.yourmodulename = {
         isClosed = true;
       }
     }
-
-    $('[data-toggle="offcanvas"]').click(function () {
+    $('[data-toggle="offcanvas"]').click(function() {
       $('#wrapper').toggleClass('toggled');
     });
-    $('.sidebar-nav > li').click(function () {
+    $('.sidebar-nav > li').click(function() {
       if (!$(this).hasClass('parent')) {
-        $('.sidebar-nav > li').each(function () {
+        $('.sidebar-nav > li').each(function() {
           $(this).removeClass('active');
         });
         $(this).addClass('active');
       }
     });
-    $('.sidebar-nav > li.parent').click(function () {
+    $('.sidebar-nav > li.parent').click(function() {
       if ($(this).hasClass('show-sub')) {
         $(this).removeClass('show-sub');
       } else {
@@ -806,11 +744,10 @@ Drupal.behaviors.yourmodulename = {
       $(this).find('.sub-sidebar-nav').slideToggle();
     });
     // Remove first existant
-    $('.sidebar-nav > li.parent').each(function () {
+    $('.sidebar-nav > li.parent').each(function() {
       $(this).find('li').first().remove();
     });
     /*sidebar*/
-
     /**** Mobile menu ****/
     /******* Faq ******/
     function faq_detail2(element) {
@@ -852,28 +789,31 @@ Drupal.behaviors.yourmodulename = {
         scrollTop: $('.path-faq .detail-wrapper').offset().top - 5
       }, 500);
     }
-
-    $('.path-faq .content-wrapper .detail').click(function () {
+    $('.path-faq .content-wrapper .detail').click(function() {
       faq_detail2($(this));
     });
-    $('.path-faq .detail-wrapper .detail').click(function () {
+    $('.path-faq .detail-wrapper .detail').click(function() {
       $(this).parent().parent().hide();
       $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
     });
     if ($('.path-faq .sub-tab-wrapper li').length > 0) {
       var tab_width = 0;
       clearTimeout($.data(this, 'faq-tab'));
-      $.data(this, 'faq-tab', setTimeout(function () {
-        $('.path-faq .sub-tab-wrapper li').each(function () {
+      $.data(this, 'faq-tab', setTimeout(function() {
+        $('.path-faq .sub-tab-wrapper li').each(function() {
           tab_width += $(this).width();
         });
         $('.path-faq .sub-tab-wrapper').width(tab_width);
       }, 500));
+
+      $('.path-faq .sub-tab-wrapper li a').each(function(){
+        if( $(this).attr('href') == window.location.pathname){
+          $(this).parent().addClass('active');
+        }
+      });
     }
     /***** code end ******/
-    function unique(arr){
-      return Array.from(new Set(arr))
-    }
+    /*product-take*/
     //global  product_finder index
     var SymptomsDataSymptoms = {
       "field_symptom_running_nose":1,
@@ -947,7 +887,7 @@ Drupal.behaviors.yourmodulename = {
             var target = $(this);
             $(target).addClass('active');
           } else {
-            // var target = $(this);
+            var target = $(this);
             $(this).removeClass('active');
           }
           var symptoms = [];
@@ -956,33 +896,16 @@ Drupal.behaviors.yourmodulename = {
           $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function () {
             symptoms.unshift($(this).attr('rel'));
           });
-          var oldtmp = []
           if (symptoms.length > 0) {
             $.get( langname + '/product-finder-json?_format=json', function (data) {
               for (var p_index in data) {
                 for (var s_index in symptoms) {
-                  //get the product of choose symptoms field True first
+                  //get the product of choose symptoms field
                   if(data[p_index][symptomsData[symptoms[s_index]]] == "True"){
                     symptomsDataarr.push(data[p_index])
                   }
                 }
                 product = symptomsDataarr;
-              }
-              var count =0;
-              if(symptoms.length>1){
-                for(var t1=0; t1< product.length;t1++ ){
-                  for(var t2=0;t2<symptoms.length;t2++){ //loop symptoms for every product
-                    if(product[t1][symptomsData[symptoms[t2]]] == "True"  ){
-                      count++
-                    }
-                  }
-                  //untill count match all symptoms
-                  if(count>=symptoms.length){
-                    oldtmp.push(product[t1])
-                  }
-                  count = 0
-                }
-                product = unique(oldtmp)
               }
               //render product box content
               var temp = [];
@@ -1045,13 +968,7 @@ Drupal.behaviors.yourmodulename = {
               }
             });
           } else {
-            // go back origin state
             product = [];
-            $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function(){
-              $(this).removeClass('inactive');
-              $(this).removeClass('active');
-            });
-            $('.matched-product-wrapper').html('');
           }
         }else {
           // reset color status
