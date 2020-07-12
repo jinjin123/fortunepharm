@@ -634,3 +634,43 @@
     }
   }
 }
+@media only screen and (max-width: 767px){
+  /*product-take*/
+  .path-product-finder {
+    #product-take-wrapper {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .path-product-finder {
+    #product-take-wrapper {
+      .content-left,
+      .content-right {
+        width: 100%;
+      }
+    }
+  }
+  .path-product-finder {
+    #product-take-wrapper {
+      .content-right {
+        margin-top: 60px;
+      }
+    }
+  }
+  .path-product-finder {
+    #product-take-wrapper {
+      .content-right {
+        .matched-product-wrapper {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .path-product-finder {
+    #product-take-wrapper {
+      .content-right {
+        display: none;
+      }
+    }
+  }
+}
