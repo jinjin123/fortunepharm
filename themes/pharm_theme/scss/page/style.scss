@@ -1,39 +1,31 @@
 @import '../variable';
 @import '../mixins';
-
 body {
   color: #656565;
 }
-
 h5 {
   @include bullet-title;
 }
-
 table {
   border-bottom: 0;
 }
-
 i {
   color: #777777;
 }
-
 #block-defaultbanner {
   img {
     height: auto;
     width: 100%;
   }
 }
-
 #main {
   max-width: 1680px;
   margin: 0 auto;
 }
-
 nav#block-mainnavigation #menu li a {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 #banner-wrapper {
   position: relative;
   width: 100%;
@@ -41,11 +33,9 @@ nav#block-mainnavigation #menu li a {
   margin-bottom: 30px;
   clear: both;
   overflow: auto;
-
   img {
     height: auto;
   }
-
   .page_title {
     position: absolute;
     width: 25%;
@@ -54,63 +44,51 @@ nav#block-mainnavigation #menu li a {
     align-items: center;
     display: flex;
     background-color: #c7edf6;
-
     div {
       width: 100%;
     }
-
     h1 {
       font-weight: 600;
       color: #57068C;
-
       span {
         font-weight: 600;
         color: #57068C;
       }
     }
   }
-
   #banner-wrapper {
     margin-bottom: 0;
   }
 }
-
 .page-node-type-page {
   #block-pharm-theme-content {
     max-width: 900px;
     margin: 0 auto;
     padding-bottom: 30px;
-
     p {
       color: #878787;
     }
-
     .field-label-hidden {
       margin: 10px 0;
     }
   }
 }
-
 #block-historybottomcontent-2 {
   .center-intro-video {
     text-align: center;
-
     iframe {
       width: 100%;
       max-width: 500px;
     }
   }
-
   .intro-img {
     max-width: 100%;
     border: 3px solid #F8F8F8;
   }
-
   .intro-text-area {
     word-wrap: break-word;
     margin: 10px 10px 10px 0;
   }
-
   .tvc-img-btn {
     display: block;
     width: 162px;
@@ -119,34 +97,24 @@ nav#block-mainnavigation #menu li a {
     margin-top: 15px;
   }
 }
-
-.page-node-5,
-.page-node-6 {
+.page-node-5, .page-node-6 {
   #os-wrapper {
     display: none;
   }
 }
-
-#block-latestoffers,
-#block-latestofferschs,
-#block-zuixinyouhuifanti {
+.path-latest-offers {
   margin-bottom: 25px;
-
   .img-wrapper {
     padding-right: 3px;
   }
-
   .content-wrapper {
     padding-left: 3px;
-
-    > div {
+    >div {
       height: 100%;
     }
-
     .content-left {
       background-color: #C4EDF6;
       display: table;
-
       h3 {
         font-size: 1.5em;
         margin: 0;
@@ -158,19 +126,16 @@ nav#block-mainnavigation #menu li a {
         line-height: 1.1;
       }
     }
-
     .content-right {
       overflow-y: auto;
       background-color: #EAF6F8;
       padding: 15px;
     }
   }
-
   .latest-off-block {
     display: flex;
   }
 }
-
 #company-timeline {
   width: 90%;
   max-width: 1000px;
@@ -178,18 +143,14 @@ nav#block-mainnavigation #menu li a {
   padding-top: 50px;
   background-image: url("../images/charity_arrow.png");
   background-position: center top;
-
   #timeline_date_separator_1954 {
     padding-top: 0;
   }
-
   div.timeline_title {
     margin: 0;
-
     span.timeline_title_date {
       display: none;
     }
-
     span.timeline_title_label {
       position: relative;
       font-size: 2em;
@@ -200,7 +161,6 @@ nav#block-mainnavigation #menu li a {
       background-position: left;
     }
   }
-
   .timeline_element_left {
     div.timeline_title {
       span.timeline_title_label {
@@ -208,7 +168,6 @@ nav#block-mainnavigation #menu li a {
       }
     }
   }
-
   .timeline_element_right {
     div.timeline_title {
       span.timeline_title_label {
@@ -216,7 +175,6 @@ nav#block-mainnavigation #menu li a {
       }
     }
   }
-
   div.timeline {
     div.date_separator {
       span {
@@ -230,15 +188,12 @@ nav#block-mainnavigation #menu li a {
       }
     }
   }
-
   div.timeline_element_box {
     border: 0;
   }
-
   div.timeline_title {
     background-color: #F8F8F8;
   }
-
   div.timeline_element.blog_post {
     div.content {
       background-color: #F8F8F8;
@@ -246,7 +201,6 @@ nav#block-mainnavigation #menu li a {
       padding: 10px 20px 20px;
     }
   }
-
   .youtube-btn {
     display: block;
     width: 162px;
@@ -256,22 +210,18 @@ nav#block-mainnavigation #menu li a {
     font-size: 0;
   }
 }
-
 .main-wrapper {
-  #block-views-block-homepage-slider-block-1,
-  .index-wrapper {
+  #block-views-block-homepage-slider-block-1, .index-wrapper {
     position: relative;
     height: 100%;
     padding-right: 5px;
     padding-bottom: 5px;
   }
-
   .index-wrapper {
     img {
       width: 100%;
       height: 100%;
     }
-
     h3 {
       position: absolute;
       top: 40%;
@@ -285,7 +235,6 @@ nav#block-mainnavigation #menu li a {
       -o-transition: 200ms linear;
       transition: 200ms linear;
     }
-
     p {
       position: absolute;
       top: 40%;
@@ -295,7 +244,6 @@ nav#block-mainnavigation #menu li a {
       color: #fff;
       display: none;
     }
-
     .link-wrapper {
       position: relative;
       width: 100%;
@@ -303,7 +251,6 @@ nav#block-mainnavigation #menu li a {
       display: inline-block;
       background-image: url("../images/arrow_icon.png");
       background-position: center 75%;
-
       span {
         position: absolute;
         top: 40%;
@@ -319,21 +266,17 @@ nav#block-mainnavigation #menu li a {
         color: #FFF;
         font-weight: 500;
       }
-
       h3 {
         color: #FFF;
         z-index: 2;
       }
-
       h3.blue {
         color: #7CCAFA;
       }
-
       h3.red {
         color: #FF6360;
       }
     }
-
     .video-wrapper {
       position: relative;
       width: 100%;
@@ -343,33 +286,27 @@ nav#block-mainnavigation #menu li a {
       background-image: url("../images/index_img_video.png");
       background-size: 20%;
       background-position: 30% 40%;
-
       p {
         display: block;
         color: #FFF;
         width: 50%;
         left: 45%;
       }
-
       p.video-text1 {
         font-size: 1.2em;
         top: 30%;
       }
-
       p.video-text2 {
         font-size: 0.7em;
         top: 50%;
       }
     }
-
     .link-wrapper.style1 {
       background-color: #6ECCF4;
     }
-
     .link-wrapper.style2 {
       background-color: #C4EDF6;
     }
-
     .banner-title {
       position: absolute;
       width: auto;
@@ -377,23 +314,19 @@ nav#block-mainnavigation #menu li a {
       left: 0;
       top: 5px;
     }
-
     .info-label {
       background-color: #6ECCF4 !important;
     }
-
     &:hover {
       span {
         top: 25%;
       }
-
       p {
         display: block;
         top: 45%;
       }
     }
   }
-
   .index-wrapper.video:after {
     content: '';
     width: 44px;
@@ -407,13 +340,13 @@ nav#block-mainnavigation #menu li a {
     background-image: url("../images/youtube_btn.png");
     background-position: 0 -30px;
     cursor: pointer;
-
     &:hover:after {
       background-position: 0 0;
     }
   }
 }
 /** News page ***/
+
 .path-news {
   .year-wrapper {
     width: 100%;
@@ -421,13 +354,11 @@ nav#block-mainnavigation #menu li a {
     padding: 10px 20px;
     margin-bottom: 10px;
     margin-top: 0;
-
     h3 {
       margin: 0;
       font-size: 1.8em;
     }
   }
-
   .year-wrapper-div {
     margin: 0;
     font-size: 0.9em;
@@ -435,41 +366,33 @@ nav#block-mainnavigation #menu li a {
     padding-left: 10px;
     font-weight: 500;
   }
-
   .views-row {
     &:nth-child(odd) .colume1 {
       background-color: #C7E3E2;
     }
-
     &:nth-child(odd) .colume2 {
       background-color: #FAFAFA;
     }
-
     .content-row {
       overflow: hidden;
       border-top: 2px solid #F5F5F5;
-
       &::last-child {
         margin-bottom: 20px;
         border-bottom: 2px solid #F5F5F5;
       }
-
-      > div {
+      >div {
         padding: 20px;
         min-height: 38px;
       }
-
       .colume2 {
         position: relative;
         border-left: 2px solid #F5F5F5;
       }
-
       .colume2 {
         .content-wrapper {
           display: none;
           margin-top: 20px;
         }
-
         .title-wrapper {
           h4 {
             font-size: 1.2em;
@@ -477,7 +400,6 @@ nav#block-mainnavigation #menu li a {
             text-decoration: underline;
             margin: 0 30px 0 0;
           }
-
           a {
             position: absolute;
             display: inline-block;
@@ -488,29 +410,24 @@ nav#block-mainnavigation #menu li a {
             top: 20px;
           }
         }
-
         .img img {
           float: right;
           max-width: 100%;
         }
-
         .text p {
           color: #848788;
         }
       }
     }
   }
-
   .content-row.active {
     .colume1 {
       background-color: #EAF6F8;
     }
-
     .colume2 {
       .content-wrapper {
         display: block;
       }
-
       .title-wrapper a {
         background-position: 0 -22px;
       }
@@ -518,34 +435,28 @@ nav#block-mainnavigation #menu li a {
   }
 }
 /** Advertisements page ***/
+
 #contact-nav {
   .page_title {
     display: none;
   }
 }
-
 .path-advertisements {
   .advertisements-top {
     overflow: hidden;
     margin-bottom: 30px;
-
     div {
       padding: 0;
       height: 300px;
-
       iframe {
         width: 100%;
         height: 100%;
       }
-
-      &.content1,
-      &.content2 {
+      &.content1, &.content2 {
         padding: 30px 20px;
       }
-
       &.content1 {
         background-color: #C4EDF6;
-
         h3 {
           color: #286D9E;
           margin: 0 0 30px;
@@ -553,25 +464,21 @@ nav#block-mainnavigation #menu li a {
           padding: 0;
         }
       }
-
       &.content2 {
         background-color: #EAF6F8;
       }
     }
   }
-
   .video-outer-wrapper {
     position: relative;
     padding: 0;
     margin-bottom: 20px;
     padding-right: 5px;
-
     .video-wrapper {
       position: relative;
       padding: 0;
       margin-bottom: 20px;
       padding-right: 5px;
-
       .image {
         position: relative;
         display: table;
@@ -579,21 +486,18 @@ nav#block-mainnavigation #menu li a {
         width: 100%;
         height: 140px;
         background-color: #EAF6F8;
-
         img {
           max-width: 100%;
           max-height: 150px;
           height: auto;
           width: 100%;
         }
-
         .image-inner {
           display: table-cell;
           text-align: center;
           vertical-align: middle;
         }
       }
-
       a {
         &.play-btn {
           position: absolute;
@@ -602,7 +506,6 @@ nav#block-mainnavigation #menu li a {
           height: 140px;
           top: 0;
           left: 0;
-
           span {
             position: absolute;
             width: 64px;
@@ -617,13 +520,11 @@ nav#block-mainnavigation #menu li a {
           }
         }
       }
-
       .content {
         position: relative;
         background-color: #C4EDF6;
         width: 100%;
         padding: 5px 5px 40px;
-
         a {
           position: absolute;
           padding: 2px 35px;
@@ -631,7 +532,6 @@ nav#block-mainnavigation #menu li a {
           color: #FFF;
           right: 8px;
           bottom: 15px;
-
           &::before {
             content: '>';
             position: absolute;
@@ -645,24 +545,19 @@ nav#block-mainnavigation #menu li a {
   }
 }
 // OtherServices
-
-.page-node-178 #contact-nav,
-.page-node-2 #contact-nav {
+.page-node-178 #contact-nav, .page-node-2 #contact-nav {
   display: none;
 }
 // Charity Fund
-
 .page-node-20 {
   #block-pharm-theme-content {
     padding-bottom: 5px;
-
     h2 {
       text-align: center;
       margin-bottom: 25px;
       font-size: 1.6em;
     }
   }
-
   #fund-timeline {
     width: 90%;
     max-width: 1000px;
@@ -670,33 +565,28 @@ nav#block-mainnavigation #menu li a {
     padding-top: 50px;
     background-image: url("../images/charity_arrow.png");
     background-position: center top;
-
     .timeline_element_box {
       border: 0;
       box-shadow: none;
       border-radius: 0;
     }
-
     .timeline {
       padding-top: 70px;
       position: relative;
       overflow: hidden;
       margin: 0 auto;
       font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
-
       .timeline_element {
         &.animated {
           margin-bottom: 60px;
         }
       }
     }
-
     .timeline_left {
       .timeline_element_box {
         margin-right: 60px;
       }
     }
-
     .timeline_dual {
       .timeline_element_left {
         &:before {
@@ -705,30 +595,25 @@ nav#block-mainnavigation #menu li a {
           top: 15px;
           margin-right: -5px;
         }
-
         .timeline_element_box {
           margin-right: 60px;
         }
       }
-
       .timeline_element_right {
         &:before {
           width: 60px;
           left: 0;
           top: 35px;
         }
-
         .timeline_element_box {
           margin-left: 60px;
         }
       }
     }
-
     .timeline_title {
       position: relative;
       background-color: #F0FFFF;
       margin: 0;
-
       &::before {
         content: '';
         width: 60px;
@@ -740,7 +625,6 @@ nav#block-mainnavigation #menu li a {
         left: 50%;
         margin-left: -30px;
       }
-
       span {
         &.timeline_title_label {
           position: relative;
@@ -753,13 +637,11 @@ nav#block-mainnavigation #menu li a {
           margin-bottom: 8px;
           font-family: "Times New Roman";
         }
-
         &.timeline_title_date {
           display: none;
         }
       }
     }
-
     .timeline_element {
       &.blog_post {
         .content {
@@ -772,31 +654,26 @@ nav#block-mainnavigation #menu li a {
       }
     }
   }
-
   #charity-fund-title {
     color: skyblue;
     text-decoration: underline;
   }
 }
-
 .charity_popup_dialog {
   background-color: #F0FFFF;
   border: 2px #0096B0 solid;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-
   .charity_popup_date {
     font-size: 2.5em;
     color: #0096B0;
   }
-
   #charity-fund-detail {
     color: #0096B0;
   }
 }
-#fund-timeline div.timeline_left div.timeline_element_box, #fund-timeline div.timeline_dual div.timeline_element_left div.timeline_element_box// Health Page
-
+#fund-timeline div.timeline_left div.timeline_element_box, #fund-timeline div.timeline_dual div.timeline_element_left div.timeline_element_box // Health Page
 .health-tips-ful {
   .container-fluid {
     padding-left: 0;
@@ -805,29 +682,23 @@ nav#block-mainnavigation #menu li a {
 }
 //Admin user
 .path-user {
-  #banner-wrapper,
-  #contact-nav {
+  #banner-wrapper, #contact-nav {
     display: none;
   }
-
   #main {
     background-color: #f7f7f7;
-
     #os-wrapper {
       max-width: 420px;
       margin: 100px auto;
       padding: $space-15;
       background-color: #fff;
-
       #block-pharm-theme-local-tasks {
         ul {
           li {
             border: 0;
             background-color: #111520;
-
             a {
               color: #fff;
-
               &:hover {
                 background-color: #ef371d;
               }
@@ -835,11 +706,9 @@ nav#block-mainnavigation #menu li a {
           }
         }
       }
-
       p {
         line-height: 1.5;
       }
-
       .description {
         font-size: 13px;
         font-style: italic;
@@ -847,13 +716,11 @@ nav#block-mainnavigation #menu li a {
         line-height: 1.5;
         padding: 5px 0;
       }
-
       #edit-submit {
         background-color: #ef371d;
         width: 100%;
         text-transform: uppercase;
       }
-
       .js-form-item-contact {
         .form-checkbox {
           float: left;
