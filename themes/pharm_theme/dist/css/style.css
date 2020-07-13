@@ -626,10 +626,10 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
           color: #040C4A;
           text-decoration: none;
           background-color: inherit; }
-    #sidebar-wrapper #lang-sidebar.active {
-      color: #040C4A; }
-    #sidebar-wrapper #lang-sidebar a:hover {
-      color: #040C4A; }
+      #sidebar-wrapper #lang-sidebar li.active {
+        color: #040C4A; }
+        #sidebar-wrapper #lang-sidebar li.active > a {
+          color: #040C4A; }
   #sidebar-wrapper #social-icon-sidebar {
     position: relative;
     width: 200px;
@@ -746,7 +746,6 @@ body.lang-zh-hant {
 .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
   margin-left: auto;
-  overflow-x: auto;
   scrollbar-width: none; }
   .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu {
     width: max-content;
@@ -773,22 +772,6 @@ body.lang-zh-hant {
         .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.active a {
           color: #fff !important;
           text-decoration: none; }
-
-.page-node-type-healthtips .sub-tab-session {
-  position: relative; }
-  .page-node-type-healthtips .sub-tab-session .arrow {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    top: 0;
-    display: none; }
-  .page-node-type-healthtips .sub-tab-session .arrow-left {
-    background-image: url("../images/sub_bar_tap_left.png");
-    left: 0; }
-  .page-node-type-healthtips .sub-tab-session .arrow-right {
-    background-image: url("../images/sub_bar_tap.png");
-    right: 0; }
 
 #health-tips .detail-wrapper .detail-left-wrapper h4 {
   line-height: 150px;
@@ -1002,29 +985,43 @@ body.lang-zh-hant {
   margin: 0 auto;
   display: block; }
 
-#health-tips .sub-tab-outer-wrapper {
-  width: 100%;
-  height: 50px;
-  background-color: #F7F7F7;
-  background-position: bottom;
-  margin-bottom: 20px; }
-  #health-tips .sub-tab-outer-wrapper li a {
-    width: 120px;
-    text-align: center;
-    font-size: 9pt;
-    color: #1D778F;
-    padding-top: 15px;
-    padding-bottom: 15px; }
-
-#health-tips .sub-tab-wrapper {
-  margin: 0; }
-  #health-tips .sub-tab-wrapper li a {
-    width: 160px;
-    color: #677D3A; }
-  #health-tips .sub-tab-wrapper li.arrow a {
+.path-healthtips .sub-tab-session {
+  position: relative; }
+  .path-healthtips .sub-tab-session .arrow {
+    position: absolute;
     width: 50px;
-    text-align: center;
-    color: #C8C8C8; }
+    height: 50px;
+    display: inline-block;
+    top: 0;
+    display: none; }
+  .path-healthtips .sub-tab-session .arrow-left {
+    background-image: url("../images/sub_bar_tap_left.png");
+    left: 0; }
+  .path-healthtips .sub-tab-session .arrow-right {
+    background-image: url("../images/sub_bar_tap.png");
+    right: 0; }
+  .path-healthtips .sub-tab-session .sub-tab-outer-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: #F7F7F7;
+    background-position: bottom;
+    margin-bottom: 20px; }
+    .path-healthtips .sub-tab-session .sub-tab-outer-wrapper li a {
+      width: 120px;
+      text-align: center;
+      font-size: 9pt;
+      color: #1D778F;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper {
+      margin: 0; }
+      .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper li a {
+        width: 160px;
+        color: #677D3A; }
+      .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper li.arrow a {
+        width: 50px;
+        text-align: center;
+        color: #C8C8C8; }
 
 .healthcare .healthcare-wrapper {
   padding: 0; }
@@ -1138,8 +1135,6 @@ body.lang-zh-hant {
   .pagination-btn.with-select:before {
     padding-left: 10px;
     padding-right: 10px; }
-  #health-tips .sub-tab-wrapper li {
-    float: left; }
   #health-tips .notice-wrapper {
     padding: 10px 20px;
     background-color: #5a5e4f; }
@@ -2285,69 +2280,6 @@ body.lang-zh-hant {
   .path-product-finder #product-take-wrapper .content-right {
     display: none; } }
 
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
-body.path-frontpage .slick-slide img {
-  height: 100%; }
-
-body.path-frontpage .slick-dots {
-  bottom: 20px; }
-  body.path-frontpage .slick-dots li {
-    width: 12px;
-    height: 12px; }
-    body.path-frontpage .slick-dots li button {
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
-      border: #fff solid 1px;
-      background: transparent; }
-      body.path-frontpage .slick-dots li button::before {
-        display: none; }
-    body.path-frontpage .slick-dots li.slick-active button {
-      background-color: #fff;
-      width: 12px;
-      height: 12px;
-      border-radius: 12px; }
-
-body.path-frontpage .slick-dotted.slick-slider {
-  margin-bottom: 0; }
-
-.main-wrapper {
-  margin-right: -5px; }
-
-.index-wrapper a {
-  color: #fff; }
-
-.index-wrapper .video-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-color: #6ECCF4;
-  background-image: url(../images/index_img_video.png);
-  background-size: 20%;
-  background-position: 30% 40%; }
-  .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 1.2em;
-    top: 30%; }
-  .index-wrapper .video-wrapper p.video-text2 {
-    font-size: 0.7em;
-    top: 50%; }
-
-.index-wrapper .info-label {
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  left: 0;
-  background-color: #6ECCF4;
-  line-height: 30px;
-  color: #FFF;
-  padding-left: 25px;
-  padding-right: 10px; }
-
 body {
   color: #656565; }
 
@@ -2430,20 +2362,30 @@ nav#block-mainnavigation #menu li a {
   .page-node-type-page #block-pharm-theme-content .field-label-hidden {
     margin: 10px 0; }
 
+#block-companyhistorycht .center-intro-video,
+#block-companyhistorychs .center-intro-video,
 #block-historybottomcontent-2 .center-intro-video {
   text-align: center; }
+  #block-companyhistorycht .center-intro-video iframe,
+  #block-companyhistorychs .center-intro-video iframe,
   #block-historybottomcontent-2 .center-intro-video iframe {
     width: 100%;
     max-width: 500px; }
 
+#block-companyhistorycht .intro-img,
+#block-companyhistorychs .intro-img,
 #block-historybottomcontent-2 .intro-img {
   max-width: 100%;
   border: 3px solid #F8F8F8; }
 
+#block-companyhistorycht .intro-text-area,
+#block-companyhistorychs .intro-text-area,
 #block-historybottomcontent-2 .intro-text-area {
   word-wrap: break-word;
   margin: 10px 10px 10px 0; }
 
+#block-companyhistorycht .tvc-img-btn,
+#block-companyhistorychs .tvc-img-btn,
 #block-historybottomcontent-2 .tvc-img-btn {
   display: block;
   width: 162px;
@@ -2745,6 +2687,8 @@ nav#block-mainnavigation #menu li a {
         padding: 0; }
     .path-advertisements .advertisements-top div.content2 {
       background-color: #EAF6F8; }
+    .path-advertisements .advertisements-top div p {
+      color: #666666; }
 
 .path-advertisements .video-outer-wrapper {
   position: relative;
@@ -2942,3 +2886,66 @@ nav#block-mainnavigation #menu li a {
       box-shadow: none;
       width: 20px;
       margin: -3px 10px 0 0; }
+
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
+body.path-frontpage .slick-slide img {
+  height: 100%; }
+
+body.path-frontpage .slick-dots {
+  bottom: 20px; }
+  body.path-frontpage .slick-dots li {
+    width: 12px;
+    height: 12px; }
+    body.path-frontpage .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      border: #fff solid 1px;
+      background: transparent; }
+      body.path-frontpage .slick-dots li button::before {
+        display: none; }
+    body.path-frontpage .slick-dots li.slick-active button {
+      background-color: #fff;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px; }
+
+body.path-frontpage .slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
+.main-wrapper {
+  margin-right: -5px; }
+
+.index-wrapper a {
+  color: #fff; }
+
+.index-wrapper .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #6ECCF4;
+  background-image: url(../images/index_img_video.png);
+  background-size: 20%;
+  background-position: 30% 40%; }
+  .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 1.2em;
+    top: 30%; }
+  .index-wrapper .video-wrapper p.video-text2 {
+    font-size: 0.7em;
+    top: 50%; }
+
+.index-wrapper .info-label {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 0;
+  background-color: #6ECCF4;
+  line-height: 30px;
+  color: #FFF;
+  padding-left: 25px;
+  padding-right: 10px; }

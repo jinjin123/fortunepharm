@@ -73,6 +73,8 @@ nav#block-mainnavigation #menu li a {
     }
   }
 }
+#block-companyhistorycht,
+#block-companyhistorychs,
 #block-historybottomcontent-2 {
   .center-intro-video {
     text-align: center;
@@ -97,6 +99,7 @@ nav#block-mainnavigation #menu li a {
     margin-top: 15px;
   }
 }
+
 .page-node-5, .page-node-6 {
   #os-wrapper {
     display: none;
@@ -470,6 +473,9 @@ nav#block-mainnavigation #menu li a {
       }
       &.content2 {
         background-color: #EAF6F8;
+      }
+      p {
+        color: #666666;
       }
     }
   }
