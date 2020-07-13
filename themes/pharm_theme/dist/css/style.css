@@ -2430,20 +2430,30 @@ nav#block-mainnavigation #menu li a {
   .page-node-type-page #block-pharm-theme-content .field-label-hidden {
     margin: 10px 0; }
 
+#block-companyhistorycht .center-intro-video,
+#block-companyhistorychs .center-intro-video,
 #block-historybottomcontent-2 .center-intro-video {
   text-align: center; }
+  #block-companyhistorycht .center-intro-video iframe,
+  #block-companyhistorychs .center-intro-video iframe,
   #block-historybottomcontent-2 .center-intro-video iframe {
     width: 100%;
     max-width: 500px; }
 
+#block-companyhistorycht .intro-img,
+#block-companyhistorychs .intro-img,
 #block-historybottomcontent-2 .intro-img {
   max-width: 100%;
   border: 3px solid #F8F8F8; }
 
+#block-companyhistorycht .intro-text-area,
+#block-companyhistorychs .intro-text-area,
 #block-historybottomcontent-2 .intro-text-area {
   word-wrap: break-word;
   margin: 10px 10px 10px 0; }
 
+#block-companyhistorycht .tvc-img-btn,
+#block-companyhistorychs .tvc-img-btn,
 #block-historybottomcontent-2 .tvc-img-btn {
   display: block;
   width: 162px;
