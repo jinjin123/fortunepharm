@@ -746,7 +746,6 @@ body.lang-zh-hant {
 .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation {
   margin-right: auto;
   margin-left: auto;
-  overflow-x: auto;
   scrollbar-width: none; }
   .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu {
     width: max-content;
@@ -773,22 +772,6 @@ body.lang-zh-hant {
         .page-node-type-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.active a {
           color: #fff !important;
           text-decoration: none; }
-
-.page-node-type-healthtips .sub-tab-session {
-  position: relative; }
-  .page-node-type-healthtips .sub-tab-session .arrow {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    top: 0;
-    display: none; }
-  .page-node-type-healthtips .sub-tab-session .arrow-left {
-    background-image: url("../images/sub_bar_tap_left.png");
-    left: 0; }
-  .page-node-type-healthtips .sub-tab-session .arrow-right {
-    background-image: url("../images/sub_bar_tap.png");
-    right: 0; }
 
 #health-tips .detail-wrapper .detail-left-wrapper h4 {
   line-height: 150px;
@@ -1002,29 +985,43 @@ body.lang-zh-hant {
   margin: 0 auto;
   display: block; }
 
-#health-tips .sub-tab-outer-wrapper {
-  width: 100%;
-  height: 50px;
-  background-color: #F7F7F7;
-  background-position: bottom;
-  margin-bottom: 20px; }
-  #health-tips .sub-tab-outer-wrapper li a {
-    width: 120px;
-    text-align: center;
-    font-size: 9pt;
-    color: #1D778F;
-    padding-top: 15px;
-    padding-bottom: 15px; }
-
-#health-tips .sub-tab-wrapper {
-  margin: 0; }
-  #health-tips .sub-tab-wrapper li a {
-    width: 160px;
-    color: #677D3A; }
-  #health-tips .sub-tab-wrapper li.arrow a {
+.path-healthtips .sub-tab-session {
+  position: relative; }
+  .path-healthtips .sub-tab-session .arrow {
+    position: absolute;
     width: 50px;
-    text-align: center;
-    color: #C8C8C8; }
+    height: 50px;
+    display: inline-block;
+    top: 0;
+    display: none; }
+  .path-healthtips .sub-tab-session .arrow-left {
+    background-image: url("../images/sub_bar_tap_left.png");
+    left: 0; }
+  .path-healthtips .sub-tab-session .arrow-right {
+    background-image: url("../images/sub_bar_tap.png");
+    right: 0; }
+  .path-healthtips .sub-tab-session .sub-tab-outer-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: #F7F7F7;
+    background-position: bottom;
+    margin-bottom: 20px; }
+    .path-healthtips .sub-tab-session .sub-tab-outer-wrapper li a {
+      width: 120px;
+      text-align: center;
+      font-size: 9pt;
+      color: #1D778F;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+    .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper {
+      margin: 0; }
+      .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper li a {
+        width: 160px;
+        color: #677D3A; }
+      .path-healthtips .sub-tab-session .sub-tab-outer-wrapper .sub-tab-wrapper li.arrow a {
+        width: 50px;
+        text-align: center;
+        color: #C8C8C8; }
 
 .healthcare .healthcare-wrapper {
   padding: 0; }
@@ -1138,8 +1135,6 @@ body.lang-zh-hant {
   .pagination-btn.with-select:before {
     padding-left: 10px;
     padding-right: 10px; }
-  #health-tips .sub-tab-wrapper li {
-    float: left; }
   #health-tips .notice-wrapper {
     padding: 10px 20px;
     background-color: #5a5e4f; }
