@@ -278,6 +278,7 @@ p {
     }
   }
 }
+
 @media (max-width: $phone) {
   .content-section {
     .inner {
@@ -347,7 +348,7 @@ table {
     line-height: 1.5;
 
     td {
-      padding: 7px;
+      //padding: 7px;
       font-size: 15px;
 
       p {
@@ -359,7 +360,7 @@ table {
       }
 
       a {
-        font-weight: 400!important;
+        font-weight: 400 !important;
       }
     }
   }
@@ -418,6 +419,7 @@ table {
   padding: 0 !important;
   margin: 0 !important;
 }
+
 /**** Bootstrap-9 ******/
 .col-xs-9-1,
 .col-xs-9-2,
@@ -466,6 +468,7 @@ table {
 .col-xs-9-1 {
   width: 11.11111111%;
 }
+
 @media (min-width: 768px) {
   .col-sm-9-1,
   .col-sm-9-10,
@@ -530,6 +533,7 @@ table {
     padding-left: 3px !important;
   }
 }
+
 @media (min-width: 992px) {
   .col-md-9-1,
   .col-md-9-10,
@@ -582,6 +586,7 @@ table {
     width: 11.11111111%;
   }
 }
+
 @media (min-width: 1200px) {
   .col-lg-9-1,
   .col-lg-9-10,
