@@ -1,6 +1,7 @@
 @import '../variable';
 @import '../mixins';
 /********** helathtips scss ***/
+
 .page-node-type-healthtips {
   div.container-fluid-healthtipsbanner {
     max-width: 1680px;
@@ -36,7 +37,7 @@
     nav#block-mainnavigation {
       margin-right: auto;
       margin-left: auto;
-      //overflow-x: auto;
+      overflow-x: auto;
       scrollbar-width: none;
 
       #menu {
@@ -71,7 +72,7 @@
             background-color: #677D3A;
 
             a {
-              color: #fff!important;
+              color: #fff !important;
               text-decoration: none;
             }
           }
@@ -80,10 +81,31 @@
     }
   }
 
+  .sub-tab-session {
+    position: relative;
 
+    .arrow {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      top: 0;
+      display: none;
+    }
+
+    .arrow-left {
+      background-image: url(../images/sub_bar_tap_left.png);
+      left: 0;
+    }
+
+    .arrow-right {
+      background-image: url(../images/sub_bar_tap.png);
+      right: 0;
+    }
+  }
 }
-// Health tips
 
+// Health tips
 #health-tips {
   .detail-wrapper {
     .detail-left-wrapper {
@@ -101,8 +123,8 @@
     }
   }
 
-  .healthtips-left-col,
-  .healthtips-right-col {
+  .healthtips-right-col,
+  .healthtips-left-col {
     position: absolute;
     bottom: 5%;
   }
@@ -219,7 +241,7 @@
 
     .function-left-wrapper {
       .function-btn {
-         > img,
+        > img,
         > p {
           margin-left: 20%;
         }
@@ -228,7 +250,7 @@
 
     .function-right-wrapper {
       .function-btn {
-         > img,
+        > img,
         > p {
           margin-left: 20%;
         }
@@ -293,8 +315,8 @@
       }
     }
   }
-  //cold_and_flu
 
+  //cold_and_flu
   &.cold_and_flu {
     .function-wrapper {
       .function-btn {
@@ -317,12 +339,12 @@
       }
     }
   }
-  //children
 
+  //children
   &.children {
     .function-wrapper {
       .function-btn {
-         > img,
+        > img,
         > p {
           width: 70%;
         }
@@ -348,7 +370,7 @@
         .function-btn {
           background-image: url("../images/tips/trip_3_left_btn.png");
 
-           > img,
+          > img,
           > p {
             margin-left: 10%;
           }
@@ -362,8 +384,8 @@
       }
     }
   }
-  //allergy, gerd, pain
 
+  //allergy, gerd, pain
   &.allergy,
   &.gerd,
   &.pain {
@@ -384,8 +406,8 @@
       }
     }
   }
-  //pain, gerd
 
+  //pain, gerd
   &.gerd,
   &.pain {
     .function-wrapper {
@@ -481,68 +503,46 @@
     }
   }
 
-}
+  .sub-tab-outer-wrapper {
+    width: 100%;
+    height: 50px;
+    background-color: #F7F7F7;
+    background-position: bottom;
+    margin-bottom: 20px;
 
-//health sub menu
-.path-healthtips{
-  .sub-tab-session {
-    position: relative;
-    .arrow {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      display: inline-block;
-      top: 0;
-      display: none;
-    }
-    .arrow-left {
-      background-image: url("../images/sub_bar_tap_left.png");
-      left: 0;
-    }
-    .arrow-right {
-      background-image: url("../images/sub_bar_tap.png");
-      right: 0;
-    }
-    .sub-tab-outer-wrapper {
-      width: 100%;
-      height: 50px;
-      background-color: #F7F7F7;
-      background-position: bottom;
-      margin-bottom: 20px;
-      li {
-        a {
-          width: 120px;
-          text-align: center;
-          font-size: 9pt;
-          color: #1D778F;
-          padding-top: 15px;
-          padding-bottom: 15px;
-        }
-      }
-      .sub-tab-wrapper {
-        margin: 0;
-        li {
-          a {
-            width: 160px;
-            color: #677D3A;
-          }
-          &.arrow {
-            a {
-              width: 50px;
-              text-align: center;
-              color: #C8C8C8;
-            }
-          }
-        }
+    li {
+      a {
+        width: 120px;
+        text-align: center;
+        font-size: 9pt;
+        color: #1D778F;
+        padding-top: 15px;
+        padding-bottom: 15px;
       }
     }
   }
 
+  .sub-tab-wrapper {
+    margin: 0;
 
+    li {
+      a {
+        width: 160px;
+        color: #677D3A;
+      }
+
+      &.arrow {
+        a {
+          width: 50px;
+          text-align: center;
+          color: #C8C8C8;
+        }
+      }
+    }
+  }
 }
 
 // Healthcare
-
 .healthcare {
   .healthcare-wrapper {
     padding: 0;
@@ -652,6 +652,7 @@
     }
   }
 }
+
 @media only screen and (min-width: 768px) {
   /*product-children*/
   .healthcare {
@@ -664,6 +665,7 @@
     }
   }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   /*health-tips*/
   #health-tips {
@@ -685,11 +687,11 @@
   }
   /*health-tips*/
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .healthcare .healthcare-wrapper .image-wrapper {
     height: 330px;
   }
-
   #health-tips {
     &.allergy,
     &.gerd,
@@ -710,6 +712,7 @@
     }
   }
 }
+
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu nav#block-mainnavigation {
     #menu {
@@ -721,12 +724,12 @@
     }
   }
 }
+
 @media only screen and (max-width: 767px) {
   .scroll-wrapper {
     overflow-y: hidden;
     overflow-x: auto;
   }
-
   .pagination-wrapper {
     .right-s {
       margin-right: 5px;
@@ -737,18 +740,21 @@
       margin-bottom: 5px;
     }
   }
-
   .pagination-btn,
   .pagination-skip {
     padding: 15px 10px;
   }
-
   .pagination-btn.with-select:before {
     padding-left: 10px;
     padding-right: 10px;
   }
-
   #health-tips {
+    .sub-tab-wrapper {
+      li {
+        float: left;
+      }
+    }
+
     .notice-wrapper {
       padding: 10px 20px;
       background-color: #5a5e4f;
