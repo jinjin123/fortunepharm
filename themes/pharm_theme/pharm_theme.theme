@@ -127,6 +127,9 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
         // Add active link.
         $variables['items'][$key]['attributes']['class'] = 'active';
       }
+      if($item['url']->toString() == "OtherServices"){
+        $variables['options']['attributes'] = ['target' => '_blank'];
+      }
     }
   }
 }
@@ -138,3 +141,5 @@ function pharm_theme_preprocess_views_view_list(&$variables) {
   $language         = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
 }
+
+
