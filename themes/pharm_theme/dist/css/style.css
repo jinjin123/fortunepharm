@@ -1358,8 +1358,7 @@ body.lang-zh-hant {
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div > div,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div > div {
   padding: 0;
-  margin-bottom: 20px;
-  overflow: hidden; }
+  margin-bottom: 20px; }
 
 #block-contactus #offers-wrapper .content-wrapper .content-left div, #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-left div,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-left div {
@@ -1372,9 +1371,9 @@ body.lang-zh-hant {
   display: block;
   vertical-align: inherit; }
 
-#block-contactus #offers-wrapper .content-wrapper .cooverflowntent-left p,
-#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .cooverflowntent-left p,
-#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .cooverflowntent-left p {
+#block-contactus #offers-wrapper .content-wrapper .content-left p,
+#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-left p,
+#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-left p {
   text-align: center;
   font-size: 0.5em;
   margin-top: 10px; }
@@ -1382,7 +1381,8 @@ body.lang-zh-hant {
 #block-contactus #offers-wrapper .content-wrapper .content-right,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right {
-  padding: 10px; }
+  padding: 10px;
+  overflow-y: auto; }
 
 #block-contactus #offers-wrapper .content-wrapper .content-right ul,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right ul,
@@ -1489,8 +1489,7 @@ body.lang-zh-hant {
   #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div,
   #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div {
     padding: 3px;
-    margin-bottom: 10px;
-    overflow: hidden; }
+    margin-bottom: 10px; }
 
 #block-contactus .content-wrapper > div,
 #block-lianxiwomenjizhaopindibuneirongjianti .content-wrapper > div,
@@ -2280,6 +2279,69 @@ body.lang-zh-hant {
   .path-product-finder #product-take-wrapper .content-right {
     display: none; } }
 
+body.fontyourface {
+  overflow-x: hidden; }
+  body.fontyourface .homepage .banner {
+    max-height: 100%; }
+
+body.path-frontpage .slick-slide img {
+  height: 100%; }
+
+body.path-frontpage .slick-dots {
+  bottom: 20px; }
+  body.path-frontpage .slick-dots li {
+    width: 12px;
+    height: 12px; }
+    body.path-frontpage .slick-dots li button {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      border: #fff solid 1px;
+      background: transparent; }
+      body.path-frontpage .slick-dots li button::before {
+        display: none; }
+    body.path-frontpage .slick-dots li.slick-active button {
+      background-color: #fff;
+      width: 12px;
+      height: 12px;
+      border-radius: 12px; }
+
+body.path-frontpage .slick-dotted.slick-slider {
+  margin-bottom: 0; }
+
+.main-wrapper {
+  margin-right: -5px; }
+
+.index-wrapper a {
+  color: #fff; }
+
+.index-wrapper .video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: #6ECCF4;
+  background-image: url(../images/index_img_video.png);
+  background-size: 20%;
+  background-position: 30% 40%; }
+  .index-wrapper .video-wrapper p.video-text1 {
+    font-size: 1.2em;
+    top: 30%; }
+  .index-wrapper .video-wrapper p.video-text2 {
+    font-size: 0.7em;
+    top: 50%; }
+
+.index-wrapper .info-label {
+  position: absolute;
+  height: 30px;
+  top: 10px;
+  left: 0;
+  background-color: #6ECCF4;
+  line-height: 30px;
+  color: #FFF;
+  padding-left: 25px;
+  padding-right: 10px; }
+
 body {
   color: #656565; }
 
@@ -2886,66 +2948,3 @@ nav#block-mainnavigation #menu li a {
       box-shadow: none;
       width: 20px;
       margin: -3px 10px 0 0; }
-
-body.fontyourface {
-  overflow-x: hidden; }
-  body.fontyourface .homepage .banner {
-    max-height: 100%; }
-
-body.path-frontpage .slick-slide img {
-  height: 100%; }
-
-body.path-frontpage .slick-dots {
-  bottom: 20px; }
-  body.path-frontpage .slick-dots li {
-    width: 12px;
-    height: 12px; }
-    body.path-frontpage .slick-dots li button {
-      width: 10px;
-      height: 10px;
-      border-radius: 10px;
-      border: #fff solid 1px;
-      background: transparent; }
-      body.path-frontpage .slick-dots li button::before {
-        display: none; }
-    body.path-frontpage .slick-dots li.slick-active button {
-      background-color: #fff;
-      width: 12px;
-      height: 12px;
-      border-radius: 12px; }
-
-body.path-frontpage .slick-dotted.slick-slider {
-  margin-bottom: 0; }
-
-.main-wrapper {
-  margin-right: -5px; }
-
-.index-wrapper a {
-  color: #fff; }
-
-.index-wrapper .video-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  background-color: #6ECCF4;
-  background-image: url(../images/index_img_video.png);
-  background-size: 20%;
-  background-position: 30% 40%; }
-  .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 1.2em;
-    top: 30%; }
-  .index-wrapper .video-wrapper p.video-text2 {
-    font-size: 0.7em;
-    top: 50%; }
-
-.index-wrapper .info-label {
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  left: 0;
-  background-color: #6ECCF4;
-  line-height: 30px;
-  color: #FFF;
-  padding-left: 25px;
-  padding-right: 10px; }
