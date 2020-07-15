@@ -87,7 +87,7 @@ h1 {
     color: #666666; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 a {
   text-decoration: none;
@@ -689,18 +689,6 @@ body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header,
 
 .homepage #footer {
   border: 0; }
-
-@media only screen and (max-width: 767px) {
-  #footer .container-fluid-40 {
-    position: relative;
-    padding: 0; }
-  #footer .copyright, #footer .footer-link {
-    float: left;
-    width: 100%; }
-  #footer p {
-    padding-left: 10px; }
-  #footer ul {
-    padding: 0; } }
 
 body.lang-zh-hans {
   font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic"; }
@@ -1619,7 +1607,7 @@ body.lang-zh-hant {
   background-image: none;
   margin-bottom: 20px;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: #F7F7F7;
   background-position: bottom; }
 
@@ -2074,11 +2062,15 @@ body.lang-zh-hant {
   .healthcare .healthcare-wrapper:nth-child(even) {
     padding-left: 3px; }
   #footer {
-    border-top: 2px solid #EFEFEF; } }
+    border-top: 2px solid #EFEFEF; }
+  .path-advertisements .video-outer-wrapper .video-wrapper .content {
+    min-height: 95px; } }
 
 @media only screen and (max-width: 1199px) {
   .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item {
-    width: 160px; } }
+    width: 160px; }
+  .path-advertisements .video-outer-wrapper .video-wrapper .content {
+    font-size: 13px; } }
 
 @media only screen and (max-width: 991px) {
   #banner-wrapper .page_banner img {
@@ -2091,7 +2083,7 @@ body.lang-zh-hant {
   body.path-frontpage .slick-dotted.slick-slider {
     padding: 0 5px 5px 0; }
   .path-news .views-row .content-row > div {
-    padding: 10px; }
+    padding: 10px !important; }
   .path-news .views-row .content-row .colume2 .img img {
     display: none; }
   .path-news .views-row .content-row .colume2 .title-wrapper a {
@@ -2264,6 +2256,26 @@ body.lang-zh-hant {
   #health-tips.pain .function-wrapper .function-left-wrapper .function-btn {
     background-image: url("../images/tips/trip_3_top_btn.png"); } }
 
+@media only screen and (min-width: 768px) {
+  #footer {
+    border-top: 2px solid #EFEFEF; } }
+
+@media only screen and (max-width: 767px) {
+  #footer .container-fluid-40 {
+    position: relative;
+    padding: 0; }
+  #footer .copyright, #footer .footer-link {
+    float: left;
+    width: 100%; }
+  #footer p {
+    padding-left: 10px; }
+  #footer ul {
+    padding: 0; } }
+
+@media only screen and (max-width: 399px) {
+  #footer .footer-link ul li a {
+    padding: 0 5px; } }
+
 @media only screen and (max-width: 399px) {
   .lang-en .main-wrapper .index-wrapper .link-wrapper span {
     font-size: 0.8em; }
@@ -2435,31 +2447,21 @@ nav#block-mainnavigation #menu li a {
   .page-node-type-page #block-pharm-theme-content .field-label-hidden {
     margin: 10px 0; }
 
-#block-companyhistorycht .center-intro-video,
-#block-companyhistorychs .center-intro-video,
-#block-historybottomcontent-2 .center-intro-video {
+#block-companyhistorycht .center-intro-video, #block-companyhistorychs .center-intro-video, #block-historybottomcontent-2 .center-intro-video {
   text-align: center; }
-  #block-companyhistorycht .center-intro-video iframe,
-  #block-companyhistorychs .center-intro-video iframe,
-  #block-historybottomcontent-2 .center-intro-video iframe {
+  #block-companyhistorycht .center-intro-video iframe, #block-companyhistorychs .center-intro-video iframe, #block-historybottomcontent-2 .center-intro-video iframe {
     width: 100%;
     max-width: 500px; }
 
-#block-companyhistorycht .intro-img,
-#block-companyhistorychs .intro-img,
-#block-historybottomcontent-2 .intro-img {
+#block-companyhistorycht .intro-img, #block-companyhistorychs .intro-img, #block-historybottomcontent-2 .intro-img {
   max-width: 100%;
   border: 3px solid #F8F8F8; }
 
-#block-companyhistorycht .intro-text-area,
-#block-companyhistorychs .intro-text-area,
-#block-historybottomcontent-2 .intro-text-area {
+#block-companyhistorycht .intro-text-area, #block-companyhistorychs .intro-text-area, #block-historybottomcontent-2 .intro-text-area {
   word-wrap: break-word;
   margin: 10px 10px 10px 0; }
 
-#block-companyhistorycht .tvc-img-btn,
-#block-companyhistorychs .tvc-img-btn,
-#block-historybottomcontent-2 .tvc-img-btn {
+#block-companyhistorycht .tvc-img-btn, #block-companyhistorychs .tvc-img-btn, #block-historybottomcontent-2 .tvc-img-btn {
   display: block;
   width: 162px;
   height: 52px;
@@ -2760,6 +2762,8 @@ nav#block-mainnavigation #menu li a {
         padding: 0; }
     .path-advertisements .advertisements-top div.content2 {
       background-color: #EAF6F8; }
+      .path-advertisements .advertisements-top div.content2 p {
+        color: #666; }
     .path-advertisements .advertisements-top div p {
       color: #666666; }
 
@@ -2959,3 +2963,6 @@ nav#block-mainnavigation #menu li a {
       box-shadow: none;
       width: 20px;
       margin: -3px 10px 0 0; }
+
+.page-node-3 #block-historybottomcontent-2 .field-type-text-with-summary #company-timeline {
+  margin-bottom: 0; }
