@@ -2,12 +2,13 @@
 @import '../mixins';
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .index-wrapper {
       position: relative;
       height: 100%;
       padding-right: 5px;
       padding-bottom: 5px;
+
       a {
         color: #000;
       }
@@ -16,7 +17,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .index-wrapper {
       images {
         width: 100%;
@@ -27,21 +28,21 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     margin: 30px 0 40px 0;
     overflow: hidden;
   }
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .title-wrapper h3 {
       font-size: 2em;
     }
   }
 }
 
-.path-product-finder #product-take-wrapper {
+.path-product-finder .container-fluid {
   .content-left,
   .content-right {
     float: left;
@@ -49,7 +50,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       width: 75%;
     }
@@ -57,7 +58,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       position: relative;
       width: 25%;
@@ -65,35 +66,92 @@
   }
 }
 
-.path-product-finder #product-take-wrapper .content-left .index-wrapper {
-  a[rel="1"]{background-image: url("../images/product-take/which_fitter_1.jpg");}
-  a[rel="2"]{background-image: url("../images/product-take/which_fitter_2.jpg");}
-  a[rel="3"]{background-image: url("../images/product-take/which_fitter_3.jpg");}
-  a[rel="4"]{background-image: url("../images/product-take/which_fitter_4.jpg");}
-  a[rel="5"]{background-image: url("../images/product-take/which_fitter_5.jpg");}
-  a[rel="6"]{background-image: url("../images/product-take/which_fitter_6.jpg");}
-  a[rel="7"]{background-image: url("../images/product-take/which_fitter_7.jpg");}
-  a[rel="8"]{background-image: url("../images/product-take/which_fitter_8.jpg");}
-  a[rel="9"]{background-image: url("../images/product-take/which_fitter_9.jpg");}
-  a[rel="10"]{background-image: url("../images/product-take/which_fitter_10.jpg");}
-  a[rel="11"]{background-image: url("../images/product-take/which_fitter_11.jpg");}
-  a[rel="12"]{background-image: url("../images/product-take/which_fitter_12.jpg");}
-  a[rel="13"]{background-image: url("../images/product-take/which_fitter_13.jpg");}
-  a[rel="14"]{background-image: url("../images/product-take/which_fitter_14.jpg");}
-  a[rel="15"]{background-image: url("../images/product-take/which_fitter_15.jpg");}
-  a[rel="16"]{background-image: url("../images/product-take/which_fitter_16.jpg");}
-  a[rel="17"]{background-image: url("../images/product-take/which_fitter_17.jpg");}
-  a,
-  div {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-size: 100%;
+.path-product-finder {
+  .container-fluid {
+    .content-left {
+      .index-wrapper {
+        a[rel="1"] {
+          background-image: url("../images/product-take/which_fitter_1.jpg");
+        }
+
+        a[rel="2"] {
+          background-image: url("../images/product-take/which_fitter_2.jpg");
+        }
+
+        a[rel="3"] {
+          background-image: url("../images/product-take/which_fitter_3.jpg");
+        }
+
+        a[rel="4"] {
+          background-image: url("../images/product-take/which_fitter_4.jpg");
+        }
+
+        a[rel="5"] {
+          background-image: url("../images/product-take/which_fitter_5.jpg");
+        }
+
+        a[rel="6"] {
+          background-image: url("../images/product-take/which_fitter_6.jpg");
+        }
+
+        a[rel="7"] {
+          background-image: url("../images/product-take/which_fitter_7.jpg");
+        }
+
+        a[rel="8"] {
+          background-image: url("../images/product-take/which_fitter_8.jpg");
+        }
+
+        a[rel="9"] {
+          background-image: url("../images/product-take/which_fitter_9.jpg");
+        }
+
+        a[rel="10"] {
+          background-image: url("../images/product-take/which_fitter_10.jpg");
+        }
+
+        a[rel="11"] {
+          background-image: url("../images/product-take/which_fitter_11.jpg");
+        }
+
+        a[rel="12"] {
+          background-image: url("../images/product-take/which_fitter_12.jpg");
+        }
+
+        a[rel="13"] {
+          background-image: url("../images/product-take/which_fitter_13.jpg");
+        }
+
+        a[rel="14"] {
+          background-image: url("../images/product-take/which_fitter_14.jpg");
+        }
+
+        a[rel="15"] {
+          background-image: url("../images/product-take/which_fitter_15.jpg");
+        }
+
+        a[rel="16"] {
+          background-image: url("../images/product-take/which_fitter_16.jpg");
+        }
+
+        a[rel="17"] {
+          background-image: url("../images/product-take/which_fitter_17.jpg");
+        }
+
+        a,
+        div {
+          width: 100%;
+          height: 100%;
+          display: block;
+          background-size: 100%;
+        }
+      }
+    }
   }
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         span {
@@ -110,7 +168,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         div {
@@ -122,7 +180,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.active {
@@ -134,7 +192,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.inactive {
@@ -146,7 +204,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.result {
@@ -166,7 +224,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.clear-select {
@@ -186,7 +244,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.result:after {
@@ -205,7 +263,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-left {
       .index-wrapper {
         a.result:hover {
@@ -218,7 +276,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .index-wrapper {
         padding-right: 0;
@@ -229,7 +287,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .index-wrapper {
         > div.matched-outer {
@@ -247,7 +305,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .index-wrapper {
         > div.matched-outer {
@@ -259,7 +317,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .level-wrapper {
         position: absolute;
@@ -272,7 +330,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .level-wrapper {
         p {
@@ -285,7 +343,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       p {
         &::before {
@@ -298,23 +356,26 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
-      p.level1{
-        &:before{
+      p.level1 {
+        &:before {
           color: #FFD442;
         }
       }
-      p.level2{
-        &:before{
+
+      p.level2 {
+        &:before {
           color: #FF7529;
         }
       }
-      p.level3{
-        &:before{
+
+      p.level3 {
+        &:before {
           color: #FD111C;
         }
       }
+
       .matched-product-wrapper {
         position: relative;
         width: 150px;
@@ -325,7 +386,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .matched-product {
         margin-bottom: 15px;
@@ -335,7 +396,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .matched-product {
         h4 {
@@ -350,7 +411,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .matched-product {
         p {
@@ -364,7 +425,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .arrow {
         position: absolute;
@@ -382,7 +443,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .arrow:hover {
         opacity: 1;
@@ -392,7 +453,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .arrow-up {
         top: 0;
@@ -403,7 +464,7 @@
 }
 
 .path-product-finder {
-  #product-take-wrapper {
+  .container-fluid {
     .content-right {
       .arrow-down {
         bottom: 5px;
