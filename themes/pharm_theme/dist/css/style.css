@@ -1347,7 +1347,7 @@ body.lang-zh-hant {
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div {
   overflow: hidden; }
 
-#block-contactus#block-contactus #offers-wrapper > div > div,
+#block-contactus #offers-wrapper > div > div,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div > div,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div > div {
   padding: 0;
@@ -1457,6 +1457,10 @@ body.lang-zh-hant {
   #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper,
   #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper {
     height: 304px !important; }
+    #block-contactus #offers-wrapper .content-wrapper .content-right,
+    #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right,
+    #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right {
+      overflow: hidden; }
   #block-contactus #offers-wrapper .content-wrapper.with-image,
   #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper.with-image,
   #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper.with-image {

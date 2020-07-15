@@ -130,7 +130,7 @@
   }
 }
 
-#block-contactus#block-contactus,
+#block-contactus,
 #block-lianxiwomenjizhaopindibuneirongjianti,
 #block-lianxiwomenjizhaopindibuneirongfanti {
   #offers-wrapper > div > div {
@@ -296,6 +296,9 @@
   #block-lianxiwomenjizhaopindibuneirongfanti {
     #offers-wrapper .content-wrapper {
       height: 304px !important;
+      .content-right {
+        overflow: hidden;
+      }
     }
   }
   #block-contactus,
