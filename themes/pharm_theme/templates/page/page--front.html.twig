@@ -1,7 +1,5 @@
-
 {% set mobile_menu = simplify_menu('main') %}
 <div class="layout-container homepage">
-
 
   {# Mobile menu #}
   {% if mobile_menu %}
@@ -33,7 +31,11 @@
             {% set active_trail = 'active' %}
           {% endif %}
           {% if menu_item.submenu %}
-          <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            {% if menu_item.url == '' %}
+              <li class="parent nolink"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            {% else %}
+              <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            {% endif %}
           {% else %}
             <li class="{{active_trail}}">
             <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>

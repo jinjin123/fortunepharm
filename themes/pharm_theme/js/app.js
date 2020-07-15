@@ -1,6 +1,7 @@
 Drupal.behaviors.yourmodulename = {
   attach: function (context, settings) {
     var $ = jQuery.noConflict();
+    $('#sidebar-wrapper .sidebar-nav .nolink ul li a').attr('target', '_blank');
     if ($('#company-timeline').length > 0) {
       var lang = settings.path.pathPrefix;
       var json_lang = lang.replace('/', '');
@@ -318,15 +319,20 @@ Drupal.behaviors.yourmodulename = {
 
     /*advertisements*/
     if ($('.path-advertisements').length > 0) {
+        var params = new window.URLSearchParams(window.location.search);
+        if(params.get('y') !='2020') {
+          $('#block-pagerforadverisement-2').remove();
+        }
+
       $('.path-advertisements .rightmove').click(function () {
         var current_page = $('#next_page').attr('rel');
         var lang = settings.path.pathPrefix;
-        window.location.assign(current_page);
+        window.location.assign('?y='+current_page);
       });
       $('.path-advertisements .leftmove').click(function () {
         var current_page = $('#prev_page').attr('rel');
         var lang = settings.path.pathPrefix;
-        window.location.assign(current_page);
+        window.location.assign('?y='+current_page);
       });
       // On Click
       var title = $('#vid-content .vid-title').html();
@@ -355,12 +361,12 @@ Drupal.behaviors.yourmodulename = {
       }).change(function () {
         var yr = $(this).val();
         var lang = settings.path.pathPrefix;
-        window.location.assign("/" + lang + "advertisements/" + yr);
+        window.location.assign("/" + lang + "advertisements/?y=" + yr);
       });
       $('.path-advertisements .pagination-btn.withmovebutt').click(function () {
         var lang = settings.path.pathPrefix;
         var page = $(this).attr('rel');
-        window.location.assign("/" + lang + "advertisements/" + page);
+        window.location.assign("/" + lang + "advertisements/?y=" + page);
       });
     }
     /*advertisements*/
