@@ -47,23 +47,3 @@
     border: 0;
   }
 }
-
-
-@media only screen and (max-width: 767px){
-  #footer {
-    .container-fluid-40{
-      position: relative;
-      padding: 0;
-    }
-    .copyright, .footer-link{
-      float: left;
-      width: 100%;
-    }
-    p{
-      padding-left: 10px;
-    }
-    ul{
-      padding: 0;
-    }
-  }
-}
