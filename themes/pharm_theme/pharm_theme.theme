@@ -111,6 +111,9 @@ function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $va
   if (isset($path_args[1]) && $path_args[1] == 'faq') {
     $suggestions[] = 'page__faq';
   }
+  if (isset($path_args[1]) && $path_args[1] == 'product') {
+    $suggestions[] = 'page__product';
+  }
 }
 
 /**
@@ -137,6 +140,11 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
 function pharm_theme_preprocess_views_view_list(&$variables) {
   $language         = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
+
+  $path      = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  $variables['parent_url_id'] = $path_args[3];
+
 }
 
 

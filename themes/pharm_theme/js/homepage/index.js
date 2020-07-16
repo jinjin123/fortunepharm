@@ -3,7 +3,7 @@ jQuery(document).ready(() => {
   const $window = $(window)
   const $footer = $('footer.footer')
 
-  const $infobox = $('#block-nyu-theme-content')
+  const $infobox = $('#block-pharm-theme-content')
   let $carouselDots = null
 
   //

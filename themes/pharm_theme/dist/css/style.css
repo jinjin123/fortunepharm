@@ -500,6 +500,8 @@ table {
     #header .main-menu #linkage-icon .icon-list-item a {
       padding-right: 0px;
       padding-left: 12px; }
+    #header .main-menu .nolink:hover > .dropdown-menu {
+      display: block; }
   #header #lang, #header #social-icon, #header #linkage-icon {
     margin-top: 60px; }
   #header #lang {
@@ -1347,7 +1349,7 @@ body.lang-zh-hant {
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div {
   overflow: hidden; }
 
-#block-contactus#block-contactus #offers-wrapper > div > div,
+#block-contactus #offers-wrapper > div > div,
 #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div > div,
 #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div > div {
   padding: 0;
@@ -1457,6 +1459,10 @@ body.lang-zh-hant {
   #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper,
   #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper {
     height: 304px !important; }
+    #block-contactus #offers-wrapper .content-wrapper .content-right,
+    #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper .content-right,
+    #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper .content-right {
+      overflow: hidden; }
   #block-contactus #offers-wrapper .content-wrapper.with-image,
   #block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .content-wrapper.with-image,
   #block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .content-wrapper.with-image {
@@ -2787,8 +2793,7 @@ nav#block-mainnavigation #menu li a {
       .path-advertisements .video-outer-wrapper .video-wrapper .image img {
         max-width: 100%;
         max-height: 150px;
-        height: auto;
-        width: 100%; }
+        height: auto; }
       .path-advertisements .video-outer-wrapper .video-wrapper .image .image-inner {
         display: table-cell;
         text-align: center;
