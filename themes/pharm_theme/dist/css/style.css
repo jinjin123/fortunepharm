@@ -483,14 +483,14 @@ table {
       color: #040C4A; }
   #header .main-menu {
     margin-top: 80px; }
-    #header .main-menu a {
+    #header .main-menu a, #header .main-menu span {
       height: 30px;
       line-height: 20px;
       padding: 5px 10px;
       margin: 0 5px;
       border-bottom: 1px solid transparent;
       color: #878787; }
-      #header .main-menu a:hover, #header .main-menu a:focus {
+      #header .main-menu a:hover, #header .main-menu a:focus, #header .main-menu span:hover, #header .main-menu span:focus {
         background: none;
         color: #040C4A;
         border-bottom: 1px #040C4A solid; }
