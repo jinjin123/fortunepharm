@@ -2092,8 +2092,6 @@ body.lang-zh-hant {
     height: 100%; }
   body.path-frontpage .slick-dotted.slick-slider {
     padding: 0 5px 5px 0; }
-  .path-news .views-row .content-row > div {
-    padding: 10px !important; }
   .path-news .views-row .content-row .colume2 .img img {
     display: none; }
   .path-news .views-row .content-row .colume2 .title-wrapper a {
@@ -2277,9 +2275,7 @@ body.lang-zh-hant {
   .path-product-finder .container-fluid .content-right {
     display: none; }
   .path-news .content-wrapper .text {
-    padding-left: 0; }
-  .path-news .content-wrapper table tr td {
-    padding: 1px; } }
+    padding-left: 0; } }
 
 @media only screen and (min-width: 768px) {
   #footer {
