@@ -1,4 +1,4 @@
-Drupal.behaviors.yourmodulename = {
+Drupal.behaviors.PharmaTheme = {
   attach: function (context, settings) {
     var $ = jQuery.noConflict();
     $('#sidebar-wrapper .sidebar-nav .nolink ul li a').attr('target', '_blank');
@@ -619,9 +619,6 @@ Drupal.behaviors.yourmodulename = {
         $('.page-node-type-healthtips .sub-tab-wrapper').width(tab_width);
       }, 500));
     }
-
-    /*health-tips*/
-
     /**** Mobile menu ****/
     /*sidebar*/
     var trigger = $('.hamburger'),
@@ -633,12 +630,10 @@ Drupal.behaviors.yourmodulename = {
 
     function hamburger_cross() {
       if (isClosed == true) {
-        //overlay.hide();
         trigger.removeClass('is-open');
         trigger.addClass('is-closed');
         isClosed = false;
       } else {
-        //overlay.show();
         trigger.removeClass('is-closed');
         trigger.addClass('is-open');
         isClosed = true;
@@ -825,7 +820,7 @@ Drupal.behaviors.yourmodulename = {
           });
           var oldtmp = []
           if (symptoms.length > 0) {
-            $.get(langname + '/product-finder-json?_format=json', function (data) {
+            $.get(langname + '/productfinderjson', function (data) {
               for (var p_index in data) {
                 for (var s_index in symptoms) {
                   //get the product of choose symptoms field True first
