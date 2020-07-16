@@ -79,6 +79,11 @@ function pharm_theme_preprocess_page(array &$variables)
     && (in_array($path_args[2], $array))) {
     $variables['#attached']['library'][] = 'pharm_theme/loadsh';
   }
+
+  if ($variables['node']->getType() == "healthtips") {
+    $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+  }
+
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $variables['language'] = $language;
 
