@@ -1,7 +1,8 @@
 Drupal.behaviors.PharmaTheme = {
   attach: function (context, settings) {
     var $ = jQuery.noConflict();
-    $('#sidebar-wrapper .sidebar-nav .nolink ul li a').attr('target', '_blank');
+    $('#sidebar-wrapper .sidebar-nav .nolink ul li a, #header .nolink ul li a').attr('target', '_blank');
+
     if ($('#company-timeline').length > 0) {
       var lang = settings.path.pathPrefix;
       var json_lang = lang.replace('/', '');

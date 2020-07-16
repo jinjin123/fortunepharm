@@ -505,6 +505,7 @@ table {
     #header .main-menu .nolink {
       position: relative; }
       #header .main-menu .nolink .sub__menu {
+        min-width: 180px;
         margin: 0;
         display: none;
         position: absolute;
@@ -513,9 +514,15 @@ table {
         z-index: 1; }
         #header .main-menu .nolink .sub__menu a {
           color: black;
-          padding: 12px 16px;
+          padding: 0 10px;
           text-decoration: none;
-          display: block; }
+          display: block;
+          margin: 0;
+          border-bottom: #ededed solid 1px;
+          line-height: 36px;
+          height: 36px; }
+          #header .main-menu .nolink .sub__menu a:hover {
+            background-color: #f7f7f7; }
       #header .main-menu .nolink:hover > .sub__menu {
         display: block; }
   #header #lang, #header #social-icon, #header #linkage-icon {
@@ -568,6 +575,8 @@ table {
     padding: 0;
     margin: 0 0 0 0;
     display: block; }
+  #header .container-fluid-40 {
+    overflow: visible; }
 
 body.path-frontpage #header, body.page-node-2 #header, body.page-node-3 #header, body.page-node-20 #header, body.page-node-147 #header, body.path-news #header, body.page-node-5 #header, body.page-node-20 #header, body.path-advertisements body.page-node-6 #header, body.page-node-10 #header {
   padding-bottom: 0;
