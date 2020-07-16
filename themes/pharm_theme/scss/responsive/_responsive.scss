@@ -189,7 +189,7 @@
     .views-row {
       .content-row {
         & > div {
-          padding: 10px !important;
+          //padding: 10px !important;
         }
 
         .colume2 {
@@ -639,14 +639,6 @@
     .content-wrapper {
       .text {
         padding-left: 0;
-      }
-
-      table {
-        tr {
-          td {
-            padding: 1px;
-          }
-        }
       }
     }
   }
