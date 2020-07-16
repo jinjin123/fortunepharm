@@ -80,8 +80,10 @@ function pharm_theme_preprocess_page(array &$variables)
     $variables['#attached']['library'][] = 'pharm_theme/loadsh';
   }
 
-  if ($variables['node']->getType() == "healthtips") {
-    $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+  if (isset($path_args[1]) && $path_args[1] == 'node') {
+    if ($variables['node']->getType() == "healthtips") {
+      $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+    }
   }
 
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
