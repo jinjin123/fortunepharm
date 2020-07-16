@@ -321,7 +321,8 @@ Drupal.behaviors.yourmodulename = {
     if ($('.path-advertisements').length > 0) {
         var params = new window.URLSearchParams(window.location.search);
         if(params.get('y') !='2020') {
-          $('#block-pagerforadverisement-2').remove();
+          $('#block-pagerforadverisement').hide();
+          $('#block-pagerforadverisement-2').hide();
         }
 
       $('.path-advertisements .rightmove').click(function () {
