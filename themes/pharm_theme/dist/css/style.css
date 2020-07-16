@@ -483,14 +483,16 @@ table {
       color: #040C4A; }
   #header .main-menu {
     margin-top: 80px; }
-    #header .main-menu a, #header .main-menu span {
+    #header .main-menu .sub__menu {
+      display: none; }
+    #header .main-menu a {
       height: 30px;
       line-height: 20px;
       padding: 5px 10px;
       margin: 0 5px;
       border-bottom: 1px solid transparent;
       color: #878787; }
-      #header .main-menu a:hover, #header .main-menu a:focus, #header .main-menu span:hover, #header .main-menu span:focus {
+      #header .main-menu a:hover, #header .main-menu a:focus {
         background: none;
         color: #040C4A;
         border-bottom: 1px #040C4A solid; }
@@ -500,8 +502,22 @@ table {
     #header .main-menu #linkage-icon .icon-list-item a {
       padding-right: 0px;
       padding-left: 12px; }
-    #header .main-menu .nolink:hover > .dropdown-menu {
-      display: block; }
+    #header .main-menu .nolink {
+      position: relative; }
+      #header .main-menu .nolink .sub__menu {
+        margin: 0;
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1; }
+        #header .main-menu .nolink .sub__menu a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block; }
+      #header .main-menu .nolink:hover > .sub__menu {
+        display: block; }
   #header #lang, #header #social-icon, #header #linkage-icon {
     margin-top: 60px; }
   #header #lang {
