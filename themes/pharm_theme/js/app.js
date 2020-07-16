@@ -908,7 +908,7 @@ Drupal.behaviors.yourmodulename = {
           });
           var oldtmp = []
           if (symptoms.length > 0) {
-            $.get(langname + '/product-finder-json?_format=json', function (data) {
+            $.get(langname + '/productfinderjson', function (data) {
               for (var p_index in data) {
                 for (var s_index in symptoms) {
                   //get the product of choose symptoms field True first

@@ -936,6 +936,9 @@ body.lang-zh-hant {
 
 #health-tips.children .function-wrapper .function-right-wrapper .function-btn {
   background-image: url("../images/tips/trip_3_right_btn.png"); }
+  #health-tips.children .function-wrapper .function-right-wrapper .function-btn > img,
+  #health-tips.children .function-wrapper .function-right-wrapper .function-btn > p {
+    margin-left: 20%; }
 
 #health-tips.allergy .function-wrapper .function-btn > p, #health-tips.gerd .function-wrapper .function-btn > p, #health-tips.pain .function-wrapper .function-btn > p {
   padding: 20px;

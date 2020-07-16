@@ -323,6 +323,10 @@
             .function-right-wrapper {
                 .function-btn {
                     background-image: url("../images/tips/trip_3_right_btn.png");
+                    >img,
+                    >p {
+                      margin-left: 20%;
+                    }
                 }
             }
         }
