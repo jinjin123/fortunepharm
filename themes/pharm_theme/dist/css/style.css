@@ -2335,13 +2335,18 @@ body.lang-zh-hant {
 
 @media only screen and (max-width: 399px) {
   #footer .footer-link ul li a {
-    padding: 0 5px; } }
-
-@media only screen and (max-width: 399px) {
+    padding: 0 5px; }
   .lang-en .main-wrapper .index-wrapper .link-wrapper span {
     font-size: 0.8em; }
   .lang-en .main-wrapper .index-wrapper .video-wrapper p.video-text1 {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+  .path-news .views-row .content-row .colume2 {
+    padding: 10px; }
+  .path-news .content-row.active .colume2 .content-wrapper .row {
+    margin-right: 0px;
+    margin-left: 0px; }
+  .path-news .content-row.active .colume2 .content-wrapper table tr td {
+    font-size: 13px; } }
 
 body.fontyourface {
   overflow-x: hidden; }
