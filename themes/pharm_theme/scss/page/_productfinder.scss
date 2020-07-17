@@ -3,12 +3,12 @@
 
 .path-product-finder {
   .container-fluid {
+    margin:0 !important;
     .index-wrapper {
       position: relative;
       height: 100%;
       padding-right: 5px;
       padding-bottom: 5px;
-
       a {
         color: #000;
       }

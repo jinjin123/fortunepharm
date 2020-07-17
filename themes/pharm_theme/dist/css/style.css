@@ -1837,13 +1837,15 @@ body.lang-zh-hant {
   position: absolute;
   bottom: 60%; }
 
-.path-product-finder .container-fluid .index-wrapper {
-  position: relative;
-  height: 100%;
-  padding-right: 5px;
-  padding-bottom: 5px; }
-  .path-product-finder .container-fluid .index-wrapper a {
-    color: #000; }
+.path-product-finder .container-fluid {
+  margin: 0 !important; }
+  .path-product-finder .container-fluid .index-wrapper {
+    position: relative;
+    height: 100%;
+    padding-right: 5px;
+    padding-bottom: 5px; }
+    .path-product-finder .container-fluid .index-wrapper a {
+      color: #000; }
 
 .path-product-finder .container-fluid .index-wrapper images {
   width: 100%;
