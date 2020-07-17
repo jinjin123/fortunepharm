@@ -168,8 +168,14 @@
   .path-news .views-row .content-row .colume2 {
     padding: 10px;
   }
-  .path-news .content-row.active .colume2 .content-wrapper table tr td {
-    font-size: 13px;
+  .path-news .content-row.active .colume2 .content-wrapper {
+      .row {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+      table tr td {
+      font-size: 13px;
+    }
   }
 }
 
