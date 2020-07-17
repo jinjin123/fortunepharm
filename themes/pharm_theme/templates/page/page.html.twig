@@ -73,40 +73,30 @@
 {# Header section #}
 {# Content section #}
   <div id="wrapper">
-    {% if page.page_title %}
-    <nav id="contact-nav" class="container-fluid">
-
-      <div class="container-fluid-125">
-        <div class="page_title">
-          {{ page.page_title }}
+    <div id="main">
+      <div class="container-fluid">
+        <section id="banner-wrapper">
+          <div class="page_banner">
+            {{ page.page_banner }}
+          </div>
+        </section>
+        <section id="os-wrapper">
+          {{ page.content }}
+        </section>
+        <section id="content_bottom">
+          {{ page.content_bottom }}
+        </section>
+      </div>
+    </div>
+    {# Content section #}
+    {# Footer section #}
+    <footer class="footer" role="contentinfo" id="footer">
+      <div class="container-fluid">
+        <div class="container-fluid-40">
+          {{ page.footer }}
         </div>
       </div>
-    </nav>
-  {%endif  %}
-  <div id="main">
-    <div class="container-fluid">
-      <section id="banner-wrapper">
-      <div class="page_banner">
-        {{ page.page_banner }}
-      </div>
-      </section>
-      <section id="os-wrapper">
-        {{ page.content }}
-      </section>
-      <section id="content_bottom">
-        {{ page.content_bottom }}
-      </section>
-    </div>
-  </div>
-{# Content section #}
-{# Footer section #}
-  <footer class="footer" role="contentinfo" id="footer">
-    <div class="container-fluid">
-      <div class="container-fluid-40">
-        {{ page.footer }}
-      </div>
-    </div>
-  </footer>
+    </footer>
   </div>
 </div>
 {# Footer section #}
