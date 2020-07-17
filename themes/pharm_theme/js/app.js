@@ -1,7 +1,8 @@
 Drupal.behaviors.PharmaTheme = {
   attach: function (context, settings) {
     var $ = jQuery.noConflict();
-    $('#sidebar-wrapper .sidebar-nav .nolink ul li a').attr('target', '_blank');
+    $('#sidebar-wrapper .sidebar-nav .nolink ul li a, #header .nolink ul li a').attr('target', '_blank');
+
     if ($('#company-timeline').length > 0) {
       var lang = settings.path.pathPrefix;
       var json_lang = lang.replace('/', '');
@@ -321,6 +322,8 @@ Drupal.behaviors.PharmaTheme = {
     if ($('.path-advertisements').length > 0) {
         if(settings.path.currentQuery.y) {
            if (settings.path.currentQuery.y == '2020') {
+             $('#block-pagerforadverisement').hide();
+             $('#block-pagerforadverisement-2').hide();
             $('#block-pagerforadverisement').show();
            } else {
             $('#block-pagerforadverisement').hide();
