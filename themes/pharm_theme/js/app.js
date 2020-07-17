@@ -322,6 +322,8 @@ Drupal.behaviors.PharmaTheme = {
     if ($('.path-advertisements').length > 0) {
         if(settings.path.currentQuery.y) {
            if (settings.path.currentQuery.y == '2020') {
+             $('#block-pagerforadverisement').hide();
+             $('#block-pagerforadverisement-2').hide();
             $('#block-pagerforadverisement').show();
            } else {
             $('#block-pagerforadverisement').hide();
