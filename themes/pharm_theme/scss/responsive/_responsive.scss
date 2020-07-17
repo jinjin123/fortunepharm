@@ -193,6 +193,7 @@
         }
 
         .colume2 {
+          padding: 10px;
           .img img {
             display: none;
           }
@@ -200,6 +201,10 @@
           .title-wrapper a {
             top: 10px;
             right: 10px;
+          }
+
+          .content-wrapper td {
+            font-size: 13px;
           }
         }
       }
