@@ -325,7 +325,7 @@
                     background-image: url("../images/tips/trip_3_right_btn.png");
                     >img,
                     >p {
-                      margin-left: 20%;
+                        margin-left: 20%;
                     }
                 }
             }
@@ -338,6 +338,7 @@
         .function-wrapper {
             .function-btn {
                 >p {
+                    text-align: left;
                     padding: 20px;
                     margin: 0 !important;
                     font-size: 1.2em;
@@ -584,6 +585,7 @@
         &.pain {
             .function-wrapper {
                 .function-btn>p {
+                    text-align: left;
                     padding: 10px;
                     font-size: 1em;
                     width: 85%;
@@ -607,6 +609,7 @@
         &.pain {
             .function-wrapper {
                 .function-btn>p {
+                    text-align: left;
                     padding: 5px;
                     font-size: 0.6em;
                     width: 90%;
@@ -762,6 +765,7 @@
         &.pain {
             .function-wrapper {
                 .function-btn>p {
+                    text-align: left;
                     padding: 5% !important;
                     font-size: 0.8em;
                     margin: 0 !important;

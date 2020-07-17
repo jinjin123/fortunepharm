@@ -9,6 +9,9 @@ Drupal.behaviors.Healthtips = {
                 $('#' + id_name).height("auto");
             }
         }
+        $(document).ready(function() {
+            // change_size('wrapper', $(window).width(), $(window).height());
+            $('body').show();
             if ($('#health-tips .sub-tab-wrapper li').length > 0) {
                 change_size('wrapper', $(window).width(), $(window).height());
 
@@ -126,5 +129,6 @@ Drupal.behaviors.Healthtips = {
                 });
             }
             /*health-tips*/
+        });
     }
 };
