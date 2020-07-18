@@ -990,12 +990,13 @@ body.lang-zh-hant {
   height: 500px;
   overflow: auto; }
 
-#health-tips.allergy .function-wrapper .function-left-wrapper,
+#health-tips.allergy .function-wrapper .function-left-wrapper {
+  display: none; }
+  #health-tips.allergy .function-wrapper .function-left-wrapper.active {
+    display: block; }
+
 #health-tips.allergy .function-wrapper .function-right-wrapper {
   display: none; }
-  #health-tips.allergy .function-wrapper .function-left-wrapper.active,
-  #health-tips.allergy .function-wrapper .function-right-wrapper.active {
-    display: block; }
 
 #health-tips.allergy .function-wrapper .function-middle-wrapper {
   margin-left: 10%; }
