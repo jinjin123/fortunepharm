@@ -3,7 +3,7 @@ Drupal.behaviors.PharmaTheme = {
     var $ = jQuery.noConflict();
     $('#sidebar-wrapper .sidebar-nav .nolink ul li a, #header .nolink ul li a').attr('target', '_blank');
 
-    if ($('#company-timeline').length > 0) {
+    if ($('#company-timeline', context).length > 0) {
       var lang = settings.path.pathPrefix;
       var json_lang = lang.replace('/', '');
       var crt_path = settings.path.currentPath;
@@ -102,7 +102,7 @@ Drupal.behaviors.PharmaTheme = {
       }]
     })
     // scroll bar for health tips or other has scroll bar page
-    if ($('.scroll-wrapper').length > 0) {
+    if ($('.scroll-wrapper', context).length > 0) {
       clearTimeout($.data(this, 'scroll-wrapper'));
       $.data(this, 'scroll-wrapper', setTimeout(function () {
         $('.scroll-wrapper').each(function () {
@@ -137,7 +137,7 @@ Drupal.behaviors.PharmaTheme = {
     }
 
     /*sub-tab-session*/
-    if ($('.sub-tab-session').length > 0) {
+    if ($('.sub-tab-session', context).length > 0) {
       clearTimeout($.data(this, 'sub-tab-session'));
       $.data(this, 'sub-tab-session', setTimeout(function () {
         if ($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()) {
@@ -148,7 +148,7 @@ Drupal.behaviors.PharmaTheme = {
       }, 500));
 
 
-      $('.sub-tab-outer-wrapper').scroll(function () {
+      $('.sub-tab-outer-wrapper', context).scroll(function () {
         if ($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
         } else {
@@ -162,7 +162,7 @@ Drupal.behaviors.PharmaTheme = {
         }
       });
 
-      $(".sub-tab-session .arrow").on("click", function () {
+      $(".sub-tab-session .arrow", context).on("click", function () {
         var target = $('.sub-tab-session .sub-tab-outer-wrapper');
         var arrow = $(this);
         if (!$(target).is(':animated')) {
@@ -182,7 +182,7 @@ Drupal.behaviors.PharmaTheme = {
     /*sub-tab-session*/
     // scroll bar for health tips or other has scroll bar page
     /*index*/
-    if ($('.homepage .body .main-wrapper').length > 0) {
+    if ($('.homepage .body .main-wrapper', context).length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
       $(window).resize(function () {
         clearTimeout($.data(this, 'resizeTimer'));
@@ -191,7 +191,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    if ($('#banner-wrapper-mobile').length > 0) {
+    if ($('#banner-wrapper-mobile', context).length > 0) {
       $('#banner-wrapper-mobile').carousel({
         interval: false
       });
@@ -278,7 +278,7 @@ Drupal.behaviors.PharmaTheme = {
 
     /*** News page ****/
     $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
-    if ($('.path-news .content-row').length > 0) {
+    if ($('.path-news .content-row', context).length > 0) {
       $('.path-news .content-row')[0].className = "content-row active";
       $.data(this, 'news', setTimeout(function () {
         $('.path-news .content-row .colume2').each(function () {
@@ -296,7 +296,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('.path-news .content-row .colume2 .title-wrapper a').click(function () {
+    $('.path-news .content-row .colume2 .title-wrapper a, context').click(function () {
       if ($(this).parent().parent().parent().hasClass('active')) {
         $(this).parent().siblings('.content-wrapper').slideUp(400, function () {
           $(this).parent().siblings('.colume1').height($(this).parent().height());
@@ -319,7 +319,7 @@ Drupal.behaviors.PharmaTheme = {
     /*** News page ****/
 
     /*advertisements*/
-    if ($('.path-advertisements').length > 0) {
+    if ($('.path-advertisements', context).length > 0) {
         if(settings.path.currentQuery.y) {
            if (settings.path.currentQuery.y == '2020') {
              $('#block-pagerforadverisement').hide();
@@ -367,13 +367,13 @@ Drupal.behaviors.PharmaTheme = {
           scrollTop: $('.advertisements-top').offset().top - 5
         });
       });
-      $(".path-advertisements .pagination-change").on('focus', function () {
+      $(".path-advertisements .pagination-change", context).on('focus', function () {
       }).change(function () {
         var yr = $(this).val();
         var lang = settings.path.pathPrefix;
         window.location.assign("/" + lang + "advertisements/?y=" + yr);
       });
-      $('.path-advertisements .pagination-btn.withmovebutt').click(function () {
+      $('.path-advertisements .pagination-btn.withmovebutt', context).click(function () {
         var lang = settings.path.pathPrefix;
         var page = $(this).attr('rel');
         window.location.assign("/" + lang + "advertisements/?y=" + page);
@@ -381,7 +381,7 @@ Drupal.behaviors.PharmaTheme = {
     }
     /*advertisements*/
     /*Charity Fund*/
-    if ($('#fund-timeline').length > 0) {
+    if ($('#fund-timeline', context, context).length > 0) {
       var timeline_data = [];
       var firstYear = '';
       var secondYear = '';
@@ -475,7 +475,7 @@ Drupal.behaviors.PharmaTheme = {
     }
 
     /*Charity Fund*/
-    if ($('.fancybox').length > 0) {
+    if ($('.fancybox', context).length > 0) {
       $(".fancybox").fancybox();
     }
     /*news */
@@ -501,7 +501,7 @@ Drupal.behaviors.PharmaTheme = {
     /*index*/
 
     /*contact-us-offers*/
-    if ($('#block-contactus #offers-wrapper').length > 0) {
+    if ($('#block-contactus #offers-wrapper', context).length > 0) {
       $.data(this, 'blcok-contactus', setTimeout(function () {
         $('#block-contactus #offers-wrapper .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -518,7 +518,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-contactus #offers-wrapper .more-btn').click(function () {
+    $('#block-contactus #offers-wrapper .more-btn', context).click(function () {
       $('#block-contactus #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-contactus #offers-wrapper > div.hide').length == 0) $('#block-contactus #offers-wrapper .more-btn').remove();
@@ -544,7 +544,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function () {
+    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn', context).click(function () {
       $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
@@ -570,7 +570,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function () {
+    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn', context).click(function () {
       $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
@@ -582,7 +582,7 @@ Drupal.behaviors.PharmaTheme = {
     /*contact-us-offers*/
 
     /*lastest-offers*/
-    if ($('.path-latest-offers').length > 0) {
+    if ($('.path-latest-offers', context).length > 0) {
       $.data(this, 'lastest-offers', setTimeout(function () {
         $('.path-latest-offers .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -599,7 +599,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('.path-latest-offers .more-btn').click(function () {
+    $('.path-latest-offers .more-btn', context).click(function () {
       $('.path-latest-offers > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('.path-latest-offers > div.hide').length == 0) $('.path-latest-offers .more-btn').remove();
@@ -611,7 +611,7 @@ Drupal.behaviors.PharmaTheme = {
     /*lastest-offers*/
 
     /*health-tips*/
-    if ($('.page-node-type-healthtips .sub-tab-wrapper li').length > 0) {
+    if ($('.page-node-type-healthtips .sub-tab-wrapper li', context).length > 0) {
       change_size('wrapper', $(window).width(), $(window).height());
       var tab_width = 0;
       clearTimeout($.data(this, 'health-tips-tab'));
@@ -643,10 +643,10 @@ Drupal.behaviors.PharmaTheme = {
       }
     }
 
-    $('[data-toggle="offcanvas"]').click(function () {
+    $('[data-toggle="offcanvas"]', context).click(function () {
       $('#wrapper').toggleClass('toggled');
     });
-    $('.sidebar-nav > li').click(function () {
+    $('.sidebar-nav > li', context).click(function () {
       if (!$(this).hasClass('parent')) {
         $('.sidebar-nav > li').each(function () {
           $(this).removeClass('active');
@@ -654,7 +654,7 @@ Drupal.behaviors.PharmaTheme = {
         $(this).addClass('active');
       }
     });
-    $('.sidebar-nav > li.parent').click(function () {
+    $('.sidebar-nav > li.parent', context).click(function () {
       if ($(this).hasClass('show-sub')) {
         $(this).removeClass('show-sub');
       } else {
@@ -710,10 +710,10 @@ Drupal.behaviors.PharmaTheme = {
       }, 500);
     }
 
-    $('.path-faq .content-wrapper .detail').click(function () {
+    $('.path-faq .content-wrapper .detail', context).click(function () {
       faq_detail2($(this));
     });
-    $('.path-faq .detail-wrapper .detail').click(function () {
+    $('.path-faq .detail-wrapper .detail', context).click(function () {
       $(this).parent().parent().hide();
       $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
     });
@@ -929,7 +929,7 @@ Drupal.behaviors.PharmaTheme = {
         }
       });
       // scroll overflow on right box
-      $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').scroll(function () {
+      $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer', context).scroll(function () {
         if ($(this).scrollTop() == 0) {
           $(".path-product-finder #product-take-wrapper .content-right .arrow-up").hide();
         } else if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
@@ -938,7 +938,7 @@ Drupal.behaviors.PharmaTheme = {
           $(".path-product-finder #product-take-wrapper .content-right .arrow").show();
         }
       });
-      $(".path-product-finder #product-take-wrapper .content-right .arrow").on("click", function () {
+      $(".path-product-finder #product-take-wrapper .content-right .arrow", context).on("click", function () {
         var target = $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer');
         var arrow = $(this);
         if (!$(target).is(':animated')) {
@@ -968,7 +968,7 @@ Drupal.behaviors.PharmaTheme = {
           $('.product-small-image').attr("style", "");
       }
     }
-    if($('.path-product .product-big-image').length > 0){
+    if($('.path-product .product-big-image', context).length > 0){
       $.data(this, 'product-image', setTimeout(function() {
         product_image_height();
         }, 200));
@@ -980,7 +980,7 @@ Drupal.behaviors.PharmaTheme = {
       });
     }
 
-    $('.path-product #product-wrapper .product-small-image a').click(function(){
+    $('.path-product #product-wrapper .product-small-image a', context).click(function(){
       var image = $(this).attr('rel');
       var fancybox_img = $(this).attr('fancyboxdata');
       $('.path-product #product-wrapper .product-big-image img').attr('src',image);
@@ -1005,7 +1005,7 @@ Drupal.behaviors.PharmaTheme = {
       }, 500));
     }
   
-    $('.path-product .product-content-tab-wrapper ul li').click(function(){
+    $('.path-product .product-content-tab-wrapper ul li', context).click(function(){
       $(this).siblings().each(function(){
         if($(this).hasClass('active')){
           $('.product-content-wrapper.product-content'+$(this).attr('rel')).hide();
