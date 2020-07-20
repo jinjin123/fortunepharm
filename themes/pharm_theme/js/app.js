@@ -956,5 +956,65 @@ Drupal.behaviors.PharmaTheme = {
       });
     }
     /*product-take*/
+
+    /*product*/
+    function product_image_height(){
+      if($(window).width() < 768){
+        var wrapper_width = $('.product-big-image').width();
+        change_height('product-big-image', wrapper_width);
+          change_height('product-small-image', wrapper_width);
+      }else{
+        $('.product-big-image').attr("style", "");
+          $('.product-small-image').attr("style", "");
+      }
+    }
+    if($('.path-product .product-big-image').length > 0){
+      $.data(this, 'product-image', setTimeout(function() {
+        product_image_height();
+        }, 200));
+      $(window).resize(function() {
+        clearTimeout($.data(this, 'product-image2'));
+          $.data(this, 'product-image2', setTimeout(function() {
+              product_image_height();
+          }, 800));
+      });
+    }
+
+    $('.path-product #product-wrapper .product-small-image a').click(function(){
+      var image = $(this).attr('rel');
+      var fancybox_img = $(this).attr('fancyboxdata');
+      $('.path-product #product-wrapper .product-big-image img').attr('src',image);
+      $('.node--type-product #product-wrapper .product-big-image .zoom-btn').attr('href',fancybox_img);
+    });
+
+    if($('.path-product .tab-icon-outer-wrapper .tab-icon-wrapper li').length > 0){
+      var tab_width = 0;
+      var icon_width = 0;
+      clearTimeout($.data(this, 'product-tab'));
+        $.data(this, 'product-tab', setTimeout(function() {
+          $('.path-product .sub-tab-wrapper li').each(function(){
+            console.log($(this).width());
+          tab_width += $(this).width();
+        });
+        $('.path-product .tab-icon-wrapper li').each(function(){
+          icon_width += $(this).width();
+        });
+
+        $('.path-product .sub-tab-wrapper').width(tab_width);
+        $('.path-product .tab-icon-wrapper').width(icon_width);
+      }, 500));
+    }
+  
+    $('.path-product .product-content-tab-wrapper ul li').click(function(){
+      $(this).siblings().each(function(){
+        if($(this).hasClass('active')){
+          $('.product-content-wrapper.product-content'+$(this).attr('rel')).hide();
+          $(this).removeClass('active');
+        }
+      });
+      $(this).addClass('active');
+      $('.product-content-wrapper.product-content'+$(this).attr('rel')).show();
+    });
+  /*product*/
   }
 };
