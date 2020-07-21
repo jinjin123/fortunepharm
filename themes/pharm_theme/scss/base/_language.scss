@@ -40,3 +40,38 @@ body.lang-zh-hans {
 body.lang-zh-hant {
   font-family: "微軟正黑體", "Microsoft JhengHei", "蘋果儷中黑", "Apple LiGothic";
 }
+
+.lang-en.path-product {
+  .market-tab-wrapper {
+    a {
+      width: 145px;
+    }
+    width: 435px;
+  }
+  .sub-tab-outer-wrapper {
+    height: 70px;
+  }
+  .sub-tab-wrapper {
+    width: 945px;
+    li {
+      a {
+        height: 70px;
+        width: 135px;
+      }
+    }
+  }
+  .product-content-wrapper.product-content2 {
+    >ul {
+      >li {
+        height: 70px;
+      }
+    }
+  }
+}
+.sidebar-nav {
+  li {
+    a {
+      width: 130px;
+    }
+  }
+}

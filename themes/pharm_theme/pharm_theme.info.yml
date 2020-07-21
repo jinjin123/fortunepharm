@@ -14,6 +14,8 @@ regions:
   home_page_bottom_one: 'Home page bottom one'
   home_page_bottom_two: 'Home page bottom two'
   home_page_bottom_three: 'Home page bottom three'
+  product_left: 'Product page left'
+  product_right: 'Product page right'
   banner: 'Banner'
   page_title: 'Page Title'
   page_banner: 'Page Banner'
