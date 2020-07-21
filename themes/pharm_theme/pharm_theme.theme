@@ -142,9 +142,9 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
         // Add active link.
         $variables['items'][$key]['attributes']['class'] = 'active';
       }
-      if (strpos($urlString, $path_args[2]) !== false) {
-        $variables['items'][$key]['attributes']['class'] = 'active';
-      }
+      // if (strpos($urlString, $path_args[2]) !== false) {
+      //   $variables['items'][$key]['attributes']['class'] = 'active';
+      // }
     }
   }
 }
