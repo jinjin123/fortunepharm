@@ -2241,7 +2241,8 @@ body.lang-zh-hant {
   background-position: 0 50%; }
 
 .path-product-finder .container-fluid .content-left .index-wrapper a.inactive {
-  background-position: 0 100%; }
+  background-position: 0 100%;
+  pointer-events: none; }
 
 .path-product-finder .container-fluid .content-left .index-wrapper a.result {
   height: 60px;
