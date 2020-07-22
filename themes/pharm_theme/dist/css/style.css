@@ -2674,7 +2674,8 @@ body.fontyourface {
     max-height: 100%; }
 
 body.path-frontpage .slick-slide img {
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 body.path-frontpage .slick-dots {
   bottom: 20px; }

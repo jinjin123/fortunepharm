@@ -133,7 +133,6 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
     // Get the current path.
     $current_path = \Drupal::request()->getRequestUri();
     $path_args = explode('/', $current_path);
-    print_r();
     $items = $variables['items'];
     foreach ($items as $key => $item) {
       // If path is current_path, set active to li.
