@@ -1015,5 +1015,14 @@ Drupal.behaviors.PharmaTheme = {
             $('.product-content-wrapper.product-content' + $(this).attr('rel')).show();
         });
         /*product*/
+        /*privacy */
+        console.log('#terms-wrapper terms-left out');
+        if ($('#terms-wrapper .terms-left').length > 0) {
+            console.log('#terms-wrapper terms-left in');
+            $("#block-pharm-theme-content").css("max-width", "1200px");
+            $("#banner-wrapper").css("margin-bottom", "1px");
+
+        }
+        /*privacy */
     }
 };

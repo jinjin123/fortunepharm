@@ -1312,6 +1312,26 @@ body.lang-zh-hant {
   font-size: small;
   color: #333; }
 
+#privacy_terms .col-sm-8.terms-right {
+  /* background-color: wheat; */
+  padding: 15px;
+  background-color: #EAF6F8; }
+  #privacy_terms .col-sm-8.terms-right h3 {
+    font-size: 1.2em;
+    color: #6ABED8; }
+
+#privacy_terms .col-sm-4.terms-left {
+  text-align: center; }
+  #privacy_terms .col-sm-4.terms-left h2 {
+    font-size: 1.8em;
+    text-align: center;
+    color: #000077; }
+
+#privacy_terms section#terms-wrapper {
+  /* background-color: rebeccapurple; */
+  background-color: #C4EDF6;
+  margin-bottom: 25px; }
+
 /*contact*/
 .contact-section #header {
   border: 0;
