@@ -642,7 +642,7 @@ Drupal.behaviors.PharmaTheme = {
             }
         }
 
-        $('[data-toggle="offcanvas"]').click(function() {
+        $('[data-toggle="offcanvas"]' , context).click(function() {
             $('#wrapper').toggleClass('toggled');
         });
         $('.sidebar-nav > li', context).click(function() {
