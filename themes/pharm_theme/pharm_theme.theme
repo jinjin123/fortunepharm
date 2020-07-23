@@ -141,9 +141,12 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
         // Add active link.
         $variables['items'][$key]['attributes']['class'] = 'active';
       }
-      // if (strpos($urlString, $path_args[2]) !== false) {
-      //   $variables['items'][$key]['attributes']['class'] = 'active';
-      // }
+
+      // Product & Faq - menu add active class
+      $arg = '/'.$path_args[2].'/';
+      if (strpos($urlString, $arg) !== false) {
+        $variables['items'][$key]['attributes']['class'] = 'active';
+      }
     }
   }
 }
