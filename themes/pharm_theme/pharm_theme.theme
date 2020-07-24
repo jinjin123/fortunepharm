@@ -143,9 +143,11 @@ function pharm_theme_preprocess_menu(&$variables, $hook) {
       }
 
       // Product & Faq - menu add active class
-      $arg = '/'.$path_args[2].'/';
-      if (strpos($urlString, $arg) !== false) {
-        $variables['items'][$key]['attributes']['class'] = 'active';
+      if (isset($path_args) && isset($path_args[2])){
+        $arg = '/'.$path_args[2].'/';
+        if (strpos($urlString, $arg) !== false) {
+          $variables['items'][$key]['attributes']['class'] = 'active';
+        }
       }
     }
   }
