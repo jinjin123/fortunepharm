@@ -3,6 +3,11 @@
 /*product-children*/
 
 .path-product {
+  #header {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EFEFEF;
+    border-radius: 0;
+  }
   .market-tab-wrapper {
     float: none;
     width: 390px;
@@ -264,6 +269,8 @@
       p {
         padding-top: 60px;
         text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   }
@@ -302,6 +309,9 @@
               right: 0;
               top: 17px;
             }
+            &:focus {
+              text-decoration: none;
+            }
           }
         }
       }
@@ -328,7 +338,7 @@
   }
   #product-more-wrapper {
     margin: 30px 0;
-    >div {
+    #block-productpageproductfinder, #block-productpageproductdetails {
       position: relative;
       padding: 0;
       padding-right: 5px;
@@ -369,12 +379,18 @@
       }
     }
   }
+  .scroll-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: auto hidden;
+  }
   .package-title {
     position: absolute;
     bottom: 60%;
   }
 }
-#product.children {
+.path-product.children {
   .sub-tab-wrapper {
     margin: 0 auto;
     li.normal {

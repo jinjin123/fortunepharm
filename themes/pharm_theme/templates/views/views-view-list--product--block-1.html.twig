@@ -62,11 +62,20 @@
           {% if row.content['#row']._entity.parent.target_id == parent_array[parent_url_id[3]]['parents'] %}
             {% set parent_url = path('entity.taxonomy_term.canonical', 
                     {'taxonomy_term':row.content['#row']._entity.parent.target_id}) %}
+            {% set pink = [38,42,43] %}
             {% set url = parent_url|replace({ (lang): ''}) %}
             {% if row.content['#row']._entity.tid.value == parent_url_id[3] %}
-              {% set active_child = 'normal_active' %}
+              {% if row.content['#row']._entity.tid.value in pink %}
+                {% set active_child = 'children_active' %}
+              {% else %}
+                {% set active_child = 'normal_active' %}
+              {% endif %}
             {% else %}
-              {% set active_child = 'normal' %}
+              {% if row.content['#row']._entity.tid.value in pink %}
+                {% set active_child = 'children' %}
+              {% else %}
+                {% set active_child = 'normal' %}
+              {% endif %}
             {% endif %}
           <li class="{{active_child}}">
             <a href="{{lang}}/product{{url}}/{{ row.content['#row']._entity.tid.value }}/0" title="{{ row.content['#row']._entity.name.value|t }}">{{ row.content['#row']._entity.name.value|t }}</a>

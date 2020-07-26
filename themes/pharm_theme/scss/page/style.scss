@@ -1,8 +1,6 @@
 @import '../variable';
 @import '../mixins';
-body {
-  color: #656565;
-}
+
 h5 {
   @include bullet-title;
 }
