@@ -43,6 +43,12 @@ function pharm_theme_preprocess_html(&$variables)
     $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
   }
   $variables['attributes']['class'][] = 'lang-'.$language;
+
+  $pink_array = [38,42,43];
+  if (isset($path_args[1]) && $path_args[1] == 'product' &&
+      in_array($path_args[3], $pink_array)) {
+    $variables['attributes']['class'][] = 'children';
+  }
 }
 
 /**
