@@ -117,34 +117,34 @@
           <h4 class="purple">{{ 'Detail'|t }}</h4>
         </div>
         <div class="product-detail-wrapper2">
-          <p class="grey">{% trans %}{{ node.field_reg_no.fieldDefinition.label }}.{{ node.field_reg_no.value }}{% endtrans %}</p>
+          <p class="grey">{{ node.field_reg_no.value | t}}</p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-3 product-content-tab-wrapper scroll-wrapper">
         <ul>
           <li class="active" rel="1">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_presentation_and_pack_size.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_presentation_and_pack_size.fieldDefinition.label|t }}</a>
           </li>
           <li rel="2">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_indications.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_indications.fieldDefinition.label|t }}</a>
           </li>
           <li rel="3">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_dosage_and_administration.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_dosage_and_administration.fieldDefinition.label|t }}</a>
           </li>
           <li rel="4">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_active_ingredients.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_active_ingredients.fieldDefinition.label|t }}</a>
           </li>
           <li rel="5">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_caution.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_caution.fieldDefinition.label|t }}</a>
           </li>
           <li rel="6">
             <a href="javascript:void(0);" class="grey">
-            {% trans %}{{ node.field_storage_and_packaging_safe.fieldDefinition.label }}{% endtrans %}</a>
+            {{ node.field_storage_and_packaging_safe.fieldDefinition.label|t }}</a>
           </li>
         </ul>
       </div>

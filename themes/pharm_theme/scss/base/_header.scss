@@ -218,6 +218,10 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #header {
+    .main-menu {
+      margin-top: 0;
+      width: 100%;
+    }
     .navbar-right {
       position: absolute;
       top: 0;
