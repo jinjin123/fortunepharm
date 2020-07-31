@@ -32,7 +32,7 @@
       <ul class="nav sidebar-nav">
         {% for menu_item in mobile_menu.menu_tree %}
           {% set active_trail = '' %}
-          {% if menu_item.active_trail %}
+          {% if menu_item.active_trail or menu_item.active %}
             {% set active_trail = 'active' %}
           {% endif %}
           {% if menu_item.submenu %}

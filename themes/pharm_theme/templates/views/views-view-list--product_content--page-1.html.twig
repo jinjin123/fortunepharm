@@ -37,7 +37,6 @@
   <div class="tab-icon-outer-wrapper scroll-wrapper">
     <{{ list.type }}{{ list.attributes }} class="tab-icon-wrapper nav navbar-nav">
       {% for row in rows %}
-      {{content}}
       {% set weight = row.content['#row']._entity.field_weight.value %}
       {% set term = row.content['#row']._entity.field_product_type.target_id %}
       {% set url_arg = row.content['#view'].args[0] %}
