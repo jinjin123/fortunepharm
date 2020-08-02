@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.2",
         "drupal/condition_query": "^1.2",
+        "drupal/conditional_fields": "^1.0",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
