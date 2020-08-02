@@ -151,8 +151,13 @@
       <div class="col-xs-12 col-sm-6 product-content-wrapper product-content1">
          {{ node.field_presentation_and_pack_size.value|raw }}
       </div>
+      {% if node.field_indications is not empty %}
       <div class="col-xs-12 col-sm-6 product-content-wrapper product-content2">
-        {{ node.field_indications.value|raw }}
+          {{ node.field_indications.value|raw }}
+        {% else %}
+        <div class="col-xs-12 col-sm-6 product-content-wrapper product-content2 ind_dtl">
+          {{ node.field_indications_description.value|raw }}
+        {% endif %}
           <ul>
             {% for symptoms in node.field_indications_symptoms %}
               <li>{{symptoms.value}}</li>

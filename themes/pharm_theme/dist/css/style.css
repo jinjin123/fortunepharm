@@ -1998,6 +1998,17 @@ body.lang-zh-hant {
   background-position: left;
   width: 150px; }
 
+.path-product .product-content-wrapper.product-content2.ind_dtl p {
+  line-height: 0; }
+
+.path-product .product-content-wrapper.product-content2.ind_dtl > ul > li {
+  height: auto;
+  float: none;
+  padding: 0 0 0px 20px;
+  background-image: url(../images/product_detail_dot.png);
+  background-position: 6px 6px;
+  width: 100%; }
+
 .path-product .product-content-wrapper.table-content h1 {
   margin: 0;
   font-size: 1.4em;
