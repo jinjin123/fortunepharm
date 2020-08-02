@@ -1842,6 +1842,9 @@ body.lang-zh-hant {
     display: none; }
 
 /*product-children*/
+.path-product #block-productchilderenbanner {
+  display: none; }
+
 .path-product #header {
   padding-bottom: 10px;
   border-bottom: 2px solid #EFEFEF;
@@ -2154,6 +2157,12 @@ body.lang-zh-hant {
 .path-product .package-title {
   position: absolute;
   bottom: 60%; }
+
+.path-product.children #block-productpagebanner {
+  display: none; }
+
+.path-product.children #block-productchilderenbanner {
+  display: block; }
 
 .path-product.children .sub-tab-wrapper {
   margin: 0 auto; }
