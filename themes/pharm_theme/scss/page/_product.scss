@@ -3,6 +3,9 @@
 /*product-children*/
 
 .path-product {
+  #block-productchilderenbanner {
+    display: none;
+  }
   #header {
     padding-bottom: 10px;
     border-bottom: 2px solid #EFEFEF;
@@ -406,6 +409,12 @@
   }
 }
 .path-product.children {
+  #block-productpagebanner {
+    display: none;
+  }
+  #block-productchilderenbanner {
+    display: block;
+  }
   .sub-tab-wrapper {
     margin: 0 auto;
     li.normal {
