@@ -43,7 +43,7 @@
           {% set url = parent_url|replace({ (lang): ''}) %}
           {% set first = child_array[row.content['#row']._entity.tid.value]| keys | first %}
           {% set url_p = child_array[row.content['#row']._entity.tid.value][first]['weight'] %}
-          {% if (first == parent_url_id[3]) %}
+          {% if (parent_array[first] == parent_array[parent_url_id[3]]) %}
             <li{{ attributes.addClass('active') }}>
           {% else %}
             <li>
