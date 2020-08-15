@@ -3,7 +3,7 @@ Drupal.behaviors.PharmaTheme = {
     var $ = jQuery.noConflict();
     $('#sidebar-wrapper .sidebar-nav .nolink ul li a, #header .nolink ul li a').attr('target', '_blank');
 
-    if ($('#company-timeline').length > 0) {
+    if ($('#company-timeline', context).length > 0) {
       var lang = settings.path.pathPrefix;
       var json_lang = lang.replace('/', '');
       var crt_path = settings.path.currentPath;
@@ -50,7 +50,7 @@ Drupal.behaviors.PharmaTheme = {
       }
     }
     /***** Homepage slide *****/
-    $('.homepage-slider .field-content ul').slick({
+    $('.homepage-slider .field-content ul', context).slick({
       dots: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -76,7 +76,7 @@ Drupal.behaviors.PharmaTheme = {
       }]
     })
     /**** homepage mobile slider *****/
-    $('.homepage-mobile-slider .field-content ul').slick({
+    $('.homepage-mobile-slider .field-content ul', context).slick({
       dots: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -102,7 +102,7 @@ Drupal.behaviors.PharmaTheme = {
       }]
     })
     // scroll bar for health tips or other has scroll bar page
-    if ($('.scroll-wrapper').length > 0) {
+    if ($('.scroll-wrapper', context).length > 0) {
       clearTimeout($.data(this, 'scroll-wrapper'));
       $.data(this, 'scroll-wrapper', setTimeout(function () {
         $('.scroll-wrapper').each(function () {
@@ -137,7 +137,7 @@ Drupal.behaviors.PharmaTheme = {
     }
 
     /*sub-tab-session*/
-    if ($('.sub-tab-session').length > 0) {
+    if ($('.sub-tab-session', context).length > 0) {
       clearTimeout($.data(this, 'sub-tab-session'));
       $.data(this, 'sub-tab-session', setTimeout(function () {
         if ($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()) {
@@ -148,7 +148,7 @@ Drupal.behaviors.PharmaTheme = {
       }, 500));
 
 
-      $('.sub-tab-outer-wrapper').scroll(function () {
+      $('.sub-tab-outer-wrapper', context).scroll(function () {
         if ($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
         } else {
@@ -162,7 +162,7 @@ Drupal.behaviors.PharmaTheme = {
         }
       });
 
-      $(".sub-tab-session .arrow").on("click", function () {
+      $(".sub-tab-session .arrow", context).on("click", function () {
         var target = $('.sub-tab-session .sub-tab-outer-wrapper');
         var arrow = $(this);
         if (!$(target).is(':animated')) {
@@ -182,7 +182,7 @@ Drupal.behaviors.PharmaTheme = {
     /*sub-tab-session*/
     // scroll bar for health tips or other has scroll bar page
     /*index*/
-    if ($('.homepage .body .main-wrapper').length > 0) {
+    if ($('.homepage .body .main-wrapper', context).length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
       $(window).resize(function () {
         clearTimeout($.data(this, 'resizeTimer'));
@@ -191,7 +191,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    if ($('#banner-wrapper-mobile').length > 0) {
+    if ($('#banner-wrapper-mobile', context).length > 0) {
       $('#banner-wrapper-mobile').carousel({
         interval: false
       });
@@ -277,8 +277,8 @@ Drupal.behaviors.PharmaTheme = {
     /*index*/
 
     /*** News page ****/
-    $('.year-wrapper-div').parent('h3').addClass('year-wrapper');
-    if ($('.path-news .content-row').length > 0) {
+    $('.year-wrapper-div', context).parent('h3').addClass('year-wrapper');
+    if ($('.path-news .content-row', context).length > 0) {
       $('.path-news .content-row')[0].className = "content-row active";
       $.data(this, 'news', setTimeout(function () {
         $('.path-news .content-row .colume2').each(function () {
@@ -296,7 +296,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('.path-news .content-row .colume2 .title-wrapper a').click(function () {
+    $('.path-news .content-row .colume2 .title-wrapper a', context).click(function () {
       if ($(this).parent().parent().parent().hasClass('active')) {
         $(this).parent().siblings('.content-wrapper').slideUp(400, function () {
           $(this).parent().siblings('.colume1').height($(this).parent().height());
@@ -312,37 +312,37 @@ Drupal.behaviors.PharmaTheme = {
     // Pager
     var pager = settings.path.currentQuery.page;
     $('.path-news .pagination-btn .pagination-change option[rel=' + pager + ']').attr('selected', 'selected');
-    $('.path-news .pagination-btn .pagination-change').change(function () {
+    $('.path-news .pagination-btn .pagination-change', context).change(function () {
       var path = $(this).val();
       window.location.assign(path);
     });
     /*** News page ****/
 
     /*advertisements*/
-    if ($('.path-advertisements').length > 0) {
-        if(settings.path.currentQuery.y) {
-           if (settings.path.currentQuery.y == '2020') {
-             $('#block-pagerforadverisement').hide();
-             $('#block-pagerforadverisement-2').hide();
-            $('#block-pagerforadverisement').show();
-           } else {
-            $('#block-pagerforadverisement').hide();
-            $('#block-pagerforadverisement-2').hide();
-            }
-        } else {
+    if ($('.path-advertisements', context).length > 0) {
+      if (settings.path.currentQuery.y) {
+        if (settings.path.currentQuery.y == '2020') {
+          $('#block-pagerforadverisement').hide();
+          $('#block-pagerforadverisement-2').hide();
           $('#block-pagerforadverisement').show();
+        } else {
+          $('#block-pagerforadverisement').hide();
           $('#block-pagerforadverisement-2').hide();
         }
+      } else {
+        $('#block-pagerforadverisement').show();
+        $('#block-pagerforadverisement-2').hide();
+      }
 
-      $('.path-advertisements .rightmove').click(function () {
+      $('.path-advertisements .rightmove', context).click(function () {
         var current_page = $('#next_page').attr('rel');
         var lang = settings.path.pathPrefix;
-        window.location.assign('?y='+current_page);
+        window.location.assign('?y=' + current_page);
       });
-      $('.path-advertisements .leftmove').click(function () {
+      $('.path-advertisements .leftmove', context).click(function () {
         var current_page = $('#prev_page').attr('rel');
         var lang = settings.path.pathPrefix;
-        window.location.assign('?y='+current_page);
+        window.location.assign('?y=' + current_page);
       });
       // On Click
       var title = $('#vid-content .vid-title').html();
@@ -353,7 +353,7 @@ Drupal.behaviors.PharmaTheme = {
       $('.advertisements-top .content1 h3').html(title);
       $('.advertisements-top .content1 p').html(date);
       $('.advertisements-top .content2').html(body);
-      $('.view-video').click(function () {
+      $('.view-video', context).click(function () {
         var title = $(this).parent().parent().find('#vid-content .vid-title').html();
         var date = $(this).parent().parent().find('#vid-content .vid-date').html();
         var body = $(this).parent().parent().find('#vid-content .vid-body').html();
@@ -367,13 +367,13 @@ Drupal.behaviors.PharmaTheme = {
           scrollTop: $('.advertisements-top').offset().top - 5
         });
       });
-      $(".path-advertisements .pagination-change").on('focus', function () {
+      $(".path-advertisements .pagination-change", context).on('focus', function () {
       }).change(function () {
         var yr = $(this).val();
         var lang = settings.path.pathPrefix;
         window.location.assign("/" + lang + "advertisements/?y=" + yr);
       });
-      $('.path-advertisements .pagination-btn.withmovebutt').click(function () {
+      $('.path-advertisements .pagination-btn.withmovebutt', context).click(function () {
         var lang = settings.path.pathPrefix;
         var page = $(this).attr('rel');
         window.location.assign("/" + lang + "advertisements/?y=" + page);
@@ -381,17 +381,17 @@ Drupal.behaviors.PharmaTheme = {
     }
     /*advertisements*/
     /*Charity Fund*/
-    if ($('#fund-timeline').length > 0) {
+    if ($('#fund-timeline', context).length > 0) {
       var timeline_data = [];
       var firstYear = '';
       var secondYear = '';
-      $('#first-year').click(function () {
+      $('#first-year', context).click(function () {
         changeYear('2016')
       });
-      $('#second-year').click(function () {
+      $('#second-year', context).click(function () {
         changeYear('2015')
       });
-      $('#year-drop-down').change(function () {
+      $('#year-drop-down', context).change(function () {
         changeYear($(this).val());
       });
 
@@ -501,7 +501,7 @@ Drupal.behaviors.PharmaTheme = {
     /*index*/
 
     /*contact-us-offers*/
-    if ($('#block-contactus #offers-wrapper').length > 0) {
+    if ($('#block-contactus #offers-wrapper', context).length > 0) {
       $.data(this, 'blcok-contactus', setTimeout(function () {
         $('#block-contactus #offers-wrapper .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -518,7 +518,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-contactus #offers-wrapper .more-btn').click(function () {
+    $('#block-contactus #offers-wrapper .more-btn', context).click(function () {
       $('#block-contactus #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-contactus #offers-wrapper > div.hide').length == 0) $('#block-contactus #offers-wrapper .more-btn').remove();
@@ -527,7 +527,7 @@ Drupal.behaviors.PharmaTheme = {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
-    if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper').length > 0) {
+    if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper', context).length > 0) {
       $.data(this, 'blcok-contactus', setTimeout(function () {
         $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -544,7 +544,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').click(function () {
+    $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn', context).click(function () {
       $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongjianti #offers-wrapper .more-btn').remove();
@@ -553,7 +553,7 @@ Drupal.behaviors.PharmaTheme = {
         $(this).siblings('.content-wrapper').height($(this).height());
       });
     });
-    if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper').length > 0) {
+    if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper', context).length > 0) {
       $.data(this, 'block-lianxiwomenjizhaopindibuneirongfanti', setTimeout(function () {
         $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -570,7 +570,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').click(function () {
+    $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn', context).click(function () {
       $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper > div.hide').length == 0) $('#block-lianxiwomenjizhaopindibuneirongfanti #offers-wrapper .more-btn').remove();
@@ -582,7 +582,7 @@ Drupal.behaviors.PharmaTheme = {
     /*contact-us-offers*/
 
     /*lastest-offers*/
-    if ($('.path-latest-offers').length > 0) {
+    if ($('.path-latest-offers', context).length > 0) {
       $.data(this, 'lastest-offers', setTimeout(function () {
         $('.path-latest-offers .img-wrapper').each(function () {
           $(this).siblings('.content-wrapper').height($(this).height());
@@ -599,7 +599,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    $('.path-latest-offers .more-btn').click(function () {
+    $('.path-latest-offers .more-btn', context).click(function () {
       $('.path-latest-offers > div.hide').each(function (key) {
         if (key < 3) $(this).removeClass('hide');
         if ($('.path-latest-offers > div.hide').length == 0) $('.path-latest-offers .more-btn').remove();
@@ -611,7 +611,7 @@ Drupal.behaviors.PharmaTheme = {
     /*lastest-offers*/
 
     /*health-tips*/
-    if ($('.page-node-type-healthtips .sub-tab-wrapper li').length > 0) {
+    if ($('.page-node-type-healthtips .sub-tab-wrapper li', context).length > 0) {
       change_size('wrapper', $(window).width(), $(window).height());
       var tab_width = 0;
       clearTimeout($.data(this, 'health-tips-tab'));
@@ -643,10 +643,10 @@ Drupal.behaviors.PharmaTheme = {
       }
     }
 
-    $('[data-toggle="offcanvas"]').click(function () {
+    $('[data-toggle="offcanvas"]', context).click(function () {
       $('#wrapper').toggleClass('toggled');
     });
-    $('.sidebar-nav > li').click(function () {
+    $('.sidebar-nav > li', context).click(function () {
       if (!$(this).hasClass('parent')) {
         $('.sidebar-nav > li').each(function () {
           $(this).removeClass('active');
@@ -654,7 +654,7 @@ Drupal.behaviors.PharmaTheme = {
         $(this).addClass('active');
       }
     });
-    $('.sidebar-nav > li.parent').click(function () {
+    $('.sidebar-nav > li.parent', context).click(function () {
       if ($(this).hasClass('show-sub')) {
         $(this).removeClass('show-sub');
       } else {
@@ -663,7 +663,7 @@ Drupal.behaviors.PharmaTheme = {
       $(this).find('.sub-sidebar-nav').slideToggle();
     });
     // Remove first existant
-    $('.sidebar-nav > li.parent').each(function () {
+    $('.sidebar-nav > li.parent', context).each(function () {
       $(this).find('li').first().remove();
     });
     /*sidebar*/
@@ -690,7 +690,7 @@ Drupal.behaviors.PharmaTheme = {
         var label_question = '问题:';
         var label_answer = '在幸福FAQ找答案:';
       }
-      $('.path-faq div.share-wrapper > a').attr('href', "https://www.facebook.com/dialog/feed?app_id=105148586494382&display=popup&caption=" + question + "&description=" + answer + "&picture=" + imaeg_path + "&link=http://www.fortunepharm.com/&redirect_uri=http://www.fortunepharm.com/");
+      $('.path-faq div.share-wrapper a.fb-share').attr('href', "https://www.facebook.com/dialog/feed?app_id=105148586494382&display=popup&caption=" + $.trim(question) + "&description=" + answer + "&picture=http://www.fortunepharm.com" + imaeg_path + "&link=http://www.fortunepharm.com/&redirect_uri=http://www.fortunepharm.com/");
       $('.path-faq .detail-wrapper h4').html(question);
       $('.path-faq .detail-wrapper .description').html(answer);
       $('.path-faq .detail-wrapper img').attr('src', imaeg_path);
@@ -710,14 +710,14 @@ Drupal.behaviors.PharmaTheme = {
       }, 500);
     }
 
-    $('.path-faq .content-wrapper .detail').click(function () {
+    $('.path-faq .content-wrapper .detail', context).click(function () {
       faq_detail2($(this));
     });
-    $('.path-faq .detail-wrapper .detail').click(function () {
+    $('.path-faq .detail-wrapper .detail', context).click(function () {
       $(this).parent().parent().hide();
       $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
     });
-    if ($('.path-faq .sub-tab-wrapper li').length > 0) {
+    if ($('.path-faq .sub-tab-wrapper li', context).length > 0) {
       var tab_width = 0;
       clearTimeout($.data(this, 'faq-tab'));
       $.data(this, 'faq-tab', setTimeout(function () {
@@ -727,7 +727,7 @@ Drupal.behaviors.PharmaTheme = {
         $('.path-faq .sub-tab-wrapper').width(tab_width);
       }, 500));
 
-      $('.path-faq .sub-tab-wrapper li a').each(function () {
+      $('.path-faq .sub-tab-wrapper li a', context).each(function () {
         if ($(this).attr('href') == window.location.pathname) {
           $(this).parent().addClass('active');
         }
@@ -735,8 +735,25 @@ Drupal.behaviors.PharmaTheme = {
     }
 
     /***** code end ******/
-    function unique(arr) {
-      return Array.from(new Set(arr))
+    // function unique(arr) {
+    //   return Array.from(new Set(arr))
+    // }
+    function unique( arr ){
+         var arr1 = [];
+         for(var i=0,len=arr.length;i<len;i++){
+               if( !arr1.includes( arr[i] ) ){      // 检索arr1中是否含有arr中的值
+                     arr1.push(arr[i]);
+                 }
+           }
+         return arr1;
+     }
+
+    function removeSpace(arr) {
+      var newTmp = []
+      for (var cr = 0; cr < arr.length; cr++) {
+        newTmp.push(arr[cr].trim())
+      }
+      return newTmp
     }
 
     //global  product_finder index
@@ -780,30 +797,68 @@ Drupal.behaviors.PharmaTheme = {
       });
       var product = [];
       //reset choose symptoms
-      $('.path-product-finder #product-take-wrapper .content-left .index-wrapper .clear-select').click(function () {
-        $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function () {
-          $(this).removeClass('active inactive');
-        });
-      });
+      // $('.path-product-finder #product-take-wrapper .content-left .index-wrapper .clear-select').click(function () {
+      //   $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function () {
+      //     $(this).removeClass('active inactive');
+      //   });
+      // });
       //active : blue  inactive: grey  nil: yellow
-      var symptomsData = {
-        1: "field_symptom_running_nose",
-        2: "field_symptom_sneezing",
-        3: "field_symptom_nasal_congestion",
-        4: "field_symptom_fever",
-        5: "field_headache",
-        6: "field_symptom_sore_throat",
-        7: "field_symptom_menstrual_pain",
-        8: "field_symptom_toothache",
-        9: "field_watery_eyes",
-        10: "field_symptom_dry_cough",
-        11: "field_symptom_productive_cough",
-        12: "field_symptom_heartbum",
-        13: "field_symptomstomach_pain",
-        14: "field_symptomflatulence",
-        15: "field_symptom_acid_reflux",
-        16: "field_symptom_diarrhea",
-        17: "field_symptom_motion_sickness",
+      var chsData = {
+        "1": "流鼻水",
+        "2": "喷嚏",
+        "3": "鼻塞",
+        "4": "发烧",
+        "5": "头痛",
+        "6": "喉咙痛",
+        "7": "经痛",
+        "8": "牙痛",
+        "9": "泪眼",
+        "10": "喉咙痒",
+        "11": "痰咳",
+        "12": "胃灼热",
+        "13": "胃痛",
+        "14": "胃气胀",
+        "15": "胃酸倒流",
+        "16": "肚泻",
+        "17": "舟车晕浪"
+      }
+      var chtData = {
+        "1": "流鼻水",
+        "2": "噴嚏",
+        "3": "鼻塞",
+        "4": "發燒",
+        "5": "頭痛",
+        "6": "喉嚨痛",
+        "7": "經痛",
+        "8": "牙痛",
+        "9": "淚眼",
+        "10": "乾咳",
+        "11": "痰咳",
+        "12": "胃灼熱",
+        "13": "胃痛",
+        "14": "胃氣脹",
+        "15": "胃酸倒流",
+        "16": "肚瀉",
+        "17": "舟車暈浪"
+      }
+      var engData = {
+        "1": "Runny nose",
+        "2": "Sneezing",
+        "3": "Nasal congestion",
+        "4": "Fever",
+        "5": "Headache",
+        "6": "Sore throat",
+        "7": "Menstrual pain",
+        "8": "Toothache",
+        "9": "Watery eyes",
+        "10": "Dry cough",
+        "11": "Productive cough",
+        "12": "Heartburn",
+        "13": "Stomach pain",
+        "14": "Flatulence",
+        "15": "Acid reflux",
+        "16": "Diarrhea",
+        "17": "Motion sickness"
       }
       $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').click(function () {
         // init, add color status
@@ -814,41 +869,47 @@ Drupal.behaviors.PharmaTheme = {
           } else {
             // var target = $(this);
             $(this).removeClass('active');
+            $(this).removeClass('inactive');
           }
           var symptoms = [];
-          var symptomsDataarr = [];
           //loop choose the symptoms put into array
           $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function () {
             symptoms.unshift($(this).attr('rel'));
           });
           var oldtmp = []
           if (symptoms.length > 0) {
-            $.get(langname + '/productfinderjson', function (data) {
-              for (var p_index in data) {
-                for (var s_index in symptoms) {
-                  //get the product of choose symptoms field True first
-                  if (data[p_index][symptomsData[symptoms[s_index]]] == "True") {
-                    symptomsDataarr.push(data[p_index])
-                  }
-                }
-                product = symptomsDataarr;
-              }
-              var count = 0;
-              if (symptoms.length > 1) {
-                for (var t1 = 0; t1 < product.length; t1++) {
-                  for (var t2 = 0; t2 < symptoms.length; t2++) { //loop symptoms for every product
-                    if (product[t1][symptomsData[symptoms[t2]]] == "True") {
-                      count++
+            // console.log(symptoms);
+            $.get( langname + '/test', function (data) {
+              // console.log(data)
+              for (var xx = 0; xx < data.length; xx++) {
+                if (data[xx]['field_indications_symptoms'] !== "") {
+                  tt = removeSpace(data[xx]['field_indications_symptoms'].split(','))
+                  if(langname == "eng"){
+                    for (var mArr = 0; mArr < symptoms.length; mArr++) {
+                      if (tt.indexOf(engData[symptoms[mArr]]) !== -1) {
+                        // console.log(chtData[symptoms[0]])
+                        oldtmp.push(data[xx])
+                      }
+                    }
+                  }else if (langname == "cht") {
+                    for (var mArr = 0; mArr < symptoms.length; mArr++) {
+                      if (tt.indexOf(chtData[symptoms[mArr]]) !== -1) {
+                        // console.log(chtData[symptoms[0]])
+                        oldtmp.push(data[xx])
+                      }
                     }
                   }
-                  //untill count match all symptoms
-                  if (count >= symptoms.length) {
-                    oldtmp.push(product[t1])
+                  else if (langname == "chs") {
+                    for (var mArr = 0; mArr < symptoms.length; mArr++) {
+                      if (tt.indexOf(chsData[symptoms[mArr]]) !== -1) {
+                        // console.log(chtData[symptoms[0]])
+                        oldtmp.push(data[xx])
+                      }
+                    }
                   }
-                  count = 0
                 }
-                product = unique(oldtmp)
               }
+              product = unique(oldtmp)
               //render product box content
               var temp = [];
               if (product.length == 0) {
@@ -860,36 +921,68 @@ Drupal.behaviors.PharmaTheme = {
                 $('.arrow').hide();
               } else {
                 $('.matched-product-wrapper').html('');
-                $(product).each(function (index, value) {
-                  for (var sym_index in SymptomsDataSymptoms) {
-                    if (product[index][sym_index] == "True") {
-                      temp.push(SymptomsDataSymptoms[sym_index]);
-                    }
+                // console.log(product)
+                //clear
+                for (var cr=0; cr<product.length;cr++) {
+                  var tmpstr  = removeSpace(product[cr]['field_indications_symptoms'].split(','))
+                  for(var tempinn=0;tempinn<tmpstr.length;tempinn++){
+                      temp.push(tmpstr[tempinn])
                   }
-                  // add grey color when the match product symptoms field is false
+                }
+                temp = unique(temp)
+                //change color
+                if(langname == "eng"){
+                  $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function() {
+                      // console.log($(this).attr('rel'))
+                      if ($.inArray(engData[$(this).attr('rel')], temp) != -1) {
+                          $(this).removeClass('inactive');
+                      } else {
+                          $(this).addClass('inactive');
+                        $(this).removeClass('active');
+                      }
+                  })
+                } else if (langname == "cht") {
                   $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function () {
-                    if ($.inArray(parseInt($(this).attr('rel')), temp) != -1) {
+                    // console.log(tData[$(this).attr('rel')])
+                    if ($.inArray(chtData[$(this).attr('rel')], temp) != -1) {
                       $(this).removeClass('inactive');
                     } else {
                       $(this).addClass('inactive');
+                      $(this).removeClass('active');
                     }
                   })
-                  var text = '<div class="matched-product"><a href="' + value.id + '"><img src=' + value.field_product_image + '><h4>' + value.field_product_name + '</h4>';
-                  if (value.field_symptoms_level == "Onset") {
+                }
+                else if (langname == "chs"){
+                  $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function () {
+                    // console.log(tData[$(this).attr('rel')])
+                    if ($.inArray(chsData[$(this).attr('rel')], temp) != -1) {
+                      $(this).removeClass('inactive');
+                    } else {
+                      // if(symptoms.indexOf($(this).attr('rel')) == -1)
+                      $(this).addClass('inactive');
+                      $(this).removeClass('active');
+                    }
+                  })
+                }
+                // console.log(unique(temp))
+                $(product).each(function (index, value) {
+                  // render box
+                  var text = '<div class="matched-product"><a href=' + value.field_product_link + '><img src=' + value.field_image.split(",")[0] + '><h4>' + value.title + '</h4></a>';
+                  if (value.field_symptom_level == "Onset") {
                     if (langname == "eng")
                       text += '<p class="level1 grey">Onset</p>';
                     else if (langname == "cht")
                       text += '<p class="level1 grey">初發</p>';
                     else if (langname == "chs")
                       text += '<p class="level1 grey">初发</p>';
-                  } else if (value.field_symptoms_level == "Slight") {
+                  } else if (value.field_symptom_level == "Slight") {
                     if (langname == "eng")
                       text += '<p class="level2 grey">Slight</p>';
                     else if (langname == "cht")
                       text += '<p class="level2 grey">輕微</p>';
                     else if (langname == "chs")
                       text += '<p class="level2 grey">轻微</p>';
-                  } else if (value.field_symptoms_level == "Critical") {
+                  } else if (value.field_symptom_level == "Critical") {
                     if (langname == "eng")
                       text += '<p class="level3 grey">Crictical</p>';
                     else if (langname == "cht")
@@ -908,7 +1001,7 @@ Drupal.behaviors.PharmaTheme = {
                   $('.content-right').show();
                 }
               }
-            });
+            })
           } else {
             // go back origin state
             product = [];
@@ -956,5 +1049,75 @@ Drupal.behaviors.PharmaTheme = {
       });
     }
     /*product-take*/
+
+    /*product*/
+    function product_image_height() {
+      if ($(window).width() < 768) {
+        var wrapper_width = $('.product-big-image').width();
+        change_height('product-big-image', wrapper_width);
+        change_height('product-small-image', wrapper_width);
+      } else {
+        $('.product-big-image').attr("style", "");
+        $('.product-small-image').attr("style", "");
+      }
+    }
+
+    if ($('.path-product .product-big-image', context).length > 0) {
+      $.data(this, 'product-image', setTimeout(function () {
+        product_image_height();
+      }, 200));
+      $(window).resize(function () {
+        clearTimeout($.data(this, 'product-image2'));
+        $.data(this, 'product-image2', setTimeout(function () {
+          product_image_height();
+        }, 800));
+      });
+    }
+
+    $('.path-product #product-wrapper .product-small-image a', context).click(function () {
+      var image = $(this).attr('rel');
+      var fancybox_img = $(this).attr('fancyboxdata');
+      $('.path-product #product-wrapper .product-big-image img').attr('src', image);
+      $('.node--type-product #product-wrapper .product-big-image .zoom-btn').attr('href', fancybox_img);
+    });
+
+    if ($('.path-product .tab-icon-outer-wrapper .tab-icon-wrapper li', context).length > 0) {
+      var tab_width = 0;
+      var icon_width = 0;
+      clearTimeout($.data(this, 'product-tab'));
+      $.data(this, 'product-tab', setTimeout(function () {
+        $('.path-product .sub-tab-wrapper li', context).each(function () {
+          console.log($(this).width());
+          tab_width += $(this).width();
+        });
+        $('.path-product .tab-icon-wrapper li', context).each(function () {
+          icon_width += $(this).width();
+        });
+
+        $('.path-product .sub-tab-wrapper').width(tab_width);
+        $('.path-product .tab-icon-wrapper').width(icon_width);
+      }, 500));
+    }
+
+    $('.path-product .product-content-tab-wrapper ul li', context).click(function () {
+      $(this).siblings().each(function () {
+        if ($(this).hasClass('active')) {
+          $('.product-content-wrapper.product-content' + $(this).attr('rel')).hide();
+          $(this).removeClass('active');
+        }
+      });
+      $(this).addClass('active');
+      $('.product-content-wrapper.product-content' + $(this).attr('rel')).show();
+    });
+    /*product*/
+    /*privacy */
+
+    if ($('#privacy_terms #terms-wrapper .terms-left').length > 0) {
+
+      $("#block-pharm-theme-content").css("max-width", "1200px");
+      $("#banner-wrapper").css("margin-bottom", "1px");
+
+    }
+    /*privacy */
   }
 };

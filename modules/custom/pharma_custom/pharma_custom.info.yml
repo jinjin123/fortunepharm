@@ -1,0 +1,7 @@
+name: Fortunepharma Custom module
+type: module
+description: This module is for customize funcationality of website
+# core: 8.x
+package: Custom
+# Information added by Drupal.org packaging script on 2017-11-06
+core: '8.x'

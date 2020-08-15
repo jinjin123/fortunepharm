@@ -13,10 +13,10 @@ template_preprocess_views_view_list() * * @ingroup themeable */ #}
       {% set lang = '/eng' %}
     {% endif %}
     {% if language == 'zh-hant' %}
-      {% set lang = '/cht' %}
+      {% set lang = '/chs' %}
     {% endif %}
     {% if language == 'zh-hans' %}
-      {% set lang = '/chs' %}
+      {% set lang = '/cht' %}
     {% endif %}
     <li class="">
       <a href="{{lang}}/faq/0" rel="0">{{ 'ALL'|t }}</a>

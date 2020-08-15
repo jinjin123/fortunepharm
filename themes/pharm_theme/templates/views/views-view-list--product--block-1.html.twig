@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a view template to display a list of rows.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container.
+ * - rows: A list of rows for this list.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's contents.
+ * - title: The title of this group of rows. May be empty.
+ * - list: @todo.
+ *   - type: Starting tag will be either a ul or ol.
+ *   - attributes: HTML attributes for the list element.
+ *
+ * @see template_preprocess_views_view_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if attributes -%}
+  <div{{ attributes }}>
+{% endif %}
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+  {% if language == 'en' %}
+      {% set lang = '/eng' %}
+  {% endif %}
+  {% if language == 'zh-hant' %}
+    {% set lang = '/chs' %}
+  {% endif %}
+  {% if language == 'zh-hans' %}
+    {% set lang = '/cht' %}
+  {% endif %}
+
+  {# Parent menu - Market menu #}
+  <{{ list.type }}{{ list.attributes }} class="market-tab-wrapper nav navbar-nav">
+    {% for row in rows %}
+      {% if row.content['#row']._entity.parent.target_id == 0 %}
+          {% set parent_url = path('entity.taxonomy_term.canonical',
+                    {'taxonomy_term':row.content['#row']._entity.tid.value}) %}
+          {% set url = parent_url|replace({ (lang): ''}) %}
+          {% set first = child_array[row.content['#row']._entity.tid.value]| keys | first %}
+          {% set url_p = child_array[row.content['#row']._entity.tid.value][first]['weight'] %}
+          {% if (parent_array[first] == parent_array[parent_url_id[3]]) %}
+            <li{{ attributes.addClass('active') }}>
+          {% else %}
+            <li>
+          {% endif %}
+            <a href="{{lang}}/product{{url}}/{{ first }}/{{url_p}}" title="{{ row.content['#row']._entity.name.value|t }}">{{ row.content['#row']._entity.name.value|t }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </{{ list.type }}>
+
+  {# Child menu menu #}
+  <div class="sub-tab-session">
+    <div class="sub-tab-outer-wrapper scroll-wrapper">
+      <ul class="sub-tab-wrapper nav navbar-nav">
+        {% for row in rows %}
+          {% if row.content['#row']._entity.parent.target_id == parent_array[parent_url_id[3]]['parents'] %}
+            {% set parent_url = path('entity.taxonomy_term.canonical', 
+                    {'taxonomy_term':row.content['#row']._entity.parent.target_id}) %}
+            {% set pink = [38,42,43] %}
+            {% set url = parent_url|replace({ (lang): ''}) %}
+            {% if row.content['#row']._entity.tid.value == parent_url_id[3] %}
+              {% if row.content['#row']._entity.tid.value in pink %}
+                {% set active_child = 'children_active' %}
+              {% else %}
+                {% set active_child = 'normal_active' %}
+              {% endif %}
+            {% else %}
+              {% if row.content['#row']._entity.tid.value in pink %}
+                {% set active_child = 'children' %}
+              {% else %}
+                {% set active_child = 'normal' %}
+              {% endif %}
+            {% endif %}
+          <li class="{{active_child}}">
+            <a href="{{lang}}/product{{url}}/{{ row.content['#row']._entity.tid.value }}/0" title="{{ row.content['#row']._entity.name.value|t }}">{{ row.content['#row']._entity.name.value|t }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+{% if attributes -%}
+  </div>
+{% endif %}
