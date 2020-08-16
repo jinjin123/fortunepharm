@@ -110,6 +110,7 @@ Drupal.behaviors.PharmaTheme = {
             nice = $(this).niceScroll();
             var _super = nice.getContentSize;
             nice.getContentSize = function () {
+              $('.sub-tab-session .arrow-right').fadeIn();
               var page = _super.call(nice);
               page.h = nice.win.height();
               return page;
@@ -126,6 +127,7 @@ Drupal.behaviors.PharmaTheme = {
               nice = $(this).niceScroll();
               var _super = nice.getContentSize;
               nice.getContentSize = function () {
+                $('.sub-tab-session .arrow-right').fadeIn();
                 var page = _super.call(nice);
                 page.h = nice.win.height();
                 return page;
@@ -177,17 +179,32 @@ Drupal.behaviors.PharmaTheme = {
           });
         }
       });
+    }
+
+    if ($('.path-product').length > 0) {
       $(window).resize(function () {
         if ($(window).width() <= 1410) {
           $('.sub-tab-session .arrow-right').fadeIn();
         }
       });
     }
+    /** Health tips scroll **/
+      // if ($('.path-healthtips').length > 0) {
+      //   if ($('.sub-tab-outer-wrapper').width()  >= $('.sub-tab-outer-wrapper').children().width()) {
+      //     $('.sub-tab-session .arrow-right').fadeOut();
+      //   } else {
+      //     $('.sub-tab-session .arrow-right').fadeIn();
+      //   }
+      // }
+    /** Health tips scroll **/
+
+
+
 
     /*sub-tab-session*/
     // scroll bar for health tips or other has scroll bar page
     /*index*/
-    if ($('.homepage .body .main-wrapper', context).length > 0) {
+    if ($('.homepage .body .main-wrapper').length > 0) {
       index_row_wrapper('desktop-main', 'mobile-main', 9);
       $(window).resize(function () {
         clearTimeout($.data(this, 'resizeTimer'));
@@ -196,7 +213,7 @@ Drupal.behaviors.PharmaTheme = {
         }, 800));
       });
     }
-    if ($('#banner-wrapper-mobile', context).length > 0) {
+    if ($('#banner-wrapper-mobile').length > 0) {
       $('#banner-wrapper-mobile').carousel({
         interval: false
       });
