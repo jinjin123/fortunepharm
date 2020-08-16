@@ -55,6 +55,8 @@ class MenuItems {
         'url' => $item->link->getUrlObject()->toString(),
         'active_trail' => FALSE,
         'active' => FALSE,
+        'metadata' => $item->link->getMetadata(),
+        'options' => $item->link->getOptions()
       ];
 
       $current_path = \Drupal::request()->getRequestUri();

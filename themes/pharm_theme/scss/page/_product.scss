@@ -407,6 +407,21 @@
     position: absolute;
     bottom: 60%;
   }
+  .sub-tab-session {
+    position: relative;
+    .arrow-right {
+      background-image: url(../images/sub_bar_tap.png);
+      right: 0;
+    }
+    .arrow {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      top: 0;
+      display: none;
+    }
+  }
 }
 .path-product.children {
   #block-productpagebanner {

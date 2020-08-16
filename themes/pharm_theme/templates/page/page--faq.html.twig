@@ -30,19 +30,26 @@
           {% set active_trail = 'active' %}
         {% endif %}
           {% if menu_item.submenu %}
-            <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            <li class="parent {{active_trail}}"><a href="javascript:void(0);" target="{{menu_item.options.attributes.target}}">{{ menu_item.text|t }}</a>
           {% else %}
+            {% if menu_item.text == "其他服务范围" %}
+               {% set menu_url = menu_item.url ~ "?lang=zh_cn" %}
+            {% elseif menu_item.text == "其他服務範圍" %}
+              {% set menu_url = menu_item.url ~ "?lang=zh" %}
+            {% else %}
+                {% set menu_url = menu_item.url %}
+            {% endif %}
             <li class="{{active_trail}}">
-              <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+              <a href="{{ menu_url }}" class="" title="{{ menu_item.text|t }}" target="{{menu_item.options.attributes.target}}">{{ menu_item.text|t }}</a>
           {% endif %}
           {% if menu_item.submenu %}
             <ul class="sub-sidebar-nav">
               <li>
-                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}">{{ menu_item.text|t }}</a>
+                <a href="{{ menu_item.url }}" class="" title="{{ menu_item.text|t }}" target="{{menu_item.options.attributes.target}}">{{ menu_item.text|t }}</a>
               </li>
               {% for sub_menu_item in menu_item.submenu %}
                 <li>
-                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}">{{ sub_menu_item.text|t }}</a>
+                  <a href="{{ sub_menu_item.url }}" title="{{ sub_menu_item.text|t }}" target="{{sub_menu_item.options.attributes.target}}">{{ sub_menu_item.text|t }}</a>
                 </li>
               {% endfor %}
             </ul>
