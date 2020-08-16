@@ -710,10 +710,10 @@ Drupal.behaviors.PharmaTheme = {
       }, 500);
     }
 
-    $('.path-faq .content-wrapper .detail', context).click(function () {
+    $('.path-faq .content-wrapper .detail').click(function () {
       faq_detail2($(this));
     });
-    $('.path-faq .detail-wrapper .detail', context).click(function () {
+    $('.path-faq .detail-wrapper .detail').click(function () {
       $(this).parent().parent().hide();
       $('.path-faq .content-outer-wrapper').css('margin-bottom', 0);
     });
