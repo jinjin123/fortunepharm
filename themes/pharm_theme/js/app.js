@@ -177,7 +177,13 @@ Drupal.behaviors.PharmaTheme = {
           });
         }
       });
+      $(window).resize(function () {
+        if ($(window).width() <= 1410) {
+          $('.sub-tab-session .arrow-right').fadeIn();
+        }
+      });
     }
+
     /*sub-tab-session*/
     // scroll bar for health tips or other has scroll bar page
     /*index*/
