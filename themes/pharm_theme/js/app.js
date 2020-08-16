@@ -966,7 +966,8 @@ Drupal.behaviors.PharmaTheme = {
                 // console.log(unique(temp))
                 $(product).each(function (index, value) {
                   // render box
-                  var text = '<div class="matched-product"><a href=' + value.field_product_link + '><img src=' + value.field_image.split(",")[0] + '><h4>' + value.title + '</h4></a>';
+                  var urlsplit1 = value.field_product_url.split("\"");
+                  var text = '<div class="matched-product"><a href="' + urlsplit1[1] + '"><img src=' + value.field_product_image + '><h4>' + value.field_product_name + '</h4>';
                   if (value.field_symptom_level == "Onset") {
                     if (langname == "eng")
                       text += '<p class="level1 grey">Onset</p>';
