@@ -137,7 +137,7 @@ Drupal.behaviors.PharmaTheme = {
     }
 
     /*sub-tab-session*/
-    if ($('.sub-tab-session', context).length > 0) {
+    if ($('.sub-tab-session').length > 0) {
       clearTimeout($.data(this, 'sub-tab-session'));
       $.data(this, 'sub-tab-session', setTimeout(function () {
         if ($('.sub-tab-outer-wrapper').width() + $('.sub-tab-outer-wrapper').scrollLeft() + 20 >= $('.sub-tab-outer-wrapper').children().width()) {
@@ -147,8 +147,7 @@ Drupal.behaviors.PharmaTheme = {
         }
       }, 500));
 
-
-      $('.sub-tab-outer-wrapper', context).scroll(function () {
+      $('.sub-tab-outer-wrapper').scroll(function () {
         if ($(this).width() + $(this).scrollLeft() + 20 >= $(this).children().width()) {
           $('.sub-tab-session .arrow-right').fadeOut();
         } else {

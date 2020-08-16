@@ -2158,6 +2158,19 @@ body.lang-zh-hant {
   position: absolute;
   bottom: 60%; }
 
+.path-product .sub-tab-session {
+  position: relative; }
+  .path-product .sub-tab-session .arrow-right {
+    background-image: url(../images/sub_bar_tap.png);
+    right: 0; }
+  .path-product .sub-tab-session .arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    top: 0;
+    display: none; }
+
 .path-product.children #block-productpagebanner {
   display: none; }
 
