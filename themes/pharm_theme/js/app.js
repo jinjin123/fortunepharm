@@ -896,7 +896,8 @@ Drupal.behaviors.PharmaTheme = {
                       $(this).addClass('inactive');
                     }
                   })
-                  var text = '<div class="matched-product"><a href="' + value.id + '"><img src=' + value.field_product_image + '><h4>' + value.field_product_name + '</h4>';
+                  var urlsplit1 = value.field_product_url.split("\"");
+                  var text = '<div class="matched-product"><a href="' + urlsplit1[1] + '"><img src=' + value.field_product_image + '><h4>' + value.field_product_name + '</h4>';
                   if (value.field_symptoms_level == "Onset") {
                     if (langname == "eng")
                       text += '<p class="level1 grey">Onset</p>';
