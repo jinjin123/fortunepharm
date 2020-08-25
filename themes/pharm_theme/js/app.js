@@ -677,6 +677,7 @@ Drupal.behaviors.PharmaTheme = {
       }
     });
     $('.sidebar-nav > li.parent', context).click(function () {
+      $('.sidebar-nav > li.parent').find('.sub-sidebar-nav').hide();
       if ($(this).hasClass('show-sub')) {
         $(this).removeClass('show-sub');
       } else {
