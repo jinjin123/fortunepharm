@@ -2597,6 +2597,9 @@ body.lang-zh-hant {
       margin-top: 13% !important; }
     #health-tips .function-wrapper .function-tab-wrapper {
       margin: 0; }
+  #health-tips #health-tips.gerd .function-wrapper .function-middle-wrapper p {
+    bottom: 26%;
+    left: 1%; }
   #health-tips .healthtips-left-col {
     position: absolute;
     bottom: 10%; }
