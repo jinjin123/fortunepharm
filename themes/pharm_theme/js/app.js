@@ -808,23 +808,382 @@ Drupal.behaviors.PharmaTheme = {
             });
             //active : blue  inactive: grey  nil: yellow
             var symptomsData = {
-                1: "field_symptom_running_nose",
-                2: "field_symptom_sneezing",
-                3: "field_symptom_nasal_congestion",
-                4: "field_symptom_fever",
-                5: "field_headache",
-                6: "field_symptom_sore_throat",
-                7: "field_symptom_menstrual_pain",
-                8: "field_symptom_toothache",
-                9: "field_watery_eyes",
-                10: "field_symptom_dry_cough",
-                11: "field_symptom_productive_cough",
-                12: "field_symptom_heartbum",
-                13: "field_symptomstomach_pain",
-                14: "field_symptomflatulence",
-                15: "field_symptom_acid_reflux",
-                16: "field_symptom_diarrhea",
-                17: "field_symptom_motion_sickness",
+                    1: "field_symptom_running_nose",
+                    2: "field_symptom_sneezing",
+                    3: "field_symptom_nasal_congestion",
+                    4: "field_symptom_fever",
+                    5: "field_headache",
+                    6: "field_symptom_sore_throat",
+                    7: "field_symptom_menstrual_pain",
+                    8: "field_symptom_toothache",
+                    9: "field_watery_eyes",
+                    10: "field_symptom_dry_cough",
+                    11: "field_symptom_productive_cough",
+                    12: "field_symptom_heartbum",
+                    13: "field_symptomstomach_pain",
+                    14: "field_symptomflatulence",
+                    15: "field_symptom_acid_reflux",
+                    16: "field_symptom_diarrhea",
+                    17: "field_symptom_motion_sickness",
+                }
+                //定义数组
+            var listjson = [{
+                    "1": 1
+                }, {
+                    "2": 1
+                }, {
+                    "3": 1
+                }, {
+                    "4": 1
+                }, {
+                    "5": 1
+                }, {
+                    "6": 1
+                }, {
+                    "9": 1
+                }, {
+                    "1": 3
+                }, {
+                    "2": 3
+                }, {
+                    "3": 3
+                }, {
+                    "4": 3
+                }, {
+                    "5": 3
+                }, {
+                    "6": 3
+                }, {
+                    "11": 3
+                }, {
+                    "9": 3
+                }, {
+                    "1": 4
+                }, {
+                    "2": 4
+                }, {
+                    "3": 4
+                }, {
+                    "4": 4
+                }, {
+                    "5": 4
+                }, {
+                    "6": 4
+                }, {
+                    "9": 4
+                }, {
+                    "12": 5
+                }, {
+                    "13": 5
+                }, {
+                    "14": 5
+                }, {
+                    "15": 5
+                }, {
+                    "11": 6
+                }, {
+                    "17": 8
+                }, {
+                    "1": 9
+                }, {
+                    "2": 9
+                }, {
+                    "9": 9
+                }, {
+                    "1": 10
+                }, {
+                    "2": 10
+                }, {
+                    "9": 10
+                }, {
+                    "6": 7
+                }, {
+                    "3": 12
+                }, {
+                    "4": 12
+                }, {
+                    "5": 12
+                }, {
+                    "6": 12
+                }, {
+                    "1": 14
+                }, {
+                    "2": 14
+                }, {
+                    "3": 14
+                }, {
+                    "4": 14
+                }, {
+                    "5": 14
+                }, {
+                    "6": 14
+                }, {
+                    "9": 14
+                }, {
+                    "1": 15
+                }, {
+                    "2": 15
+                }, {
+                    "3": 15
+                }, {
+                    "4": 15
+                }, {
+                    "5": 15
+                }, {
+                    "6": 15
+                }, {
+                    "9": 15
+                }, {
+                    "4": 18
+                }, {
+                    "5": 18
+                }, {
+                    "6": 18
+                }, {
+                    "8": 18
+                }, {
+                    "1": 26
+                }, {
+                    "2": 26
+                }, {
+                    "3": 26
+                }, {
+                    "4": 26
+                }, {
+                    "5": 26
+                }, {
+                    "6": 26
+                }, {
+                    "10": 26
+                }, {
+                    "11": 26
+                }, {
+                    "9": 26
+                }, {
+                    "4": 25
+                }, {
+                    "5": 25
+                }, {
+                    "6": 25
+                }, {
+                    "7": 25
+                }, {
+                    "8": 25
+                }, {
+                    "4": 19
+                }, {
+                    "5": 19
+                }, {
+                    "6": 19
+                }, {
+                    "7": 19
+                }, {
+                    "8": 19
+                }, {
+                    "4": 24
+                }, {
+                    "5": 24
+                }, {
+                    "6": 24
+                }, {
+                    "7": 24
+                }, {
+                    "8": 24
+                }, {
+                    "12": 27
+                }, {
+                    "13": 27
+                }, {
+                    "14": 27
+                }, {
+                    "15": 27
+                }, {
+                    "10": 23
+                }, {
+                    "10": 11
+                }, {
+                    "6": 2
+                }, {
+                    "16": 30
+                }, {
+                    "11": 11
+                }, {
+                    "11": 23
+                }, {
+                    "12": 29
+                }, {
+                    "13": 29
+                }, {
+                    "14": 29
+                }, {
+                    "15": 29
+                }, {
+                    "3": 44
+                }, {
+                    "4": 44
+                }, {
+                    "5": 44
+                }, {
+                    "6": 44
+                }, {
+                    "11": 44
+                }, {
+                    "4": 46
+                }, {
+                    "3": 46
+                }, {
+                    "5": 46
+                }, {
+                    "6": 46
+                }, {
+                    "7": 46
+                }, {
+                    "11": 46
+                }]
+                //获取显示症状和显示药品的方法 
+            function get_display_symptoms_product_id(input_symptoms) {
+                var all_product_id_display = []
+
+                var all_symptoms_id_display = []
+                    //var all_symptoms_id_new = []
+                var all_symptoms_id = []
+                for (var i = 0, l = input_symptoms.length; i < l; i++) {
+                    var all_symptoms_id_new = []
+                    input_symptoms_id = input_symptoms[i]
+                    productid = list_product_and_symptoms[0][input_symptoms_id]
+                    console.log("product-----66666666666666666---start")
+                    console.log(productid)
+
+                    for (var ii = 0, ll = productid.length; ii < ll; ii++) {
+                        //通过产品id 的到症状
+                        let all_product_id3 = list_product_and_symptoms[1][productid[ii]]
+                        let all_symptoms_id4 = Array.from(new Set([...all_product_id3, ...all_symptoms_id_new]));
+                        //  console.log("all_product_id3--------start")
+                        all_symptoms_id_new = all_symptoms_id4
+                            //   console.log(all_symptoms_id)
+
+                        //   console.log(all_symptoms_id4)
+                        //   console.log("all_product_id3         end")
+
+                    }
+                    if (i == 0) {
+                        all_symptoms_id_display = all_symptoms_id_new;
+                        all_product_id_display = productid;
+                    } else {
+                        console.log('需要交集-------------------------表达式')
+                            // all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => all_symptoms_id_new.has(x)));
+                            // let all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => input_symptomsTest.has(x)));
+                        let intersection = all_symptoms_id_new.filter(v => all_symptoms_id_display.includes(v))
+                        all_symptoms_id_display = intersection
+                        console.log("all_symptoms_id_new")
+                        console.log(all_symptoms_id_new)
+                        console.log("all_symptoms_id_new")
+                            //   all_symptoms_id_display = all_symptoms_id_new1
+                        console.log(all_symptoms_id_display);
+                    }
+                    //  console.log("获取产品显示id");
+                    //   productid1 = all_product_id.concat(productid.filter(v => !all_product_id.includes(v)))
+                    let intersection1 = all_product_id_display.filter(v => productid.includes(v))
+                        //   let all_product_id2 = Array.from(new Set([...productid1, ...all_product_id]));
+                    all_product_id_display = intersection1
+                        // console.log()
+
+                }
+                judgearr1_6 = [1, 2, 3, 4, 5, 6];
+                judgearr4568 = [4, 5, 6, 8]
+                judgearr1_6_tag = (judgearr1_6.length == Array.from(new Set([...input_symptoms, ...judgearr1_6])).length) && !(input_symptoms.indexOf(10) > -1) && !(input_symptoms.indexOf(11) > -1);
+                judgearr1_6_12tag = (judgearr1_6.length == Array.from(new Set([...input_symptoms, ...judgearr1_6])).length) && !(input_symptoms.indexOf(10) > -1) && !(input_symptoms.indexOf(11) > -1) && !(input_symptoms.indexOf(1) > -1) && !(input_symptoms.indexOf(2) > -1);
+                judgearr4568_tag = (judgearr4568.length == Array.from(new Set([...input_symptoms, ...judgearr4568])).length) && !(input_symptoms.indexOf(10) > -1) && !(input_symptoms.indexOf(11) > -1);
+                if (judgearr1_6_tag) {
+                    console.log("judgearr1_6_tag")
+                    all_product_id_display = [1, 4, 14, 15]
+                }
+                if (judgearr1_6_12tag) {
+                    console.log("judgearr1_6_12tag")
+                    all_product_id_display = [1, 4, 12, 14, 15]
+                }
+                if (judgearr4568_tag) {
+                    console.log("judgearr4568_tag")
+                    all_product_id_display = [18, 19, 24, 25]
+                }
+                if (input_symptoms.length == 2) {
+                    if ((input_symptoms.indexOf(10) > -1) && (input_symptoms.indexOf(11) > -1)) {
+                        all_product_id_display = [6, 11, 13]
+                    }
+                }
+                if (input_symptoms.length == 1) {
+                    if (input_symptoms[0] == 6) {
+                        all_product_id_display = [2, 7]
+                    }
+                }
+                if (input_symptoms.length == 1) {
+                    if (input_symptoms[0] == 9) {
+                        all_product_id_display = [9, 10]
+                    }
+                }
+
+
+                console.log("输入症状")
+                console.log(input_symptoms)
+                console.log("合并症状")
+                console.log(Array.from(new Set([...input_symptoms, ...judgearr1_6])))
+                    //console.log(all_product_id_display)
+                    //console.log("要判断显示的产品id")
+                    //console.log(Array.from(new Set([...all_product_id_display, ...judgearr1_6])))
+                    //console.log("获取是否在123456")
+                console.log(judgearr1_6_tag)
+
+                console.log("获取最后显示的症状的id");
+                console.log(all_symptoms_id_display)
+                console.log(all_product_id_display)
+                return [all_symptoms_id_display, all_product_id_display];
+            }
+
+            function get_product_and_symptoms_id() {
+                //获取症状对应的药品
+
+                //获取药品治愈的症状
+                // var list_symptoms = {};
+                list_symptoms_productid = {}
+                list_productid_symptoms = {}
+                for (var i = 0, l = listjson.length; i < l; i++) {
+                    //获取症状对应的产品
+                    for (var key in listjson[i]) {
+                        if (JSON.stringify(list_symptoms_productid) == "{}") {
+                            list_symptoms_productid[key] = [listjson[i][key]]
+                        } else if (typeof(list_symptoms_productid[parseInt(key)]) == "undefined") {
+                            list_symptoms_productid[key] = [listjson[i][key]]
+                        } else {
+                            list_symptoms_productid[key].push(listjson[i][key])
+                        }
+                        ///反转
+                        //产品对应症状
+                        product_id = listjson[i][key]
+                        var newjson = {};
+                        newjson[product_id] = key;
+
+                        //   listjson2.push(newjson);
+                        if (1) {
+                            if (JSON.stringify(list_productid_symptoms) == "{}") {
+                                // list_productid_symptoms[key] = [listjson[0][key]]
+                                list_productid_symptoms[product_id] = [parseInt(key)]
+
+                            } else if (typeof(list_productid_symptoms[parseInt(product_id)]) == "undefined") {
+                                //  list_productid_symptoms[key] = [listjson[i][key]]
+                                list_productid_symptoms[product_id] = [parseInt(key)]
+
+                            } else {
+                                // list_productid_symptoms[key].push(listjson[i][key])
+                                list_productid_symptoms[product_id].push(parseInt(key))
+                            }
+                        }
+                    }
+                    //console.log(listjson2);
+                }
+                console.log(list_symptoms_productid);
+                console.log(list_productid_symptoms);
+                return [list_symptoms_productid, list_productid_symptoms];
+
             }
             $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').click(function() {
                 // init, add color status
@@ -838,43 +1197,75 @@ Drupal.behaviors.PharmaTheme = {
                     }
                     var symptoms = [];
                     var symptomsDataarr = [];
+                    var display_product_arr = []
+                    var temp = [];
                     //loop choose the symptoms put into array
                     $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function() {
                         symptoms.unshift($(this).attr('rel'));
+                        //symptoms.unshift($(this).attr('rel'));
+                        console.log("loop choose the symptoms put into array");
+                        //  console.log(parseInt(symptoms));
+                        list_product_and_symptoms = get_product_and_symptoms_id()
+                            //  var input_symptoms = [1, 2, 3, 4, 5, 8, 14, 16]
+                            //var input_symptomsTest = [1, 2, 3, 4, 5, 8, 14, 16]
+                            // var input_symptoms = [3, 9, 11]
+                            // var input_symptoms = [6]
+                            //  var input_symptoms = [1, 2, 3, 9]
+                            //    -----------------------------
+                        var symptoms1 = symptoms
+                        for (var i = 0, l = symptoms1.length; i < l; i++) {
+                            symptoms1[i] = parseInt(symptoms1[i])
+
+                        }
+                        all_display_symptoms_product_id = get_display_symptoms_product_id(symptoms1)
+                            //  get_display_product_id()
+                            //症状显示数组
+                        display_symptoms_arr = all_display_symptoms_product_id[0];
+                        console.log("返回症状显示数组")
+                        console.log(display_symptoms_arr)
+                            //药品显示数组
+                        display_product_arr = all_display_symptoms_product_id[1];
+
+                        // rr = get_productid(parseInt(symptoms));
+                        // console.log(rr);
+                        //console.log(listjson2);
+                        //dd = get_symptomsid(rr[0])
+                        // temp = dd
+                        temp = (Array.from(new Set(display_symptoms_arr)))
+
+                        console.log("loop choose the symptoms put into array");
+                        //----------------------------------------
+
                     });
-                    var oldtmp = []
+                    console.log("打印输入symptoms数组的")
+                    console.log(symptoms);
+                    //   var oldtmp = []
                     if (symptoms.length > 0) {
                         $.get(langname + '/productfinderjson', function(data) {
-                            console.log("测试代码")
-                            console.log(symptoms)
                             for (var p_index in data) {
-                                for (var s_index in symptoms) {
-                                    //get the product of choose symptoms field True first
-                                    if (data[p_index][symptomsData[symptoms[s_index]]] == "True") {
-                                        symptomsDataarr.push(data[p_index])
-
-                                    }
+                                //console.log(data)
+                                //  for (var s_index in symptoms) {
+                                //get the product of choose symptoms field True first
+                                console.log("查询display_product_arr")
+                                console.log(display_product_arr)
+                                console.log("查询field_product_id")
+                                find_field_product_id = parseInt(data[p_index]["field_product_id"])
+                                console.log("判断是否加入pruduct")
+                                console.log(display_product_arr.indexOf(find_field_product_id))
+                                if (display_product_arr.indexOf(find_field_product_id) > -1) {
+                                    console.log(find_field_product_id)
+                                    symptomsDataarr.push(data[p_index])
                                 }
+
+                                // if (data[p_index][symptomsData[symptoms[s_index]]] == "True") {
+
+                                //  }
+                                //  }
+                                console.log("symptomsDataarr````````````");
+                                console.log(symptomsDataarr);
+                                console.log("symptomsDataarr``````````");
                                 product = symptomsDataarr;
                             }
-                            var count = 0;
-                            if (symptoms.length > 1) {
-                                for (var t1 = 0; t1 < product.length; t1++) {
-                                    for (var t2 = 0; t2 < symptoms.length; t2++) { //loop symptoms for every product
-                                        if (product[t1][symptomsData[symptoms[t2]]] == "True") {
-                                            count++
-                                        }
-                                    }
-                                    //untill count match all symptoms
-                                    if (count >= symptoms.length) {
-                                        oldtmp.push(product[t1])
-                                    }
-                                    count = 0
-                                }
-                                product = unique(oldtmp)
-                            }
-                            //render product box content
-                            var temp = [];
                             if (product.length == 0) {
                                 if ($(window).width() < 768) {
                                     $('.content-right').hide();
@@ -885,11 +1276,7 @@ Drupal.behaviors.PharmaTheme = {
                             } else {
                                 $('.matched-product-wrapper').html('');
                                 $(product).each(function(index, value) {
-                                    for (var sym_index in SymptomsDataSymptoms) {
-                                        if (product[index][sym_index] == "True") {
-                                            temp.push(SymptomsDataSymptoms[sym_index]);
-                                        }
-                                    }
+
                                     // add grey color when the match product symptoms field is false
                                     $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.wrapper').each(function() {
                                         if ($.inArray(parseInt($(this).attr('rel')), temp) != -1) {
