@@ -1050,7 +1050,7 @@ Drupal.behaviors.PharmaTheme = {
                 for (var i = 0, l = input_symptoms.length; i < l; i++) {
                     var all_symptoms_id_new = []
                     input_symptoms_id = input_symptoms[i]
-                        //    productid = list_product_and_symptoms[0][input_symptoms_id]
+                    productid = list_product_and_symptoms[0][input_symptoms_id]
                         //    console.log("product-----66666666666666666---start")
                         //   console.log(productid)
 
