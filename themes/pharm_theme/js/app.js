@@ -1050,9 +1050,9 @@ Drupal.behaviors.PharmaTheme = {
                 for (var i = 0, l = input_symptoms.length; i < l; i++) {
                     var all_symptoms_id_new = []
                     input_symptoms_id = input_symptoms[i]
-                    productid = list_product_and_symptoms[0][input_symptoms_id]
-                    console.log("product-----66666666666666666---start")
-                    console.log(productid)
+                        //    productid = list_product_and_symptoms[0][input_symptoms_id]
+                        //    console.log("product-----66666666666666666---start")
+                        //   console.log(productid)
 
                     for (var ii = 0, ll = productid.length; ii < ll; ii++) {
                         //通过产品id 的到症状
@@ -1070,16 +1070,16 @@ Drupal.behaviors.PharmaTheme = {
                         all_symptoms_id_display = all_symptoms_id_new;
                         all_product_id_display = productid;
                     } else {
-                        console.log('需要交集-------------------------表达式')
-                            // all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => all_symptoms_id_new.has(x)));
-                            // let all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => input_symptomsTest.has(x)));
+                        //     console.log('需要交集-------------------------表达式')
+                        // all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => all_symptoms_id_new.has(x)));
+                        // let all_symptoms_id_new1 = new Set([...all_symptoms_id_display].filter(x => input_symptomsTest.has(x)));
                         let intersection = all_symptoms_id_new.filter(v => all_symptoms_id_display.includes(v))
                         all_symptoms_id_display = intersection
-                        console.log("all_symptoms_id_new")
-                        console.log(all_symptoms_id_new)
-                        console.log("all_symptoms_id_new")
+                            //      console.log("all_symptoms_id_new")
+                            //      console.log(all_symptoms_id_new)
+                            //     console.log("all_symptoms_id_new")
                             //   all_symptoms_id_display = all_symptoms_id_new1
-                        console.log(all_symptoms_id_display);
+                            //    console.log(all_symptoms_id_display);
                     }
                     //  console.log("获取产品显示id");
                     //   productid1 = all_product_id.concat(productid.filter(v => !all_product_id.includes(v)))
@@ -1123,19 +1123,19 @@ Drupal.behaviors.PharmaTheme = {
                 }
 
 
-                console.log("输入症状")
-                console.log(input_symptoms)
-                console.log("合并症状")
-                console.log(Array.from(new Set([...input_symptoms, ...judgearr1_6])))
-                    //console.log(all_product_id_display)
-                    //console.log("要判断显示的产品id")
-                    //console.log(Array.from(new Set([...all_product_id_display, ...judgearr1_6])))
-                    //console.log("获取是否在123456")
-                console.log(judgearr1_6_tag)
+                //  console.log("输入症状")
+                //  console.log(input_symptoms)
+                //  console.log("合并症状")
+                //  console.log(Array.from(new Set([...input_symptoms, ...judgearr1_6])))
+                //console.log(all_product_id_display)
+                //console.log("要判断显示的产品id")
+                //console.log(Array.from(new Set([...all_product_id_display, ...judgearr1_6])))
+                //console.log("获取是否在123456")
+                //   console.log(judgearr1_6_tag)
 
-                console.log("获取最后显示的症状的id");
-                console.log(all_symptoms_id_display)
-                console.log(all_product_id_display)
+                //   console.log("获取最后显示的症状的id");
+                // console.log(all_symptoms_id_display)
+                // console.log(all_product_id_display)
                 return [all_symptoms_id_display, all_product_id_display];
             }
 
@@ -1203,7 +1203,7 @@ Drupal.behaviors.PharmaTheme = {
                     $('.path-product-finder #product-take-wrapper .content-left .index-wrapper a.active').each(function() {
                         symptoms.unshift($(this).attr('rel'));
                         //symptoms.unshift($(this).attr('rel'));
-                        console.log("loop choose the symptoms put into array");
+                        //   console.log("loop choose the symptoms put into array");
                         //  console.log(parseInt(symptoms));
                         list_product_and_symptoms = get_product_and_symptoms_id()
                             //  var input_symptoms = [1, 2, 3, 4, 5, 8, 14, 16]
@@ -1221,9 +1221,9 @@ Drupal.behaviors.PharmaTheme = {
                             //  get_display_product_id()
                             //症状显示数组
                         display_symptoms_arr = all_display_symptoms_product_id[0];
-                        console.log("返回症状显示数组")
-                        console.log(display_symptoms_arr)
-                            //药品显示数组
+                        //   console.log("返回症状显示数组")
+                        //   console.log(display_symptoms_arr)
+                        //药品显示数组
                         display_product_arr = all_display_symptoms_product_id[1];
 
                         // rr = get_productid(parseInt(symptoms));
@@ -1233,7 +1233,7 @@ Drupal.behaviors.PharmaTheme = {
                         // temp = dd
                         temp = (Array.from(new Set(display_symptoms_arr)))
 
-                        console.log("loop choose the symptoms put into array");
+                        //    console.log("loop choose the symptoms put into array");
                         //----------------------------------------
 
                     });
@@ -1246,14 +1246,14 @@ Drupal.behaviors.PharmaTheme = {
                                 //console.log(data)
                                 //  for (var s_index in symptoms) {
                                 //get the product of choose symptoms field True first
-                                console.log("查询display_product_arr")
-                                console.log(display_product_arr)
-                                console.log("查询field_product_id")
+                                //   console.log("查询display_product_arr")
+                                //  console.log(display_product_arr)
+                                //   console.log("查询field_product_id")
                                 find_field_product_id = parseInt(data[p_index]["field_product_id"])
-                                console.log("判断是否加入pruduct")
-                                console.log(display_product_arr.indexOf(find_field_product_id))
+                                    //   console.log("判断是否加入pruduct")
+                                    //   console.log(display_product_arr.indexOf(find_field_product_id))
                                 if (display_product_arr.indexOf(find_field_product_id) > -1) {
-                                    console.log(find_field_product_id)
+                                    //       console.log(find_field_product_id)
                                     symptomsDataarr.push(data[p_index])
                                 }
 
@@ -1261,9 +1261,9 @@ Drupal.behaviors.PharmaTheme = {
 
                                 //  }
                                 //  }
-                                console.log("symptomsDataarr````````````");
-                                console.log(symptomsDataarr);
-                                console.log("symptomsDataarr``````````");
+                                //    console.log("symptomsDataarr````````````");
+                                //   console.log(symptomsDataarr);
+                                //    console.log("symptomsDataarr``````````");
                                 product = symptomsDataarr;
                             }
                             if (product.length == 0) {
