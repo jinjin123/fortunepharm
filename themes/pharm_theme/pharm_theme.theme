@@ -106,6 +106,7 @@ function pharm_theme_preprocess_node(&$variables)
 {
   if ($variables['node']->getType() == 'healthtips') {
     $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+    $variables['title'] = 'Healthtips';
   }
 }
 
@@ -127,7 +128,7 @@ function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $va
       $suggestions[] = 'page__faq';
     }
   }
-  
+
   $current_path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $current_path);
   if (isset($path_args[1]) && $path_args[1] == 'faq') {
