@@ -676,13 +676,18 @@ Drupal.behaviors.PharmaTheme = {
             }
         });
         $('.sidebar-nav > li.parent', context).click(function() {
-            $('.sidebar-nav > li.parent').find('.sub-sidebar-nav').hide();
             if ($(this).hasClass('show-sub')) {
                 $(this).removeClass('show-sub');
             } else {
+                $('.sidebar-nav > li.parent').find('.sub-sidebar-nav').hide();
                 $(this).addClass('show-sub');
             }
             $(this).find('.sub-sidebar-nav').slideToggle();
+            if ($(this).attr('id')) {
+              $(".navbar").animate({
+                scrollTop: $('#menuEnd').offset().top 
+              }, 300);
+            }
         });
         // Remove first existant
         $('.sidebar-nav > li.parent', context).each(function() {
