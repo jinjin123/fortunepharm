@@ -49,9 +49,10 @@ function pharm_theme_preprocess_html(&$variables)
       in_array($path_args[3], $pink_array)) {
     $variables['attributes']['class'][] = 'children';
   }
-  if (isset($path_args[1]) && $path_args[1] == 'health-tips') {
-    $variables['head_title']['title'] = 'NEWTITLE';
-  }
+  $variables['head_title']['title'] = 'NEWTITLE';
+  // if (isset($path_args[1]) && $path_args[1] == 'health-tips') {
+  //   $variables['head_title']['title'] = 'NEWTITLE';
+  // }
 }
 
 /**
