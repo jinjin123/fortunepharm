@@ -2750,9 +2750,9 @@ body.lang-zh-hant {
 
 @media only screen and (max-width: 767px) {
   .main-wrapper .index-wrapper:hover span {
-    top: 0%; }
+    top: 0% !important; }
   .main-wrapper .index-wrapper:hover p {
-    display: none; } }
+    display: none !important; } }
 
 @media only screen and (max-width: 399px) {
   #footer .footer-link ul li a {

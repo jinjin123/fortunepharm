@@ -683,10 +683,10 @@
     .index-wrapper {
       &:hover {
         span {
-          top: 0%;
+          top: 0% !important;
         }
         p {
-          display: none;
+          display: none !important;
           // display: block;
           // top: 45%;
         }
