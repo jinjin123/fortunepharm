@@ -49,6 +49,9 @@ function pharm_theme_preprocess_html(&$variables)
       in_array($path_args[3], $pink_array)) {
     $variables['attributes']['class'][] = 'children';
   }
+  if (isset($path_args[1]) && $path_args[1] == 'health-tips') {
+    $variables['head_title']['title'] = 'NEWTITLE';
+  }
 }
 
 /**
@@ -201,17 +204,4 @@ function pharm_theme_preprocess_views_view_list(&$variables) {
     }
   }
   $variables['parent_array'] = $parents_term;
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function pharm_theme_preprocess_page_title(&$variables) {
-  $variables['title'] = 'New Title 1';
-  $request = \Drupal::request();
-  $path = $request->getRequestUri(); // get current path
-  if(strpos($path, 'health-tips')) { //check current path is user profile page
-    $variables['content']['#title'] = 'New Title 2';
-  }
-  $variables['head_title']['title'] = 'New Title 3';
 }
