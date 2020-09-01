@@ -678,7 +678,21 @@
     border-top: 2px solid #EFEFEF;
   }
 }
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+  // Setting homepage hover
+  .mobile-main {
+    .index-wrapper {
+      .link-wrapper {
+        span {
+          top: 0%;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 399px) {
   #footer {
     .footer-link {

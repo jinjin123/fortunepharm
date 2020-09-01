@@ -2748,6 +2748,12 @@ body.lang-zh-hant {
   #footer {
     border-top: 2px solid #EFEFEF; } }
 
+@media only screen and (max-width: 767px) {
+  .mobile-main .index-wrapper .link-wrapper span {
+    top: 0%; }
+  .mobile-main .index-wrapper .link-wrapper p {
+    display: none; } }
+
 @media only screen and (max-width: 399px) {
   #footer .footer-link ul li a {
     padding: 0 5px; }
