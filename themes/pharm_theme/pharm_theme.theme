@@ -51,7 +51,6 @@ function pharm_theme_preprocess_html(&$variables)
   }
 
   $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
-  health-tips
   if (strpos($alias,'health-tips') !== false) {
     $variables['head_title']['title'] = 'HEALTH-TIPS';
   }
