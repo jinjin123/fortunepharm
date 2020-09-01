@@ -207,8 +207,9 @@ function pharm_theme_preprocess_views_view_list(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function pharm_theme_preprocess_page_title(&$variables) {
-   // WRITE YOUR LOGIC HERE,
-   if ($variables['node']->getType() == "healthtips") {
-     $variables['title'] = 'New Title';
-   }
+  $request = \Drupal::request();
+  $path = $request->getRequestUri(); // get current path
+  if(strpos($path, 'health-tips')) { //check current path is user profile page
+    $variables['content']['#title'] = 'health-tips';
+  }
 }
