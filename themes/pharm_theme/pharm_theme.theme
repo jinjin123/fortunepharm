@@ -49,7 +49,7 @@ function pharm_theme_preprocess_html(&$variables)
       in_array($path_args[3], $pink_array)) {
     $variables['attributes']['class'][] = 'children';
   }
-  $variables['head_title']['title'] = 'NEWTITLE 1';
+
   if (isset($path_args[0]) && $path_args[0] == 'health-tips') {
     $variables['head_title']['title'] = 'NEWTITLE 2';
   }
@@ -98,6 +98,7 @@ function pharm_theme_preprocess_page(array &$variables)
 
   if (isset($path_args[1]) && $path_args[1] == 'node') {
     if ($variables['node']->getType() == "healthtips") {
+      $variables['head_title']['title'] = 'NEWTITLE 1';
       $variables['#attached']['library'][] = 'pharm_theme/healthtips';
     }
   }
