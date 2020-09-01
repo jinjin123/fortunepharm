@@ -678,7 +678,22 @@
     border-top: 2px solid #EFEFEF;
   }
 }
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+  .main-wrapper {
+    .index-wrapper {
+      &:hover {
+        span {
+          top: 40% !important;
+        }
+        p {
+          display: none !important;
+          // display: block;
+          // top: 45%;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 399px) {
   #footer {
     .footer-link {
