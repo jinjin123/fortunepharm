@@ -53,6 +53,10 @@ function pharm_theme_preprocess_html(&$variables)
   if (isset($path_args[0]) && $path_args[0] == 'health-tips') {
     $variables['head_title']['title'] = 'NEWTITLE 2';
   }
+  if (isset($path_args[1]) && $path_args[1] == 'health-tips') {
+    $variables['head_title']['title'] = 'NEWTITLE 3';
+  }
+  var_dump($path_args);
 }
 
 /**
