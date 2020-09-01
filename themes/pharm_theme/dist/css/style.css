@@ -2506,7 +2506,8 @@ body.lang-zh-hant {
   .path-faq .sub-tab-wrapper li {
     float: left; }
   .path-faq .content-outer-wrapper .detail-wrapper {
-    width: 100%; }
+    width: 100% !important;
+    z-index: 9; }
   .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
     height: auto; }
   #banner-wrapper .page_title {

@@ -91,21 +91,20 @@
       </div>
       </section>
       {# Sub menu #}
-      <div class="sub-tab-session">
-        <div class="sub-tab-outer-wrapper scroll-wrapper" style="overflow: hidden; outline: none; cursor: -webkit-grab;">
-          <div class="sub-tab-wrapper container-healthtips-submenu">
-            {{ page.sub_menu }}
+      <div id="faq-wrapper">
+        <div class="sub-tab-session">
+          <div class="sub-tab-outer-wrapper scroll-wrapper" style="overflow: hidden; outline: none; cursor: -webkit-grab;">
+            <div class="sub-tab-wrapper container-healthtips-submenu">
+              {{ page.sub_menu }}
+            </div>
           </div>
+          <a class="arrow arrow-right"></a>
         </div>
-        <a class="arrow arrow-right"></a>
+        {# Sub menu #}
+        <section id="os-wrapper" class="content-outer-wrapper">
+          {{ page.content }}
+        </section>
       </div>
-       {# Sub menu #}
-      <section id="os-wrapper">
-        {{ page.content }}
-      </section>
-      <section id="content_bottom">
-        {{ page.content_bottom }}
-      </section>
     </div>
   </div>
 {# Content section #}
