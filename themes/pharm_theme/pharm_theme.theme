@@ -91,7 +91,7 @@ function pharm_theme_preprocess_page(array &$variables)
   if (isset($path_args[1]) && $path_args[1] == 'node') {
     if ($variables['node']->getType() == "healthtips") {
       $variables['#attached']['library'][] = 'pharm_theme/healthtips';
-      $variables['title'] = 'Healthtips';
+      $var['page']['#title'] = 'Healthtips';
     }
   }
 
@@ -107,6 +107,7 @@ function pharm_theme_preprocess_node(&$variables)
 {
   if ($variables['node']->getType() == 'healthtips') {
     $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+
   }
 }
 
