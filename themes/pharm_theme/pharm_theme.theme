@@ -50,14 +50,11 @@ function pharm_theme_preprocess_html(&$variables)
     $variables['attributes']['class'][] = 'children';
   }
 
-  if (isset($path_args[0]) && $path_args[0] == 'health-tips') {
-    $variables['head_title']['title'] = 'NEWTITLE 2';
-  }
-  if (isset($path_args[1]) && $path_args[1] == 'health-tips') {
-    $variables['head_title']['title'] = 'NEWTITLE 3';
-  }
-  // $path = \Drupal::service('path.current')->getPath();
   $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
+  health-tips
+  if (strpos($alias,'health-tips') !== false) {
+    $variables['head_title']['title'] = 'HEALTH-TIPS';
+  }
   var_dump($alias);
 }
 
