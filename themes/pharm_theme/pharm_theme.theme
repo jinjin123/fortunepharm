@@ -98,7 +98,6 @@ function pharm_theme_preprocess_page(array &$variables)
 
   if (isset($path_args[1]) && $path_args[1] == 'node') {
     if ($variables['node']->getType() == "healthtips") {
-      $variables['head_title']['title'] = 'NEWTITLE 1';
       $variables['#attached']['library'][] = 'pharm_theme/healthtips';
     }
   }
@@ -128,6 +127,7 @@ function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $va
     $content_type = $node->bundle();
     if ($content_type == 'healthtips') {
       $suggestions[] = 'page__' . $content_type;
+      $variables['head_title']['title'] = 'NEWTITLE 1';
     }
   }
 
