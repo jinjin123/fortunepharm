@@ -52,9 +52,12 @@ function pharm_theme_preprocess_html(&$variables)
 
   $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
   if (strpos($alias,'health-tips') !== false) {
-    $variables['head_title']['title'] = 'HEALTH-TIPS';
+    if($language == 'zh-hans'){
+      $variables['head_title']['title'] = '健康資訊';
+    } elseif($language == 'zh-hans'){
+    $variables['head_title']['title'] = '健康资讯';
+    } else $variables['head_title']['title'] = 'Health Tips';
   }
-  var_dump($language);
 }
 
 /**
