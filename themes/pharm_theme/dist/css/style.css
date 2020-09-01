@@ -2749,9 +2749,9 @@ body.lang-zh-hant {
     border-top: 2px solid #EFEFEF; } }
 
 @media only screen and (max-width: 767px) {
-  .mobile-main .index-wrapper:hover span {
+  .main-wrapper .index-wrapper:hover span {
     top: 0%; }
-  .mobile-main .index-wrapper:hover p {
+  .main-wrapper .index-wrapper:hover p {
     display: none; } }
 
 @media only screen and (max-width: 399px) {

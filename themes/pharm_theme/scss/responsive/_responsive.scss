@@ -679,14 +679,17 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  // Setting homepage hover
-  .mobile-main {
-    .index-wrapper:hover {
-      span {
-        top: 0%;
-      }
-      p {
-        display: none;
+  .main-wrapper {
+    .index-wrapper {
+      &:hover {
+        span {
+          top: 0%;
+        }
+        p {
+          display: none;
+          // display: block;
+          // top: 45%;
+        }
       }
     }
   }
