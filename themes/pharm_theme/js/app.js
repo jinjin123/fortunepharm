@@ -805,14 +805,14 @@ Drupal.behaviors.PharmaTheme = {
             console.log("打印此时输出的langname");
             if (langname == "chs") {
                 if ($('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').length > 0) {
-                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(../dist/images/product-take/which_bg_chs.jpg)");
+                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(/themes/pharm_theme/dist/images/product-take/which_bg_chs.jpg)");
                 }
                 console.log("打印此时输出的chs");
 
             }
             if (langname == "cht") {
                 if ($('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').length > 0) {
-                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(../dist/images/product-take/which_bg_cht.jpg)");
+                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(/themes/pharm_theme/dist/images/product-take/which_bg_cht.jpg)");
                 }
                 console.log("打印此时输出的cht");
 
