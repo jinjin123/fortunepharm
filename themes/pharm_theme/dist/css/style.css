@@ -760,6 +760,9 @@ body.lang-zh-hant {
 .sidebar-nav li a {
   width: 130px; }
 
+.sidebar-nav li.parent:before {
+  right: 30px; }
+
 /********** helathtips scss ***/
 .page-node-type-healthtips div.container-fluid-healthtipsbanner {
   max-width: 1680px;

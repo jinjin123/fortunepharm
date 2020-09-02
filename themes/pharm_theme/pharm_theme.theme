@@ -45,9 +45,25 @@ function pharm_theme_preprocess_html(&$variables)
   $variables['attributes']['class'][] = 'lang-'.$language;
 
   $pink_array = [38,42,43];
-  if (isset($path_args[1]) && $path_args[1] == 'product' &&
-      in_array($path_args[3], $pink_array)) {
+  $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
+  if (isset($path_args[1]) && $path_args[1] == 'product') {
+    if(in_array($path_args[3], $pink_array)) {
     $variables['attributes']['class'][] = 'children';
+    }
+    if (strpos($alias,'product') !== false) {
+      if($language == 'zh-hans'){
+        $variables['head_title']['title'] = '產品';
+      } elseif($language == 'zh-hant'){
+        $variables['head_title']['title'] = '产品';
+      } else $variables['head_title']['title'] = 'Product Content';
+    }
+  }
+  if (strpos($alias,'health-tips') !== false) {
+    if($language == 'zh-hans'){
+      $variables['head_title']['title'] = '健康資訊';
+    } elseif($language == 'zh-hant'){
+    $variables['head_title']['title'] = '健康资讯';
+    } else $variables['head_title']['title'] = 'Health Tips';
   }
 }
 
@@ -106,6 +122,7 @@ function pharm_theme_preprocess_node(&$variables)
 {
   if ($variables['node']->getType() == 'healthtips') {
     $variables['#attached']['library'][] = 'pharm_theme/healthtips';
+
   }
 }
 
@@ -127,7 +144,7 @@ function pharm_theme_theme_suggestions_page_alter(array &$suggestions, array $va
       $suggestions[] = 'page__faq';
     }
   }
-  
+
   $current_path = \Drupal::service('path.current')->getPath();
   $path_args = explode('/', $current_path);
   if (isset($path_args[1]) && $path_args[1] == 'faq') {

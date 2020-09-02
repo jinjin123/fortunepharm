@@ -73,5 +73,8 @@ body.lang-zh-hant {
     a {
       width: 130px;
     }
+    &.parent:before{
+      right: 30px;
+    }
   }
 }
