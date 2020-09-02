@@ -2776,7 +2776,8 @@ body.lang-zh-hant {
 
 @media only screen and (max-width: 767px) {
   #health-tips.gerd .function-wrapper .function-middle-wrapper p {
-    bottom: 0%; }
+    bottom: 0%;
+    margin: 1px; }
   .main-wrapper .index-wrapper:hover span {
     top: 40% !important; }
   .main-wrapper .index-wrapper:hover p {
