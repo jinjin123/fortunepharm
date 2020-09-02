@@ -194,7 +194,8 @@
     }
     .content-outer-wrapper {
       .detail-wrapper {
-        width: 100%;
+        width: 100% !important;
+        z-index: 9;
       }
       .content-wrapper {
         .text-wrapper {

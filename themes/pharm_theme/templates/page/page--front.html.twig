@@ -32,7 +32,7 @@
           {% endif %}
           {% if menu_item.submenu %}
             {% if menu_item.url == '' %}
-              <li class="parent nolink"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+              <li class="parent nolink {{active_trail}}" id="{{menu_item.options.attributes.class}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
             {% else %}
               <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
             {% endif %}
@@ -60,6 +60,7 @@
             </ul>
           {% endif %}
           </li>
+          <div id="menuEnd"></div>
         {% endfor %}
       </ul>
       <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>

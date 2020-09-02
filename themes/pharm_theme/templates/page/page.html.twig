@@ -30,7 +30,7 @@
           {% set active_trail = 'active' %}
         {% endif %}
           {% if menu_item.submenu %}
-            <li class="parent {{active_trail}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
+            <li class="parent {{active_trail}}" id="{{menu_item.options.attributes.class}}"><a href="javascript:void(0);">{{ menu_item.text|t }}</a>
           {% else %}
             {% if menu_item.text == "其他服务范围" %}
                {% set menu_url = menu_item.url ~ "?lang=zh_cn" %}
@@ -55,6 +55,7 @@
             </ul>
           {% endif %}
         </li>
+        <div id="menuEnd"></div>
       {% endfor %}
     </ul>
     <ul id="linkage-icon-sidebar" class="nav navbar-nav"></ul>
