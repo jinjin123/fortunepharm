@@ -2479,7 +2479,8 @@ body.lang-zh-hant {
 @media only screen and (min-width: 768px) {
   .path-news #block-pharm-theme-content {
     width: 100%; }
-  .page-node-147 #block-pharm-theme-content, .page-node-3 #block-pharm-theme-content {
+  .page-node-147 #block-pharm-theme-content,
+  .page-node-3 #block-pharm-theme-content {
     width: 50%; }
   .views-field-field-mobile-banner-photo .field-content img {
     display: none; }
@@ -2549,7 +2550,8 @@ body.lang-zh-hant {
         .container-fluid-healthtips .container-healthtips-submenu nav#block-mainnavigation #menu li.navbar-item a {
           padding-top: 15px;
           padding-bottom: 15px; }
-  .mobile-main .col-xs-4.row-xs-4.nopadding div, .mobile-main .col-xs-8.row-xs-4.nopadding div {
+  .mobile-main .col-xs-4.row-xs-4.nopadding div,
+  .mobile-main .col-xs-8.row-xs-4.nopadding div {
     height: 100%; }
   .scroll-wrapper {
     overflow-y: hidden;
@@ -2560,7 +2562,8 @@ body.lang-zh-hant {
   .pagination-wrapper .right-l {
     margin-right: 10px;
     margin-bottom: 5px; }
-  .pagination-btn, .pagination-skip {
+  .pagination-btn,
+  .pagination-skip {
     padding: 15px 10px; }
   .pagination-btn.with-select:before {
     padding-left: 10px;
@@ -2649,9 +2652,15 @@ body.lang-zh-hant {
     height: 300px; }
   #health-tips.allergy .function-wrapper .function-btn {
     width: 24.25%; }
-    #health-tips.allergy .function-wrapper .function-btn.function-logo, #health-tips.allergy .function-wrapper .function-btn .function-logo:hover {
+    #health-tips.allergy .function-wrapper .function-btn.function-logo,
+    #health-tips.allergy .function-wrapper .function-btn .function-logo:hover {
       background-image: url("../images/tips/trip_2_print.png") !important; }
-  #health-tips.allergy .function-wrapper .function-btn[rel="10"], #health-tips.allergy .function-wrapper .function-btn[rel="5"], #health-tips.allergy .function-wrapper .function-btn[rel="6"], #health-tips.allergy .function-wrapper .function-btn[rel="7"], #health-tips.allergy .function-wrapper .function-btn[rel="8"], #health-tips.allergy .function-wrapper .function-btn[rel="9"] {
+  #health-tips.allergy .function-wrapper .function-btn[rel="10"],
+  #health-tips.allergy .function-wrapper .function-btn[rel="5"],
+  #health-tips.allergy .function-wrapper .function-btn[rel="6"],
+  #health-tips.allergy .function-wrapper .function-btn[rel="7"],
+  #health-tips.allergy .function-wrapper .function-btn[rel="8"],
+  #health-tips.allergy .function-wrapper .function-btn[rel="9"] {
     width: 32.6666%; }
   #health-tips.allergy .function-wrapper .function-right-wrapper {
     display: none; }
@@ -2688,7 +2697,8 @@ body.lang-zh-hant {
   .path-product-finder .container-fluid {
     margin-top: 20px;
     margin-bottom: 20px; }
-  .path-product-finder .container-fluid .content-left, .path-product-finder .container-fluid .content-right {
+  .path-product-finder .container-fluid .content-left,
+  .path-product-finder .container-fluid .content-right {
     width: 100%; }
   .path-product-finder .container-fluid .content-right {
     margin-top: 60px; }
@@ -2706,7 +2716,9 @@ body.lang-zh-hant {
     padding-left: 5px;
     padding-right: 5px;
     width: 110px !important; }
-  .path-product .market-tab-wrapper li, .path-product .sub-tab-wrapper li, .path-product .tab-icon-outer-wrapper li {
+  .path-product .market-tab-wrapper li,
+  .path-product .sub-tab-wrapper li,
+  .path-product .tab-icon-outer-wrapper li {
     float: left; }
   .path-product .product-detail {
     display: none; }
@@ -2749,7 +2761,8 @@ body.lang-zh-hant {
   #footer .container-fluid-40 {
     position: relative;
     padding: 0; }
-  #footer .copyright, #footer .footer-link {
+  #footer .copyright,
+  #footer .footer-link {
     float: left;
     width: 100%; }
   #footer p {
@@ -2762,6 +2775,8 @@ body.lang-zh-hant {
     border-top: 2px solid #EFEFEF; } }
 
 @media only screen and (max-width: 767px) {
+  #health-tips.gerd .function-wrapper .function-middle-wrapper p {
+    bottom: 0%; }
   .main-wrapper .index-wrapper:hover span {
     top: 40% !important; }
   .main-wrapper .index-wrapper:hover p {

@@ -801,13 +801,12 @@ Drupal.behaviors.PharmaTheme = {
                 }, 800));
             });
             //修改搜索右边结果右边显示背景图片
-            //
-            console.log("打印此时输出的langname");
+
             if (langname == "chs") {
                 if ($('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').length > 0) {
                     $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(/themes/pharm_theme/dist/images/product-take/which_bg_chs.jpg)");
                 }
-                console.log("打印此时输出的chs");
+
 
             }
             if (langname == "cht") {
@@ -817,7 +816,7 @@ Drupal.behaviors.PharmaTheme = {
                 console.log("打印此时输出的cht");
 
             }
-            console.log(langname);
+
             var product = [];
             //reset choose symptoms
             $('.path-product-finder #product-take-wrapper .content-left .index-wrapper .clear-select').click(function() {
