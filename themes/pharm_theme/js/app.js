@@ -676,18 +676,13 @@ Drupal.behaviors.PharmaTheme = {
             }
         });
         $('.sidebar-nav > li.parent', context).click(function() {
+            $('.sidebar-nav > li.parent').find('.sub-sidebar-nav').hide();
             if ($(this).hasClass('show-sub')) {
                 $(this).removeClass('show-sub');
             } else {
-                $('.sidebar-nav > li.parent').find('.sub-sidebar-nav').hide();
                 $(this).addClass('show-sub');
             }
             $(this).find('.sub-sidebar-nav').slideToggle();
-            if ($(this).attr('id')) {
-              $(".navbar").animate({
-                scrollTop: $('#menuEnd').offset().top 
-              }, 300);
-            }
         });
         // Remove first existant
         $('.sidebar-nav > li.parent', context).each(function() {
@@ -699,9 +694,9 @@ Drupal.behaviors.PharmaTheme = {
         /******* Faq ******/
         function faq_detail2(element) {
             var id = $(element).attr('rel');
-            var position = $(element).parent().parent().parent().position();
+            var position = $(element).parent().parent().position();
             var big_width = $('.path-faq .detail-wrapper').width();
-            var width = $(element).parent().parent().parent().width();
+            var width = $(element).parent().parent().width();
             var lang = settings.path.pathPrefix;
             var langname = lang.replace('/', '');
             var imaeg_path = $(element).parent().parent().parent().find('.img-wrapper img').attr('src');
@@ -805,6 +800,23 @@ Drupal.behaviors.PharmaTheme = {
                     index_row_wrapper('content-left', 'content-left', 12);
                 }, 800));
             });
+            //修改搜索右边结果右边显示背景图片
+
+            if (langname == "chs") {
+                if ($('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').length > 0) {
+                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(/themes/pharm_theme/dist/images/product-take/which_bg_chs.jpg)");
+                }
+
+
+            }
+            if (langname == "cht") {
+                if ($('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').length > 0) {
+                    $('.path-product-finder #product-take-wrapper .content-right .index-wrapper .matched-outer').css("background-image", "url(/themes/pharm_theme/dist/images/product-take/which_bg_cht.jpg)");
+                }
+                console.log("打印此时输出的cht");
+
+            }
+
             var product = [];
             //reset choose symptoms
             $('.path-product-finder #product-take-wrapper .content-left .index-wrapper .clear-select').click(function() {
