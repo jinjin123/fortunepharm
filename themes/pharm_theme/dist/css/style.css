@@ -2521,8 +2521,14 @@ body.lang-zh-hant {
   .path-faq .content-outer-wrapper .detail-wrapper {
     width: 100% !important;
     z-index: 9; }
-  .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
-    height: auto; }
+  .path-faq .content-outer-wrapper .col-xs-6 {
+    width: 49%; }
+  .path-faq .content-outer-wrapper .content-wrapper {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+    .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
+      height: auto; }
   #banner-wrapper .page_title {
     width: 50%; }
     #banner-wrapper .page_title h1 {
@@ -2751,7 +2757,7 @@ body.lang-zh-hant {
         right: auto;
         margin-left: -6px; }
       .path-product .product-content-tab-wrapper ul li a {
-        padding: 3px 0 0 0;
+        padding: 3px 0 0;
         line-height: 20px;
         height: 50px;
         text-align: center; }
@@ -2776,7 +2782,7 @@ body.lang-zh-hant {
 
 @media only screen and (max-width: 767px) {
   #health-tips.gerd .function-wrapper .function-middle-wrapper p {
-    bottom: 0%;
+    bottom: 0;
     margin: 1px; }
   .main-wrapper .index-wrapper:hover span {
     top: 40% !important; }
