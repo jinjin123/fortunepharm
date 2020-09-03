@@ -2525,9 +2525,8 @@ body.lang-zh-hant {
     width: 49%; }
   .path-faq .content-outer-wrapper .content-wrapper {
     display: inline-block;
-    float: none; }
-    .path-faq .content-outer-wrapper .content-wrapper .img-wrapper {
-      vertical-align: top; }
+    float: none;
+    vertical-align: top; }
     .path-faq .content-outer-wrapper .content-wrapper .text-wrapper {
       height: auto; }
   #banner-wrapper .page_title {
