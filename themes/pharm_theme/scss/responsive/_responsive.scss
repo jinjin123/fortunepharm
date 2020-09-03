@@ -191,7 +191,6 @@
     }
   }
   // News
-
   .path-news {
     .views-row {
       .content-row {
@@ -220,6 +219,10 @@
       .detail-wrapper {
         width: 100% !important;
         z-index: 9;
+      }
+
+      .col-xs-6 {
+        width: 49%;
       }
 
       .content-wrapper {
@@ -850,7 +853,6 @@
     }
   }
   // For English Pages
-
   .lang-en {
     .main-wrapper {
       .index-wrapper {
