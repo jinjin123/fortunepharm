@@ -694,9 +694,9 @@ Drupal.behaviors.PharmaTheme = {
         /******* Faq ******/
         function faq_detail2(element) {
             var id = $(element).attr('rel');
-            var position = $(element).parent().parent().position();
+            var position = $(element).parent().parent().parent().position();
             var big_width = $('.path-faq .detail-wrapper').width();
-            var width = $(element).parent().parent().width();
+            var width = $(element).parent().parent().parent().width();
             var lang = settings.path.pathPrefix;
             var langname = lang.replace('/', '');
             var imaeg_path = $(element).parent().parent().parent().find('.img-wrapper img').attr('src');
