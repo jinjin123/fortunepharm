@@ -1,6 +1,20 @@
 <div{{ attributes }} class="inner">
   <div class="navbar-header">
-    {{ elements.pharm_theme_branding }}
+    {% if language == 'en' %}
+      {% set title = 'Home' %}
+      {% set url = '/eng' %}
+    {% endif %}
+    {% if language == 'zh-hant' %}
+      {% set title = '主頁' %}
+      {% set url = '/chs' %}
+    {% endif %}
+    {% if language == 'zh-hans' %}
+      {% set title = '主页' %}
+      {% set url = '/cht' %}
+    {% endif %}
+    <a href="{{url}}" title="{{title}}" rel="{{title}}" tabindex="-1">
+      <img src="{{logopath}}" alt="{{title}}">
+    </a>
   </div>
   <nav class="collapse navbar-collapse bs-navbar-collapse">
     {{ elements.pharm_theme_main_menu }}
