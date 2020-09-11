@@ -6,11 +6,11 @@
     {% endif %}
     {% if language == 'zh-hant' %}
       {% set title = '主頁' %}
-      {% set url = '/chs' %}
+      {% set url = '/cht' %}
     {% endif %}
     {% if language == 'zh-hans' %}
       {% set title = '主页' %}
-      {% set url = '/cht' %}
+      {% set url = '/chs' %}
     {% endif %}
     <a href="{{url}}" title="{{title}}" rel="{{title}}" tabindex="-1">
       <img src="{{logopath}}" alt="{{title}}">
