@@ -712,7 +712,7 @@ Drupal.behaviors.PharmaTheme = {
                 var label_question = '问题:';
                 var label_answer = '在幸福FAQ找答案:';
             }
-            $('.path-faq div.share-wrapper a.fb-share').attr('href', "https://www.facebook.com/dialog/feed?app_id=105148586494382&display=popup&caption=" + $.trim(question) + "&description=" + answer + "&picture=http://www.fortunepharm.com" + imaeg_path + "&link=http://www.fortunepharm.com/&redirect_uri=http://www.fortunepharm.com/");
+            $('.path-faq div.share-wrapper a.fb-share').attr('href', "https://www.facebook.com/dialog/feed?app_id=353667696034556&display=popup&caption=" + $.trim(question) + "&description=" + answer + "&picture=http://www.fortunepharm.com" + imaeg_path + "&link=http://www.fortunepharm.com/&redirect_uri=http://www.fortunepharm.com/");
             $('.path-faq .detail-wrapper h4').html(question);
             $('.path-faq .detail-wrapper .description').html(answer);
             $('.path-faq .detail-wrapper img').attr('src', imaeg_path);
