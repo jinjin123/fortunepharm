@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/bootstrap4": "^2.1",
         "drupal/condition_query": "^1.2",
         "drupal/console": "^1.9",
         "drupal/core-composer-scaffold": "^8.8",
