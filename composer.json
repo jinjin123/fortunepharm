@@ -35,6 +35,7 @@
         "drush/drush": "^10.3",
         "symfony/filesystem": "^2.8",
         "symfony/finder": "^3.0"
+        "drupal/core-vendor-hardening": "^8.8"
     },
     "conflict": {
         "drupal/drupal": "*"
